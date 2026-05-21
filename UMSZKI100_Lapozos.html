@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMSZKI 100 – 3D lapozás</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --desk-dark: #1a0f05;
+            --desk-mid: #3b2209;
+            --page-w: 380px;
+            --page-h: 520px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            user-select: none;
+            touch-action: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Crimson Text', Georgia, serif;
+            background: radial-gradient(ellipse at 40% 60%, var(--desk-mid) 0%, var(--desk-dark) 70%);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(87deg, transparent, transparent 28px, rgba(0, 0, 0, .07) 28px, rgba(0, 0, 0, .07) 29px),
+                repeating-linear-gradient(177deg, transparent, transparent 28px, rgba(0, 0, 0, .05) 28px, rgba(0, 0, 0, .05) 29px);
+            pointer-events: none;
+        }
+
+        #scene {
+            position: relative;
+            perspective: 1800px;
+        }
+
+        #book {
+            position: relative;
+            width: calc(var(--page-w) * 2);
+            height: var(--page-h);
+            cursor: grab;
+            contain: layout paint;
+        }
+
+        #book:active {
+            cursor: grabbing;
+        }
+
+        #book::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            transform: translateY(26px);
+            background: rgba(0, 0, 0, .38);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .85);
+            filter: blur(8px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .static-page {
+            position: absolute;
+            top: 0;
+            width: var(--page-w);
+            height: var(--page-h);
+            overflow: hidden;
+            box-shadow: inset 0 0 22px rgba(0, 0, 0, .06);
+            z-index: 1;
+            contain: layout paint;
+        }
+
+        #static-left {
+            left: 0;
+        }
+
+        #static-right {
+            left: var(--page-w);
+        }
+
+        /*
+           Ez az egyetlen mozgó 3D lap.
+           Alatta mindig már a következő/előző oldal van berenderelve.
+        */
+        #flip-layer {
+            position: absolute;
+            top: 0;
+            width: var(--page-w);
+            height: var(--page-h);
+            z-index: 10;
+            display: none;
+            transform-style: preserve-3d;
+            will-change: transform;
+            pointer-events: none;
+            contain: layout paint;
+        }
+
+        #flip-layer.forward {
+            left: var(--page-w);
+            transform-origin: left center;
+        }
+
+        #flip-layer.backward {
+            left: 0;
+            transform-origin: right center;
+        }
+
+        .flip-face {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            will-change: transform;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+            contain: layout paint;
+        }
+
+        #flip-front {
+            transform: translateZ(1px);
+        }
+
+        #flip-back {
+            transform: rotateY(180deg) translateZ(1px);
+        }
+
+        #flip-layer.dragging .flip-face {
+            box-shadow: 0 5px 12px rgba(0, 0, 0, .14);
+        }
+
+        .page-content {
+            width: 100%;
+            height: 100%;
+            padding: 36px 32px 44px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .lined::before {
+            content: '';
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: repeating-linear-gradient(transparent,
+                    transparent 31px,
+                    rgba(0, 0, 0, .1) 31px,
+                    rgba(0, 0, 0, .1) 32px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-header {
+            font-family: 'IM Fell English', serif;
+            font-size: 9px;
+            letter-spacing: 4px;
+            color: #aaa;
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: .5px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+        }
+
+        .chapter-title {
+            font-family: 'IM Fell English', serif;
+            font-size: 22px;
+            color: #2a1a0a;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .chapter-year {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .chapter-body {
+            font-size: 15px;
+            line-height: 1.85;
+            color: #3a2a18;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'IM Fell English', serif;
+            font-size: 52px;
+            float: left;
+            line-height: .8;
+            margin: 4px 8px 0 0;
+            color: #2a1a0a;
+        }
+
+        .page-num {
+            position: absolute;
+            bottom: 14px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #999;
+        }
+
+        .page-num.left {
+            left: 30px;
+        }
+
+        .page-num.right {
+            right: 30px;
+        }
+
+        .era-1920 {
+            background: #f0e6cc;
+        }
+
+        .era-1950 {
+            background: #dde8f5;
+            background-image:
+                linear-gradient(rgba(0, 0, 200, .08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 200, .08) 1px, transparent 1px);
+            background-size: 22px 22px;
+            background-position: 0 76px;
+        }
+
+        .era-1990 {
+            background: #f8f8f4;
+            border-left: 10px dotted #d0d0c8;
+        }
+
+        .era-2000 {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        @media (max-width: 860px) {
+            :root {
+                --page-w: 280px;
+                --page-h: 420px;
+            }
+
+            .chapter-title {
+                font-size: 19px;
+            }
+
+            .chapter-body {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="scene">
+        <div id="book">
+            <div id="static-left" class="static-page"></div>
+            <div id="static-right" class="static-page"></div>
+
+            <div id="flip-layer">
+                <div id="flip-front" class="flip-face"></div>
+                <div id="flip-back" class="flip-face"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const spreads = [
+            {
+                leftEraCss: 'era-1920',
+                rightEraCss: 'era-1920',
+                left: `
+                    <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM</div>
+                    <div class="chapter-title">Előszó</div>
+                    <div class="chapter-year">A Szerkesztőbizottság</div>
+                    <div class="chapter-body drop-cap">Ez a kötet száz esztendő emlékeit foglalja magában...</div>
+                    <div class="page-num left">ii</div>
+                `,
+                right: `
+                    <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM <br>1927-2027</div>
+                    <div class="chapter-title">Tartalom</div>
+                    <div class="chapter-year">Fejezetek</div>
+                    <div class="chapter-body" style="font-size:14px;line-height:2.2;">
+                        I. Az alapítás kora — 1924–1944<br>
+                        II. Újjáépítés és Landler-korszak<br>
+                        III. Az informatika hajnala<br>
+                        IV. Modern UMSZKI<br>
+                    </div>
+                    <div class="page-num right">iii</div>
+                `
+            },
+            {
+                leftEraCss: 'era-1920',
+                rightEraCss: 'era-1920',
+                left: `
+                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
+                    <div class="chapter-title">Az alapítás előzményei</div>
+                    <div class="chapter-body drop-cap">Most már lapozás közben ez az oldal jelenik meg a forduló lap hátoldalán.</div>
+                    <div class="page-num left">2</div>
+                `,
+                right: `
+                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
+                    <div class="chapter-title">Az első évek</div>
+                    <div class="chapter-body">Ez pedig a következő jobb oldal, ami már a lap alatt vár, miközben lapozol.</div>
+                    <div class="page-num right">3</div>
+                `
+            },
+            {
+                leftEraCss: 'era-1950',
+                rightEraCss: 'era-1950',
+                left: `
+                    <div class="page-header">II. FEJEZET – ÚJJÁÉPÍTÉS</div>
+                    <div class="chapter-title">Új korszak</div>
+                    <div class="chapter-body drop-cap">A háború utáni években az iskola története új fejezethez érkezett.</div>
+                    <div class="page-num left">4</div>
+                `,
+                right: `
+                    <div class="page-header">II. FEJEZET – ÚJJÁÉPÍTÉS</div>
+                    <div class="chapter-title">Landler-korszak</div>
+                    <div class="chapter-body">A technikai oktatás szerepe egyre hangsúlyosabbá vált.</div>
+                    <div class="page-num right">5</div>
+                `
+            },
+            {
+                leftEraCss: 'era-1990',
+                rightEraCss: 'era-1990',
+                left: `
+                    <div class="page-header">III. FEJEZET – INFORMATIKA</div>
+                    <div class="chapter-title">Az informatika hajnala</div>
+                    <div class="chapter-body drop-cap">A számítógépek megjelenése új irányt adott az oktatásnak.</div>
+                    <div class="page-num left">6</div>
+                `,
+                right: `
+                    <div class="page-header">III. FEJEZET – INFORMATIKA</div>
+                    <div class="chapter-title">Modern eszközök</div>
+                    <div class="chapter-body">A műszaki képzés egyre jobban összekapcsolódott a digitális világgal.</div>
+                    <div class="page-num right">7</div>
+                `
+            }
+        ];
+
+        const staticLeft = document.getElementById('static-left');
+        const staticRight = document.getElementById('static-right');
+        const flipLayer = document.getElementById('flip-layer');
+        const flipFront = document.getElementById('flip-front');
+        const flipBack = document.getElementById('flip-back');
+        const book = document.getElementById('book');
+
+        let currentSpread = 0;
+        let isDragging = false;
+        let isFlipping = false;
+        let dragDirection = 0;
+        let startX = 0;
+        let dragProgress = 0;
+
+        let rafId = null;
+        let pendingTransform = '';
+
+        function pageHTML(index, side) {
+            const spread = spreads[index];
+
+            if (!spread) {
+                return `
+                    <div class="page-content era-2000" style="align-items:center;justify-content:center;">
+                        <div class="chapter-title" style="color:#777;">VÉGE</div>
+                    </div>
+                `;
+            }
+
+            const css = side === 'left' ? spread.leftEraCss : spread.rightEraCss;
+            const content = side === 'left' ? spread.left : spread.right;
+
+            return `<div class="page-content ${css} lined">${content}</div>`;
+        }
+
+        function renderSpread(index) {
+            staticLeft.innerHTML = pageHTML(index, 'left');
+            staticRight.innerHTML = pageHTML(index, 'right');
+        }
+
+        function applyFlipTransform(value) {
+            pendingTransform = value;
+
+            if (rafId) return;
+
+            rafId = requestAnimationFrame(() => {
+                flipLayer.style.transform = pendingTransform;
+                rafId = null;
+            });
+        }
+
+        function prepareFlip(direction) {
+            flipLayer.style.display = 'block';
+            flipLayer.style.transition = 'none';
+            flipLayer.classList.add('dragging');
+
+            if (direction === 1) {
+                const nextSpread = currentSpread + 1;
+
+                /*
+                   EZ A LÉNYEG:
+                   a lap alatt már a következő oldalpár van.
+                   Tehát nem ugyanazt látod alatta lapozás közben.
+                */
+                staticLeft.innerHTML = pageHTML(currentSpread, 'left');
+                staticRight.innerHTML = pageHTML(nextSpread, 'right');
+
+                flipLayer.className = 'forward dragging';
+                flipLayer.style.transform = 'translateZ(2px) rotateY(0deg)';
+
+                flipFront.innerHTML = pageHTML(currentSpread, 'right');
+                flipBack.innerHTML = pageHTML(nextSpread, 'left');
+            } else {
+                const prevSpread = currentSpread - 1;
+
+                /*
+                   Visszalapozásnál a bal oldal alatt már az előző bal oldal van.
+                */
+                staticLeft.innerHTML = pageHTML(prevSpread, 'left');
+                staticRight.innerHTML = pageHTML(currentSpread, 'right');
+
+                flipLayer.className = 'backward dragging';
+                flipLayer.style.transform = 'translateZ(2px) rotateY(0deg)';
+
+                flipFront.innerHTML = pageHTML(currentSpread, 'left');
+                flipBack.innerHTML = pageHTML(prevSpread, 'right');
+            }
+        }
+
+        function finishFlip(direction) {
+            currentSpread += direction;
+            renderSpread(currentSpread);
+            cleanupFlip();
+            isFlipping = false;
+        }
+
+        function cleanupFlip() {
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+
+            flipLayer.className = '';
+            flipLayer.style.display = 'none';
+            flipLayer.style.transition = 'none';
+            flipLayer.style.transform = '';
+            flipFront.innerHTML = '';
+            flipBack.innerHTML = '';
+        }
+
+        function animateFlip(direction, complete) {
+            isFlipping = true;
+
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+
+            flipLayer.classList.remove('dragging');
+            flipLayer.style.transition = 'transform .52s cubic-bezier(.25, .8, .25, 1)';
+
+            requestAnimationFrame(() => {
+                if (direction === 1) {
+                    flipLayer.style.transform = complete
+                        ? 'translateZ(2px) rotateY(-180deg)'
+                        : 'translateZ(2px) rotateY(0deg)';
+                } else {
+                    flipLayer.style.transform = complete
+                        ? 'translateZ(2px) rotateY(180deg)'
+                        : 'translateZ(2px) rotateY(0deg)';
+                }
+            });
+
+            window.setTimeout(() => {
+                if (complete) {
+                    finishFlip(direction);
+                } else {
+                    renderSpread(currentSpread);
+                    cleanupFlip();
+                    isFlipping = false;
+                }
+            }, 540);
+        }
+
+        function startDrag(e) {
+            if (isFlipping) return;
+
+            isDragging = true;
+            dragDirection = 0;
+            dragProgress = 0;
+            startX = e.clientX;
+        }
+
+        function moveDrag(e) {
+            if (!isDragging || isFlipping) return;
+
+            const deltaX = e.clientX - startX;
+
+            if (!dragDirection) {
+                if (deltaX < -15 && currentSpread < spreads.length - 1) {
+                    dragDirection = 1;
+                    prepareFlip(1);
+                } else if (deltaX > 15 && currentSpread > 0) {
+                    dragDirection = -1;
+                    prepareFlip(-1);
+                }
+            }
+
+            if (!dragDirection) return;
+
+            if (e.cancelable) e.preventDefault();
+
+            dragProgress = Math.min(1, Math.max(0, Math.abs(deltaX) / (window.innerWidth * .32)));
+
+            if (dragDirection === 1) {
+                applyFlipTransform(`translateZ(2px) rotateY(${-180 * dragProgress}deg)`);
+            } else {
+                applyFlipTransform(`translateZ(2px) rotateY(${180 * dragProgress}deg)`);
+            }
+        }
+
+        function endDrag() {
+            if (!isDragging) return;
+
+            isDragging = false;
+
+            if (!dragDirection) return;
+
+            const complete = dragProgress > .28;
+            animateFlip(dragDirection, complete);
+
+            dragDirection = 0;
+            dragProgress = 0;
+        }
+
+        renderSpread(currentSpread);
+
+        book.addEventListener('pointerdown', startDrag);
+        window.addEventListener('pointermove', moveDrag, { passive: false });
+        window.addEventListener('pointerup', endDrag);
+        window.addEventListener('pointercancel', endDrag);
+    </script>
+</body>
+
+</html>
