@@ -58,19 +58,29 @@
             pointer-events: none; 
         }
 
+        /* TÖRÖLVE a "contain: layout paint;", így kilóg a könyvjelző! */
         #book {
             position: relative;
             width: calc(var(--page-w) * 2);
             height: var(--page-h);
             cursor: grab;
-            contain: layout paint;
-            transition: opacity 0.3s ease-in-out;
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease-in-out;
+        }
+
+        /* --- KÖZÉPRE IGAZÍTÁS ZÁRT ÁLLAPOTBAN --- */
+        #book.closed-front {
+            transform: translateX(calc(var(--page-w) * -0.5));
+        }
+
+        #book.closed-back {
+            transform: translateX(calc(var(--page-w) * 0.5));
         }
 
         #book:active {
             cursor: grabbing;
         }
 
+        /* --- ÁRNYÉK LOGIKA (Csukott állapotban eltűnik) --- */
         #book::before {
             content: '';
             position: absolute;
@@ -81,6 +91,14 @@
             filter: blur(8px);
             z-index: -1;
             pointer-events: none;
+            width: 100%;
+            left: 0;
+            transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        #book.closed-front::before,
+        #book.closed-back::before {
+            opacity: 0; /* Teljesen eltűnik az árnyék! */
         }
 
         #touch-indicator {
@@ -109,24 +127,53 @@
             to { transform: translate(-50%, -50%) scale(1.05); text-shadow: 0 4px 20px rgba(212, 175, 55, 0.6); }
         }
 
+        /* --- KÖNYVJELZŐ STÍLUS --- */
+        #bookmark {
+            position: absolute;
+            top: 25px;
+            right: -30px; /* Kilóg a könyvből */
+            width: 30px;
+            height: 150px;
+            background: #901a1e;
+            color: #f1e5c9;
+            font-family: 'IM Fell English', serif;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 3px;
+            z-index: 0; 
+            transition: right 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+        }
+
+        #bookmark:hover {
+            right: -33px; 
+            background: #b02025;
+        }
+
+        /* A könyvjelző eltűnik, ha a hátsó borítón vagyunk */
+        #book.closed-back #bookmark {
+            opacity: 0;
+            pointer-events: none;
+        }
+
         .static-page {
             position: absolute;
             top: 0;
             width: var(--page-w);
             height: var(--page-h);
             overflow: hidden;
-            box-shadow: inset 0 0 22px rgba(0, 0, 0, .06);
             z-index: 1;
-            contain: layout paint;
         }
 
-        #static-left {
-            left: 0;
-        }
-
-        #static-right {
-            left: var(--page-w);
-        }
+        #static-left { left: 0; }
+        #static-right { left: var(--page-w); }
 
         #flip-layer {
             position: absolute;
@@ -165,17 +212,10 @@
             contain: layout paint;
         }
 
-        #flip-front {
-            transform: translateZ(1px);
-        }
+        #flip-front { transform: translateZ(1px); }
+        #flip-back { transform: rotateY(180deg) translateZ(1px); }
 
-        #flip-back {
-            transform: rotateY(180deg) translateZ(1px);
-        }
-
-        #flip-layer.dragging .flip-face {
-            box-shadow: 0 5px 12px rgba(0, 0, 0, .14);
-        }
+        #flip-layer.dragging .flip-face { box-shadow: 0 5px 12px rgba(0, 0, 0, .14); }
 
         .page-content {
             width: 100%;
@@ -185,6 +225,7 @@
             flex-direction: column;
             overflow: hidden;
             position: relative;
+            box-shadow: inset 0 0 22px rgba(0, 0, 0, .06); /* Bekerült ide, hogy az átlátszó oldalon ne legyen látható keret */
         }
 
         .lined::before {
@@ -255,12 +296,16 @@
             color: #999;
         }
 
-        .page-num.left {
-            left: 30px;
-        }
+        .page-num.left { left: 30px; }
+        .page-num.right { right: 30px; }
 
-        .page-num.right {
-            right: 30px;
+        /* --- Átlátszó oldal a csukott könyvhöz --- */
+        .era-transparent {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+        .era-transparent.lined::before {
+            display: none !important;
         }
 
         .era-cover {
@@ -268,14 +313,9 @@
             box-shadow: inset 0 0 50px rgba(0,0,0,0.9);
             border-left: 2px solid #05080c;
         }
-        
-        .era-cover.lined::before {
-            display: none !important;
-        }
+        .era-cover.lined::before { display: none !important; }
 
-        .era-1920 {
-            background: #f0e6cc;
-        }
+        .era-1920 { background: #f0e6cc; }
 
         .era-1950 {
             background: #dde8f5;
@@ -354,9 +394,7 @@
             transition: color 0.2s;
         }
 
-        .modal-close:hover {
-            color: #000;
-        }
+        .modal-close:hover { color: #000; }
 
         .modal-title {
             font-family: 'IM Fell English', serif;
@@ -393,39 +431,23 @@
         }
 
         @media (max-width: 860px) {
-            :root {
-                --page-w: 280px;
-                --page-h: 420px;
-            }
-
-            .chapter-title {
-                font-size: 19px;
-            }
-
-            .chapter-body {
-                font-size: 13px;
-            }
-            
-            .modal-content {
-                padding: 20px;
-            }
-
-            .modal-layout {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            
-            #modal-img {
-                max-width: 180px; 
-            }
+            :root { --page-w: 280px; --page-h: 420px; }
+            .chapter-title { font-size: 19px; }
+            .chapter-body { font-size: 13px; }
+            .modal-content { padding: 20px; }
+            .modal-layout { flex-direction: column; align-items: center; gap: 15px; }
+            #modal-img { max-width: 180px; }
+            #bookmark { right: -20px; padding: 10px 0; font-size: 10px; width: 25px; top: 15px; height: 100px;}
+            #bookmark:hover { right: -25px; }
         }
     </style>
 </head>
 
 <body>
     <div id="scene" class="idle">
-        <div id="book">
+        <div id="book" class="closed-front">
+            <div id="bookmark" title="Ugrás a Tartalomhoz">TARTALOM</div>
+
             <div id="static-left" class="static-page"></div>
             <div id="static-right" class="static-page"></div>
 
@@ -447,22 +469,16 @@
                 <img id="modal-img" src="" alt="Kép">
                 <div class="modal-body" id="modal-body">Érdekességek...</div>
             </div>
-            
         </div>
     </div>
 
     <script>
         const spreads = [
-            // SPREAD 0: BORÍTÓ
+            // SPREAD 0: ZÁRT KÖNYV (ELÜLSŐ BORÍTÓ) - Bal oldal átlátszó
             {
-                leftEraCss: 'era-cover',
+                leftEraCss: 'era-transparent',
                 rightEraCss: 'era-cover',
-                left: `
-                    <div style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 20px; opacity: 0.6;">
-                        <img src="umszki_logo.jpg" alt="UMSZKI Logo" style="width: 60px; height: 60px; border-radius: 50%; opacity: 0.3; margin-bottom: 15px; filter: grayscale(100%);">
-                        <p style="color: #d4af37; font-size: 11px; letter-spacing: 2px; text-align: center; font-family: 'IM Fell English', serif;">Újpesti Két Tanítási Nyelvű<br>Műszaki Technikum</p>
-                    </div>
-                `,
+                left: ``,
                 right: `
                     <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; padding: 20px;">
                         <h1 style="font-family: 'IM Fell English', serif; font-size: 38px; color: #d4af37; margin-bottom: 35px; text-shadow: 2px 2px 6px rgba(0,0,0,0.9); letter-spacing: 2px;">UMSZKI 100</h1>
@@ -475,18 +491,19 @@
                     </div>
                 `
             },
-            // SPREAD 1: TARTALOMJEGYZÉK
+            // SPREAD 1: KINYITOTT KÖNYV - ELŐSZÓ ÉS TARTALOM
             {
                 leftEraCss: 'era-1920',
                 rightEraCss: 'era-1920',
-                left: `
-                    <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM</div>
+                left:`
+                    <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM <br>1927-2027</div>
                     <div class="chapter-title">Előszó</div>
-                    <div class="chapter-year">A Szerkesztőbizottság</div>
+                    <div class="chapter-year">A Szerkesztőség</div>
                     <div class="chapter-body drop-cap">Ez a kötet száz esztendő emlékeit foglalja magában. Egy évszázadnyi tudás, közösség és szakmai fejlődés krónikája olvasható ezeken a lapokon.</div>
                     <div class="page-num left">1</div>
                 `,
-                right: `
+                // data-target="hanyadik spread"
+                right:`
                     <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM <br>1927-2027</div>
                     <div class="chapter-title">Tartalom</div>
                     <div class="chapter-year">Kattints a fejezetre az ugráshoz</div>
@@ -498,7 +515,7 @@
                     <div class="page-num right">2</div>
                 `
             },
-            // SPREAD 2: I. FEJEZET (1. RÉSZ)
+            // SPREAD 2: I. FEJEZET KEZDETE
             {
                 leftEraCss: 'era-1920',
                 rightEraCss: 'era-1920',
@@ -508,30 +525,30 @@
                     <div class="chapter-body drop-cap">Az intézmény 1927-ben nyitotta meg kapuit. Ebben a nehéz, de reménnyel teli időszakban hatalmas szükség volt jól képzett műszaki szakemberekre.</div>
                     <div class="page-num left">3</div>
                 `,
-                right: `
+                right:`
                     <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
                     <div class="chapter-title">Az első évek</div>
                     <div class="chapter-body">A kezdeti években az iskola épülete még másként festett, de a tanárok elhivatottsága már akkor is a maihoz volt mérhető. A diákok kemény fizikai és szellemi munkával sajátították el az ipari alapismereteket. <br><br>Az első tantervek még a gépészetre fókuszáltak...</div>
                     <div class="page-num right">4</div>
                 `
             },
-            // SPREAD 3: I. FEJEZET (2. RÉSZ)
+            // SPREAD 3: I. FEJEZET (Folytatás)
             {
                 leftEraCss: 'era-1920',
                 rightEraCss: 'era-1920',
                 left: `
-                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA (FOLYTATÁS)</div>
+                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
                     <div class="chapter-body">...mivel abban az időben az ipar gerincét a gépgyártás és a fémfeldolgozás adta. Hamarosan azonban nyilvánvalóvá vált, hogy a technológia gyorsuló ütemben fejlődik.<br><br>Az 1930-as évekre az iskola laboratóriumai és műhelyei folyamatosan bővültek. Új esztergagépek és mérőműszerek érkeztek, melyek mind a gyakorlati oktatás magas színvonalát szolgálták.</div>
                     <div class="page-num left">5</div>
                 `,
                 right: `
-                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA (FOLYTATÁS)</div>
+                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
                     <div class="chapter-title">A háború vihara</div>
                     <div class="chapter-body">Az 1940-es évek elejére az intézmény életére sötét árnyékot vetettek a világesemények. Az oktatást egyre nehezebb volt fenntartani, mégis a falak között mindvégig megmaradt a szolidaritás és a tudás tisztelete.</div>
                     <div class="page-num right">6</div>
                 `
             },
-            // SPREAD 4: II. FEJEZET 
+            // SPREAD 4: II. FEJEZET
             {
                 leftEraCss: 'era-1950',
                 rightEraCss: 'era-1950',
@@ -541,7 +558,7 @@
                     <div class="chapter-body drop-cap">A háború utáni években az iskola története új fejezethez érkezett. A romok eltakarítása után az oktatás soha nem látott lendülettel indult újra.</div>
                     <div class="page-num left">7</div>
                 `,
-                right: `
+                right:`
                     <div class="page-header">II. FEJEZET – ÚJJÁÉPÍTÉS</div>
                     <div class="chapter-title">Landler-korszak</div>
                     <div class="chapter-body">A technikai oktatás szerepe egyre hangsúlyosabbá vált. Ebben a korszakban az intézmény <span class="info-link" data-name="Landler Jenő" data-info="Landler Jenő (1875–1928) ügyvéd és politikus. Az iskola 1950 és 1990 között viselte a nevét (Landler Jenő Gép- és Híradásipari Technikum), ekkor vált az intézmény a hazai híradástechnikai oktatás legfontosabb központjává." data-img="KEPEK/landler_jeno.jpg">Landler Jenő</span> nevét viselte, és óriási fejlődésen ment keresztül a híradástechnika irányába.</div>
@@ -552,18 +569,30 @@
             {
                 leftEraCss: 'era-1990',
                 rightEraCss: 'era-1990',
-                left: `
+                left:`
                     <div class="page-header">III. FEJEZET – INFORMATIKA</div>
                     <div class="chapter-title">Az informatika hajnala</div>
                     <div class="chapter-body drop-cap">A számítógépek megjelenése új irányt adott az oktatásnak az 1980-as és 90-es évek fordulóján. Megjelentek az első PC-k a tantermekben.</div>
                     <div class="page-num left">9</div>
-                `,
-                right: `
+                ` ,
+                right:`
                     <div class="page-header">III. FEJEZET – INFORMATIKA</div>
                     <div class="chapter-title">Modern eszközök</div>
                     <div class="chapter-body">A műszaki képzés egyre jobban összekapcsolódott a digitális világgal. A programozás és a hálózatépítés az alaptanterv része lett.</div>
                     <div class="page-num right">10</div>
-                `
+                ` 
+            },
+            // SPREAD 6: HÁTSÓ BORÍTÓ (ZÁRT KÖNYV) - Jobb oldal átlátszó
+            {
+                leftEraCss: 'era-cover',
+                rightEraCss: 'era-transparent',
+                left: `
+                    <div style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 20px; opacity: 0.6;">
+                        <img src="umszki_logo.jpg" alt="UMSZKI Logo" style="width: 60px; height: 60px; border-radius: 50%; opacity: 0.3; margin-bottom: 15px; filter: grayscale(100%);">
+                        <p style="color: #d4af37; font-size: 11px; letter-spacing: 2px; text-align: center; font-family: 'IM Fell English', serif;">Újpesti Két Tanítási Nyelvű<br>Műszaki Technikum</p>
+                    </div>
+                `,
+                right: ``
             }
         ];
 
@@ -586,24 +615,21 @@
         let rafId = null;
         let pendingTransform = '';
 
-        // --- ÚJ: Fullscreen kezelő logika ---
         function requestFullScreen() {
-            // Ellenőrizzük, hogy NEM vagyunk-e már teljes képernyőn
             if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
                 const elem = document.documentElement;
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen().catch(err => console.log("Hiba a teljes képernyő indításakor:", err));
-                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                } else if (elem.webkitRequestFullscreen) {
                     elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { /* IE11 */
+                } else if (elem.msRequestFullscreen) {
                     elem.msRequestFullscreen();
                 }
             }
         }
 
-        // --- IDŐZÍTŐ LOGIKA ---
         let idleTimeout;
-        const IDLE_TIME_LIMIT = 10000; // 10 másodperc (TESZT ÜZEMMÓD)
+        const IDLE_TIME_LIMIT = 10000; // TESZTÜZEMMÓD! Élesítéshez írd át: 900000 (15 perc)
 
         function wakeUpBook() {
             if (scene.classList.contains('idle')) {
@@ -630,12 +656,9 @@
             idleTimeout = setTimeout(putDownBook, IDLE_TIME_LIMIT);
         }
 
-        // Bármilyen interakció indítja a teljes képernyőt, és kezeli az időzítőt
         ['pointerdown', 'pointermove', 'keydown', 'wheel', 'click'].forEach(evt => {
             window.addEventListener(evt, () => {
-                // Megpróbál teljes képernyőre váltani
                 requestFullScreen();
-                
                 if (scene.classList.contains('idle')) {
                     wakeUpBook();
                 } else {
@@ -650,24 +673,32 @@
             }, 600);
         });
 
+        // --- ÚJ: Kezeli a könyv eltolását és árnyékát, ha valamelyik borítón vagyunk ---
+        function updateBookState(targetIndex) {
+            book.classList.remove('closed-front', 'closed-back');
+            
+            if (targetIndex === 0) {
+                book.classList.add('closed-front');
+            } else if (targetIndex === spreads.length - 1) {
+                book.classList.add('closed-back');
+            }
+        }
+
         function pageHTML(index, side) {
             const spread = spreads[index];
-
-            if (!spread) {
-                return `
-                    <div class="page-content era-2000" style="align-items:center;justify-content:center;">
-                        <div class="chapter-title" style="color:#777;">VÉGE</div>
-                    </div>
-                `;
-            }
+            if (!spread) return '';
 
             const css = side === 'left' ? spread.leftEraCss : spread.rightEraCss;
             const content = side === 'left' ? spread.left : spread.right;
 
-            return `<div class="page-content ${css} lined">${content}</div>`;
+            // Ha átlátszó oldal, ne rajzoljon vonalakat se
+            const linedClass = css === 'era-transparent' ? '' : 'lined';
+
+            return `<div class="page-content ${css} ${linedClass}">${content}</div>`;
         }
 
         function renderSpread(index) {
+            updateBookState(index);
             staticLeft.innerHTML = pageHTML(index, 'left');
             staticRight.innerHTML = pageHTML(index, 'right');
         }
@@ -690,6 +721,7 @@
 
             if (direction === 1) {
                 const nextSpread = currentSpread + 1;
+                updateBookState(nextSpread); // Az árnyék és a csúsztatás előre elkezd mozogni
 
                 staticLeft.innerHTML = pageHTML(currentSpread, 'left');
                 staticRight.innerHTML = pageHTML(nextSpread, 'right');
@@ -701,6 +733,7 @@
                 flipBack.innerHTML = pageHTML(nextSpread, 'left');
             } else {
                 const prevSpread = currentSpread - 1;
+                updateBookState(prevSpread); // Visszacsúsztatja, ha a borítóra érünk
 
                 staticLeft.innerHTML = pageHTML(prevSpread, 'left');
                 staticRight.innerHTML = pageHTML(currentSpread, 'right');
@@ -725,6 +758,7 @@
                 cancelAnimationFrame(rafId);
                 rafId = null;
             }
+            updateBookState(currentSpread); // Visszaállítja a pozíciót, ha megszakadt a húzás
 
             flipLayer.className = '';
             flipLayer.style.display = 'none';
@@ -771,8 +805,13 @@
         function startDrag(e) {
             if (isFlipping || scene.classList.contains('idle')) return;
 
-            isDragging = true;
+            // FONTOS JAVÍTÁS: Mindig lenullázzuk, hogy a könyvjelző-kattintás működjön
             wasDragged = false; 
+            
+            // Ha a könyvjelzőre nyomtunk, akkor ne próbáljon meg lapozni az ujjhúzással
+            if (e.target.closest('#bookmark')) return;
+
+            isDragging = true;
             dragDirection = 0;
             dragProgress = 0;
             startX = e.clientX;
@@ -828,6 +867,7 @@
             if (index === currentSpread || index < 0 || index >= spreads.length) return;
             
             book.style.opacity = '0';
+            updateBookState(index);
             
             setTimeout(() => {
                 currentSpread = index;
@@ -859,6 +899,12 @@
 
         book.addEventListener('click', (e) => {
             if (wasDragged) return;
+
+            // Könyvjelzőre kattintás kezelése - Ugrás az 1. oldalra (Tartalomjegyzék)
+            if (e.target.closest('#bookmark')) {
+                jumpToSpread(1); 
+                return;
+            }
 
             const tocLink = e.target.closest('.toc-link');
             if (tocLink) {
