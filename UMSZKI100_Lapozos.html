@@ -48,6 +48,14 @@
         #scene {
             position: relative;
             perspective: 1800px;
+            transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 1.2s ease;
+            z-index: 5;
+        }
+
+        #scene.idle {
+            transform: scale(0.65) translateY(20vh) rotateX(15deg);
+            filter: brightness(0.4);
+            pointer-events: none; 
         }
 
         #book {
@@ -56,6 +64,7 @@
             height: var(--page-h);
             cursor: grab;
             contain: layout paint;
+            transition: opacity 0.3s ease-in-out;
         }
 
         #book:active {
@@ -72,6 +81,32 @@
             filter: blur(8px);
             z-index: -1;
             pointer-events: none;
+        }
+
+        #touch-indicator {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #d4af37;
+            font-family: 'IM Fell English', serif;
+            font-size: 26px;
+            letter-spacing: 3px;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s ease;
+            z-index: 10;
+        }
+
+        #scene.idle + #touch-indicator {
+            opacity: 1;
+            animation: pulseText 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseText {
+            from { transform: translate(-50%, -50%) scale(0.95); text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+            to { transform: translate(-50%, -50%) scale(1.05); text-shadow: 0 4px 20px rgba(212, 175, 55, 0.6); }
         }
 
         .static-page {
@@ -93,10 +128,6 @@
             left: var(--page-w);
         }
 
-        /*
-           Ez az egyetlen mozgó 3D lap.
-           Alatta mindig már a következő/előző oldal van berenderelve.
-        */
         #flip-layer {
             position: absolute;
             top: 0;
@@ -232,6 +263,16 @@
             right: 30px;
         }
 
+        .era-cover {
+            background: linear-gradient(135deg, #18253b 0%, #0a111a 100%);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.9);
+            border-left: 2px solid #05080c;
+        }
+        
+        .era-cover.lined::before {
+            display: none !important;
+        }
+
         .era-1920 {
             background: #f0e6cc;
         }
@@ -255,6 +296,102 @@
             color: #e0e0e0;
         }
 
+        .toc-link, .info-link {
+            color: #8c7340;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+            position: relative;
+            z-index: 20;
+            text-decoration: underline;
+            text-decoration-color: rgba(140, 115, 64, 0.4);
+        }
+
+        .toc-link:hover, .info-link:hover {
+            color: #d4af37;
+            text-decoration-color: #d4af37;
+        }
+
+        #info-modal {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; 
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #info-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #f0e6cc;
+            padding: 30px 40px;
+            border-radius: 6px;
+            max-width: 550px;
+            width: 90%;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            border: 2px solid #a08c5b;
+            text-align: center;
+            position: relative;
+            font-family: 'Crimson Text', Georgia, serif;
+            max-height: 90vh;
+            overflow-y: auto; 
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px; right: 20px;
+            cursor: pointer;
+            font-size: 28px;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #000;
+        }
+
+        .modal-title {
+            font-family: 'IM Fell English', serif;
+            font-size: 26px;
+            color: #2a1a0a;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #d0c5ab;
+            padding-bottom: 10px;
+        }
+
+        .modal-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; 
+            text-align: left;
+        }
+
+        #modal-img {
+            max-width: 140px; 
+            height: auto;
+            flex-shrink: 0; 
+            border-radius: 4px;
+            border: 2px solid #d0c5ab;
+            display: none; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .modal-body {
+            font-size: 16px;
+            color: #3a2a18;
+            line-height: 1.6;
+            text-align: justify;
+            flex-grow: 1; 
+        }
+
         @media (max-width: 860px) {
             :root {
                 --page-w: 280px;
@@ -268,12 +405,26 @@
             .chapter-body {
                 font-size: 13px;
             }
+            
+            .modal-content {
+                padding: 20px;
+            }
+
+            .modal-layout {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            #modal-img {
+                max-width: 180px; 
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="scene">
+    <div id="scene" class="idle">
         <div id="book">
             <div id="static-left" class="static-page"></div>
             <div id="static-right" class="static-page"></div>
@@ -284,9 +435,47 @@
             </div>
         </div>
     </div>
+    
+    <div id="touch-indicator">Érintsd meg a képernyőt a könyv olvasásához</div>
+
+    <div id="info-modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal()">&times;</div>
+            <div class="modal-title" id="modal-title">Név</div>
+            
+            <div class="modal-layout">
+                <img id="modal-img" src="" alt="Kép">
+                <div class="modal-body" id="modal-body">Érdekességek...</div>
+            </div>
+            
+        </div>
+    </div>
 
     <script>
         const spreads = [
+            // SPREAD 0: BORÍTÓ
+            {
+                leftEraCss: 'era-cover',
+                rightEraCss: 'era-cover',
+                left: `
+                    <div style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 20px; opacity: 0.6;">
+                        <img src="umszki_logo.jpg" alt="UMSZKI Logo" style="width: 60px; height: 60px; border-radius: 50%; opacity: 0.3; margin-bottom: 15px; filter: grayscale(100%);">
+                        <p style="color: #d4af37; font-size: 11px; letter-spacing: 2px; text-align: center; font-family: 'IM Fell English', serif;">Újpesti Két Tanítási Nyelvű<br>Műszaki Technikum</p>
+                    </div>
+                `,
+                right: `
+                    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; padding: 20px;">
+                        <h1 style="font-family: 'IM Fell English', serif; font-size: 38px; color: #d4af37; margin-bottom: 35px; text-shadow: 2px 2px 6px rgba(0,0,0,0.9); letter-spacing: 2px;">UMSZKI 100</h1>
+                        
+                        <img src="umszki_logo.jpg" alt="UMSZKI Logo" style="width: 170px; height: 170px; border-radius: 50%; margin: 0 auto 35px; box-shadow: 0 12px 25px rgba(0,0,0,0.8), 0 0 0 3px #d4af37;">
+                        
+                        <h2 style="font-family: 'Crimson Text', serif; font-size: 20px; color: #f1e5c9; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase;">Történelmi Archívum</h2>
+                        <div style="width: 50px; height: 2px; background-color: #a08c5b; margin: 0 auto 15px;"></div>
+                        <p style="font-family: 'IM Fell English', serif; font-size: 18px; color: #d4af37; letter-spacing: 5px;">1927 - 2027</p>
+                    </div>
+                `
+            },
+            // SPREAD 1: TARTALOMJEGYZÉK
             {
                 leftEraCss: 'era-1920',
                 rightEraCss: 'era-1920',
@@ -294,68 +483,86 @@
                     <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM</div>
                     <div class="chapter-title">Előszó</div>
                     <div class="chapter-year">A Szerkesztőbizottság</div>
-                    <div class="chapter-body drop-cap">Ez a kötet száz esztendő emlékeit foglalja magában...</div>
-                    <div class="page-num left">ii</div>
+                    <div class="chapter-body drop-cap">Ez a kötet száz esztendő emlékeit foglalja magában. Egy évszázadnyi tudás, közösség és szakmai fejlődés krónikája olvasható ezeken a lapokon.</div>
+                    <div class="page-num left">1</div>
                 `,
                 right: `
                     <div class="page-header">UMSZKI 100 – TÖRTÉNELMI ARCHÍVUM <br>1927-2027</div>
                     <div class="chapter-title">Tartalom</div>
-                    <div class="chapter-year">Fejezetek</div>
-                    <div class="chapter-body" style="font-size:14px;line-height:2.2;">
-                        I. Az alapítás kora — 1924–1944<br>
-                        II. Újjáépítés és Landler-korszak<br>
-                        III. Az informatika hajnala<br>
-                        IV. Modern UMSZKI<br>
+                    <div class="chapter-year">Kattints a fejezetre az ugráshoz</div>
+                    <div class="chapter-body" style="font-size:14px;line-height:2.4;">
+                        <span class="toc-link" data-target="2">I. Az alapítás kora — 1927–1944</span><br>
+                        <span class="toc-link" data-target="4">II. Újjáépítés és Landler-korszak</span><br>
+                        <span class="toc-link" data-target="5">III. Az informatika hajnala</span><br>
                     </div>
-                    <div class="page-num right">iii</div>
+                    <div class="page-num right">2</div>
                 `
             },
+            // SPREAD 2: I. FEJEZET (1. RÉSZ)
             {
                 leftEraCss: 'era-1920',
                 rightEraCss: 'era-1920',
                 left: `
                     <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
                     <div class="chapter-title">Az alapítás előzményei</div>
-                    <div class="chapter-body drop-cap">Most már lapozás közben ez az oldal jelenik meg a forduló lap hátoldalán.</div>
-                    <div class="page-num left">2</div>
+                    <div class="chapter-body drop-cap">Az intézmény 1927-ben nyitotta meg kapuit. Ebben a nehéz, de reménnyel teli időszakban hatalmas szükség volt jól képzett műszaki szakemberekre.</div>
+                    <div class="page-num left">3</div>
                 `,
                 right: `
                     <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA</div>
                     <div class="chapter-title">Az első évek</div>
-                    <div class="chapter-body">Ez pedig a következő jobb oldal, ami már a lap alatt vár, miközben lapozol.</div>
-                    <div class="page-num right">3</div>
+                    <div class="chapter-body">A kezdeti években az iskola épülete még másként festett, de a tanárok elhivatottsága már akkor is a maihoz volt mérhető. A diákok kemény fizikai és szellemi munkával sajátították el az ipari alapismereteket. <br><br>Az első tantervek még a gépészetre fókuszáltak...</div>
+                    <div class="page-num right">4</div>
                 `
             },
+            // SPREAD 3: I. FEJEZET (2. RÉSZ)
+            {
+                leftEraCss: 'era-1920',
+                rightEraCss: 'era-1920',
+                left: `
+                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA (FOLYTATÁS)</div>
+                    <div class="chapter-body">...mivel abban az időben az ipar gerincét a gépgyártás és a fémfeldolgozás adta. Hamarosan azonban nyilvánvalóvá vált, hogy a technológia gyorsuló ütemben fejlődik.<br><br>Az 1930-as évekre az iskola laboratóriumai és műhelyei folyamatosan bővültek. Új esztergagépek és mérőműszerek érkeztek, melyek mind a gyakorlati oktatás magas színvonalát szolgálták.</div>
+                    <div class="page-num left">5</div>
+                `,
+                right: `
+                    <div class="page-header">I. FEJEZET – AZ ALAPÍTÁS KORA (FOLYTATÁS)</div>
+                    <div class="chapter-title">A háború vihara</div>
+                    <div class="chapter-body">Az 1940-es évek elejére az intézmény életére sötét árnyékot vetettek a világesemények. Az oktatást egyre nehezebb volt fenntartani, mégis a falak között mindvégig megmaradt a szolidaritás és a tudás tisztelete.</div>
+                    <div class="page-num right">6</div>
+                `
+            },
+            // SPREAD 4: II. FEJEZET 
             {
                 leftEraCss: 'era-1950',
                 rightEraCss: 'era-1950',
                 left: `
                     <div class="page-header">II. FEJEZET – ÚJJÁÉPÍTÉS</div>
                     <div class="chapter-title">Új korszak</div>
-                    <div class="chapter-body drop-cap">A háború utáni években az iskola története új fejezethez érkezett.</div>
-                    <div class="page-num left">4</div>
+                    <div class="chapter-body drop-cap">A háború utáni években az iskola története új fejezethez érkezett. A romok eltakarítása után az oktatás soha nem látott lendülettel indult újra.</div>
+                    <div class="page-num left">7</div>
                 `,
                 right: `
                     <div class="page-header">II. FEJEZET – ÚJJÁÉPÍTÉS</div>
                     <div class="chapter-title">Landler-korszak</div>
-                    <div class="chapter-body">A technikai oktatás szerepe egyre hangsúlyosabbá vált.</div>
-                    <div class="page-num right">5</div>
+                    <div class="chapter-body">A technikai oktatás szerepe egyre hangsúlyosabbá vált. Ebben a korszakban az intézmény <span class="info-link" data-name="Landler Jenő" data-info="Landler Jenő (1875–1928) ügyvéd és politikus. Az iskola 1950 és 1990 között viselte a nevét (Landler Jenő Gép- és Híradásipari Technikum), ekkor vált az intézmény a hazai híradástechnikai oktatás legfontosabb központjává." data-img="KEPEK/landler_jeno.jpg">Landler Jenő</span> nevét viselte, és óriási fejlődésen ment keresztül a híradástechnika irányába.</div>
+                    <div class="page-num right">8</div>
                 `
             },
+            // SPREAD 5: III. FEJEZET
             {
                 leftEraCss: 'era-1990',
                 rightEraCss: 'era-1990',
                 left: `
                     <div class="page-header">III. FEJEZET – INFORMATIKA</div>
                     <div class="chapter-title">Az informatika hajnala</div>
-                    <div class="chapter-body drop-cap">A számítógépek megjelenése új irányt adott az oktatásnak.</div>
-                    <div class="page-num left">6</div>
+                    <div class="chapter-body drop-cap">A számítógépek megjelenése új irányt adott az oktatásnak az 1980-as és 90-es évek fordulóján. Megjelentek az első PC-k a tantermekben.</div>
+                    <div class="page-num left">9</div>
                 `,
                 right: `
                     <div class="page-header">III. FEJEZET – INFORMATIKA</div>
                     <div class="chapter-title">Modern eszközök</div>
-                    <div class="chapter-body">A műszaki képzés egyre jobban összekapcsolódott a digitális világgal.</div>
-                    <div class="page-num right">7</div>
+                    <div class="chapter-body">A műszaki képzés egyre jobban összekapcsolódott a digitális világgal. A programozás és a hálózatépítés az alaptanterv része lett.</div>
+                    <div class="page-num right">10</div>
                 `
             }
         ];
@@ -366,6 +573,7 @@
         const flipFront = document.getElementById('flip-front');
         const flipBack = document.getElementById('flip-back');
         const book = document.getElementById('book');
+        const scene = document.getElementById('scene');
 
         let currentSpread = 0;
         let isDragging = false;
@@ -373,9 +581,74 @@
         let dragDirection = 0;
         let startX = 0;
         let dragProgress = 0;
+        let wasDragged = false; 
 
         let rafId = null;
         let pendingTransform = '';
+
+        // --- ÚJ: Fullscreen kezelő logika ---
+        function requestFullScreen() {
+            // Ellenőrizzük, hogy NEM vagyunk-e már teljes képernyőn
+            if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                const elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen().catch(err => console.log("Hiba a teljes képernyő indításakor:", err));
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            }
+        }
+
+        // --- IDŐZÍTŐ LOGIKA ---
+        let idleTimeout;
+        const IDLE_TIME_LIMIT = 10000; // 10 másodperc (TESZT ÜZEMMÓD)
+
+        function wakeUpBook() {
+            if (scene.classList.contains('idle')) {
+                scene.classList.remove('idle');
+            }
+            resetIdleTimer();
+        }
+
+        function putDownBook() {
+            closeModal();
+
+            if (currentSpread !== 0) {
+                jumpToSpread(0);
+                setTimeout(() => {
+                    scene.classList.add('idle');
+                }, 350);
+            } else {
+                scene.classList.add('idle');
+            }
+        }
+
+        function resetIdleTimer() {
+            clearTimeout(idleTimeout);
+            idleTimeout = setTimeout(putDownBook, IDLE_TIME_LIMIT);
+        }
+
+        // Bármilyen interakció indítja a teljes képernyőt, és kezeli az időzítőt
+        ['pointerdown', 'pointermove', 'keydown', 'wheel', 'click'].forEach(evt => {
+            window.addEventListener(evt, () => {
+                // Megpróbál teljes képernyőre váltani
+                requestFullScreen();
+                
+                if (scene.classList.contains('idle')) {
+                    wakeUpBook();
+                } else {
+                    resetIdleTimer();
+                }
+            });
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                wakeUpBook();
+            }, 600);
+        });
 
         function pageHTML(index, side) {
             const spread = spreads[index];
@@ -418,11 +691,6 @@
             if (direction === 1) {
                 const nextSpread = currentSpread + 1;
 
-                /*
-                   EZ A LÉNYEG:
-                   a lap alatt már a következő oldalpár van.
-                   Tehát nem ugyanazt látod alatta lapozás közben.
-                */
                 staticLeft.innerHTML = pageHTML(currentSpread, 'left');
                 staticRight.innerHTML = pageHTML(nextSpread, 'right');
 
@@ -434,9 +702,6 @@
             } else {
                 const prevSpread = currentSpread - 1;
 
-                /*
-                   Visszalapozásnál a bal oldal alatt már az előző bal oldal van.
-                */
                 staticLeft.innerHTML = pageHTML(prevSpread, 'left');
                 staticRight.innerHTML = pageHTML(currentSpread, 'right');
 
@@ -504,9 +769,10 @@
         }
 
         function startDrag(e) {
-            if (isFlipping) return;
+            if (isFlipping || scene.classList.contains('idle')) return;
 
             isDragging = true;
+            wasDragged = false; 
             dragDirection = 0;
             dragProgress = 0;
             startX = e.clientX;
@@ -516,6 +782,10 @@
             if (!isDragging || isFlipping) return;
 
             const deltaX = e.clientX - startX;
+
+            if (Math.abs(deltaX) > 10) {
+                wasDragged = true; 
+            }
 
             if (!dragDirection) {
                 if (deltaX < -15 && currentSpread < spreads.length - 1) {
@@ -553,6 +823,65 @@
             dragDirection = 0;
             dragProgress = 0;
         }
+
+        function jumpToSpread(index) {
+            if (index === currentSpread || index < 0 || index >= spreads.length) return;
+            
+            book.style.opacity = '0';
+            
+            setTimeout(() => {
+                currentSpread = index;
+                renderSpread(currentSpread);
+                cleanupFlip();
+                book.style.opacity = '1';
+            }, 300); 
+        }
+
+        function openModal(name, info, imageUrl) {
+            document.getElementById('modal-title').innerText = name;
+            document.getElementById('modal-body').innerHTML = info;
+            
+            const modalImg = document.getElementById('modal-img');
+            if (imageUrl) {
+                modalImg.src = imageUrl;
+                modalImg.style.display = 'block'; 
+            } else {
+                modalImg.style.display = 'none'; 
+                modalImg.src = '';
+            }
+            
+            document.getElementById('info-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('info-modal').classList.remove('active');
+        }
+
+        book.addEventListener('click', (e) => {
+            if (wasDragged) return;
+
+            const tocLink = e.target.closest('.toc-link');
+            if (tocLink) {
+                const targetIndex = parseInt(tocLink.getAttribute('data-target'), 10);
+                jumpToSpread(targetIndex);
+                return;
+            }
+
+            const infoLink = e.target.closest('.info-link');
+            if (infoLink) {
+                const name = infoLink.getAttribute('data-name');
+                const info = infoLink.getAttribute('data-info');
+                const imageUrl = infoLink.getAttribute('data-img'); 
+                
+                openModal(name, info, imageUrl);
+            }
+        });
+
+        document.getElementById('info-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'info-modal') {
+                closeModal();
+            }
+        });
 
         renderSpread(currentSpread);
 
