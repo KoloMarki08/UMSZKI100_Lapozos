@@ -1,2 +1,2 @@
-# UMSZKI100_Lapozos
+# UMSZKI100
 
