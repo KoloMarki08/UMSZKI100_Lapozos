@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UMSZKI Múzeum – kiállítási tárgyak</title>
+  <meta name="description"
+    content="Az Újpesti UMSZKI múzeumának kiállítási tárgyai bővebb leírásokkal és fotógalériával." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="UMSZKI Múzeum kezdőlap">
+      <img class="brand-logo" src="assets/logo/umszki-logo.png" alt="UMSZKI logó">
+      <span><strong>UMSZKI Múzeum</strong><small>Kiállítási tárgyak</small></span>
+    </a>
+    <nav>
+      <a href="#targyak">Tárgyak</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Régi szertár · digitális katalógus</p>
+        <h1>Laboratóriumi és műhelygyakorlati műszerek</h1>
+        <p class="lead">A kiállítás tárgyai rövid leírással, bővebb megnyitással és mini fotógalériával.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#targyak">Tárgyak böngészése</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <strong>UMSZKI</strong>
+        <span>múzeumi tárgykatalógus</span>
+
+      </aside>
+    </section>
+
+    <section class="museum-media-section" id="tarlatvezetes" aria-labelledby="videoTitle">
+      <div class="section-heading">
+        <p class="eyebrow">Tárlatvezetés</p>
+        <h2 id="videoTitle">Tárlatvezető videó</h2>
+
+      </div>
+
+      <div class="video-frame">
+        <iframe
+          src="https://umszki-my.sharepoint.com/personal/peter_kovacs_umszki_hu/_layouts/15/embed.aspx?UniqueId=b548bc12-dac5-4e54-b8c0-f2f6b35857d8&embed=%7B%22ust%22%3Afalse%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+          width="100%" height="700" frameborder="0" scrolling="no" allowfullscreen title="Tárlatvezető videó">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="museum-map-image-section" id="teremterkep" aria-labelledby="mapImageTitle">
+      <div class="section-heading">
+        <p class="eyebrow">Teremtérkép</p>
+        <h2 id="mapImageTitle">A kiállítás térképe</h2>
+      </div>
+
+      <figure class="map-image-frame">
+        <img src="assets/terkep/terem-terkep.png" alt="Az UMSZKI múzeum terem térképe">
+
+        <figcaption>A számok a kiállításon lévő tárgyak sorszámát jelentik.</figcaption>
+      </figure>
+    </section>
+
+
+
+
+    <section class="toolbar" id="targyak" aria-label="Keresés és szűrés">
+      <label class="search-box">
+        <span>Keresés</span>
+        <input id="searchInput" type="search" placeholder="pl. galvanométer, Csepel, mikroszkóp…" />
+      </label>
+      <label class="filter-box">
+        <span>Kategória</span>
+        <select id="categorySelect">
+          <option value="all">Összes kategória</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="cards" id="cards" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>UMSZKI Múzeum – Kovács Péter</p>
+  </footer>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="card-top">
+        <span class="number"></span>
+        <span class="category"></span>
+      </div>
+      <h2></h2>
+      <p class="meta"></p>
+      <p class="description"></p>
+      <div class="card-actions">
+        <button class="small-button open-detail" type="button">Megnyitás</button>
+      </div>
+    </article>
+  </template>
+
+  <div class="modal-backdrop" id="detailModal" aria-hidden="true">
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Részletek bezárása">×</button>
+      <div class="modal-head">
+        <span class="modal-number" id="modalNumber"></span>
+        <span class="modal-category" id="modalCategory"></span>
+      </div>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-meta" id="modalMeta"></p>
+      <p class="modal-description" id="modalDescription"></p>
+      <div class="modal-gallery" id="modalGallery" aria-label="Tárgy fotói"></div>
+      <p class="gallery-hint">A képekre kattintva nagyobb nézetben is megnyílnak. A hiányzó képek egyszerűen nem
+        jelennek meg.</p>
+    </section>
+  </div>
+
+  <div class="image-viewer" id="imageViewer" aria-hidden="true">
+    <button class="image-viewer-close" id="imageViewerClose" type="button" aria-label="Kép bezárása">×</button>
+    <img id="imageViewerImg" alt="Tárgyfotó nagyítva" />
+  </div>
+
+  <script src="items.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
