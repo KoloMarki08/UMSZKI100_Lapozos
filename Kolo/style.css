@@ -520,7 +520,7 @@ body::before {
     font-style: italic;
     color: #4a3a28;
 }
-
+era-uniform
 .drop-cap::first-letter {
     font-family: 'IM Fell English', serif;
     font-size: 52px;
@@ -570,6 +570,24 @@ body::before {
 .era-uniform {
     background: #f4ecd8;
 }
+
+.era-szemelyek{
+    background: #19468a;
+}
+
+.era-esemeny{
+    background:#7c2c18;
+}
+
+.era-helyiseg{
+    background:#0d7904;
+}
+
+.era-targyak{
+    background:#cea210;
+}
+
+
 
 .toc-link {
     color: #8c7340;
