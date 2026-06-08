@@ -1,8 +1,9 @@
 :root {
     --desk-dark: #1a0f05;
     --desk-mid: #3b2209;
-    --page-w: 380px;
-    --page-h: 520px;
+    --page-h: 92vh;
+    --page-w: min(48vw, calc(var(--page-h) * 0.7));
+    --base-lh: 3.6vh;
 }
 
 * {
@@ -36,7 +37,7 @@ body::before {
 #scene {
     position: relative;
     perspective: 1800px;
-    transform: scale(1.25);
+    transform: scale(1);
     transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 1.2s ease;
     z-index: 5;
 }
@@ -71,10 +72,10 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    transform: translateY(26px);
+    transform: translateY(3vh);
     background: rgba(0, 0, 0, .38);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, .85);
-    filter: blur(8px);
+    box-shadow: 0 4vh 8vh rgba(0, 0, 0, .85);
+    filter: blur(1vh);
     z-index: -1;
     pointer-events: none;
     width: 100%;
@@ -94,8 +95,8 @@ body::before {
     transform: translate(-50%, -50%);
     color: #d4af37;
     font-family: 'IM Fell English', serif;
-    font-size: 26px;
-    letter-spacing: 3px;
+    font-size: 3vh;
+    letter-spacing: 0.3vw;
     text-align: center;
     opacity: 0;
     pointer-events: none;
@@ -111,41 +112,41 @@ body::before {
 @keyframes pulseText {
     from {
         transform: translate(-50%, -50%) scale(0.95);
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 0.2vh 1vh rgba(0, 0, 0, 0.8);
     }
 
     to {
         transform: translate(-50%, -50%) scale(1.05);
-        text-shadow: 0 4px 20px rgba(212, 175, 55, 0.6);
+        text-shadow: 0 0.4vh 2vh rgba(212, 175, 55, 0.6);
     }
 }
 
 #bookmark {
     position: absolute;
-    top: 25px;
-    right: -30px;
-    width: 30px;
-    height: 150px;
+    top: 3vh;
+    right: -3.5vh;
+    width: 3.5vh;
+    height: 18vh;
     background: #901a1e;
     color: #f1e5c9;
     font-family: 'IM Fell English', serif;
-    font-size: 11px;
+    font-size: 1.4vh;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0.5vh 0.5vh 0;
     cursor: pointer;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0.2vh 0.2vh 1vh rgba(0, 0, 0, 0.4);
     writing-mode: vertical-rl;
     text-orientation: upright;
-    letter-spacing: 3px;
+    letter-spacing: 0.3vh;
     z-index: 0;
     transition: right 0.2s, background 0.2s, opacity 0.3s;
 }
 
 #bookmark:hover {
-    right: -33px;
+    right: -4vh;
     background: #b02025;
 }
 
@@ -202,7 +203,7 @@ body::before {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform-style: preserve-3d;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, .18);
 }
 
 #flip-front {
@@ -213,15 +214,17 @@ body::before {
     transform: rotateY(180deg) translateZ(1px);
 }
 
+/* --- TARTALOM --- */
 .page-content {
     width: 100%;
     height: 100%;
-    padding: 32px 32px 44px;
+    padding: 4vh 4vw 5vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    box-shadow: inset 0 0 22px rgba(0, 0, 0, .06);
+    box-shadow: inset 0 0 3vh rgba(0, 0, 0, .06);
+    color: inherit;
 }
 
 .lined::before {
@@ -231,13 +234,14 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: repeating-linear-gradient(transparent, transparent 31px, rgba(0, 0, 0, .1) 31px, rgba(0, 0, 0, .1) 32px);
-    background-position: 0 22px;
+    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px),
+            rgba(0, 0, 0, .1) calc(var(--base-lh) - 1px), rgba(0, 0, 0, .1) var(--base-lh));
+    background-position: 0 2.8vh;
     pointer-events: none;
     z-index: 0;
 }
 
-/* ELSŐ BORÍTÓ STÍLUSOK */
+/* BORÍTÓK */
 .cover-front-container {
     text-align: center;
     display: flex;
@@ -245,79 +249,78 @@ body::before {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 20px;
+    padding: 2vh;
 }
 
 .cover-front-title {
     font-family: 'IM Fell English', serif;
-    font-size: 38px;
+    font-size: 5.5vh;
     color: #d4af37;
-    margin-bottom: 35px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-    letter-spacing: 2px;
+    margin-bottom: 4vh;
+    text-shadow: 0.2vh 0.2vh 1vh rgba(0, 0, 0, 0.9);
+    letter-spacing: 0.2vh;
 }
 
 .cover-front-logo {
-    width: 170px;
-    height: 170px;
+    width: 22vh;
+    height: 22vh;
     object-fit: cover;
     border-radius: 50%;
-    margin: 0 auto 35px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8), 0 0 0 3px #d4af37;
+    margin: 0 auto 4vh;
+    box-shadow: 0 1.5vh 3vh rgba(0, 0, 0, 0.8), 0 0 0 0.4vh #d4af37;
 }
 
 .cover-front-subtitle {
     font-family: 'Crimson Text', serif;
-    font-size: 20px;
+    font-size: 2.8vh;
     color: #f1e5c9;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+    letter-spacing: 0.3vh;
+    margin-bottom: 2vh;
     text-transform: uppercase;
 }
 
 .cover-front-divider {
-    width: 50px;
-    height: 2px;
+    width: 6vh;
+    height: 0.3vh;
     background-color: #a08c5b;
-    margin: 0 auto 15px;
+    margin: 0 auto 2vh;
 }
 
 .cover-front-date {
     font-family: 'IM Fell English', serif;
-    font-size: 18px;
+    font-size: 2.5vh;
     color: #d4af37;
-    letter-spacing: 5px;
+    letter-spacing: 0.5vh;
 }
 
-/* HÁTSÓ BORÍTÓ STÍLUSOK */
 .cover-back-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 3vh;
     opacity: 0.6;
 }
 
 .cover-back-logo {
-    width: 60px;
-    height: 60px;
+    width: 8vh;
+    height: 8vh;
     border-radius: 50%;
     opacity: 0.3;
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
     filter: grayscale(100%);
 }
 
 .cover-back-text {
     color: #d4af37;
-    font-size: 11px;
-    letter-spacing: 2px;
+    font-size: 1.5vh;
+    letter-spacing: 0.2vh;
     text-align: center;
     font-family: 'IM Fell English', serif;
 }
 
-/* Képes oldal elrendezés */
+/* KÉPES OLDAL & ÓRIÁS ZSEB */
 .image-page-layout {
     display: flex;
     flex-direction: column;
@@ -326,83 +329,82 @@ body::before {
     z-index: 2;
 }
 
-/* Főkép - Tökéletesen középre igazítva */
 .main-image-container {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 1.5vh;
 }
 
 .main-page-image {
     width: 100%;
-    max-height: 260px;
+    max-height: 35vh;
     object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
+    border: 0.5vh solid #fff;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.2);
+    border-radius: 0.3vh;
 }
 
-/* ---- ZSEB ÉS KILÓGÓ KÉPEK JAVÍTVA ---- */
+/* ---- ZSEB ÉS KILÓGÓ KÉPEK ---- */
 .pocket-container {
-    height: 140px;
+    height: 32vh;
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 5px;
+    padding-bottom: 1vh;
 }
 
 .pocket-wrapper {
     position: relative;
-    width: 220px;
-    height: 85px;
+    width: 85%;
+    height: 17vh;
     cursor: pointer;
+    margin: 0 auto;
 }
 
-/* A képek tartója felülre húzva a zseben belül */
 .pocket-photos {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
     z-index: 1;
 }
 
 .pocket-photo {
-    width: 80px;
-    height: 80px;
+    width: 28%;
+    height: 16vh;
     object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border: 0.5vh solid #fff;
+    box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 15px;
-    /* A zseb felső vonalához horgonyozva */
+    bottom: 2vh;
     transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    transform-origin: bottom center;
+    transform-origin: center;
 }
 
-/* Alapállapot - felfelé (negatív Y) tolva a felső kivágáshoz */
 .pocket-photo.img-0 {
-    transform: rotate(-12deg) translateX(-35px) translateY(-50px);
-}
-
-.pocket-photo.img-1 {
-    transform: rotate(3deg) translateY(-60px);
+    left: 4%;
+    transform: rotate(12deg) translateY(-2vh);
     z-index: 2;
 }
 
-.pocket-photo.img-2 {
-    transform: rotate(15deg) translateX(35px) translateY(-45px);
+.pocket-photo.img-1 {
+    left: 36%;
+    transform: rotate(-8deg) translateY(-4vh);
+    z-index: 1;
 }
 
-/* A zseb eleje - alulról takar, felül kivágott */
+.pocket-photo.img-2 {
+    right: 4%;
+    transform: rotate(6deg) translateY(-1vh);
+    z-index: 3;
+}
+
 .pocket-front {
     position: absolute;
     bottom: 0;
@@ -410,36 +412,33 @@ body::before {
     width: 100%;
     height: 100%;
     background: #cbb48b;
-    border-top: 1px solid #b69d71;
+    border-top: 0.3vh solid #b69d71;
     z-index: 3;
-    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15), inset 0 2px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 3px 3px 8px 8px;
-    /* Alul kerekített */
+    box-shadow: 0 -0.6vh 2vh rgba(0, 0, 0, 0.15), inset 0 0.8vh 2.5vh rgba(0, 0, 0, 0.05);
+    border-radius: 0.8vh 0.8vh 2vh 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'IM Fell English', serif;
-    font-size: 15px;
+    font-size: 3.2vh;
     color: #5a4220;
-    clip-path: polygon(0 0, 8% 15%, 92% 15%, 100% 0, 100% 100%, 0 100%);
-    padding-top: 12px;
-    /* Szöveg egyensúlyozása */
-}
-
-/* Hover effektek - Még feljebb csúsznak a képek */
-.pocket-wrapper:hover .pocket-photo.img-1 {
-    transform: rotate(3deg) translateY(-80px);
+    clip-path: polygon(0 0, 5% 15%, 95% 15%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 2.5vh;
 }
 
 .pocket-wrapper:hover .pocket-photo.img-0 {
-    transform: rotate(-18deg) translateX(-45px) translateY(-65px);
+    transform: rotate(16deg) translateY(-8vh);
+}
+
+.pocket-wrapper:hover .pocket-photo.img-1 {
+    transform: rotate(-12deg) translateY(-10vh);
 }
 
 .pocket-wrapper:hover .pocket-photo.img-2 {
-    transform: rotate(22deg) translateX(45px) translateY(-60px);
+    transform: rotate(10deg) translateY(-7vh);
 }
 
-/* Szöveges Formázás */
+/* SZÖVEG FORMÁZÁS */
 .header-area {
     display: block;
     margin-bottom: 0;
@@ -449,105 +448,108 @@ body::before {
 
 .page-header {
     font-family: 'IM Fell English', serif;
-    font-size: 9px;
-    letter-spacing: 4px;
-    color: #888;
+    font-size: 1.3vh;
+    letter-spacing: 0.4vw;
+    color: inherit;
+    opacity: 0.6;
     text-transform: uppercase;
     text-align: center;
-    height: 48px;
+    height: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
 }
 
 .chapter-title {
     font-family: 'IM Fell English', serif;
-    font-size: 22px;
-    color: #2a1a0a;
-    line-height: 32px;
+    font-size: 3.2vh;
+    color: inherit;
+    line-height: 4vh;
     margin-bottom: 0;
 }
 
 .chapter-year {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #777;
-    line-height: 32px;
+    font-size: 1.8vh;
+    letter-spacing: 0.3vw;
+    color: inherit;
+    opacity: 0.8;
+    line-height: var(--base-lh);
     margin-bottom: 0;
     text-transform: uppercase;
 }
 
 .chapter-body {
-    font-size: 15px;
-    line-height: 32px;
-    color: #3a2a18;
+    font-size: 1.8vh;
+    line-height: var(--base-lh);
+    color: inherit;
     text-align: justify;
     position: relative;
     z-index: 1;
 }
 
 .chapter-body p {
-    margin-bottom: 16px;
+    margin-bottom: calc(var(--base-lh) / 2);
 }
 
 .chapter-body p:last-child {
     margin-bottom: 0;
 }
 
-/* A könyv szövegében megjelenő linkek elegáns stílusa */
 .chapter-body a {
-    color: #8c7340;
+    color: inherit;
     font-weight: bold;
     text-decoration: underline;
-    text-decoration-color: rgba(140, 115, 64, 0.4);
-    transition: color 0.2s, text-decoration-color 0.2s;
+    transition: opacity 0.2s;
+    opacity: 0.8;
 }
 
 .chapter-body a:hover {
-    color: #d4af37;
-    text-decoration-color: #d4af37;
+    opacity: 1;
+    text-decoration-color: inherit;
 }
 
-/* Egyéb formázások finomhangolása a szövegtörzsben */
-.chapter-body b, .chapter-body strong {
-    color: #1a0f05;
+.chapter-body b,
+.chapter-body strong {
     font-weight: 600;
+    opacity: 0.95;
 }
 
-.chapter-body i, .chapter-body em {
+.chapter-body i,
+.chapter-body em {
     font-style: italic;
-    color: #4a3a28;
+    opacity: 0.9;
 }
-era-uniform
+
 .drop-cap::first-letter {
     font-family: 'IM Fell English', serif;
-    font-size: 52px;
+    font-size: 7.5vh;
     float: left;
     line-height: .8;
-    margin: 4px 8px 0 0;
-    color: #2a1a0a;
+    margin: 0.6vh 1.2vh 0 0;
+    color: inherit;
 }
 
 .page-num {
     position: absolute;
-    bottom: 14px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #999;
+    bottom: 2vh;
+    font-size: 1.5vh;
+    letter-spacing: 0.2vw;
+    color: inherit;
+    opacity: 0.6;
     z-index: 2;
 }
 
 .page-num.left {
-    left: 30px;
+    left: 4vw;
 }
 
 .page-num.right {
-    right: 30px;
+    right: 4vw;
 }
 
-/* Hátterek */
+/* HÁTTEREK ÉS SZÍNTÉMÁK */
 .era-transparent {
     background: transparent !important;
     box-shadow: none !important;
@@ -559,8 +561,9 @@ era-uniform
 
 .era-cover {
     background: linear-gradient(135deg, #18253b 0%, #0a111a 100%);
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9);
-    border-left: 2px solid #05080c;
+    box-shadow: inset 0 0 6vh rgba(0, 0, 0, 0.9);
+    border-left: 0.3vh solid #05080c;
+    color: #fff;
 }
 
 .era-cover.lined::before {
@@ -569,54 +572,86 @@ era-uniform
 
 .era-uniform {
     background: #f4ecd8;
+    color: #3a2a18;
 }
 
-.era-szemelyek{
+.era-szemelyek {
     background: #19468a;
+    color: #f0f4f8;
 }
 
-.era-esemeny{
-    background:#7c2c18;
+.era-szemelyek .lined::before {
+    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) var(--base-lh));
 }
 
-.era-helyiseg{
-    background:#0d7904;
+.era-szemelyek .pocket-front {
+    background: #113366;
+    color: #fff;
+    border-top-color: #2a5a9a;
 }
 
-.era-targyak{
-    background:#cea210;
+.era-esemeny {
+    background: #7c2c18;
+    color: #fdf5e6;
 }
 
+.era-esemeny .lined::before {
+    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) var(--base-lh));
+}
 
+.era-esemeny .pocket-front {
+    background: #5a1e0f;
+    color: #fff;
+    border-top-color: #8c3a22;
+}
+
+.era-helyiseg {
+    background: #0d7904;
+    color: #f0fdf0;
+}
+
+.era-helyiseg .lined::before {
+    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) var(--base-lh));
+}
+
+.era-helyiseg .pocket-front {
+    background: #085002;
+    color: #fff;
+    border-top-color: #1a9a0f;
+}
+
+.era-targyak {
+    background: #cea210;
+    color: #2a1a0a;
+}
 
 .toc-link {
-    color: #8c7340;
+    color: inherit;
+    opacity: 0.8;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: opacity 0.2s;
     position: relative;
     z-index: 20;
     text-decoration: underline;
-    text-decoration-color: rgba(140, 115, 64, 0.4);
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 0.5vh;
 }
 
 .toc-link:hover {
-    color: #d4af37;
-    text-decoration-color: #d4af37;
+    opacity: 1;
 }
 
-/* Modal & Galéria Rács */
+/* ---- CSEMPÉS, 2 SOROS GALÉRIA ---- */
 #info-modal {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -627,99 +662,153 @@ era-uniform
 }
 
 .modal-content {
-    background: #f0e6cc;
-    padding: 30px 40px;
-    border-radius: 6px;
-    max-width: 650px;
-    width: 90%;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-    border: 2px solid #a08c5b;
-    text-align: center;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-title,
+#modal-img {
+    display: none !important;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 3vh;
+    right: 4vw;
     cursor: pointer;
-    font-size: 28px;
-    color: #555;
+    font-size: 5vh;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 50;
+    transition: color 0.2s;
 }
 
 .modal-close:hover {
-    color: #000;
-}
-
-.modal-title {
-    font-family: 'IM Fell English', serif;
-    font-size: 26px;
-    color: #2a1a0a;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #d0c5ab;
-    padding-bottom: 10px;
+    color: #fff;
 }
 
 .modal-layout {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
     justify-content: center;
-    margin-top: 10px;
-}
-
-.gallery-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    transition: transform 0.2s;
-}
-
-.gallery-img:hover {
-    transform: scale(1.05);
 }
 
 .modal-body {
-    font-size: 16px;
-    color: #3a2a18;
-    line-height: 1.6;
-    text-align: justify;
     width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#modal-img {
+.gallery-tile-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+    gap: 3vh;
+    padding: 4vh 10vw;
+    width: 100vw;
+    height: 80vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-content: center;
+    cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.gallery-tile-grid::-webkit-scrollbar {
     display: none;
+}
+
+.gallery-tile-grid.active-drag {
+    cursor: grabbing;
+}
+
+.gallery-tile-img {
+    width: 32vh;
+    height: 32vh;
+    object-fit: cover;
+    border: 0.5vh solid #fff;
+    border-radius: 1vh;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-tile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.6);
+}
+
+/* ---- LIGHTBOX (TELJES KÉPERNYŐS KÉP, 75%-OS MÉRETEZÉSSEL) ---- */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+#lightbox-img {
+    width: 75vw;
+    height: 75vh;
+    object-fit: contain;
+    border: 0.5vh solid #fff;
+    border-radius: 0.5vh;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 3vh;
+    right: 4vw;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 5vh;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: #fff;
 }
 
 footer {
     position: fixed;
-    bottom: 20px;
+    bottom: 3vh;
     left: 50%;
     transform: translateX(-50%);
     color: #a08c5b;
     font-family: 'Crimson Text', Georgia, serif;
-    font-size: 16px;
-    letter-spacing: 3px;
+    font-size: 2vh;
+    letter-spacing: 0.3vw;
     z-index: 10;
     pointer-events: none;
 }
 
+/* Kisebb képernyőkre optimalizálás */
 @media (max-width: 860px) {
     :root {
-        --page-w: 280px;
-        --page-h: 420px;
+        --page-h: 85vh;
     }
 
     #scene {
@@ -727,20 +816,31 @@ footer {
     }
 
     .chapter-title {
-        font-size: 19px;
+        font-size: 20px;
     }
 
     .chapter-body {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 28px;
     }
 
-    .modal-content {
-        padding: 20px;
+    .pocket-wrapper {
+        width: 95%;
     }
 
-    .gallery-img {
-        width: 100px;
-        height: 100px;
+    .pocket-photo {
+        height: 14vh;
+        width: 30%;
+    }
+
+    .gallery-tile-grid {
+        gap: 2vh;
+        padding: 2vh 5vw;
+    }
+
+    .gallery-tile-img {
+        width: 25vh;
+        height: 25vh;
     }
 
     #bookmark {
@@ -757,6 +857,15 @@ footer {
     }
 
     .main-page-image {
-        max-height: 180px;
+        max-height: 25vh;
+    }
+
+    .page-content {
+        padding: 25px 25px 35px;
+    }
+
+    .drop-cap::first-letter {
+        font-size: 48px;
+        margin: 4px 6px 0 0;
     }
 }

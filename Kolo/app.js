@@ -1,4 +1,4 @@
-// app.js - Lapozás, animációk és tisztán DOM alapú modál kezelés
+// app.js - Lapozás, animációk, csempés galéria és kép-megnyitó
 const staticLeft = document.getElementById('static-left');
 const staticRight = document.getElementById('static-right');
 const flipLayer = document.getElementById('flip-layer');
@@ -196,31 +196,78 @@ function jumpToSpread(index) {
     }, 300);
 }
 
-// --- TISZTA DOM ALAPÚ GALÉRIA MEGJELENÍTÉS ---
+// --- ÚJ, CSENMPÉS (2 SOROS) GALÉRIA ÉS KÉPMEGNYITÓ ---
 function openGalleryModal(pageIndex) {
     const page = pages[pageIndex];
     if (!page || !page.gallery) return;
 
-    document.getElementById('modal-title').textContent = page.pocketTitle || 'Képgaléria';
-
     const modalBody = document.getElementById('modal-body');
-    modalBody.innerHTML = ''; // Régi tartalom törlése
+    modalBody.innerHTML = ''; 
 
-    // Rács konténer létrehozása
+    // Rács (csempe) tartó
     const grid = document.createElement('div');
-    grid.className = 'gallery-grid';
+    grid.className = 'gallery-tile-grid';
 
-    // Képek hozzáadása tiszta DOM node-ként
+    let wasGridDragged = false;
+
     page.gallery.forEach(imgUrl => {
         const img = document.createElement('img');
         img.src = imgUrl;
-        img.className = 'gallery-img';
-        img.alt = 'Galéria kép';
+        img.className = 'gallery-tile-img';
+        img.draggable = false;
+        
+        // Kattintás -> Kép megnyitása teljes méretben
+        img.addEventListener('click', (e) => {
+            if(wasGridDragged) return; // Ha csak húztuk a rácsot, ne nyissa meg
+            e.stopPropagation(); 
+            openLightbox(imgUrl);
+        });
+        
         grid.appendChild(img);
     });
 
     modalBody.appendChild(grid);
     document.getElementById('info-modal').classList.add('active');
+
+    // Drag-scroll a 2 soros csempékhez
+    let isGridDown = false;
+    let gridStartX;
+    let scrollLeft;
+
+    grid.addEventListener('mousedown', (e) => {
+        isGridDown = true;
+        wasGridDragged = false;
+        grid.classList.add('active-drag');
+        gridStartX = e.pageX - grid.offsetLeft;
+        scrollLeft = grid.scrollLeft;
+    });
+    
+    grid.addEventListener('mouseleave', () => {
+        isGridDown = false;
+        grid.classList.remove('active-drag');
+    });
+    
+    grid.addEventListener('mouseup', () => {
+        isGridDown = false;
+        grid.classList.remove('active-drag');
+    });
+    
+    grid.addEventListener('mousemove', (e) => {
+        if (!isGridDown) return;
+        e.preventDefault();
+        const x = e.pageX - grid.offsetLeft;
+        const walk = (x - gridStartX) * 2; 
+        if (Math.abs(walk) > 5) wasGridDragged = true;
+        grid.scrollLeft = scrollLeft - walk;
+    });
+
+    // Sötét hézagra kattintás bezárja a modált
+    grid.addEventListener('click', (e) => {
+        if (wasGridDragged) return; 
+        if (e.target === grid) {
+            closeModal();
+        }
+    });
 }
 
 function closeModal() {
@@ -250,10 +297,29 @@ book.addEventListener('click', (e) => {
     }
 });
 
+// A modál bezárása ha kifejezetten az overlay-re vagy a bezáró ikonra kattintanak
 document.getElementById('info-modal').addEventListener('click', (e) => {
     if (e.target.id === 'info-modal' || e.target.classList.contains('modal-close')) {
         closeModal();
     }
+});
+
+// --- LIGHTBOX (Egyedi kép kinagyítása) ---
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+lightbox.innerHTML = `
+    <div class="lightbox-close">&times;</div>
+    <img id="lightbox-img" src="" alt="Nagy kép">
+`;
+document.body.appendChild(lightbox);
+
+function openLightbox(url) {
+    document.getElementById('lightbox-img').src = url;
+    lightbox.classList.add('active');
+}
+
+lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
 });
 
 renderSpread(currentSpread);
