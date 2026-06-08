@@ -37,7 +37,6 @@ body::before {
     position: relative;
     perspective: 1800px;
     transform: scale(1.25);
-    /* 125%-os nagyítás nyitott állapotban */
     transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 1.2s ease;
     z-index: 5;
 }
@@ -80,7 +79,7 @@ body::before {
     pointer-events: none;
     width: 100%;
     left: 0;
-    transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: opacity 0.6s, width 0.6s, left 0.6s;
 }
 
 #book.closed-front::before,
@@ -142,7 +141,7 @@ body::before {
     text-orientation: upright;
     letter-spacing: 3px;
     z-index: 0;
-    transition: right 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+    transition: right 0.2s, background 0.2s, opacity 0.3s;
 }
 
 #bookmark:hover {
@@ -182,7 +181,6 @@ body::before {
     transform-style: preserve-3d;
     will-change: transform;
     pointer-events: none;
-    contain: layout paint;
 }
 
 #flip-layer.forward {
@@ -204,9 +202,7 @@ body::before {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform-style: preserve-3d;
-    will-change: transform;
     box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
-    contain: layout paint;
 }
 
 #flip-front {
@@ -217,15 +213,10 @@ body::before {
     transform: rotateY(180deg) translateZ(1px);
 }
 
-#flip-layer.dragging .flip-face {
-    box-shadow: 0 5px 12px rgba(0, 0, 0, .14);
-}
-
 .page-content {
     width: 100%;
     height: 100%;
     padding: 32px 32px 44px;
-    /* Fix 32px felső margó a rács miatt */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -237,34 +228,232 @@ body::before {
     content: '';
     position: absolute;
     top: 0;
-    /* A vonalak a lap legtetejétől indulnak */
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: repeating-linear-gradient(transparent,
-            transparent 31px,
-            rgba(0, 0, 0, .1) 31px,
-            rgba(0, 0, 0, .1) 32px);
+    background-image: repeating-linear-gradient(transparent, transparent 31px, rgba(0, 0, 0, .1) 31px, rgba(0, 0, 0, .1) 32px);
     background-position: 0 22px;
-    /* Ez a "tekerőgomb" a vonalak feltolásához */
     pointer-events: none;
     z-index: 0;
 }
 
+/* ELSŐ BORÍTÓ STÍLUSOK */
+.cover-front-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.cover-front-title {
+    font-family: 'IM Fell English', serif;
+    font-size: 38px;
+    color: #d4af37;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    letter-spacing: 2px;
+}
+
+.cover-front-logo {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 35px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8), 0 0 0 3px #d4af37;
+}
+
+.cover-front-subtitle {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    color: #f1e5c9;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.cover-front-divider {
+    width: 50px;
+    height: 2px;
+    background-color: #a08c5b;
+    margin: 0 auto 15px;
+}
+
+.cover-front-date {
+    font-family: 'IM Fell English', serif;
+    font-size: 18px;
+    color: #d4af37;
+    letter-spacing: 5px;
+}
+
+/* HÁTSÓ BORÍTÓ STÍLUSOK */
+.cover-back-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    opacity: 0.6;
+}
+
+.cover-back-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.3;
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+}
+
+.cover-back-text {
+    color: #d4af37;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'IM Fell English', serif;
+}
+
+/* Képes oldal elrendezés */
+.image-page-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Főkép - Tökéletesen középre igazítva */
+.main-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.main-page-image {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+/* ---- ZSEB ÉS KILÓGÓ KÉPEK JAVÍTVA ---- */
+.pocket-container {
+    height: 140px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+.pocket-wrapper {
+    position: relative;
+    width: 220px;
+    height: 85px;
+    cursor: pointer;
+}
+
+/* A képek tartója felülre húzva a zseben belül */
+.pocket-photos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.pocket-photo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 15px;
+    /* A zseb felső vonalához horgonyozva */
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-origin: bottom center;
+}
+
+/* Alapállapot - felfelé (negatív Y) tolva a felső kivágáshoz */
+.pocket-photo.img-0 {
+    transform: rotate(-12deg) translateX(-35px) translateY(-50px);
+}
+
+.pocket-photo.img-1 {
+    transform: rotate(3deg) translateY(-60px);
+    z-index: 2;
+}
+
+.pocket-photo.img-2 {
+    transform: rotate(15deg) translateX(35px) translateY(-45px);
+}
+
+/* A zseb eleje - alulról takar, felül kivágott */
+.pocket-front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #cbb48b;
+    border-top: 1px solid #b69d71;
+    z-index: 3;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15), inset 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 3px 3px 8px 8px;
+    /* Alul kerekített */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IM Fell English', serif;
+    font-size: 15px;
+    color: #5a4220;
+    clip-path: polygon(0 0, 8% 15%, 92% 15%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 12px;
+    /* Szöveg egyensúlyozása */
+}
+
+/* Hover effektek - Még feljebb csúsznak a képek */
+.pocket-wrapper:hover .pocket-photo.img-1 {
+    transform: rotate(3deg) translateY(-80px);
+}
+
+.pocket-wrapper:hover .pocket-photo.img-0 {
+    transform: rotate(-18deg) translateX(-45px) translateY(-65px);
+}
+
+.pocket-wrapper:hover .pocket-photo.img-2 {
+    transform: rotate(22deg) translateX(45px) translateY(-60px);
+}
+
+/* Szöveges Formázás */
 .header-area {
     display: block;
     margin-bottom: 0;
+    z-index: 2;
+    position: relative;
 }
 
 .page-header {
     font-family: 'IM Fell English', serif;
     font-size: 9px;
     letter-spacing: 4px;
-    color: #aaa;
+    color: #888;
     text-transform: uppercase;
     text-align: center;
-    border-bottom: none;
-    /* A dupla vonal javítása */
     height: 48px;
     display: flex;
     flex-direction: column;
@@ -284,19 +473,52 @@ body::before {
 .chapter-year {
     font-size: 12px;
     letter-spacing: 3px;
-    color: #999;
+    color: #777;
     line-height: 32px;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 
 .chapter-body {
     font-size: 15px;
     line-height: 32px;
-    /* Fix 32px sortáv a rács miatt */
     color: #3a2a18;
     text-align: justify;
     position: relative;
     z-index: 1;
+}
+
+.chapter-body p {
+    margin-bottom: 16px;
+}
+
+.chapter-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* A könyv szövegében megjelenő linkek elegáns stílusa */
+.chapter-body a {
+    color: #8c7340;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: rgba(140, 115, 64, 0.4);
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.chapter-body a:hover {
+    color: #d4af37;
+    text-decoration-color: #d4af37;
+}
+
+/* Egyéb formázások finomhangolása a szövegtörzsben */
+.chapter-body b, .chapter-body strong {
+    color: #1a0f05;
+    font-weight: 600;
+}
+
+.chapter-body i, .chapter-body em {
+    font-style: italic;
+    color: #4a3a28;
 }
 
 .drop-cap::first-letter {
@@ -314,6 +536,7 @@ body::before {
     font-size: 11px;
     letter-spacing: 2px;
     color: #999;
+    z-index: 2;
 }
 
 .page-num.left {
@@ -324,6 +547,7 @@ body::before {
     right: 30px;
 }
 
+/* Hátterek */
 .era-transparent {
     background: transparent !important;
     box-shadow: none !important;
@@ -343,36 +567,11 @@ body::before {
     display: none !important;
 }
 
-.era-1920 {
-    background: #f0e6cc;
+.era-uniform {
+    background: #f4ecd8;
 }
 
-.era-1950 {
-    background: #dde8f5;
-    background-image:
-        linear-gradient(rgba(0, 0, 200, .08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 200, .08) 1px, transparent 1px);
-    background-size: 32px 32px;
-    background-position: 0 22px;
-    /* Ennek meg kell egyeznie a vonalak .lined::before beállításával */
-}
-
-.era-1950.lined::before {
-    display: none !important;
-}
-
-.era-1990 {
-    background: #f8f8f4;
-    border-left: 10px dotted #d0d0c8;
-}
-
-.era-2000 {
-    background: #1a1a2e;
-    color: #e0e0e0;
-}
-
-.toc-link,
-.info-link {
+.toc-link {
     color: #8c7340;
     font-weight: bold;
     cursor: pointer;
@@ -381,26 +580,25 @@ body::before {
     z-index: 20;
     text-decoration: underline;
     text-decoration-color: rgba(140, 115, 64, 0.4);
+    display: block;
+    margin-bottom: 4px;
 }
 
-.toc-link:hover,
-.info-link:hover {
+.toc-link:hover {
     color: #d4af37;
     text-decoration-color: #d4af37;
 }
 
+/* Modal & Galéria Rács */
 #info-modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -414,13 +612,12 @@ body::before {
     background: #f0e6cc;
     padding: 30px 40px;
     border-radius: 6px;
-    max-width: 550px;
+    max-width: 650px;
     width: 90%;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
     border: 2px solid #a08c5b;
     text-align: center;
     position: relative;
-    font-family: 'Crimson Text', Georgia, serif;
     max-height: 90vh;
     overflow-y: auto;
 }
@@ -432,7 +629,6 @@ body::before {
     cursor: pointer;
     font-size: 28px;
     color: #555;
-    transition: color 0.2s;
 }
 
 .modal-close:hover {
@@ -450,19 +646,31 @@ body::before {
 
 .modal-layout {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    text-align: left;
 }
 
-#modal-img {
-    max-width: 140px;
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 4px;
-    border: 2px solid #d0c5ab;
-    display: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.gallery-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
 }
 
 .modal-body {
@@ -470,10 +678,13 @@ body::before {
     color: #3a2a18;
     line-height: 1.6;
     text-align: justify;
-    flex-grow: 1;
+    width: 100%;
 }
 
-/* Képernyő alji szerzői vízjel */
+#modal-img {
+    display: none;
+}
+
 footer {
     position: fixed;
     bottom: 20px;
@@ -497,7 +708,6 @@ footer {
         transform: scale(1);
     }
 
-    /* Mobilon nincs nagyítás */
     .chapter-title {
         font-size: 19px;
     }
@@ -510,14 +720,9 @@ footer {
         padding: 20px;
     }
 
-    .modal-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    #modal-img {
-        max-width: 180px;
+    .gallery-img {
+        width: 100px;
+        height: 100px;
     }
 
     #bookmark {
@@ -531,5 +736,9 @@ footer {
 
     #bookmark:hover {
         right: -25px;
+    }
+
+    .main-page-image {
+        max-height: 180px;
     }
 }

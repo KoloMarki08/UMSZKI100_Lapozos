@@ -1,8 +1,7 @@
-// builder.js - A sablonok és az adatok összekapcsolása
+// builder.js - Tiszta DOM alapú sablon feltöltő (HTML szövegek támogatásával)
 const spreadsData = [];
 const tocData = [];
 
-// 1. Kiszámoljuk az oldalpárokat (spreadek) és a tartalomjegyzéket
 function initBookData() {
     pages.forEach((page, index) => {
         if (page.type === 'chapter' && page.tocTitle) {
@@ -14,20 +13,19 @@ function initBookData() {
     for (let i = 0; i < pages.length; i += 2) {
         const leftPage = pages[i];
         const rightPage = pages[i + 1];
-        
-        const isLeftText = leftPage && ['text', 'chapter', 'toc'].includes(leftPage.type);
-        const isRightText = rightPage && ['text', 'chapter', 'toc'].includes(rightPage.type);
+
+        const isLeftCountable = leftPage && ['text', 'chapter', 'toc', 'image'].includes(leftPage.type);
+        const isRightCountable = rightPage && ['text', 'chapter', 'toc', 'image'].includes(rightPage.type);
 
         spreadsData.push({
             leftPage: leftPage,
-            leftNum: isLeftText ? realPageNum++ : '',
+            leftNum: isLeftCountable ? realPageNum++ : '',
             rightPage: rightPage,
-            rightNum: isRightText ? realPageNum++ : ''
+            rightNum: isRightCountable ? realPageNum++ : ''
         });
     }
 }
 
-// 2. Létrehoz egy kész HTML elemet a megfelelő sablon (template) alapján
 function buildPageElement(pageData, pageNum, side) {
     const pageDiv = document.createElement('div');
     if (!pageData) return pageDiv;
@@ -35,58 +33,105 @@ function buildPageElement(pageData, pageNum, side) {
     const isTransparent = pageData.eraCss === 'era-transparent';
     pageDiv.className = `page-content ${pageData.eraCss || ''} ${isTransparent ? '' : 'lined'}`;
 
-    if (isTransparent) return pageDiv; // Átlátszó oldalhoz nem kell tartalom
+    if (isTransparent) return pageDiv;
 
-    // Kiválasztjuk a megfelelő HTML sablont
     let templateId = 'tpl-text-page';
     if (pageData.type === 'front-cover') templateId = 'tpl-front-cover';
     else if (pageData.type === 'back-cover') templateId = 'tpl-back-cover';
+    else if (pageData.type === 'image') templateId = 'tpl-image-page';
 
     const template = document.getElementById(templateId);
     if (!template) return pageDiv;
 
-    // Klónozzuk a sablon tartalmát
     const content = template.content.cloneNode(true);
 
-    // Borítóknál nincs további dolgunk
     if (pageData.type === 'front-cover' || pageData.type === 'back-cover') {
         pageDiv.appendChild(content);
         return pageDiv;
     }
 
-    // Normál oldalak elemeinek kitöltése vagy törlése (ha nincs adat)
-    const header = content.querySelector('.page-header');
-    if (pageData.header) header.innerHTML = pageData.header; else header.remove();
+    // --- KÉPES OLDAL GENERÁLÁSA ---
+    if (pageData.type === 'image') {
+        const imgContainer = content.querySelector('.main-image-container');
+        if (pageData.image) {
+            const mainImg = document.createElement('img');
+            mainImg.src = pageData.image;
+            mainImg.className = 'main-page-image';
+            mainImg.alt = 'Fejezet kép';
+            imgContainer.appendChild(mainImg);
+        }
 
-    const title = content.querySelector('.chapter-title');
-    if (pageData.title) title.innerHTML = pageData.title; else title.remove();
+        const pocketContainer = content.querySelector('.pocket-container');
+        if (pageData.gallery && pageData.gallery.length > 0) {
+            const pageIndex = pages.indexOf(pageData);
 
-    const year = content.querySelector('.chapter-year');
-    if (pageData.subtitle) year.innerHTML = pageData.subtitle; else year.remove();
+            const wrapper = document.createElement('div');
+            wrapper.className = 'pocket-wrapper';
+            wrapper.dataset.pageIndex = pageIndex;
 
-    const body = content.querySelector('.chapter-body');
-    if (pageData.type === 'toc') {
-        // Tartalomjegyzék felépítése DOM elemekkel
-        tocData.forEach(item => {
-            const span = document.createElement('span');
-            span.className = 'toc-link';
-            span.dataset.target = item.target;
-            span.textContent = item.title;
-            body.appendChild(span);
-            body.appendChild(document.createElement('br'));
-        });
-    } else {
-        body.innerHTML = pageData.content || '';
-        if (pageData.dropCap) body.classList.add('drop-cap');
+            const photosDiv = document.createElement('div');
+            photosDiv.className = 'pocket-photos';
+
+            pageData.gallery.slice(0, 3).forEach((imgUrl, i) => {
+                const pPhoto = document.createElement('img');
+                pPhoto.src = imgUrl;
+                pPhoto.className = `pocket-photo img-${i}`;
+                photosDiv.appendChild(pPhoto);
+            });
+
+            const frontDiv = document.createElement('div');
+            frontDiv.className = 'pocket-front';
+            frontDiv.textContent = pageData.pocketTitle || 'Galéria';
+
+            wrapper.appendChild(photosDiv);
+            wrapper.appendChild(frontDiv);
+            pocketContainer.appendChild(wrapper);
+        }
+    }
+    // --- SZÖVEGES OLDAL GENERÁLÁSA ---
+    else {
+        const header = content.querySelector('.page-header');
+        if (pageData.header) header.textContent = pageData.header; else header.remove();
+
+        const title = content.querySelector('.chapter-title');
+        if (pageData.title) title.textContent = pageData.title; else title.remove();
+
+        const year = content.querySelector('.chapter-year');
+        if (pageData.subtitle) year.textContent = pageData.subtitle; else year.remove();
+
+        const body = content.querySelector('.chapter-body');
+        body.innerHTML = '';
+
+        if (pageData.type === 'toc') {
+            tocData.forEach(item => {
+                const span = document.createElement('span');
+                span.className = 'toc-link';
+                span.dataset.target = item.target;
+                span.textContent = item.title;
+                body.appendChild(span);
+            });
+        } else if (pageData.content) {
+            const paragraphs = pageData.content.split('\n\n');
+            paragraphs.forEach((pText, index) => {
+                const p = document.createElement('p');
+                // JAVÍTVA: textContent helyett innerHTML, hogy vigye a linkeket és formázásokat
+                p.innerHTML = pText;
+                if (index === 0 && pageData.dropCap) {
+                    p.className = 'drop-cap';
+                }
+                body.appendChild(p);
+            });
+        }
     }
 
     const num = content.querySelector('.page-num');
-    num.className = `page-num ${side}`;
-    num.textContent = pageNum;
+    if (num) {
+        num.className = `page-num ${side}`;
+        num.textContent = pageNum;
+    }
 
     pageDiv.appendChild(content);
     return pageDiv;
 }
 
-// Azonnal lefuttatjuk, hogy a memória feltöltődjön az adatokkal
 initBookData();

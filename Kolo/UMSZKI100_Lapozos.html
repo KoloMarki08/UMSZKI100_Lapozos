@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMSZKI 100 – 3D lapozás</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div id="scene" class="idle">
         <div id="book" class="closed-front">
@@ -31,7 +28,6 @@
         <div class="modal-content">
             <div class="modal-close" onclick="closeModal()">&times;</div>
             <div class="modal-title" id="modal-title">Név</div>
-
             <div class="modal-layout">
                 <img id="modal-img" src="" alt="Kép">
                 <div class="modal-body" id="modal-body">Érdekességek...</div>
@@ -40,31 +36,28 @@
     </div>
 
     <template id="tpl-front-cover">
-        <div
-            style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; padding: 20px;">
-            <h1
-                style="font-family: 'IM Fell English', serif; font-size: 38px; color: #d4af37; margin-bottom: 35px; text-shadow: 2px 2px 6px rgba(0,0,0,0.9); letter-spacing: 2px;">
-                UMSZKI 100</h1>
-            <img src="umszki_logo.jpg" alt="UMSZKI Logo"
-                style="width: 170px; height: 170px; border-radius: 50%; margin: 0 auto 35px; box-shadow: 0 12px 25px rgba(0,0,0,0.8), 0 0 0 3px #d4af37;">
-            <h2
-                style="font-family: 'Crimson Text', serif; font-size: 20px; color: #f1e5c9; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase;">
-                Történelmi Archívum</h2>
-            <div style="width: 50px; height: 2px; background-color: #a08c5b; margin: 0 auto 15px;"></div>
-            <p style="font-family: 'IM Fell English', serif; font-size: 18px; color: #d4af37; letter-spacing: 5px;">
-                1927 - 2027</p>
+        <div class="cover-front-container">
+            <h1 class="cover-front-title">UMSZKI 100</h1>
+            <img src="umszki_logo.jpg" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&q=80'" alt="UMSZKI Logo" class="cover-front-logo">
+            <h2 class="cover-front-subtitle">Történelmi Archívum</h2>
+            <div class="cover-front-divider"></div>
+            <p class="cover-front-date">1927 - 2027</p>
         </div>
     </template>
 
     <template id="tpl-back-cover">
-        <div
-            style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 20px; opacity: 0.6;">
-            <img src="umszki_logo.jpg" alt="UMSZKI Logo"
-                style="width: 60px; height: 60px; border-radius: 50%; opacity: 0.3; margin-bottom: 15px; filter: grayscale(100%);">
-            <p
-                style="color: #d4af37; font-size: 11px; letter-spacing: 2px; text-align: center; font-family: 'IM Fell English', serif;">
-                Újpesti Két Tanítási Nyelvű<br>Műszaki Technikum</p>
+        <div class="cover-back-container">
+            <img src="umszki_logo.jpg" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&q=80'" alt="UMSZKI Logo" class="cover-back-logo">
+            <p class="cover-back-text">Újpesti Két Tanítási Nyelvű<br>Műszaki Technikum</p>
         </div>
+    </template>
+
+    <template id="tpl-image-page">
+        <div class="image-page-layout">
+            <div class="main-image-container"></div>
+            <div class="pocket-container"></div>
+        </div>
+        <div class="page-num left"></div>
     </template>
 
     <template id="tpl-text-page">
@@ -74,9 +67,8 @@
             <div class="chapter-year"></div>
         </div>
         <div class="chapter-body"></div>
-        <div class="page-num"></div>
+        <div class="page-num right"></div>
     </template>
-
 
     <footer>UMSZKI 100 Könyv – Kolonics Márk</footer>
 
@@ -84,5 +76,4 @@
     <script src="builder.js"></script>
     <script src="app.js"></script>
 </body>
-
 </html>

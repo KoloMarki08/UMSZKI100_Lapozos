@@ -1,4 +1,4 @@
-// app.js - Lapozás, animáció, egérkezelés és modál
+// app.js - Lapozás, animációk és tisztán DOM alapú modál kezelés
 const staticLeft = document.getElementById('static-left');
 const staticRight = document.getElementById('static-right');
 const flipLayer = document.getElementById('flip-layer');
@@ -13,11 +13,11 @@ let isFlipping = false;
 let dragDirection = 0;
 let startX = 0;
 let dragProgress = 0;
-let wasDragged = false; 
+let wasDragged = false;
 let rafId = null;
 let pendingTransform = '';
 let idleTimeout;
-const IDLE_TIME_LIMIT = 10000; 
+const IDLE_TIME_LIMIT = 90000;
 
 function requestFullScreen() {
     if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
@@ -64,16 +64,11 @@ function updateBookState(targetIndex) {
     else if (targetIndex === spreadsData.length - 1) book.classList.add('closed-back');
 }
 
-// ÚJ: DOM elemek beillesztése a stringek helyett
 function renderSpread(index) {
     updateBookState(index);
     const spread = spreadsData[index];
-    
-    staticLeft.innerHTML = '';
-    staticLeft.appendChild(buildPageElement(spread.leftPage, spread.leftNum, 'left'));
-    
-    staticRight.innerHTML = '';
-    staticRight.appendChild(buildPageElement(spread.rightPage, spread.rightNum, 'right'));
+    staticLeft.innerHTML = ''; staticLeft.appendChild(buildPageElement(spread.leftPage, spread.leftNum, 'left'));
+    staticRight.innerHTML = ''; staticRight.appendChild(buildPageElement(spread.rightPage, spread.rightNum, 'right'));
 }
 
 function applyFlipTransform(value) {
@@ -93,25 +88,19 @@ function prepareFlip(direction) {
     if (direction === 1) {
         const nextSpread = currentSpread + 1;
         updateBookState(nextSpread);
-        
         staticLeft.innerHTML = ''; staticLeft.appendChild(buildPageElement(spreadsData[currentSpread].leftPage, spreadsData[currentSpread].leftNum, 'left'));
         staticRight.innerHTML = ''; staticRight.appendChild(buildPageElement(spreadsData[nextSpread].rightPage, spreadsData[nextSpread].rightNum, 'right'));
-        
         flipLayer.className = 'forward dragging';
         flipLayer.style.transform = 'translateZ(2px) rotateY(0deg)';
-        
         flipFront.innerHTML = ''; flipFront.appendChild(buildPageElement(spreadsData[currentSpread].rightPage, spreadsData[currentSpread].rightNum, 'right'));
         flipBack.innerHTML = ''; flipBack.appendChild(buildPageElement(spreadsData[nextSpread].leftPage, spreadsData[nextSpread].leftNum, 'left'));
     } else {
         const prevSpread = currentSpread - 1;
         updateBookState(prevSpread);
-        
         staticLeft.innerHTML = ''; staticLeft.appendChild(buildPageElement(spreadsData[prevSpread].leftPage, spreadsData[prevSpread].leftNum, 'left'));
         staticRight.innerHTML = ''; staticRight.appendChild(buildPageElement(spreadsData[currentSpread].rightPage, spreadsData[currentSpread].rightNum, 'right'));
-        
         flipLayer.className = 'backward dragging';
         flipLayer.style.transform = 'translateZ(2px) rotateY(0deg)';
-        
         flipFront.innerHTML = ''; flipFront.appendChild(buildPageElement(spreadsData[currentSpread].leftPage, spreadsData[currentSpread].leftNum, 'left'));
         flipBack.innerHTML = ''; flipBack.appendChild(buildPageElement(spreadsData[prevSpread].rightPage, spreadsData[prevSpread].rightNum, 'right'));
     }
@@ -131,8 +120,7 @@ function cleanupFlip() {
     flipLayer.style.display = 'none';
     flipLayer.style.transition = 'none';
     flipLayer.style.transform = '';
-    flipFront.innerHTML = '';
-    flipBack.innerHTML = '';
+    flipFront.innerHTML = ''; flipBack.innerHTML = '';
 }
 
 function animateFlip(direction, complete) {
@@ -158,8 +146,8 @@ function animateFlip(direction, complete) {
 
 function startDrag(e) {
     if (isFlipping || scene.classList.contains('idle')) return;
-    wasDragged = false; 
-    if (e.target.closest('#bookmark')) return;
+    wasDragged = false;
+    if (e.target.closest('#bookmark') || e.target.closest('.pocket-wrapper')) return;
 
     isDragging = true;
     dragDirection = 0;
@@ -190,7 +178,6 @@ function endDrag() {
     if (!isDragging) return;
     isDragging = false;
     if (!dragDirection) return;
-
     const complete = dragProgress > .28;
     animateFlip(dragDirection, complete);
     dragDirection = 0;
@@ -199,30 +186,40 @@ function endDrag() {
 
 function jumpToSpread(index) {
     if (index === currentSpread || index < 0 || index >= spreadsData.length) return;
-    
     book.style.opacity = '0';
     updateBookState(index);
-    
     setTimeout(() => {
         currentSpread = index;
         renderSpread(currentSpread);
         cleanupFlip();
         book.style.opacity = '1';
-    }, 300); 
+    }, 300);
 }
 
-function openModal(name, info, imageUrl) {
-    document.getElementById('modal-title').innerText = name;
-    document.getElementById('modal-body').innerHTML = info;
-    
-    const modalImg = document.getElementById('modal-img');
-    if (imageUrl) {
-        modalImg.src = imageUrl;
-        modalImg.style.display = 'block'; 
-    } else {
-        modalImg.style.display = 'none'; 
-        modalImg.src = '';
-    }
+// --- TISZTA DOM ALAPÚ GALÉRIA MEGJELENÍTÉS ---
+function openGalleryModal(pageIndex) {
+    const page = pages[pageIndex];
+    if (!page || !page.gallery) return;
+
+    document.getElementById('modal-title').textContent = page.pocketTitle || 'Képgaléria';
+
+    const modalBody = document.getElementById('modal-body');
+    modalBody.innerHTML = ''; // Régi tartalom törlése
+
+    // Rács konténer létrehozása
+    const grid = document.createElement('div');
+    grid.className = 'gallery-grid';
+
+    // Képek hozzáadása tiszta DOM node-ként
+    page.gallery.forEach(imgUrl => {
+        const img = document.createElement('img');
+        img.src = imgUrl;
+        img.className = 'gallery-img';
+        img.alt = 'Galéria kép';
+        grid.appendChild(img);
+    });
+
+    modalBody.appendChild(grid);
     document.getElementById('info-modal').classList.add('active');
 }
 
@@ -234,7 +231,7 @@ book.addEventListener('click', (e) => {
     if (wasDragged) return;
 
     if (e.target.closest('#bookmark')) {
-        jumpToSpread(1); 
+        jumpToSpread(1);
         return;
     }
 
@@ -245,17 +242,18 @@ book.addEventListener('click', (e) => {
         return;
     }
 
-    const infoLink = e.target.closest('.info-link');
-    if (infoLink) {
-        const name = infoLink.getAttribute('data-name');
-        const info = infoLink.getAttribute('data-info');
-        const imageUrl = infoLink.getAttribute('data-img'); 
-        openModal(name, info, imageUrl);
+    const pocket = e.target.closest('.pocket-wrapper');
+    if (pocket) {
+        const pageIndex = parseInt(pocket.getAttribute('data-page-index'), 10);
+        openGalleryModal(pageIndex);
+        return;
     }
 });
 
 document.getElementById('info-modal').addEventListener('click', (e) => {
-    if (e.target.id === 'info-modal') closeModal();
+    if (e.target.id === 'info-modal' || e.target.classList.contains('modal-close')) {
+        closeModal();
+    }
 });
 
 renderSpread(currentSpread);
