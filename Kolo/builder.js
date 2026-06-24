@@ -50,7 +50,6 @@ function buildPageElement(pageData, pageNum, side) {
         return pageDiv;
     }
 
-    // --- KÉPES OLDAL GENERÁLÁSA ---
     if (pageData.type === 'image') {
         const imgContainer = content.querySelector('.main-image-container');
         if (pageData.image) {
@@ -87,9 +86,7 @@ function buildPageElement(pageData, pageNum, side) {
             wrapper.appendChild(frontDiv);
             pocketContainer.appendChild(wrapper);
         }
-    }
-    // --- SZÖVEGES OLDAL GENERÁLÁSA ---
-    else {
+    } else {
         const header = content.querySelector('.page-header');
         if (pageData.header) header.textContent = pageData.header; else header.remove();
 
@@ -111,15 +108,22 @@ function buildPageElement(pageData, pageNum, side) {
                 body.appendChild(span);
             });
         } else if (pageData.content) {
-            const paragraphs = pageData.content.split('\n\n');
+            let cleanContent = pageData.content.replace(/(<br\s*\/?>\s*)+<a/g, '\n\n<a');
+            const paragraphs = cleanContent.split('\n\n');
             paragraphs.forEach((pText, index) => {
-                const p = document.createElement('p');
-                // JAVÍTVA: textContent helyett innerHTML, hogy vigye a linkeket és formázásokat
-                p.innerHTML = pText;
-                if (index === 0 && pageData.dropCap) {
-                    p.className = 'drop-cap';
+                if (pText.trim().startsWith('<a')) {
+                    const footerLinks = document.createElement('div');
+                    footerLinks.className = 'page-footer-links-block';
+                    footerLinks.innerHTML = pText;
+                    body.appendChild(footerLinks);
+                } else {
+                    const p = document.createElement('p');
+                    p.innerHTML = pText;
+                    if (index === 0 && pageData.dropCap) {
+                        p.className = 'drop-cap';
+                    }
+                    body.appendChild(p);
                 }
-                body.appendChild(p);
             });
         }
     }

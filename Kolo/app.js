@@ -69,6 +69,9 @@ function renderSpread(index) {
     const spread = spreadsData[index];
     staticLeft.innerHTML = ''; staticLeft.appendChild(buildPageElement(spread.leftPage, spread.leftNum, 'left'));
     staticRight.innerHTML = ''; staticRight.appendChild(buildPageElement(spread.rightPage, spread.rightNum, 'right'));
+    
+    // Elosztó algoritmus meghívása biztonságosan frame-renderelés után
+    requestAnimationFrame(() => { distributePageElements(); });
 }
 
 function applyFlipTransform(value) {
@@ -196,7 +199,6 @@ function jumpToSpread(index) {
     }, 300);
 }
 
-// --- ÚJ, CSENMPÉS (2 SOROS) GALÉRIA ÉS KÉPMEGNYITÓ ---
 function openGalleryModal(pageIndex) {
     const page = pages[pageIndex];
     if (!page || !page.gallery) return;
@@ -204,7 +206,6 @@ function openGalleryModal(pageIndex) {
     const modalBody = document.getElementById('modal-body');
     modalBody.innerHTML = ''; 
 
-    // Rács (csempe) tartó
     const grid = document.createElement('div');
     grid.className = 'gallery-tile-grid';
 
@@ -216,9 +217,8 @@ function openGalleryModal(pageIndex) {
         img.className = 'gallery-tile-img';
         img.draggable = false;
         
-        // Kattintás -> Kép megnyitása teljes méretben
         img.addEventListener('click', (e) => {
-            if(wasGridDragged) return; // Ha csak húztuk a rácsot, ne nyissa meg
+            if(wasGridDragged) return; 
             e.stopPropagation(); 
             openLightbox(imgUrl);
         });
@@ -229,7 +229,6 @@ function openGalleryModal(pageIndex) {
     modalBody.appendChild(grid);
     document.getElementById('info-modal').classList.add('active');
 
-    // Drag-scroll a 2 soros csempékhez
     let isGridDown = false;
     let gridStartX;
     let scrollLeft;
@@ -261,7 +260,6 @@ function openGalleryModal(pageIndex) {
         grid.scrollLeft = scrollLeft - walk;
     });
 
-    // Sötét hézagra kattintás bezárja a modált
     grid.addEventListener('click', (e) => {
         if (wasGridDragged) return; 
         if (e.target === grid) {
@@ -297,14 +295,12 @@ book.addEventListener('click', (e) => {
     }
 });
 
-// A modál bezárása ha kifejezetten az overlay-re vagy a bezáró ikonra kattintanak
 document.getElementById('info-modal').addEventListener('click', (e) => {
     if (e.target.id === 'info-modal' || e.target.classList.contains('modal-close')) {
         closeModal();
     }
 });
 
-// --- LIGHTBOX (Egyedi kép kinagyítása) ---
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 lightbox.innerHTML = `
@@ -322,6 +318,50 @@ lightbox.addEventListener('click', () => {
     lightbox.classList.remove('active');
 });
 
+// --- AUTOMATIKUS SORKÖZ-ELOSZTÓ (Eltünteti a bekarikázott hézagokat) ---
+function distributePageElements() {
+    const bodies = document.querySelectorAll('.chapter-body');
+    bodies.forEach(body => {
+        const elements = body.children;
+        if (elements.length <= 1) return; 
+        
+        for (let el of elements) { el.style.marginBottom = ''; }
+        
+        const pageContent = body.closest('.page-content');
+        if (!pageContent) return;
+        
+        const totalHeight = pageContent.clientHeight;
+        const paddingBottom = parseFloat(getComputedStyle(pageContent).paddingBottom) || 0;
+        const maxBottom = totalHeight - paddingBottom;
+        
+        const baseLhStr = getComputedStyle(document.documentElement).getPropertyValue('--base-lh');
+        const baseLhVal = parseFloat(baseLhStr) || 3.6;
+        const baseLhPx = baseLhVal * (window.innerHeight / 100);
+        
+        let currentBottom = body.offsetTop + body.offsetHeight;
+        let safetyCounter = 0;
+        
+        while ((maxBottom - currentBottom) >= baseLhPx && safetyCounter < 40) {
+            safetyCounter++;
+            let changed = false;
+            for (let i = 0; i < elements.length - 1; i++) {
+                if ((maxBottom - currentBottom) < baseLhPx) break;
+                
+                const el = elements[i];
+                const currentMargin = parseFloat(getComputedStyle(el).marginBottom) || 0;
+                el.style.marginBottom = `${currentMargin + baseLhPx}px`;
+                
+                currentBottom = body.offsetTop + body.offsetHeight;
+                changed = true;
+            }
+            if (!changed) break;
+        }
+    });
+}
+
+window.addEventListener('resize', distributePageElements);
+
+// Kezdő futtatás
 renderSpread(currentSpread);
 
 book.addEventListener('pointerdown', startDrag);
