@@ -1,4 +1,3 @@
-// data.js - Hozzáigazítva az új színes kategóriákhoz és a 10 képes galériához
 const pages = [
     { type: 'transparent', eraCss: 'era-transparent' },
     { type: 'front-cover', eraCss: 'era-cover' },
@@ -28,7 +27,7 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-targyak',
         image: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&q=80',
-        pocketTitle: 'Emléktárgyak',
+        pocketTitle: 'További képek',
         gallery: [
             'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80',
             'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&q=80'
@@ -37,7 +36,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         tocTitle: 'IV. Egyéb – A múlt darabkái',
-        header: 'IV. FEJEZET – EGYÉB', title: 'Ikonikus Tárgyak', subtitle: 'Műszerek és emlékek',
+        header: 'Zsolnay csempék', title: 'Zsolnay csempék',
         content: 'Az archívumban számtalan olyan tárgy maradt fenn, amely egy adott kor technológiai csúcsát képviselte. Régi oszcilloszkópok, mechanikus számológépek és kézzel írt naplók.<br><br>Ezek az <b>egyéb kincsek</b> mesélik el talán a legpontosabban, mennyit változott a világ. Ha érdekel a régi műszerek restaurálása és története, érdemes körülnézni a <a href="https://wikipedia.org" target="_blank">Wikipédia technológia-történeti</a> lapjain.'
     },
     // iskolanevek, korszakok
@@ -97,7 +96,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', 
-        header: 'UMSZKI 100 – BEVEZETÉS', title: 'A kapu feletti címer szombilikája'
+        header: 'Kapu feletti címer szombilikája', title: 'A kapu feletti címer szombilikája'
     },
     //Szabó Béla
     {
@@ -140,13 +139,12 @@ const pages = [
     },
     //korabeli kisfilm
     { 
-        type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/12_lépcsőházi ólomüvegablak.jpg'
+        type: 'image', eraCss: 'era-targyak'
     },
     {
-        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        type: 'chapter', eraCss: 'era-targyak',
         header: 'Emléktárgyak – Lépcsőházi ólomüvegablak', title: 'Lépcsőházi ólomüvegablak',
-        content: 'Ez az ólomüveg a kőművesek és kőfaragók céhének jelképét ábrázolja. A szimbólum elemei a mesterség alapvető szerszámai, amelyek gyakran megjelennek céhes címereken és szabadkőműves jelképrendszerben is: Körző és derékszög: A pontosság és a mértéktartás szimbólumai. Gyalu és vésők: A megmunkálás és a finomítás eszközei. A vörös háttér gyakran használt szín a történelmi céhes üvegablakokon. Történelmi háttér: Hasonló ólomüveg alkotások Európa-szerte megtalálhatók régi városházákon vagy céhházakban. Például a németországi Stade városházáján látható egy 1721-ből származó kőműves céhpecsét, amely szinte azonos elrendezésű. Ezek a medálok az adott mesterség tiszteletére és a szakmai közösség összetartozásának jeléül készültek.'
+        content: '<a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">Filmhiradó</a>'
     },
     //az iskola egykori korterme
     { 
@@ -171,7 +169,7 @@ const pages = [
     //iskola egyenruha
     { 
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/8_az első tabló.jpg'
+        image: ''
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
@@ -188,8 +186,184 @@ const pages = [
         header: 'Helyszín - Az udvar platánjai', subtitle: 'Ady Endre: A platánfa álma',
         content: 'A Nap huga, zöld szemü lány,<br>(Kit imádnak álom-vitézek)<br>Megszánt egy holdas éjjelen<br>És megigézett.<br><br>Két lábam elhült s szétbomolt<br>Gyökerekként a mélybe szállva<br>S itt állok a fehér mezőn,<br>Mint árva platánfa.<br><br>Girhes, szomorú derekam<br>Szökkenve büszke lombot ontott,<br>Lombom a felhőket veri<br>S elhagytak a gondok.<br><br>Állok: várom a Nap hugát<br>Némán a nagy, éji mezőben<br>S koronámról hull a levél<br>Zörgőn, búsan, rőten.'
     },
+    //Radioamator URH-allomas HG5KCC
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/19_rádióamatőrök_1957 Galyatető.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín - Rádióamatőr URH-állomás', title:'Rádióamatőr URH-állomás HG5KCC',
+        content: '<a href="https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27" target="_blank">A HG5KCC rádióamatőr URH kollektív állomás indulása 1954/55.</a><br>Vajda György kiváló pedagógus volt. Jól érzékelte: az új szak sikeres indításához kevés a tárgyi- és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr tevékenység elterjesztése az iskolában. Az akkor még a rádióamatőrök körében is „fehér folt”-nak számító URH sávot választotta. Ez kitűnő döntés volt, hiszen ehhez az adót, vevőt és antennát – más lehetőség nem lévén – házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítése volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált. 1955-ben Vajda György rádióamatőr vizsgát tett és adóengedélyt kapott URH kollektív rádióamatőr adóállomás működtetetésére. Az országban ekkor tíz alatt volt ezek száma. <a href="https://www.youtube.com/watch?v=UlsbM1RyCFA&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=28" target="_blank">1956-ban már két nemzetközi URH versenyen elindultunk.</a>'
+    },
+    //Jegesmedve relikvia
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/20_jegesmedve relikvia.JPG',
+        pocketTitle: 'További képek',
+        gallery: [
+            'KEPEK/20_jegesmedve relikvia.JPG',
+            'KEPEK/20_jegesmedve átadás 1945_46.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emléktárgyak – Jegesmedve relikvia', title: 'Jegesmedve relikvia',
+        content: 'A jegesmedve szobor feliratán látszik, hogy az 1945/46. évi középiskolás labdarúgó bajnokságot nyerte meg a Landler csapata. A győztesek neve a réztábláról leolvasható.'
+    },
+    //a tornaterem
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/21_tornaterem.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín - Tornaterem', title:'Tornaterem',
+        content: 'A tornatermet mélyítették 5 méterrel'
+    },
+    //Dr. Radnai László
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/55_Landler Jenő.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Dr. Radnai László', title: 'Dr. Radnai László', subtitle: '(xxxx-xxxx)',
+        content: ''
+    },
+    //Tanar-diak sportesemeny 1943-bol
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/23_Szabó Gyula véd.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemenyek - Tanár-diák sportesemény', title: 'Tanár-diák sportesemény 1943-ból',
+        content: 'Szokás volt, hogy a tantestület és a diákság minden évben kirándult valahová. Az 1943-as év kirándulása június 2-án Visegrádon volt. Egyéb programok mellett sor került egy focimeccsre az elméleti és gyakorlati tanárok között. Az elméletiek 3:1 –re győztek. A képen Szabó Gyula, az iskola akkori igazgatója őrzi a kaput vigyázó szemeivel.'
+    },
+    //Tanmuhelyek
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/24_TANMŰHELY.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín - Tanműhelyek', title:'Tanműhelyek',
+        content: 'A tornatermet mélyítették 5 méterrel'
+    },
+    //autómodellező és gépjármű szakkör
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/25_.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemenyek - Autómodellező és Gépjármű Szakkör', title: 'Autómodellező és Gépjármű Szakkör',
+        content: 'A műhelyben Fekete Gyula tanár vezetésével működött az autómodellező és gépjármű szakkör. A tanár úr volt diákja, Halász Erika (1953-57) segítségével elérte, hogy annak munkahelye – a  Csepel Motorkerékpárgyár – alkatrészekben egy Pannónia motorkerékpárt adományozott az iskolának. Ezek zömében hibásak voltak. Felújításuk és az összeszerelés 1959 őszétől a szakkörben történt. A munkába bekapcsolódott  az 1959/60 tanév III.B osztályának néhány lelkes tanulója is, köztük Mucsi Ferenc akitől a képeket kaptam. Fekete Gyula tanár. 1934 és 1967 között oktatott az iskolában, fémforgácsolás gyakorlatot, ezen belül zömében esztergálást. Hobbija volt a gépjármű. Nyugdíjasként 1968 és 1974 között az iskola gépkocsiját vezette. Sóvárgó tekintetek követik a ”száguldó” Mucsi Ferencet. A képen jól látszik, hogy ekkor az udvarnak még nem volt szilárd burkolata.'
+    },
+    //Az iskola "helyrajza"
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/26_az iskola helyrajza.jpg',
+        pocketTitle: 'További képek',
+        gallery: [
+            'KEPEK/26B_Hősök ligete.jpg',
+            'KEPEK/26C_Hősök ligete.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg',
+        header: 'Helyszín - Iskola helyrajza', title:'Az iskola "helyrajza"',
+        content: '1880-as években Vasút utca volt, majd 1926-tól Horthy Miklós utca, 1945-től Dózsa György utca, 1991-től Görgey Artúr utca lett, az elnevezés arra utal, hogy 1849 januárjában itt vonult át Görgey Artúr hadserege. Iskolánk mögött egy csodálatosan szép park – a Hősök ligete – állt. A mellékelt térképen is láthatóan a Szent Imre út, Leiningen Károly utca, Munkácsy Mihály utca és Bajza János utca által határolt területen feküdt. Volt benne egy halastó, melynek két oldalát egy szép fahíd kötötte össze. Középtájon egy mesterségesen kialakított kis dombon vezetett át a sétány. Innen teljes pompájában lehetett áttekinteni a bokrokkal, fákkal és virágokkal díszített parkot. Körben kerítés volt, bejáratként a Corvin utca - akkor Revízió utca -magasságában kialakított díszes kovácsoltvas kapu szolgált. Erre a részre építették az Országzászló nevet viselő első világháborús emlékművet az elhunyt hősök tiszteletére. A Hősök ligete park az emlékművel 1935-ben készült el és lett átadva. Ettől kezdve a város itt rendezte a nemzeti ünnepeken a megemlékezéseket, ünnepélyes zászlófelvonással. A háború alatt a környéken élők szükségből a fákat kivágták és eltüzelték, majd a háború után az emlékmű is lebontásra került. Erre a területre épült nem sokkal később a Szent Imre út vonalában egy lakóépület, mögötte óvoda, bölcsőde és a Bajza utcai Általános Iskola. Mindezek ma is funkcionálnak.'
+    },
+    //Az orosz nyelv oktatása
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/27_iskolacímerek.jpg',
+        pocketTitle: 'További képek',
+        gallery: [
+            'KEPEK/27_iskolacímer.jpg',
+            'KEPEK/27_iskolacímerek.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemenyek - Orosz nyelv oktatása', title: 'Az orosz nyelv oktatása',
+        content: ''
+    },
+    //Major tamas a Landlerben
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/28_MAJOR TAMÁS.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Major Tamás', title: 'Major Tamás a Landlerben',
+        content: 'Major Tamás színművész a diákklub vendége volt 1972-ben. Az iskolai diákszervezet - az akkori KISZ -szervezésében a diákok láthatták a Nemzeti Színházban -  a Hevesi Sándor téren - Peter Weiss: A luzitán szörny c. drámáját. Az előadás egy sajátos és emlékezetes színházi produkció volt, melynek hatástörténetéhez iskolánk is kapcsolódik oly módon, hogy az előadást követően Major Tamás a színház főrendezője – kiemelkedő színészegyéniség – meglátogatta az iskolát és a diákklubban élményt jelentő beszélgetést folytatott az érdeklődő diákokkal.'
+    },
+    //Bartos Lívia
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/29_BARTOS LÍVIA.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Bartos Lívia', title: 'Bartos Lívia', subtitle: '(1923 Budapest – 1999 Budapest)',
+        content: 'Gazdasági mérnöki diplomáját a Budapesti Műszaki Egyetem Gépészmérnöki Karának gazdaságmérnöki szakán, gépipari ágazaton szerezte. 23 éven át látta el az iskola igazgatói teendőit 1957 és 1980 között. Neki köszönhető, hogy a mi iskolánkat bízták meg az országban először számítástechnikai oktatás bevezetésével.'
+    },
+    //Az elso nemzetkozi kapocs
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/30_jugoszláv kapcsolatok.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemeny – Első nemzetközi kapocs', title: 'Az első nemzetközi kapocs', subtitle: 'Kranj, Ljubljana',
+        content: 'A múlt század hatvanas éveinek közepére csökkent a feszültség Magyarország és Jugoszlávia között. Nyilván politikai nyomásra a KGM Oktatási Osztálya is szervezett kapcsolatfelvételt. Mint a kiemelkedően jó iskola, az UMSZKI (akkor Landler) lett kijelölve a projektre. Az útra 1964 szeptemberében került sor. A vendéglátó iskola egy Ljubljánában működő szakképző intézmény volt.'
+    },
+    //naplok, ellenorzok, bizonyitvanyok
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&q=80'
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Naplók, ellenőrzők, bizonyítványok', title: 'Naplók, ellenőrzők, bizonyítványok',
+        content: 'Digitális bizonyítvány, Kréta-értesítő, Kréta-napló sem volt egészen a 2000-es évekig, így az ellenőrzők, bizonyítványok, tanári naplók megléte és bejegyzései mutatták az adott tanévek eredményeit, szolgáltak az oktatás eredményekben mérhető lenyomataként. A kézzel ékesen írt bizonyítványok, az érdemjegyekkel teletűzdelt ellenőrzők és naplók mára kordokumentumként is szolgálnak.'
+    },
+    //Udvaratalakitas
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/32_udvarátalakítás.JPG',
+        pocketTitle: 'További képek',
+        gallery: [
+            'KEPEK/32_udvarátalakítás.JPG',
+            'KEPEK/32_medence.jpg',
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín - Udvar', title: 'Udvarátalakítás',
+        content: 'Eredetileg belső parkja volt az iskola épületének. De azt is kevesen tudják, hogy eredetileg az udvaron volt egy medence a mai tengópálya helyén, kb. 4x8 méteres és 1,2 méter mélységű. Egyáltalán nem sportolási vagy fürdőzési célokat szolgált. A háború előtt építették tűzoltó víz tárolásának céljára. Az udvar „burkolata” ekkor még pormentesített, döngölt föld volt. 1966-ban – a toldalék épület elkészülte után - került sor az udvar felújítására. Ekkor tüntették el a medencét és készítették el alapozás nélkül a teljes udvar aszfaltburkolatát.'
+    },
+    //Szalagavatok, szalagtuzok
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/33_szalagavatók.jpg',
+        pocketTitle: 'További képek',
+        gallery: [
+            'KEPEK/33_szalagavatók.jpg',
+            'KEPEK/33B_szalagavatók.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemeny – Szalagavatók', title: 'Szalagavatók és szalagtuzok',
+        content: 'Iskolánkban a nappali tagozaton az első érettséginek is megfelelő végbizonyítványt 1950-ben kapta egy ipari gimnáziumi (gépészeti) osztály. Elvileg ekkor lehetett volna az első szalagtűzés. Az első ismert szalagtűzés 1957-ben történt. . Az 1953-57 ~ B osztály az iskolában tartott egy szűk-körű rendezvényt, ahol az osztályfőnök – Németh László - feltűzte a szalagokat. Farsangi mulatsággal egybekötött szalagtűzés, az 1954-58-as. 1959-ben először fordult elő, hogy a szaltűzés épületen kívül történt. Valamelyik kultúrházban tartották. Ez volt az első igazi „Szalagavató Bál”, nyitótánccal. Iskolában, a Gellért szálló márványcsarnokában (1964, 1965) …. Jégcsarnok <a href="https://www.youtube.com/watch?v=63URkrkH2UU" target="_blank">2002-es szalagavató tanári tánca</a>'
+    },
 
 
+    //MINTA//
     // --- SZEMÉLYEK (Kék téma) ---
     { 
         type: 'image', eraCss: 'era-szemelyek',
@@ -197,8 +371,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        tocTitle: 'Személyek - Landler Jenő',
-        header: 'SZEMÉLYEK', title: 'Landler Jenő', subtitle: '(1875–1928)',
+        header: 'Személyek - Landler Jenő', title: 'Landler Jenő', subtitle: '(1875–1928)',
         content: 'Magyar kommunista politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált, a Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény megnevezésében 35 éven át jelen volt Landler Jenő neve:<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
     },
 
@@ -207,7 +380,7 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-esemeny',
         image: 'https://images.unsplash.com/photo-1551131628-6623bc17e826?w=800&q=80',
-        pocketTitle: 'Korabeli Iratok',
+        pocketTitle: 'További képek',
         gallery: [
             'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&q=80',
             'https://images.unsplash.com/photo-1580536417537-eb4a4d6b63f5?w=400&q=80'
@@ -215,8 +388,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        tocTitle: 'II. Történet – Mérföldkövek',
-        header: 'II. FEJEZET – TÖRTÉNET', title: 'Az Újjáépítés és Fejlődés', subtitle: 'Korszakok a történelemben',
+        header: 'Esemeny – Mérföldkövek', title: 'Az Újjáépítés és Fejlődés', subtitle: 'Korszakok a történelemben',
         content: 'Az iskola <b>1927-es alapítása</b> után hamar szembesült a világtörténelem viharaival. A háború és az azt követő újjáépítés komoly próbatétel elé állította a közösséget.<br><br>A korszak történelmi hátterének mélyebb megértéséhez érdemes átlapozni a <a href="https://zanza.tv" target="_blank">Zanza.tv történelmi oktatótárát</a>. Később, a technológiai robbanással a híradástechnika, majd a 90-es évektől az informatika forradalma határozta meg a mindennapokat.'
     },
 
@@ -224,7 +396,7 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-helyiseg',
         image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80',
-        pocketTitle: 'Régi Épületszárnyak',
+        pocketTitle: 'További képek',
         gallery: [
             'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80',
             'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80',
@@ -261,7 +433,7 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-targyak',
         image: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&q=80',
-        pocketTitle: 'Emléktárgyak',
+        pocketTitle: 'További képek',
         gallery: [
             'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80',
             'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&q=80'
