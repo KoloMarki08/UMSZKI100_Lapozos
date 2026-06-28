@@ -41,13 +41,15 @@ const pages = [
     },
     // iskolanevek, korszakok
     { 
-        type: 'text', eraCss: 'era-esemeny', header: 'UMSZKI 100 – BEVEZETÉS', title: 'Az újpesti magyar állami fa- és fémipari szakiskola', dropCap: true,
-        content: 'Újpest ikonikus épülete és kultikus oktatási intézménye - ahová újpesti fiatalok generációi jártak és járnak még most is - az Újpesti Két Tanítási Nyelvű Műszaki Technikum. Az intézmény épülete, eredeti nevén a Magyar Királyi Állami Fa- és Fémipari Szakiskola, 1926-ban épült fel. Klebelsberg Kunó kultuszminiszternek és Semsey Aladár polgármesternek kiemelt szerepe volt a létrehozásában. Születésnapunk tehát egyrészt a gyönyörű épületünk 1927-es átadásához, valamint az ekkor beinduló fémipari szakiskolai képzéshez kötődik. Az első tanévünknek az 1927/28 tanévet tekinthetjük. A kép mégis árnyaltabb. Volt egy jogelőd iskola - az Újpesti Faipari Szakiskola – mely 1895-ben kezdte meg működését. Ez az iskola költözött át - továbbra is Blockner Gyula igazgatása mellett - 1927-ben, fémipari szakiskolai tagozattal bővülve, az új épületbe.                                                                             <a href="https://edir.umszki.hu/rolunk/tortenet " target="_blank">(helytörténet 88-94.)</a> <a href="https://www.youtube.com/watch?v=-0KIu1-IwSE&list=PLiROlxlxPFLIVTnwUDQTPqc8g4Epfhs03&index=5" target="_blank">Archív felvételek</a>'
+        type: 'text', eraCss: 'era-esemeny',
+        header: 'Iskolanevek, korszakok',
+        title: 'Iskolanevek, korszakok',
+        content: '1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 – 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 – 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 – 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 – 1948 Állami Műszaki Középiskola<br>1948 – 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 – 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől – 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum'
     },
     {
         type: 'text', eraCss: 'era-esemeny', 
-        header: 'UMSZKI 100 – BEVEZETÉS',
-        content: 'Az 1928-tól kiadott iskolai Értesítők – melyek 1940-től az Évkönyv nevet kapták – a születésnapnak az 1895/96 tanévet tekintették. Az utolsó írásos anyag erről az időszámításról, az 1945/46-os évkönyv, ami kiadásra nem került, de gépelt kézirat formájában fennmaradt. 1951-ben az iskola kettévált. Létrejött az 1 sz. Faipari Technikum és a 2 sz. Gépipari Technikum, melyek más-más főhatóság irányítás alá kerültek, de mindkettő továbbra is ugyanabban az épületben működött tovább. A szétváláskor a faipar a Corvin utcai szárnyat kapta. A születésnap kérdése érdekes módon mindkét iskolánál szinte egyszerre az 1958/59 tanévben bukkan elő. Meglepő módon mindkét iskola egymástól eltérő és a korábbival nem egyező születésnapot jelölt. Az új évszámok a faipar 75 éves Jubileumi évkönyvében, illetve a nálunk újra indított évkönyv kiadás első könyvében olvasható: az 1927-es születési évvel.Az iskola már alapításakor a korabeli szakmai oktatás jelentős intézménye volt és hosszú története során képes volt a szakoktatás élvonalában maradni. A tartalmilag folyamatosan megújuló fémipari-gépészképzés a kezdetektől napjainkig a korszerű ismeretekkel rendelkező szakemberek forrása.'
+        header: 'Iskolanevek, korszakok',
+        content: '1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 – 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 – 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 -2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 – 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 – 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
     },
     //Blochner Gyula
     { 
@@ -238,7 +240,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemenyek - Tanár-diák sportesemény', title: 'Tanár-diák sportesemény 1943-ból',
+        header: 'Események - Tanár-diák sportesemény', title: 'Tanár-diák sportesemény 1943-ból',
         content: 'Szokás volt, hogy a tantestület és a diákság minden évben kirándult valahová. Az 1943-as év kirándulása június 2-án Visegrádon volt. Egyéb programok mellett sor került egy focimeccsre az elméleti és gyakorlati tanárok között. Az elméletiek 3:1 –re győztek. A képen Szabó Gyula, az iskola akkori igazgatója őrzi a kaput vigyázó szemeivel.'
     },
     //Tanmuhelyek
@@ -249,7 +251,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszín - Tanműhelyek', title:'Tanműhelyek',
-        content: 'A tornatermet mélyítették 5 méterrel'
+        content: ''
     },
     //autómodellező és gépjármű szakkör
     { 
@@ -258,7 +260,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemenyek - Autómodellező és Gépjármű Szakkör', title: 'Autómodellező és Gépjármű Szakkör',
+        header: 'Események - Autómodellező és Gépjármű Szakkör', title: 'Autómodellező és Gépjármű Szakkör',
         content: 'A műhelyben Fekete Gyula tanár vezetésével működött az autómodellező és gépjármű szakkör. A tanár úr volt diákja, Halász Erika (1953-57) segítségével elérte, hogy annak munkahelye – a  Csepel Motorkerékpárgyár – alkatrészekben egy Pannónia motorkerékpárt adományozott az iskolának. Ezek zömében hibásak voltak. Felújításuk és az összeszerelés 1959 őszétől a szakkörben történt. A munkába bekapcsolódott  az 1959/60 tanév III.B osztályának néhány lelkes tanulója is, köztük Mucsi Ferenc akitől a képeket kaptam. Fekete Gyula tanár. 1934 és 1967 között oktatott az iskolában, fémforgácsolás gyakorlatot, ezen belül zömében esztergálást. Hobbija volt a gépjármű. Nyugdíjasként 1968 és 1974 között az iskola gépkocsiját vezette. Sóvárgó tekintetek követik a ”száguldó” Mucsi Ferencet. A képen jól látszik, hogy ekkor az udvarnak még nem volt szilárd burkolata.'
     },
     //Az iskola "helyrajza"
@@ -288,7 +290,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemenyek - Orosz nyelv oktatása', title: 'Az orosz nyelv oktatása',
+        header: 'Események - Orosz nyelv oktatása', title: 'Az orosz nyelv oktatása',
         content: ''
     },
     //Major tamas a Landlerben
@@ -318,7 +320,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemeny – Első nemzetközi kapocs', title: 'Az első nemzetközi kapocs', subtitle: 'Kranj, Ljubljana',
+        header: 'Esemény – Első nemzetközi kapocs', title: 'Az első nemzetközi kapocs', subtitle: 'Kranj, Ljubljana',
         content: 'A múlt század hatvanas éveinek közepére csökkent a feszültség Magyarország és Jugoszlávia között. Nyilván politikai nyomásra a KGM Oktatási Osztálya is szervezett kapcsolatfelvételt. Mint a kiemelkedően jó iskola, az UMSZKI (akkor Landler) lett kijelölve a projektre. Az útra 1964 szeptemberében került sor. A vendéglátó iskola egy Ljubljánában működő szakképző intézmény volt.'
     },
     //naplok, ellenorzok, bizonyitvanyok
@@ -358,8 +360,57 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemeny – Szalagavatók', title: 'Szalagavatók és szalagtuzok',
+        header: 'Esemény – Szalagavatók', title: 'Szalagavatók és szalagtuzok',
         content: 'Iskolánkban a nappali tagozaton az első érettséginek is megfelelő végbizonyítványt 1950-ben kapta egy ipari gimnáziumi (gépészeti) osztály. Elvileg ekkor lehetett volna az első szalagtűzés. Az első ismert szalagtűzés 1957-ben történt. . Az 1953-57 ~ B osztály az iskolában tartott egy szűk-körű rendezvényt, ahol az osztályfőnök – Németh László - feltűzte a szalagokat. Farsangi mulatsággal egybekötött szalagtűzés, az 1954-58-as. 1959-ben először fordult elő, hogy a szaltűzés épületen kívül történt. Valamelyik kultúrházban tartották. Ez volt az első igazi „Szalagavató Bál”, nyitótánccal. Iskolában, a Gellért szálló márványcsarnokában (1964, 1965) …. Jégcsarnok <a href="https://www.youtube.com/watch?v=63URkrkH2UU" target="_blank">2002-es szalagavató tanári tánca</a>'
+    },
+    //tanacsterem
+    { 
+        type: 'image', eraCss: 'era-helyiseg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Tanácsterem', title: 'Tanácsterem',
+        content: 'A 113-as számú terem a tanácsterem, az igazgatóság és a korábban naplószobaként funkcionáló tanári, 2022 óta az iskolatörténeti gyűjteménynek helyet adó terem között helyezkedik el. Funkcióját tekintve igen forgalmas helyszíne az épületnek: értekezletek, érettségi vizsgák, Erasmus találkozók, projektmunkák, versmondó versenyek, dolgozatírások helyszínéül szolgál tanévról tanévre.'
+    },
+    //dinasztiák
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/55_Landler Jenő.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Dinasztiák', title: 'Dinasztiák',
+        content: 'Magyar kommunista politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált, a Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény megnevezésében 35 éven át jelen volt Landler Jenő neve:<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
+    },
+    //evkonyvek
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&q=80',
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Évkönyvek', title: 'Évkönyvek',
+        content: ''
+    },
+    //hiradastechnikai kepzes
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'https://images.unsplash.com/photo-1551131628-6623bc17e826?w=800&q=80'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemény – Hiradástechnikai képzés', title: 'Híradástechnikai képzés',
+        content: 'Szerencsésen egészült ki az iskola profilja az ötvenes években az akkor újdonságnak számító híradásipari tagozattal. Ebben az időszakban vált az iskola a főváros egyik legnagyobb oktatási intézményévé.'
+    },
+    //sportelet,sportsikerek
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/38_sportélet.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Esemény – Sportélet', title: 'Sportélet és sportsikerek',
+        content: 'Szöllősi Antal iskolánk legendás testnevelő tanára a negyvenes évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával is kiemelten foglalkozott. Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt. Andorfer János - iskolánk olt diákja, tanára - a kerületi, városi labdarúgó tornákra nevezte és kísérte rendszeresen az UMSZKI csapatait. Szenczi László 1. Gáll Mária – tornász 2. Bakos István – kézilabdázó 3. Jakab István – kézilabdázó 4. Sütő József – atléta, maratonista 5. Fekete Sándor – atléta 6. Tóth Zoltán – labdarúgó 7. Nyirádi György – kajakozó 8. Mózes András – atléta, maratonista 9. Brabant Béla – gyeplabda játékos 10. Tóth Zoltán – motoros hajómodellező 11. Ancsin János – jégkorongozó 12. Brockhauser István – labdarúgó 13. Sztankó Éva – röplabdázó 14. Szűcs Lajos – labdarúgó 15. Hoboth Sándor – röplabdázó 16. Giczy Csaba – kajakozó 17. Füzesi Zsolt – labdarúgó 18. Kovács Zoltán – válogatott vízilabdázó 19. Vass Sándor – kézilabdázó 20. Móró Endre – thai-boxoló 21. Spránitz Gábor – sportlövő 22. Vass Károly – kézilabdázó 23. Monostori Attila – vízilabdázó 24. Lange Péter - RSM Hungary Sail Racing Team tagja 25. Battlay Krisztina - röplabda UTE, Vasas 26. Lőw Zsolt - labdarúgó 27. Nyerges Krisztián - labdarúgó 28. Czingli László – tornász 29. Szirányi Bence - válogatott jégkorongozó 30. Németh Zsanett - olimpiai birkózó 31. Guczoghy György - tornász 32. Ágh György - válogatott vízilabdázó 33. Farkas János - válogatott kalapácsvető 34. Nagy Tibor - válogatott labdarúgó'
     },
 
 
@@ -388,7 +439,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemeny – Mérföldkövek', title: 'Az Újjáépítés és Fejlődés', subtitle: 'Korszakok a történelemben',
+        header: 'Esemény – Mérföldkövek', title: 'Az Újjáépítés és Fejlődés', subtitle: 'Korszakok a történelemben',
         content: 'Az iskola <b>1927-es alapítása</b> után hamar szembesült a világtörténelem viharaival. A háború és az azt követő újjáépítés komoly próbatétel elé állította a közösséget.<br><br>A korszak történelmi hátterének mélyebb megértéséhez érdemes átlapozni a <a href="https://zanza.tv" target="_blank">Zanza.tv történelmi oktatótárát</a>. Később, a technológiai robbanással a híradástechnika, majd a 90-es évektől az informatika forradalma határozta meg a mindennapokat.'
     },
 
@@ -412,8 +463,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        tocTitle: 'III. Helyszín – Ahol a jövő épül',
-        header: 'III. FEJEZET – HELYSZÍN', title: 'A Falak Titkai', subtitle: 'Műhelyek és Tantermek',
+        header: 'Helyszín – Tanácsterem', title: 'Tanácsterem',
         content: '1927 óta működő intézményünk 114-es termében, korábban naplószobájában, kapott helyett 2022 novemberében a megújult iskolatörténeti gyűjtemény.<br><br>Ennek alapjául az iskola alagsorában 20 éven át működő múzeum anyaga és Urbán Kornélnak – iskolánk egykori diákjának és későbbi mérnöktanárának – hagyatéka szolgált.'
     },
 
