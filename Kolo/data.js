@@ -336,18 +336,23 @@ const pages = [
         pocketTitle: 'További képek',
         gallery: [
             'KEPEK/26B_Hősök ligete.jpg',
-            'KEPEK/26C_Hősök ligete.jpg'
+            'KEPEK/26C_Hősök ligete.jpg',
+            'KEPEK/26_az iskola helyrajza/C.jpg',
+            'KEPEK/26_az iskola helyrajza/D.jpg',
+            'KEPEK/26_az iskola helyrajza/E.jpg',
+            'KEPEK/26_az iskola helyrajza/F.jpg',
+            'KEPEK/26_az iskola helyrajza/F - beolvasás0007.jpg',
         ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg',
         header: 'Helyszín - Iskola helyrajza', title:'Az iskola "helyrajza"',
-        content: '1880-as években Vasút utca volt, majd 1926-tól Horthy Miklós utca, 1945-től Dózsa György utca, 1991-től Görgey Artúr utca lett, az elnevezés arra utal, hogy 1849 januárjában itt vonult át Görgey Artúr hadserege. Iskolánk mögött egy csodálatosan szép park – a Hősök ligete – állt. A mellékelt térképen is láthatóan a Szent Imre út, Leiningen Károly utca, Munkácsy Mihály utca és Bajza János utca által határolt területen feküdt. Volt benne egy halastó, melynek két oldalát egy szép fahíd kötötte össze. Középtájon egy mesterségesen kialakított kis dombon vezetett át a sétány. Innen teljes pompájában lehetett áttekinteni a bokrokkal, fákkal és virágokkal díszített parkot. Körben kerítés volt, bejáratként a Corvin utca - akkor Revízió utca -magasságában kialakított díszes kovácsoltvas kapu szolgált. Erre a részre építették az Országzászló nevet viselő első világháborús emlékművet az elhunyt hősök tiszteletére. A Hősök ligete park az emlékművel 1935-ben készült el és lett átadva. Ettől kezdve a város itt rendezte a nemzeti ünnepeken a megemlékezéseket, ünnepélyes zászlófelvonással. A háború alatt a környéken élők szükségből a fákat kivágták és eltüzelték, majd a háború után az emlékmű is lebontásra került. Erre a területre épült nem sokkal később a Szent Imre út vonalában egy lakóépület, mögötte óvoda, bölcsőde és a Bajza utcai Általános Iskola. Mindezek ma is funkcionálnak.'
+        content: '1880-as években Vasút utca volt, majd 1926-tól Horthy Miklós utca, 1945-től Dózsa György utca, 1991-től Görgey Artúr utca lett, az elnevezés arra utal, hogy 1849 januárjában itt vonult át Görgey Artúr hadserege. Iskolánk mögött egy csodaszép park – a Hősök ligete – állt. A mellékelt térképen is láthatóan a Szent Imre út, Leiningen Károly utca, Munkácsy Mihály utca és Bajza János utca által határolt területen feküdt. Volt benne egy halastó, melynek két oldalát egy szép fahíd kötötte össze. Középtájon egy mesterségesen kialakított kis dombon vezetett át a sétány. Innen teljes pompájában lehetett áttekinteni a bokrokkal, fákkal és virágokkal díszített parkot. Körben kerítés volt, bejáratként a Corvin utca - akkor Revízió utca - magasságában kialakított díszes kovácsoltvas kapu szolgált. Erre a részre építették az Országzászló nevet viselő első világháborús emlékművet az elhunyt hősök tiszteletére. A Hősök ligete park az emlékművel 1935-ben készült el és lett átadva. Ettől kezdve a város itt rendezte a nemzeti ünnepeken a megemlékezéseket, ünnepélyes zászlófelvonással. A háború alatt a környéken élők szükségből a fákat kivágták és eltüzelték, majd a háború után az emlékmű is lebontásra került. Erre a területre épült nem sokkal később a Szent Imre út vonalában egy lakóépület, mögötte óvoda, bölcsőde és a Bajza utcai Általános Iskola.  Mindezek ma is funkcionálnak. Míg a park létezett, diákjaink, különösen a kollégisták alkalomadtán el-eljártak oda.'
     },
     //Az orosz nyelv oktatása
     { 
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/27_iskolacímerek.jpg',
+        image: 'KEPEK/27_orosz nyelv.jpg',
         pocketTitle: 'További képek',
         gallery: [
             'KEPEK/27_iskolacímer.jpg',
@@ -357,22 +362,30 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         header: 'Események - Orosz nyelv oktatása', title: 'Az orosz nyelv oktatása',
-        content: ''
+        content: 'Az érettségivel záruló képzések tantervében mindig szerepel idegen nyelv. Idegennyelvi képzés nálunk az 1943/44 tanévben a dolgozók tagozatán kezdődött. Külsős óraadó tanárral oldották meg a német nyelv tanítását. Ez az osztály az 1946/47 tanévben végzett. A háború miatt újabb ilyen felnőtt osztály az 1945/46 tanévben indult. A nappali tagozaton az 1947/48-as tanévben indult az érettségit adó képzés. Az első három évben németet tanultak a diákok a Könyves Gimnáziumból átjárt óraadó tanár, Kalavszky István irányításával. A negyedikben át kellett térniük az orosz nyelvre. Az  1948/49 tanévtől a fenntartó az orosz nyelv oktatását írta elő annak ellenére, hogy erre képzett tanár akkor még nem állt rendelkezésre. "Ki tud többet a Szovjetunióról?" - ez volt a vetélkedő címe, mely évtizedekig meghatározta az orosz nyelvtanuláshoz kötödő tudás irányvonalát.'
     },
     //Major tamas a Landlerben
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/28_MAJOR TAMÁS.jpg'
+        image: 'KEPEK/28_MAJOR TAMÁS.jpg',
+        pocketTitle: 'Major Tamás a Landlerben',
+        gallery: [
+            'KEPEK/28_Major Tamás/A.jpg',
+            'KEPEK/28_Major Tamás/B.jpg',
+            'KEPEK/28_Major Tamás/C.jpg',
+            'KEPEK/28_Major Tamás/D.jpg',
+            'KEPEK/28_Major Tamás/E.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         header: 'Személyek - Major Tamás', title: 'Major Tamás a Landlerben',
-        content: 'Major Tamás színművész a diákklub vendége volt 1972-ben. Az iskolai diákszervezet - az akkori KISZ -szervezésében a diákok láthatták a Nemzeti Színházban -  a Hevesi Sándor téren - Peter Weiss: A luzitán szörny c. drámáját. Az előadás egy sajátos és emlékezetes színházi produkció volt, melynek hatástörténetéhez iskolánk is kapcsolódik oly módon, hogy az előadást követően Major Tamás a színház főrendezője – kiemelkedő színészegyéniség – meglátogatta az iskolát és a diákklubban élményt jelentő beszélgetést folytatott az érdeklődő diákokkal.'
+        content: 'Major Tamás színművész a diákklub vendége volt 1972-ben. Az iskolai diákszervezet - az akkori KISZ -szervezésében a diákok láthatták a Nemzeti Színház akkori stúdiószínházában a Katona József Színházban Peter Weiss: A luzitán szörny c. drámáját. Az előadás egy sajátos és emlékezetes színházi produkció volt, melynek hatástörténetéhez iskolánk is kapcsolódik oly módon, hogy az előadást követően Major Tamás a színház főrendezője – kiemelkedő színészegyéniség – meglátogatta az iskolát és a diákklubban élményt jelentő beszélgetést folytatott az érdeklődő diákokkal.'
     },
     //Bartos Lívia
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/29_BARTOS LÍVIA.jpg'
+        image: 'KEPEK/29_Bartos Lívia.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -405,14 +418,14 @@ const pages = [
         image: 'KEPEK/32_udvarátalakítás.JPG',
         pocketTitle: 'További képek',
         gallery: [
-            'KEPEK/32_udvarátalakítás.JPG',
             'KEPEK/32_medence.jpg',
+            'KEPEK/32_udvarátalakítás.JPG',
         ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszín - Udvar', title: 'Udvarátalakítás',
-        content: 'Eredetileg belső parkja volt az iskola épületének. De azt is kevesen tudják, hogy eredetileg az udvaron volt egy medence a mai tengópálya helyén, kb. 4x8 méteres és 1,2 méter mélységű. Egyáltalán nem sportolási vagy fürdőzési célokat szolgált. A háború előtt építették tűzoltó víz tárolásának céljára. Az udvar „burkolata” ekkor még pormentesített, döngölt föld volt. 1966-ban – a toldalék épület elkészülte után - került sor az udvar felújítására. Ekkor tüntették el a medencét és készítették el alapozás nélkül a teljes udvar aszfaltburkolatát.'
+        content: 'Eredetileg belső parkja volt az iskola épületének. Azt is kevesen tudják, hogy az udvaron volt egy medence a mai tengópálya helyén, kb. 4x8 méteres és 1,2 méter mélységű. Egyáltalán nem sportolási vagy fürdőzési célokat szolgált. A háború előtt építették tűzoltó víz tárolásának céljára. Az udvar „burkolata” ekkor még pormentesített, döngölt föld volt. 1966-ban – a stílustörő toldaléképület elkészülte után - került sor az udvar felújítására. Ekkor tüntették el a medencét és készítették el alapozás nélkül a teljes udvar aszfaltburkolatát.'
     },
     //Szalagavatok, szalagtuzok
     { 
@@ -420,14 +433,22 @@ const pages = [
         image: 'KEPEK/33_szalagavatók.jpg',
         pocketTitle: 'További képek',
         gallery: [
-            'KEPEK/33_szalagavatók.jpg',
-            'KEPEK/33B_szalagavatók.jpg'
+            'KEPEK/33B_szalagavatók.jpg',
+            'KEPEK/33_szalagavatók/A.JPG',
+            'KEPEK/33_szalagavatók/B.JPG',
+            'KEPEK/33_szalagavatók/C.JPG',
+            'KEPEK/33_szalagavatók/D.JPG',
+            'KEPEK/33_szalagavatók/E.JPG',
+            'KEPEK/33_szalagavatók/H.jpg',
+            'KEPEK/33_szalagavatók/önfeledt pillanat.jpg',
+            'KEPEK/33_szalagavatók/1959.jpg',
+            'KEPEK/33_szalagavatók/1958_szalagtűző farsang.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         header: 'Esemény – Szalagavatók', title: 'Szalagavatók és szalagtuzok',
-        content: 'Iskolánkban a nappali tagozaton az első érettséginek is megfelelő végbizonyítványt 1950-ben kapta egy ipari gimnáziumi (gépészeti) osztály. Elvileg ekkor lehetett volna az első szalagtűzés. Az első ismert szalagtűzés 1957-ben történt. . Az 1953-57 ~ B osztály az iskolában tartott egy szűk-körű rendezvényt, ahol az osztályfőnök – Németh László - feltűzte a szalagokat. Farsangi mulatsággal egybekötött szalagtűzés, az 1954-58-as. 1959-ben először fordult elő, hogy a szaltűzés épületen kívül történt. Valamelyik kultúrházban tartották. Ez volt az első igazi „Szalagavató Bál”, nyitótánccal. Iskolában, a Gellért szálló márványcsarnokában (1964, 1965) …. Jégcsarnok <a href="https://www.youtube.com/watch?v=63URkrkH2UU" target="_blank">2002-es szalagavató tanári tánca</a>'
+        content: 'Iskolánkban a nappali tagozaton az első érettséginek is megfelelő végbizonyítványt 1950-ben kapta egy ipari gimnáziumi, gépészeti osztály. Elvileg ekkor lehetett volna az első szalagtűzés. Az első ismert szalagtűzés viszont 1957-ben történt. Az 1953-57 -es B osztály az iskolában tartott egy szűkkörű rendezvényt, ahol az osztályfőnök – Németh László - feltűzte a szalagokat. Farsangi mulatsággal egybekötött szalagtűzés volt az 1954-58-as évfolyam tűzője. 1959-től külső helyszínen,  a Vasas Kultúrházban a farsangi időszakban technikus bálokra került sor. Arra vonatkozóan nincs adat, hogy a szalagtűzés is az esemény része lett volna. 1961-ben sajátos módon, az igazgatóság tiltásának ellenére szerveződött a bál külső helyszínen. Nyilvánvalóan kuriózumnak számított a Gellért szálló márványcsarnokában tartott szalagavató bál 1964-ben és 1965-ben.Bizonyos, hogy a 80-as években a Dallos Ida Művelődési Ház adott otthont ennek az iskolai ünnepségnek. A 90-es években a Petőfi Csarnok volt a helyszín, és arra is volt példa, hogy a Kanizsay Dorottya Egészségügyi Szakiskola leányaival közösen táncolták a keringőt umszkis fiaink. Egy ideig a zuglói Körcsarnok, majd a káposztásmegyeri Jégcsarnok vált helyszínévé a szalagavatónknak.'
     },
     //tanacsterem
     { 
@@ -441,27 +462,27 @@ const pages = [
     //dinasztiák
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/55_Landler Jenő.jpg',
+        image: 'KEPEK/35_dinasztiák.png',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         header: 'Személyek - Dinasztiák', title: 'Dinasztiák',
-        content: 'Magyar kommunista politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált, a Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény megnevezésében 35 éven át jelen volt Landler Jenő neve:<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
+        content: ''
     },
     //evkonyvek
     { 
         type: 'image', eraCss: 'era-targyak',
-        image: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&q=80',
+        image: 'KEPEK/36_évkönyvek.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        header: 'Évkönyvek', title: 'Évkönyvek',
-        content: ''
+        header: 'Emléktárgyak - Évkönyvek', title: 'Évkönyvek',
+        content: 'A kezdet kezdetén évenként megjelentetett iskolai Értesítők tájékozattak a tanév eseményeiről, adatairól összegzőleg.Ezeket váltották 1940-től az Évkönyvek. Az utolsó évkönyv 1980-ban került kiadásra. Fontos szempont az évkönyvek közt keresésnél, hogy Landler Jenő nevét több szakiskola és középiskola viselte a XX. század második felében: Budapesten, Debrecenben és Nagykanizsán is volt "Landler". Ezen középiskolák és szakiskolák évkönyvei, köztük az újpesti Landleré is elsősorban digitális archívumokban, antikváriumokban és helytörténeti gyűjteményekben érhetők el. Sok landleres diák relikviáként gyűjti ezeket az évkönyveket. A 80-as évek vége és a 90-es évek eleje események ilyen módon történő rögzítéséről nem gondoskodott. Az iskola első internetes bejegyzése 1998-ból való, és ettől az évtől kezdve honlapok ismertetik az érdeklődőkkel az iskola adatait, sikereit, eredményeit.'
     },
     //hiradastechnikai kepzes
     { 
         type: 'image', eraCss: 'era-esemeny',
-        image: 'https://images.unsplash.com/photo-1551131628-6623bc17e826?w=800&q=80'
+        image: 'KEPEK/37_híradástechnika kezdete.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -476,7 +497,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         header: 'Esemény – Sportélet', title: 'Sportélet és sportsikerek',
-        content: 'Szöllősi Antal iskolánk legendás testnevelő tanára a negyvenes évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával is kiemelten foglalkozott. Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt. Andorfer János - iskolánk olt diákja, tanára - a kerületi, városi labdarúgó tornákra nevezte és kísérte rendszeresen az UMSZKI csapatait. Szenczi László 1. Gáll Mária – tornász 2. Bakos István – kézilabdázó 3. Jakab István – kézilabdázó 4. Sütő József – atléta, maratonista 5. Fekete Sándor – atléta 6. Tóth Zoltán – labdarúgó 7. Nyirádi György – kajakozó 8. Mózes András – atléta, maratonista 9. Brabant Béla – gyeplabda játékos 10. Tóth Zoltán – motoros hajómodellező 11. Ancsin János – jégkorongozó 12. Brockhauser István – labdarúgó 13. Sztankó Éva – röplabdázó 14. Szűcs Lajos – labdarúgó 15. Hoboth Sándor – röplabdázó 16. Giczy Csaba – kajakozó 17. Füzesi Zsolt – labdarúgó 18. Kovács Zoltán – válogatott vízilabdázó 19. Vass Sándor – kézilabdázó 20. Móró Endre – thai-boxoló 21. Spránitz Gábor – sportlövő 22. Vass Károly – kézilabdázó 23. Monostori Attila – vízilabdázó 24. Lange Péter - RSM Hungary Sail Racing Team tagja 25. Battlay Krisztina - röplabda UTE, Vasas 26. Lőw Zsolt - labdarúgó 27. Nyerges Krisztián - labdarúgó 28. Czingli László – tornász 29. Szirányi Bence - válogatott jégkorongozó 30. Németh Zsanett - olimpiai birkózó 31. Guczoghy György - tornász 32. Ágh György - válogatott vízilabdázó 33. Farkas János - válogatott kalapácsvető 34. Nagy Tibor - válogatott labdarúgó'
+        content: 'Szöllősi Antal iskolánk legendás testnevelő tanára a negyvenes évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott. Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt. Kis Alajos labdarúgóedző, csapatával országos nagypályás bajnokságon is részt vett. Andorfer János - iskolánk volt diákja, tanára - 1993-tól vette át a kispályás labdarúgó csapatot, és 2018-ig vitte renszeresen a diákokat kerületi, városi labdarúgó tornákra nevezte és kísérte rendszeresen az UMSZKI csapatait. Ifjósági országos curling bajnokásgon 6. helyezést értek el. UTE öregfiúk - Újpest diákválogatott mérkőzés 2015 felkérték a kerületi középiskolás váléogatott vezetésére. Országos floorball-bajnokságon is szerepeltek. Szenczi László- UTE/Honvéd atlétika edző, Molnár Imréné az iskolában országos és fővárosi atlétikai versenyekre vitte a diákokat. 1. Gáll Mária – tornász 2. Bakos István – kézilabdázó 3. Jakab István – kézilabdázó 4. Sütő József – atléta, maratonista 5. Fekete Sándor – atléta 6. Tóth Zoltán – labdarúgó 7. Nyirádi György – kajakozó 8. Mózes András – atléta, maratonista 9. Brabant Béla – gyeplabda játékos 10. Tóth Zoltán – motoros hajómodellező 11. Ancsin János – jégkorongozó 12. Brockhauser István – labdarúgó 13. Sztankó Éva – röplabdázó 14. Szűcs Lajos – labdarúgó 15. Hoboth Sándor – röplabdázó 16. Giczy Csaba – kajakozó 17. Füzesi Zsolt – labdarúgó 18. Kovács Zoltán – válogatott vízilabdázó 19. Vass Sándor – kézilabdázó 20. Móró Endre – thai-boxoló 21. Spránitz Gábor – sportlövő 22. Vass Károly – kézilabdázó 23. Monostori Attila – vízilabdázó 24. Lange Péter - RSM Hungary Sail Racing Team tagja 25. Battlay Krisztina - röplabda UTE, Vasas 26. Lőw Zsolt - labdarúgó 27. Nyerges Krisztián - labdarúgó 28. Czingli László – tornász 29. Szirányi Bence - válogatott jégkorongozó 30. Németh Zsanett - olimpiai birkózó 31. Guczoghy György - tornász 32. Ágh György - válogatott vízilabdázó 33. Farkas János - válogatott kalapácsvető 34. Nagy Tibor - válogatott labdarúgó'
     },
 
 
