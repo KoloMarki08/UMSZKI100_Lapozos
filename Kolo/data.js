@@ -4,11 +4,11 @@ const pages = [
 
     // --- BEVEZETÉS ---
     { 
-        type: 'text', eraCss: 'era-uniform', header: 'ANTRÉ 75 éves jubileumi', title: 'Az újpesti magyar állami fa- és fémipari szakiskola', dropCap: true,
+        type: 'chapter', eraCss: 'era-uniform', header: 'ANTRÉ 75 éves jubileumi', title: 'Az újpesti magyar állami fa- és fémipari szakiskola', dropCap: true,
         content: 'Újpest ikonikus épülete és kultikus oktatási intézménye - ahová újpesti fiatalok generációi jártak és járnak - az Újpesti Két Tanítási Nyelvű Műszaki Technikum. Az intézmény épülete, eredeti nevén a Magyar Királyi Állami Fa- és Fémipari Szakiskola, 1926-ban épült fel. Klebelsberg Kunó kultuszminiszternek és Semsey Aladár polgármesternek kiemelt szerepe volt a létrehozásában. Születésnap tehát egyrészt a gyönyörű épület 1927-es átadásához, valamint az ekkor beinduló fémipari szakiskolai képzéshez kötődik. Az első tanévnek az 1927/28-as tanévet tekinthetjük. A helyzet mégis árnyaltabb. Volt egy jogelőd iskola - az Újpesti Faipari Szakiskola – mely 1895-ben kezdte meg működését. Ez az iskola költözött át - továbbra is Blockner Gyula igazgatása mellett - 1927-ben, fémipari szakiskolai tagozattal bővülve, az új épületbe.<br><a href="https://www.youtube.com/watch?v=-0KIu1-IwSE&list=PLiROlxlxPFLIVTnwUDQTPqc8g4Epfhs03&index=5" target="_blank">1926-os építkezési videó</a><br><a href="https://edir.umszki.hu/rolunk/tortenet" target="_blank">75. Jubileumi évkönyv 6-28.</a>'
     },
     {
-        type: 'text', eraCss: 'era-uniform', 
+        type: 'chapter', eraCss: 'era-uniform', 
         header: 'ANTRÉ 75 éves jubileumi',
         content: 'Az 1928-tól kiadott iskolai Értesítők – melyek 1940-től az Évkönyv nevet kapták – a születésnapnak az 1895/96 tanévet tekintették. Az utolsó írásos anyag erről az időszámításról, az 1945/46-os évkönyv, ami kiadásra nem került, de gépelt kézirat formájában fennmaradt. 1951-ben az iskola kettévált. Létrejött az 1 sz. Faipari Technikum és a 2 sz. Gépipari Technikum, melyek más-más főhatóság irányítás alá kerültek, de mindkettő továbbra is ugyanabban az épületben működött tovább. A szétváláskor a faipar a Corvin utcai szárnyat kapta. (A születésnap kérdése mindkét iskolánál szinte egyszerre az 1958/59 tanévben bukkan elő. Meglepő módon mindkét iskola egymástól eltérő és a korábbival nem egyező születésnapot jelölt.) Az iskola már alapításakor a korabeli szakmai oktatás jelentős intézménye volt és hosszú története során képes volt a szakoktatás élvonalában maradni. A tartalmilag folyamatosan megújuló fémipari-gépészképzés a kezdetektől napjainkig a korszerű ismeretekkel rendelkező szakemberek forrása, az azóta megjelent és újra és újrafogalmazott híradástechnikai, elektrotechnikai, informatikai és mechatronikai képzés teszi teljessé a mai arculatot.'
     },
@@ -42,8 +42,8 @@ const pages = [
         ]
     },
     {
-        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        header: 'Zsolnay csempék', title: 'Zsolnay csempék',
+        type: 'text', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emléktárgyak - Zsolnay csempék', title: 'Zsolnay csempék',
         content: ' Az 1920-as évekre jellemző - a szecesszió és az art deco határán álló - építészeti stílushoz illeszkednek. A korszak hasonló középületeiben - például hentesüzletekben vagy iskolákban - gyakran használtak mázas pirogránit alapanyagú, fagyálló és könnyen tisztítható csempéket, melyek közül a legnevesebbek a Zsolnay-gyárból kerültek ki. A mázas pirogránit a Zsolnay-gyár által kifejlesztett, rendkívül ellenálló kerámiaanyag, amelyet különböző színű és típusú mázakkal vonnak be.'
     },
     // iskolanevek, korszakok
@@ -61,32 +61,41 @@ const pages = [
     //Blochner Gyula
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/05_Blockner_Gyula.jpg',
+        image: 'KEPEK/5_Blockner Gyula.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         header: 'Személyek - Blockner Gyula', title: 'Blockner Gyula', subtitle: '(1877 Székesfehérvár – 1941 Újpest)',
-        content: 'Blockner Gyula neves újpesti pedagógus, szakiskolai igazgató és helytörténeti kutató volt. Gépészmérnökként végzett. Tagja volt a nagy múltú Magyar Mérnök- és Építész-Egyletnek (ahogy egyébként Hajós Alfréd is).'
+        content: 'Blockner Gyula neves újpesti pedagógus, szakiskolai igazgató és helytörténeti kutató volt. Gépészmérnökként végzett. Tagja volt a nagy múltú Magyar Mérnök- és Építész-Egyletnek (ahogy egyébként Hajós Alfréd is). Munkássága leginkább az ipari szakoktatáshoz kötődik. Másfél évtizenden át - 1924 és 1939 között -  tevékenykedett az Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola igazgatójaként. Nevéhez fűződik az intézmény több évkönyvének és értesítőjének kiadása az 1930-as években. Újpest közéletének aktív tagja volt, különböző egyesületi tisztségeket is betöltött az Újpesti Helytörténeti Értesítő szerint. Mindemellett Erdély történelméhez is vonzódott. Különösen foglalkoztatta Déva vára. 1905-ben az Erdélyi Múzeumban publikált tanulmányt a dévai várról, melyet saját rajzaival illusztrált. Kutatásait 1826-ból származó bécsi katonai tervrajzokra alapozta. Blockner Gyula testvére az a hirdetőiroda-alapító Blockner Izidor, kinek veje Hajós Alfréd volt, hiszen lányát, Blockner Vilmát vette feleségül. Blochner Gyula felesége a neves bőrgyáros családból származó Mauthner Ilona volt.'
     },
     //Laurencsik Béla
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/06_Laurencsik_Béla.jpg',
+        image: 'KEPEK/6_Laurencsik Béla.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         header: 'Személyek - Laurencsik Béla', title: 'Laurencsik Béla', subtitle: '(1888 Fülek – 1972 Budapest)',
-        content: 'Laurencsik Béla 1912-ben szerzett műszaki oklevelet. De a Képzőművészeti Főiskolán is tanult. Az I. világháborúban szibériai hadifogságba került Vlagyivosztokban. Több, ekkor született rajza maradt fent. A világháboró után Újpestre költözött felesége családjához. Így lett az újpesti faipari technikum rajztanára. 1922-ben nevezték ki az iskola műhelyfőnökének. 1929-től igazgatóhelyettes. Blochner Gyula után ő vette át az igazgatói feladatokat egy tanéven át: 1939-től 1940-ig. Festőművészként mesterei: Révész Imre, Hegedűs László, Edvi Illés Aladár, Szentiványi Gyula. A képzőművészeten belül több műfajban is kipróbálta magát.'
+        content: 'Laurencsik Béla 1912-ben szerzett műszaki oklevelet. De a Képzőművészeti Főiskolán is tanult. Az I. világháborúban szibériai hadifogságba került Vlagyivosztokban. Több, ekkor született rajza maradt fent. A világháboró után Újpestre költözött felesége családjához. Így lett az újpesti faipari technikum rajztanára. 1922-ben nevezték ki az iskola műhelyfőnökének. 1929-től igazgatóhelyettes. Blochner Gyula után ő vette át az igazgatói feladatokat egy tanéven át: 1939-től 1940-ig. Az iskola 1940 – 41-es évkönyvében a következőket olvashatjuk: „Laurencsik Béla iskolánk faipari tagozatán 18 éven át működött mint műhelyfőnök tanár, majd helyettes, illetve megbízott igazgató. Ez idő alatt szaktudásával, szervező képességével feljebbvalóinak teljes elismerését, kartársainak és művezetőinek megbecsülését, az ifjúságnak pedig osztatlan szeretetét érdemelte ki.”Festőművészként mesterei: Révész Imre, Hegedűs László, Edvi Illés Aladár, Szentiványi Gyula. A képzőművészeten belül több műfajban is kipróbálta magát.'
     },
     //kovacsmuhely
     { 
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/7_kovácsműhely.JPG',
+        pocketTitle: 'Kovácsműhely',
+        gallery: [
+            'KEPEK/7_mappa_KOVÁCSMŰHELY/PICT3495.JPG',
+            'KEPEK/7_mappa_KOVÁCSMŰHELY/PICT3958.JPG',
+            'KEPEK/7_mappa_KOVÁCSMŰHELY/PICT3960.JPG',
+            'KEPEK/7_mappa_KOVÁCSMŰHELY/PICT3963.JPG',
+            'KEPEK/7_mappa_KOVÁCSMŰHELY/PICT4001.JPG',
+            'KEPEK/7_mappa_KOVÁCSMŰHELY/PICT4002.JPG'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszínek – Kovácsműhely', title: 'Kovácsműhely',
-        content: 'A kovácsműhely, mely az épület egyetlen olyan helyisége, ahol zömében az eredeti berendezés és eszközök megmaradtak.'
+        content: 'A kovácsműhely, mely az épület egyetlen olyan helyisége, ahol zömében az eredeti berendezés és eszközök megmaradtak igazi kuriúzuma az épületnek. 2022 óta újra teljes pompájában tündököl, amennyiben ez a kifejezés egy kovácsműhely kapcsán helytálló.'
     },
     //az elso tablo
     { 
@@ -100,22 +109,32 @@ const pages = [
     },
     //a kapu feletti címer szombilikája
     { 
-        type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/9_a kapu feletti címer szimbolikája.jpg'
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/9_a kapu feletti címer szimbolikája.jpg',
+        pocketTitle: 'A kapu feletti címer',
+        gallery: [
+            'KEPEK/9_a kapu feletti címer szimbolikája.jpg',
+            'KEPEK/9_bejárat.jpg'
+        ]
     },
     {
-        type: 'chapter', eraCss: 'era-esemeny', 
-        header: 'Kapu feletti címer szombilikája', title: 'A kapu feletti címer szombilikája'
+        type: 'chapter', eraCss: 'era-targyak', 
+        header: 'Emléktárgyak – A kapu feletti címer', title: 'A kapu feletti címer szombilikája',
+        content: ' A főbejárat kovácsoltvas díszítésének tervrajzán pajzs alakú magyar címer stilizált változata látható. A szimbolika a következő: a kettős kereszt a magyar államiság és a keresztény hagyomány egyik legfontosabb jelképe. A kettős kereszt a középkor óta a magyar címer része, és a keresztény hitre, valamint a történelmi Magyar Királyságra utal. A vízszintes sávok az Árpád-házi uralkodók vörös–ezüst sávozására emlékeztetnek. A heraldikában ez a magyar államiság történelmi folytonosságát jelképezi. A kör alakú keret, vagyis a címer kör alakú medaillonba foglalása gyakori szecessziós és historizáló épületdíszítési megoldás, amely kiemeli a nemzeti jelképet. A babér- vagy tölgyágak hagyományosan a dicsőség, a tudomány, a siker vagy az erő, állhatatosság, kitartás jelképei. A négy irányban elhelyezett virágmotívumok elsősorban dekoratív szerepűek, de a szimmetriát és a teljességet is hangsúlyozzák. A szecessziós növényi indák, azaz az ornamentika az életet, a fejlődést és a folytonosságot szimbolizálják. A magyar címer alkalmazása az intézmény állami jellegét és nemzeti kötődését hangsúlyozza, míg a növényi ornamentika az épület historizáló–szecessziós díszítőstílusához igazodik.'
     },
     //Szabó Béla
     {
         eraCss: 'era-szemelyek', type: 'image',
-        image: 'KEPEK/10_Szabó Béla.jpg'
+        image: 'KEPEK/10_Szabó Béla.jpg',
+        pocketTitle: 'Szabó Béla',
+        gallery: [
+            'KEPEK/10_Szabó/Szabó gúnyrajz.png'
+        ]
     },
     { 
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         header: 'Személyek - Szabó Béla', title: 'Szabó Béla', subtitle: '(1899 Józseffalva -  )',
-        content: '1925-ben szerzett gépészmérnöki oklevelet a Királyi József Műegyetemen. 1927-től műhelyfőnöke az iskolának. Berendezte a fémipari tanműhelyeket, a gépházat és a szertárakat. Majd megbízott igazgató lett 1940-től. A második világháború frontjának közeledtével 1944 októberében megkezdte az iskola gépi berendezéseinek mentését, részben elásatta, részben befalaztatta azokat. A tanítás 1944. november 17-én megszakadt, és csak 1945. május 7-én indult újra. 1948 januárjában felmentették igazgatói állásából Szabó Bélát.'
+        content: '1925-ben szerzett gépészmérnöki oklevelet a Királyi József Műegyetemen. 1927-től műhelyfőnöke az iskolának. Berendezte a fémipari tanműhelyeket, a gépházat és a szertárakat. Majd megbízott igazgató lett 1940-től. A második világháború frontjának közeledtével 1944 októberében megkezdte az iskola gépi berendezéseinek mentését, részben elásatta, részben befalaztatta azokat. A tanítás 1944. november 17-én megszakadt, és csak 1945. május 7-én indult újra. 1948 januárjában felmentették igazgatói állásából Szabó Bélát. Az őt ábároló gúnyrajzzal szemléltették az akkor kialakult helyzetet: A „fémipart a tenyerén hordozza”, a faipar meg a „kalapács súlya alatt nyög”.'
     },
     //Lepcsohaz
     { 
@@ -134,26 +153,35 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         header: 'Emléktárgyak – Lépcsőházi ólomüvegablak', title: 'Lépcsőházi ólomüvegablak',
-        content: 'Ez az ólomüveg a kőművesek és kőfaragók céhének jelképét ábrázolja. A szimbólum elemei a mesterség alapvető szerszámai, amelyek gyakran megjelennek céhes címereken és szabadkőműves jelképrendszerben is: Körző és derékszög: A pontosság és a mértéktartás szimbólumai. Gyalu és vésők: A megmunkálás és a finomítás eszközei. A vörös háttér gyakran használt szín a történelmi céhes üvegablakokon. Történelmi háttér: Hasonló ólomüveg alkotások Európa-szerte megtalálhatók régi városházákon vagy céhházakban. Például a németországi Stade városházáján látható egy 1721-ből származó kőműves céhpecsét, amely szinte azonos elrendezésű. Ezek a medálok az adott mesterség tiszteletére és a szakmai közösség összetartozásának jeléül készültek.'
+        content: 'Ez az ólomüveg a kőművesek és kőfaragók céhének jelképét ábrázolja. A szimbólum elemei a mesterség alapvető szerszámai, amelyek gyakran megjelennek céhes címereken és szabadkőműves jelképrendszerben is:<br>- körző és derékszög - a pontosság és a mértéktartás szimbólumai,<br>- gyalu és vésők - a megmunkálás és a finomítás eszközei. A vörös háttér gyakran használt szín a történelmi céhes üvegablakokon. Hasonló ólomüveg alkotások Európa-szerte megtalálhatók régi városházákon vagy céhházakban. Például a németországi Stade városházáján látható egy 1721-ből származó kőműves céhpecsét, amely szinte azonos elrendezésű. Ezek a "medálok" az adott mesterség tiszteletére és a szakmai közösség összetartozásának jeléül készültek.'
     },
     //az igazgatoi elott
     { 
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/13_igazgatói előtt.JPG',
+        pocketTitle: 'Az igazgatói előtt',
+        gallery: [
+            'KEPEK/13_igazgatói előtt/K.JPG',
+            'KEPEK/13_igazgatói előtt/O.JPG',
+            'KEPEK/13_igazgatói előtt/L.jpg',
+            'KEPEK/13_igazgatói előtt/M.jpg',
+            'KEPEK/13_igazgatói előtt/N.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszínek – Igazgatói előtt', title: 'Az igazgatói előtt',
-        content: 'A régi igazgatói lakás hallja ma így néz ki. Dr. Szentirmay János az 1951/52 tanév elején lett az iskola igazgatója. Ő volt az első igazgató aki nem költözött be a szolgálati lakásba. Neki is kezdtek az átalakításnak. Odáig jutottak, hogy egy tervező iroda elkészítette a terveket. Aztán a következő tanévben a szegedi technikumból az ottani igazgató helyettes Badár Gábor lett az igazgató és családjával beköltözött a lakásba, az átalakítás így elmaradt.  Badár Gábor a korábbi igazgató 1962-ig még bent lakott az iskolában. 1957. szeptenber 17–től Bartos Lívia lett az igazgató. Miután Bartos Lívia nem vette igénybe a szolgálati lakás lehetőséget, így átépítés után   itt lett kialakítva – első ütemben - az igazgatói iroda és később a teljes irodai blokk.'
+        content: 'Az egykori igazgatói lakás hallja így néz ki. Dr. Szentirmay János az 1951/52-es tanév elején lett az iskola igazgatója. Ő volt az első igazgató, aki nem költözött be a szolgálati lakásba. Neki is kezdtek az átalakításnak. Odáig jutottak, hogy egy tervezőiroda elkészítette a terveket. Aztán a következő tanévben a szegedi technikumból az ottani igazgatóhelyettes Badár Gábor lett az igazgató és családjával beköltözött a lakásba, az átalakítás így elmaradt. 1957. szeptenberétől Bartos Lívia lett az igazgató. Badár Gábor, a korábbi igazgató 1962-ig még bent lakott az iskolában. Miután Bartos Lívia nem vette igénybe a szolgálati lakás lehetőséget, így átépítés után itt alakították ki –  első ütemben - az igazgatói irodát és később a teljes irodai blokkot.'
     },
     //korabeli kisfilm
     { 
-        type: 'image', eraCss: 'era-targyak'
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/14_1950_kisfilm.png'
     },
     {
         type: 'chapter', eraCss: 'era-targyak',
-        header: 'Emléktárgyak – Lépcsőházi ólomüvegablak', title: 'Lépcsőházi ólomüvegablak',
-        content: '<a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">Filmhiradó</a>'
+        header: 'Emlékek – Korabeli kisfilm', title: 'Korabeli kisfilm',
+        content: '<a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">Korabeli kisfilm</a><br>"Így határozta el Sásdi Mária, hogy a szovjet minta nyomán szervezett gépészeti technikumban tanul tovább." - az 1950-es tanévnyitó ünnepséget, és jópár, kordokumentumként is nagyra értékelhető pillanatát eleveníti meg a kisfilm az 1950-es évnek.'
     },
     //az iskola egykori korterme
     { 
@@ -163,7 +191,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszínek – Iskola egykori korterme', title: 'Az iskola egykori korterme',
-        content: 'Az Auditorium Maximum (gyakran rövidítve AudMax) latin kifejezés, amely a legnagyobb előadótermet jelöli egy oktatási intézményben. A körterem a főépület jobboldali sarokpavilonjában volt. Ez a nagyterem 300 fő feletti befogadó képességével évtizedeken keresztül kiváló színtere volt az iskola teljes közösségét mozgató programoknak. A hatvanas évek elején az iskola létszámának már a harmada sem fért be, így eredeti funkcióját elvesztette. A felfutó létszám és a beindult híradástechnikai képzés gyakorlati oktatása infrastruktúrájának megteremtése krónikus helyiség hiányt eredményezett. Ezen valamennyit segített a kollégium 1960-ban történt kiköltöztetése, de nem oldott meg minden problémát. Ezért döntés született a körterem megszüntetésére, oktató termekre történő átépítésére, ami 1962-ben megkezdődött.'
+        content: 'Az Auditorium Maximum (gyakran rövidítve AudMax) latin kifejezés, amely a legnagyobb előadótermet jelöli egy oktatási intézményben. A körterem a főépület jobboldali sarokpavilonjában volt. Ez a nagyterem 300 fő feletti befogadó képességével évtizedeken keresztül kiváló színtere volt az iskola teljes közösségét mozgató programoknak. A hatvanas évek elején az iskola létszámának már a harmada sem fért be, így eredeti funkcióját elvesztette. A felfutó létszám és a beindult híradástechnikai képzés gyakorlati oktatása, infrastruktúrájának megteremtése krónikus helyiséghiányt eredményezett. Ezen valamennyit segített a kollégium 1960-ban történt kiköltöztetése, de nem oldott meg minden problémát. Ezért döntés született a körterem megszüntetéséről, oktató termekre történő átépítésére, ami 1962-ben meg is kezdődött.'
     },
     //muszaki vena
     { 
@@ -173,17 +201,16 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', 
         header: 'Műszaki véna', title: 'Műszaki véna',
-        content:'A "műszaki véna" kifejezés a technikai érzékre, a gépek, szerkezetek működésének gyors átlátására és a gyakorlati problémamegoldó képességre utal. Ez egy olyan tehetség vagy készség, amely lehetővé teszi valakinek a technikai eszközök intuitív megértését, javítását vagy tervezését. Jellemzők: logikus gondolkodás: ok-okozati összefüggések átlátása; gyakorlatiasság: a "hogyan működik?" kérdés megválaszolása cselekvéssel; térlátás: szerkezeti elemek vizualizálása; kreativitás: új megoldások keresése technikai problémákra.'
+        content:'A "műszaki véna" kifejezés a technikai érzékre, a gépek, szerkezetek működésének gyors átlátására és a gyakorlati problémamegoldó képességre utal. Ez egy olyan tehetség vagy készség, amely lehetővé teszi valakinek a technikai eszközök intuitív megértését, javítását vagy tervezését. Jellemzők: logikus gondolkodás; ok-okozati összefüggések átlátása; gyakorlatiasság: a "hogyan működik?" kérdés megválaszolása cselekvéssel; térlátás: szerkezeti elemek vizualizálása; kreativitás: új megoldások keresése technikai problémákra. Mind a faipari, mind a fémipari részlegben nagy jelentőséget tulajdonítottak a rajzkészségnek is. Ez nemcsak művészi érzéküket fejlesztette a diákoknak, hanem nélkülözhetetlen volt mindennapi munkájuk elvégzéséhez is. Meg kellett tervezni és lerajzolni az elkészítendő bútort, a kovácsoltvas alkotásokat, de éppen úgy műszaki rajzot kellett készíteni egyes gépalkatrészekről, mégpedig nagyon nagy pontossággal, hiszen ettől is függhetett egy-egy gép működése, felhasználhatósága. A növendékek rajzaiból, munkáiból, alkotásaiból minden évben kiállítás nyílt. Itt tudták bemutatni mindazt, melyet tanulásuk idején készítettek. A technikusok hidat jelentenek a szakmunkások és a mérnökök között.'
     },
     //iskola egyenruha
     { 
-        type: 'image', eraCss: 'era-targyak',
-        image: ''
+        type: 'image', eraCss: 'era-targyak'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        header: 'Emléktárgyak – Iskola egyenruha', title: 'Iskola egyenruha',
-        content: ''
+        header: 'Emléktárgyak – Iskola egyensapka', title: 'Iskola egyensapka',
+        content: 'Az 1960-as években kötelező volt az iskolai egyenruha viselése. A korszak technikumaira és szakiskoláira jellemző módon a diákok kötelező jelleggel sötétkék sapkát viseltek, amelynek az elején vagy oldalán az iskola egyedi, zománcozott fém sapkajelvénye (vagy iskolajelvénye) szerepelt. Az 1961/65-ben iskolánba járt évfolyam egy diákjának visszaemlékezése szerint: "Az iskolához kapcsolódó külsőségek közül talán a legnépszerűtlenebb volt a diáksapka. Ezt némi visszfordíthatatlan átalakítással kabátzsebben hordhatóvá tettük, és csak közvetlenül az iskola kapuja előtt raktuk a fejünkre."'
     },
     //Az udvar platánjai
     { 
@@ -199,11 +226,22 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/19_rádióamatőrök_1957 Galyatető.jpg',
+        pocketTitle: 'Rádióamatőr Album',
+        gallery: [
+            'KEPEK/19_rádióamatőr_ALBUM/A.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/B.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/C.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/D.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/E.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/F.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/G.jpg',
+            'KEPEK/19_rádióamatőr_ALBUM/H.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszín - Rádióamatőr URH-állomás', title:'Rádióamatőr URH-állomás HG5KCC',
-        content: '<a href="https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27" target="_blank">A HG5KCC rádióamatőr URH kollektív állomás indulása 1954/55.</a><br>Vajda György kiváló pedagógus volt. Jól érzékelte: az új szak sikeres indításához kevés a tárgyi- és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr tevékenység elterjesztése az iskolában. Az akkor még a rádióamatőrök körében is „fehér folt”-nak számító URH sávot választotta. Ez kitűnő döntés volt, hiszen ehhez az adót, vevőt és antennát – más lehetőség nem lévén – házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítése volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált. 1955-ben Vajda György rádióamatőr vizsgát tett és adóengedélyt kapott URH kollektív rádióamatőr adóállomás működtetetésére. Az országban ekkor tíz alatt volt ezek száma. <a href="https://www.youtube.com/watch?v=UlsbM1RyCFA&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=28" target="_blank">1956-ban már két nemzetközi URH versenyen elindultunk.</a>'
+        content: '<a href="https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27" target="_blank">A HG5KCC rádióamatőr URH kollektív állomás 1954/55-ben indult.</a><br>Vajda György pedagógus felismerte, hogy új szak sikeres indításához kevés a tárgyi- és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr tevékenység elterjesztése az iskolában. Az akkor még a rádióamatőrök körében is „fehér folt”-nak számító URH sávot választotta, mindehhez az adót, vevőt és antennát – más lehetőség nem lévén – házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítésén volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált. 1955-ben Vajda György rádióamatőr vizsgát tett és adóengedélyt kapott URH kollektív rádióamatőr adóállomás működtetetésére. Az országban ekkor kevesebb mint tíz ilyen állomás működött.<a href="https://www.youtube.com/watch?v=UlsbM1RyCFA&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=28" target="_blank">1956-ban már két nemzetközi URH versenyen indultak a landleres diákok.</a>'
     },
     //Jegesmedve relikvia
     { 
@@ -218,7 +256,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         header: 'Emléktárgyak – Jegesmedve relikvia', title: 'Jegesmedve relikvia',
-        content: 'A jegesmedve szobor feliratán látszik, hogy az 1945/46. évi középiskolás labdarúgó bajnokságot nyerte meg a Landler csapata. A győztesek neve a réztábláról leolvasható.'
+        content: 'A jegesmedve szobor felirata szerint az 1945/46. évi középiskolás labdarúgó bajnokságot megnyerte a Landler akkori csapata. A győztesek neve a réztábláról leolvasható. A legesmedve tehát több mint 80 éve lakik az iskola falai között. Tanáriból múzeumba, múzeumból a végleges iskolatörténeti gyűjteménye cammogott át, és őrzi a 114-es terem biztonságát.'
     },
     //a tornaterem
     { 
@@ -233,7 +271,7 @@ const pages = [
     //Dr. Radnai László
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/55_Landler Jenő.jpg',
+        image: 'KEPEK/22_Radnai.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -244,6 +282,12 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/23_Szabó Gyula véd.jpg',
+        pocketTitle: 'Tanár-diák sportesemény',
+        gallery: [
+            'KEPEK/23_tanár_diák sportesemény_1943/A..jpg',
+            'KEPEK/23_tanár_diák sportesemény_1943/B..jpg',
+            'KEPEK/23_tanár_diák sportesemény_1943/C..jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -254,16 +298,31 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/24_TANMŰHELY.jpg',
+        pocketTitle: 'Tanműhely',
+        gallery: [
+
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszín - Tanműhelyek', title:'Tanműhelyek',
-        content: ''
+        content: 'Mennyiféle tanműhely a gyakorlati oktatás központi helyszíne, ahol a diákok a valós ipari környezetet modellező körülmények között sajátíthatják el szakmájuk alapjait. Kovácstanműhely, lánghegesztő műhely, öntöde, távbeszélőműhely, vezérlőszoba, gépműhely, rádióműhely, belsőégésű motorok gépterme, daraboló, lakatosműhely, forgácsoló műhely, ívhegesztő műhely, elektonikai műhelyek, informatikatermek, számítógéptermek. A műhelygyakorlatokon elsődleges cél és feladat az ipari gépek, szerszámok biztonságos kezelésének megtanulása. A biztonsági előírások és rutinszerű alkalmazásuk rögzítése. Valódi termékek vagy makettek önálló legyártása. Jellemző felszereltség, ágazattól függően:<br>Gépészet: esztergák, marógépek, fúrógépek, CNC-berendezések, hegesztőboxok. Elvárás a zárt munkaruha: hosszú nadrág, kabát. Elektronika: oszcilloszkópok, forrasztóállomások, tápegységek, PLC-programozók. Informatika: hálózati rack szekrények, szerverek, teszt-számítógépek, krimpelők.'
     },
     //autómodellező és gépjármű szakkör
     { 
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/25_.jpg',
+        image: 'KEPEK/25_autómodellező és gépjármű szakkör.jpg',
+        pocketTitle: 'Autómodellező és Gépjármű Szakkör',
+        gallery: [
+            'KEPEK/25_.jpg',
+            'KEPEK/25_autómodellező/A.jpg',
+            'KEPEK/25_autómodellező/AA.jpg',
+            'KEPEK/25_autómodellező/B.jpg',
+            'KEPEK/25_autómodellező/C.jpg',
+            'KEPEK/25_autómodellező/D.jpg',
+            'KEPEK/25_autómodellező/D (2).jpg',
+            'KEPEK/25_autómodellező/E.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
