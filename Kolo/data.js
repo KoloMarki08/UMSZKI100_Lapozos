@@ -50,7 +50,7 @@ const pages = [
     { 
         type: 'text', eraCss: 'era-esemeny',
         header: 'Iskolanevek, korszakok',
-        title: 'Iskolanevek, korszakok',
+        title: 'Iskolanevek, korszakok', dropCap: true,
         content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 – 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 – 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 – 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 – 1948 Állami Műszaki Középiskola<br>1948 – 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 – 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől – 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum'
     },
     {
@@ -119,7 +119,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', 
-        header: 'Emléktárgyak – A kapu feletti címer', title: 'A kapu feletti címer szombilikája',
+        header: 'Emléktárgyak – A kapu feletti címer', title: 'A kapu feletti címer szombilikája', dropCap: true,
         content: ' A főbejárat kovácsoltvas díszítésének tervrajzán pajzs alakú magyar címer stilizált változata látható. A szimbolika a következő: a kettős kereszt a magyar államiság és a keresztény hagyomány egyik legfontosabb jelképe. A kettős kereszt a középkor óta a magyar címer része, és a keresztény hitre, valamint a történelmi Magyar Királyságra utal. A vízszintes sávok az Árpád-házi uralkodók vörös–ezüst sávozására emlékeztetnek. A heraldikában ez a magyar államiság történelmi folytonosságát jelképezi. A kör alakú keret, vagyis a címer kör alakú medaillonba foglalása gyakori szecessziós és historizáló épületdíszítési megoldás, amely kiemeli a nemzeti jelképet. A babér- vagy tölgyágak hagyományosan a dicsőség, a tudomány, a siker vagy az erő, állhatatosság, kitartás jelképei. A négy irányban elhelyezett virágmotívumok elsősorban dekoratív szerepűek, de a szimmetriát és a teljességet is hangsúlyozzák. A szecessziós növényi indák, azaz az ornamentika az életet, a fejlődést és a folytonosságot szimbolizálják. A magyar címer alkalmazása az intézmény állami jellegét és nemzeti kötődését hangsúlyozza, míg a növényi ornamentika az épület historizáló–szecessziós díszítőstílusához igazodik.'
     },
     //Szabó Béla
@@ -200,7 +200,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', 
-        header: 'Műszaki véna', title: 'Műszaki véna',
+        header: 'Műszaki véna', title: 'Műszaki véna',dropCap: true,
         content:'A "műszaki véna" kifejezés a technikai érzékre, a gépek, szerkezetek működésének gyors átlátására és a gyakorlati problémamegoldó képességre utal. Ez egy olyan tehetség vagy készség, amely lehetővé teszi valakinek a technikai eszközök intuitív megértését, javítását vagy tervezését. Jellemzők: logikus gondolkodás; ok-okozati összefüggések átlátása; gyakorlatiasság: a "hogyan működik?" kérdés megválaszolása cselekvéssel; térlátás: szerkezeti elemek vizualizálása; kreativitás: új megoldások keresése technikai problémákra. Mind a faipari, mind a fémipari részlegben nagy jelentőséget tulajdonítottak a rajzkészségnek is. Ez nemcsak művészi érzéküket fejlesztette a diákoknak, hanem nélkülözhetetlen volt mindennapi munkájuk elvégzéséhez is. Meg kellett tervezni és lerajzolni az elkészítendő bútort, a kovácsoltvas alkotásokat, de éppen úgy műszaki rajzot kellett készíteni egyes gépalkatrészekről, mégpedig nagyon nagy pontossággal, hiszen ettől is függhetett egy-egy gép működése, felhasználhatósága. A növendékek rajzaiból, munkáiból, alkotásaiból minden évben kiállítás nyílt. Itt tudták bemutatni mindazt, melyet tanulásuk idején készítettek. A technikusok hidat jelentenek a szakmunkások és a mérnökök között.'
     },
     //iskola egyenruha
@@ -499,6 +499,139 @@ const pages = [
         header: 'Esemény – Sportélet', title: 'Sportélet és sportsikerek',
         content: 'Szöllősi Antal iskolánk legendás testnevelő tanára a negyvenes évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott. Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt. Kis Alajos labdarúgóedző, csapatával országos nagypályás bajnokságon is részt vett. Andorfer János - iskolánk volt diákja, tanára - 1993-tól vette át a kispályás labdarúgó csapatot, és 2018-ig vitte renszeresen a diákokat kerületi, városi labdarúgó tornákra nevezte és kísérte rendszeresen az UMSZKI csapatait. Ifjósági országos curling bajnokásgon 6. helyezést értek el. UTE öregfiúk - Újpest diákválogatott mérkőzés 2015 felkérték a kerületi középiskolás váléogatott vezetésére. Országos floorball-bajnokságon is szerepeltek. Szenczi László- UTE/Honvéd atlétika edző, Molnár Imréné az iskolában országos és fővárosi atlétikai versenyekre vitte a diákokat. 1. Gáll Mária – tornász 2. Bakos István – kézilabdázó 3. Jakab István – kézilabdázó 4. Sütő József – atléta, maratonista 5. Fekete Sándor – atléta 6. Tóth Zoltán – labdarúgó 7. Nyirádi György – kajakozó 8. Mózes András – atléta, maratonista 9. Brabant Béla – gyeplabda játékos 10. Tóth Zoltán – motoros hajómodellező 11. Ancsin János – jégkorongozó 12. Brockhauser István – labdarúgó 13. Sztankó Éva – röplabdázó 14. Szűcs Lajos – labdarúgó 15. Hoboth Sándor – röplabdázó 16. Giczy Csaba – kajakozó 17. Füzesi Zsolt – labdarúgó 18. Kovács Zoltán – válogatott vízilabdázó 19. Vass Sándor – kézilabdázó 20. Móró Endre – thai-boxoló 21. Spránitz Gábor – sportlövő 22. Vass Károly – kézilabdázó 23. Monostori Attila – vízilabdázó 24. Lange Péter - RSM Hungary Sail Racing Team tagja 25. Battlay Krisztina - röplabda UTE, Vasas 26. Lőw Zsolt - labdarúgó 27. Nyerges Krisztián - labdarúgó 28. Czingli László – tornász 29. Szirányi Bence - válogatott jégkorongozó 30. Németh Zsanett - olimpiai birkózó 31. Guczoghy György - tornász 32. Ágh György - válogatott vízilabdázó 33. Farkas János - válogatott kalapácsvető 34. Nagy Tibor - válogatott labdarúgó'
     },
+    //Csizmadia Ferenc
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: ''
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Csizmadia Ferenc', title: 'Csizmadia Ferenc', subtitle: '()',
+        content: '1962-ben szerzett hőerőgépész diplomát a Budapesti Műszaki Egyetem Gépészmérnöki Karán. Pályája kezdetén a Ganz-Mávagnál Diesel-motorok turbófeltöltőinek és levegőhűtőinek fejlesztésével foglalkozott. A mérnöki munka mellett gépipari technikumokban is tanított esti tagozaton. Az itt szerzett élmények vitték egyre közelebb a pedagógusi pályához. 1980 és 2000 között volt iskolánk igazgatója, nyugdíjazása után is tevékenykedett óraadóként, tankönyvszerzőként.'
+    },
+    //művésztanárok, képzőművészeink
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/40_művésztanáraink.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Művésztanárok, Képzőművészeink', title: 'Művésztanárok, Képzőművészeink',
+        content: 'Magyar kommunista politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált, a Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény megnevezésében 35 éven át jelen volt Landler Jenő neve:<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
+    },
+    //Gepeszet
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/41_gépészet.png',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Gépészet', title: 'Gépészet',
+        content: '<a href="https://www.youtube.com/watch?v=F3HLp9LxE8o" target="_blank">Gépészeti ágazat  bemutató videó</a>'
+    },
+    //Elektronika
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/42_elektronika.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Elektronika', title: 'Elektronika',
+        content: '<a href="https://www.youtube.com/watch?v=0yaMR7XflqQ" target="_blank">Az elkészült áramkör működésének ellenőrzése zajlik a képen.</a>'
+    },
+    //Informatika
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/43_informatika.png',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Informatika', title: 'Informatika',
+        content: 'Szakmai szempontból igen jelentős az 1971-es tanév, hiszen ekkor indult az országban elsőként a számítástechnikai képzés.'
+    },
+    //Műhelyfőnökök
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/44_műhelyfőnökök.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Műhelyfőnökök', title: 'Műhelyfőnökök',
+        content: 'Laurencsik Béla volt a kezdetektől közel két évtizeden át az iskola műhelyfőnöke. Csányi István gépész műhelyfőnök. Jegyernik Pál mérnöktanár is volt a gépész műhelyfőnök. Vajda György - 1953-tól a villamos tanműhely főnöke volt. Garai József - 1983-tól gépész műhelyfőnök volt. Urbán Kornél - 1985-től vette át a villamos majd 1996-ban a gépész tanműhely vezetését is. Barabás Gábor - 2000-től kapta meg a műhelyfőnöki feladatokat. 2013-ban a szakképzési törvény módosításakor megszüntették ezt a funkciót. Négy műhelyfőnök, három generáció. Vajda György tanította Urbán Kornélt, aki meg Barabás Gábornak volt tanára.'
+    },
+    //tanári szobák
+    { 
+        type: 'image', eraCss: 'era-helyiseg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Tanári szobák', title: 'Tanári szobák',
+        content: 'Egy tantestületi vacsora emléke 1969-ből:<br><a href="https://www.youtube.com/watch?v=Qsb-9d8y3Ag" target="_blank">Videó 1</a><br><a href="https://www.youtube.com/watch?v=2s-FGVlW1LI" target="_blank">Videó 2</a><br><a href="https://www.youtube.com/watch?v=PFtCYstWymM" target="_blank">Videó 3</a><br><a href="https://www.youtube.com/watch?v=dtbWKrULnJI" target="_blank">Videó 4</a><br><a href="https://www.youtube.com/watch?v=5BZI6spfChk" target="_blank">Videó 5</a><br><a href="https://www.youtube.com/watch?v=iqbgCSvFWgU" target="_blank">Videó 6</a><br><a href="https://www.youtube.com/watch?v=5XwYrA2MT7Y" target="_blank">Videó 7</a>'
+    },
+    //diák voltam, tanár lettem
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: '',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Diák voltam, tanár lettem', title: 'Diák voltam, tanár lettem',
+        content: 'Szakmai szempontból igen jelentős az 1971-es tanév, hiszen ekkor indult az országban elsőként a számítástechnikai képzés.'
+    },
+    //ballagások
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/47_ballagás.JPG',
+        pocketTitle: 'További képek',
+        gallery: [
+            'KEPEK/47_ballagás.JPG',
+            'KEPEK/47_ballagások.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Ballagások', title: 'Ballagások',
+        content: '<a href="https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27" target="_blank">1968-as ballagás</a>'
+    },
+    //aula, zsibongó
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image:'KEPEK/48_aula.jpg',
+        pocketTitle: 'Aula és a zsibongó',
+        gallery: [
+            'KEPEK/48_nagy aula_zsibongó.jpg',
+            'KEPEK/48_aula_zsibongó/C.JPG',
+            'KEPEK/48_aula_zsibongó/D.JPG',
+            'KEPEK/48_aula_zsibongó/E.JPG',
+            'KEPEK/48_aula_zsibongó/F.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Aula, zsibongó', title: 'Aula és a zsibongó',
+        content: 'Foerk Ernő a Corvin utcai oldalon, két szinten, a fő- és műhelyépület között átjárást biztosított. A műhelyépület földszintje a főépület alagsorával megfelelő ajtók betervezésével lett megoldva. A műhelyépület emeletét a főépület földszintjével az eredeti tervek szerint kőoszlopokon álló, kőpárkányos pergolával - a szintkülönbséget lépcsők beiktatásával – oldotta meg. Egy diákklub kialakításának terve kapcsán, az 1983 áprilisában íródott talajmechanikai szakvéleményben a következő olvasható: „A raktárhelyiség kb. 40 évvel ezelőtt készült a gépműhely és a szomszédos épületszárny között. Eredetileg a két épület között az udvar felőli oldalon csak egy keskeny átjáró volt, alul árkádos megoldással. Később ezt bővítették újabb pillérsor és íves falazat építésével. A bővítés során a pillérekre és a falazatra I 320-as acéltartókat helyeztek és közöttük téglaboltozatot alakítottak ki.” Így kialakult egy zárt raktárépület, melynek födémét leaszfaltozták. Az emeleten az átjárási funkciót megtartották, a földszinten viszont megszűnt. A Corvin utca felé a kijárat szintén megszűnt. Ennek az átalakításnak feltehetően két célja volt. Egyrészt a közelgő háború okán jónak látták az ezen a részen nyitott épületet lezárni, másrészt az amúgy is szűkös koksztárolási kapacitást valamivel növelni tudták. Az átalakítás két lépcsőben történt. Először 1983-ban a kihasználatlan raktárhelyiségből egy diákklub létesült. Majd 1987 után – a különállóan működő faipari iskola kiköltözése kapcsán – az átjáró beépítésre került. Így a kulturáltabb közlekedésen túlmenően egy jól kihasználható közösségi tér jött létre. Sok éven át élt a zsibongóban egy tárlóban egy plüss óriásgorilla, aki mára az iskolatörténeti gyűjteményt őrzi nagy erőkkel.'
+    },
+    //Zombori Béla
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: '',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Zombori Béla', title: 'Zombori Béla',
+        content: 'Középiskolai tanulmányait iskolánkban végezte. 1970-ben érettségizett. 1977-ben szerzett villamosmérnöki oklevelet. Az egyetem elvégzése után iskolánkban kezdte el tanári pályafutását. Elektronikát, elektrotechnikát, villamos méréseket, számítástechnikát és digitális számítógépek tantárgyakat tanított. A tanítás mellett folyamatosan képezte magát. Sorra jelentek meg a műszaki oktatást segítő tankönyvei. 1986 óta műszaki igazgatóhelyettese volt az iskolának, majd 2000-től 2010-ig igazgatója. 2022-ben Nyárs Csaba – díjat kapott.'
+    },
+    //50 éves az iskola
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/50_jubileum.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – 50 Éves Jubileum', title: '50 éves az iskola',
+        content: '1977-ben került sor 50 éves fennállásunk ünneplésére. Az akkori iskolavezetés a három napos „Landler Napok” rendezvénysorozatába – május 5-6-7. - illesztette és a ballagási ünnepséggel vonta össze. A rendezvénysorozat első két napján politikai vetélkedő volt (a kispesti Landler Gimnázium részvételével), zászlóavatás, emléktábla-avatás, iskolatörténeti kiállítás megnyitása, kézilabdatorna, „Ady Endre” szavalóverseny (a Landler Gimnázium és a kassai „testvériskola” részvételével), irodalmi pályázat (a költő 100 éve született) és esti majális az udvaron a P. Mobil együttes fellépésével.'
+    },
+
 
 
     //MINTA//
