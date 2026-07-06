@@ -631,8 +631,76 @@ const pages = [
         header: 'Történet – 50 Éves Jubileum', title: '50 éves az iskola',
         content: '1977-ben került sor 50 éves fennállásunk ünneplésére. Az akkori iskolavezetés a három napos „Landler Napok” rendezvénysorozatába – május 5-6-7. - illesztette és a ballagási ünnepséggel vonta össze. A rendezvénysorozat első két napján politikai vetélkedő volt (a kispesti Landler Gimnázium részvételével), zászlóavatás, emléktábla-avatás, iskolatörténeti kiállítás megnyitása, kézilabdatorna, „Ady Endre” szavalóverseny (a Landler Gimnázium és a kassai „testvériskola” részvételével), irodalmi pályázat (a költő 100 éve született) és esti majális az udvaron a P. Mobil együttes fellépésével.'
     },
-
-
+    //zsolnay relikvia
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/51_Zsolnay relikvia.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emléktárgyak - Zsolnay relikvia', title: 'Zsolnay relikvia',
+        content: 'Ez a tárgy egy ritka Zsolnay eozin kerámia emlékváza, amelyet a KGM (Kohó- és Gépipari Minisztérium) technikusainak jubileumára készítettek. Tárgy: Eozin mázas emlékváza jellegzetes zöldes-kékes irizáló színnel. Felirat: "TKGM TE" és "1952-1972", ami a Technikum jubileumára utal. Stílus: A pécsi Zsolnay gyárra jellemző eozin technika alkalmazása. Érték: Mivel egyedi jubileumi kiadás, gyűjtők számára értékes darabnak számít.'
+    },
+    //tantestuleti kirandulasok
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/52_tantestületi kir.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Történet – Tantestületi kirándulások', title: 'Tantestületi kirándulások',
+        content: 'A tanári kuirándulások az 50-es évektől kezdődtek. Egy 1968-as kirándulás felvételei négy összeállításban:<br><a href="https://www.youtube.com/watch?v=HIjiH655OWs" target="_blank">Videó 1</a><br><a href="https://www.youtube.com/watch?v=OdiwdCWJprM" target="_blank">Videó 2</a><br><a href="https://www.youtube.com/watch?v=xxCfwaUGvKk" target="_blank">Videó 3</a><br><a href="https://www.youtube.com/watch?v=Bxi_Y7eihE0" target="_blank">Videó 4</a><br>70-es, 80-as évek: Kassa, éveken át Meldorf<br>90-es évek: Balatonszentgyörgy-Vörs, Firenze, Róma, Nápoly, Párizs<br>2000-es évek: Bécs<br>2020-as évek: Eger, Kiskunmajsa '
+    },
+    //madartavlat
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image:'KEPEK/53_MADÁR.jpg',
+        pocketTitle: 'Madártávlatból',
+        gallery: [
+            'KEPEK/53_MADÁR.jpg',
+            'KEPEK/53_MADÁRTÁVLAT.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Madártávlat', title: 'Madártávlat',
+        content: '<a href="https://www.youtube.com/watch?v=5wylxrdFFBI" target="_blank">Madártávlat</a>'
+    },
+    //Tankonyvszerzoink
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/54_ tankönyvszerzőink.png',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Tankönyvszerzőink', title: 'Tankönyvszerzőink',
+        content: 'dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Zoltán - Juhász Róbert - Masa László: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1.-2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)'
+    },
+    //LANDLER JENO
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/55_Landler Jenő.jpg',
+        pocketTitle: 'Landler Jenő',
+        gallery: [
+            'KEPEK/55_Landler Jenő/55_Landler.jpg',
+            'KEPEK/55_Landler Jenő.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Landler Jenő', title: 'Landler Jenő', subtitle: '(1875–1928)',
+        content: 'Landler Jenő magyar szociáldemokrata politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált, a Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig. Az intézmény nevében 35 éven át szerepelt a neve:<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
+    },
+    //Tanulmányi versenyek
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/56_tanulmányi versenyek.png',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Történet – Tanulmányi versenyek', title: 'Tanulmányi versenyek',
+        content: ''
+    },
 
     //MINTA//
     // --- SZEMÉLYEK (Kék téma) ---
