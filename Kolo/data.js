@@ -701,6 +701,340 @@ const pages = [
         header: 'Történet – Tanulmányi versenyek', title: 'Tanulmányi versenyek',
         content: ''
     },
+    //iskolazaszlo
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: ''
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emléktárgyak - Iskolazászló', title: 'Iskolazászló',
+        content: 'Az 1977-es ballagáson, az 50 éves ünnepség napján a ballagók az előző napon felavatott zászló mögött vonultak. Az egyik oldala nemzeti színű zászló, a másik oldalon egyszínű piros mezőben az akkori iskolacímer látható. Valószínűsíthető, hogy ettől az időponttól minden ballagáson elöl ezt az iskolazászlót vitték. A kezdeti időszakból az 1977-es, 1980-as és az 1986-os ballagásról fennmaradt „zászlós” fotó. A 2002-es múzeum avatóünnepségen az 1977-ben felavatott iskolazászló volt látható a falon. Az iskola fennállásának 75. évfordulóján, a fenntartó képviselője új zászlót adott át. Ennek egyik oldalán a magyar címer, másik oldalán az iskolacímer látható. Azóta minden ballagási menet élén ez halad. A zászlót az igazgatói iroda előterében helyezik el. A rendszerváltás után az új címeres zászló elkészültéig ezt használták ballagáson, hiszen akkor már nem volt aktuális önmagában a vörös szín, és a névváltozás miatt a rajta lévő iskolacímer sem.'
+    },
+    //iskolai ünnepsegek
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/58_iskolai ünnep.jpeg',
+        pocketTitle: 'Iskolai ünnepségek',
+        gallery: [
+            'KEPEK/58_iskolai ünnep.jpeg',
+            'KEPEK/58_iskolai ünnepségek.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        header: 'Történet – Iskolai ünnepségek', title: 'Iskolai ünnepségek',
+        content: ''
+    },
+    //Elektroncso
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/59_elektroncső.jpg',
+        pocketTitle: 'Elektroncső',
+        gallery: [
+            'KEPEK/59_elektroncső/A.JPG',
+            'KEPEK/59_elektroncső/B.jpg',
+            'KEPEK/59_elektroncső/C.JPG',
+            'KEPEK/59_elektroncső/D.jpg',
+            'KEPEK/59_elektroncső/E.jpg',
+            'KEPEK/59_elektroncső/F.jpg',
+            'KEPEK/59_elektroncső/G.JPG',
+            'KEPEK/59_elektroncső/H.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emléktárgyak - Elektroncső', title: 'Elektroncső',
+        content: 'Az 1961/62 tanévben az iskola tanműhelyében kialakítottak a Tungsram gyár jóvoltából egy vákuumtechnikai műhelyt (a mai raktár helyén). Ebben az időszakban a gyárnak egyre több technikusra volt szüksége, hiszen a hagyományos izzólámpa készítés mellett felfutott a fénycsőgyártás, az elektroncső gyártás volumene pedig a növekedő televízió gyártás (Orion, Videoton) miatt nőtt jelentősen. Egyebek mellett telepítettek ponthegesztő gépet és vákuumszivattyút is. Az iskolában izzólámpa és elektroncső gyártás befejező műveleteire került sor. A tanulók EL 84 típusú elektroncsövet gyártottak. A műveletek a következők voltak:<br>1. a gyárban előszerelt komplett szerelvényt pont-hegesztéssel a kivezetéssel ellátott üvegtalphoz rögzítették;<br>2. a vákuum csonkkal ellátott burát a szerelvényezett üvegtalppal gázlánggal összeolvasztották;<br>3. vákuumszivattyúzás;<br>4. getterezés;<br>5. a funkcionális működés vizsgálata.<br>A tanulók először a gázlánggal felhevített üveg megmunkálását (hajlítás, összeforrasztás, stb.) gyakorolták. Ezt követte az izzólámpa készítés néhány művelete, majd következett az EL 84 elektroncső gyártása. A vákuumtechnikai műhely működtetése az 1971/72. tanévben fejeződött be. Ennek oka, hogy a híradástechnikai profilt a számítástechnikai képzés váltotta fel.'
+    },
+    //sikerek magyar nyelv és irodalomból, valamint történelemből
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/60_sikerek magyar.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Sikerek', title: 'Sikerek magyar nyelv és irodalomból, valamint történelemből',
+        content: 'A 70-es, 80-as évek a Landler Művészeti Stúdió - LMS tevékenysége sok diákot megmozgatott. Versmondó versenyek, színházi előadások kerültek megrendezésre. Szép Magyar Beszéd, Implom József Középiskolai Helyesírási Verseny, Édes Anyanyelvünk, Hatágú Síp Versmondó Verseny költészet napján - az 1993 óta már hagyományossá vált „Hatágú Síp” elnevezésű szavalóverseny került megrendezésre 100 éves József Attila évforduló - 24 órás felolvasás Újpesti Helytörténeti Vetélkedő, Újpesti Akadémikusok Vetélkedője'
+    },
+    //a Magyar Köztársaság Ezüst Érdemkeresztje
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/61_kovács mihály.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Kovács Mihály', title: 'Kovács Mihály',
+        content: 'Az iskola történetének legmagasabb szintű kitüntetését <a href="https://www.youtube.com/watch?v=2X9oa6YFFCs&list=PLgQbRN68uStpzHCOXW7TFELVJ9sJX1HoZ&index=13" target="_blank">Kovács Mihály</a> kapta. 1995-ben Göncz Árpád köztársasági elnöktől vehette át a Magyar Köztársaság Ezüst Érdemkereszt Kitüntetést. A Magyar Ezüst Érdemkereszt a független és demokratikus Magyarország érdekeinek előmozdítása, valamint a nemzet szolgálata terén végzett kimagasló, példamutató tevékenység elismerésére adományozható állami kitüntetés.'
+    },
+    //Elso szamitogep
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/62_ELSŐ SZÁMÍTÓGÉP.jpg',
+        pocketTitle: 'Első számítógép',
+        gallery: [
+            'KEPEK/62_első számítógép/A.JPG',
+            'KEPEK/62_első számítógép/B.jpg',
+            'KEPEK/62_első számítógép/C.JPG',
+            'KEPEK/62_első számítógép/D.jpg',
+            'KEPEK/62_első számítógép/E.jpg',
+            'KEPEK/62_első számítógép/F.jpg',
+            'KEPEK/62_első számítógép/G.JPG',
+            'KEPEK/62_első számítógép/H.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emléktárgyak - Első számítógép', title: 'Az első számítógép',
+        content: 'Iskolánkban az 1971/72-es tanévben indult a számítástechnikai műszerész képzés, mely a híradástechnikai technikus képzésünket váltotta ki. Akkor a  3.A és C osztályban történt az átállás, valamint mindhárom újonnan beiskolázott első osztályban. Ennek a projektnek a megvalósításához kapcsolódóan kaptuk a KFKI által gyártott TPA 1001 nevű számítógépet. Ebben az időben az országban még mindössze 170 db számítógép volt. Mi voltunk az első középiskola, amely számítógéppel rendelkezett. Előzmények: A félvezetők megjelenése az ötvenes évek végétől – elsősorban az Egyesült Államokban – ugrásszerű fejlődést hozott a számítástechnikában (második generációs gépek).  A KGST-ben 1969-ben volt az „áttörés”.  Az országok között „szétosztották” a gyártási feladatokat. Magyarország a rendszer legkisebb (R10) gépének gyártását kapta. A KGM (Kohó- és Gépipari Minisztérium, az iskola akkori fenntartója) feladata egyrészt a gyártás megszervezése, másrészt az ehhez és a legyártott gépek üzemeltetéséhez szükséges középfokú végzettségű munkaerő képzésének biztosítása volt. A középfokú szakember képzésre bennünket találtak legalkalmasabbnak, mi voltunk akkoriban az elektronikához kapcsolódó technikus képzés „zászlóshajója”. Később a koncepció kissé változott, a gyártás Székesfehérváron valósult meg. A TPA 1001 1971. szepntember 8-án lett üzembe helyezve. Az elméleti képzés megszervezését Nagy Imre, a gyakorlati képzését Urbán Kornél kapta feladatul. A gép a fszt. 9.B jelű helyiségben kapott helyet. A kábeleknek álmennyezet és álpadló lett kiépítve.'
+    },
+    //Görgey Artúr út 26.
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image:'KEPEK/63_Görgey szobor koszorúzás.jpg',
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Görgey Artúr út 26.', title: 'Görgey Artúr út 26.',
+        content: 'Görgey Artúr (1818–1916), az 1848–49-es forradalom és szabadságharc honvéd tábornokának mellszobra a róla elnevezett utcában áll. A mellszobor egy 150 cm magas talapzaton nyugszik. Alkotója Gömbös László szobrászművész; alkotását 1998-ban állították fel.'
+    },
+    //Hachné Nyerges Rita
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: '',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Hachné Nyerges Rita', title: 'Hachné Nyerges Rita', 
+        content: '1989-ben végzett az Eötvös Loránd Tudományegyetem Természettudományi Karán okleveles matematika szakos középiskolai tanárként, majd Kecskeméten, Szegeden, és a Corvinuson tett további szakvizsgákat. Volt az iskola matematikát angol nyelven oktató tanára, mérési csoportjának vezetője, reál-szakterületének vezetője, igazgatóhelyettese és igazgatója 2012 és 2018 között.'
+    },
+    //sikerek matematikabol
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: '',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Sikerek', title: 'Sikerek matematikából',
+        content: 'Zrínyi Ilona Matematikaverseny, Kenguru Nemzetközi Matematika Verseny, Gordiusz Matematika Verseny, Arany Dániel Matematika Verseny, '
+    },
+    //Szakmak ejszakaja
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/66B_szakmák éjszakája.jpg',
+        pocketTitle: 'Szakmák éjszakája',
+        gallery: [
+            'KEPEK/66_szakmák éjszakája/K.jpg',
+            'KEPEK/66_szakmák éjszakája/L.jpg',
+            'KEPEK/66_szakmák éjszakája/szakmák éjszakája.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Szakmak éjszakája', title: 'Szakmak éjszakája',
+        content: '2016. április 15-én sok érdeklődő vett részt a SZAKMÁK ÉJSZAKÁJÁN az UMSZKI-ban. Első ízben ekkor került megrendezésre ez az interaktív bemutató. Látogathatóak voltak a műhelyek és a szaktantermek, különlegesen érdekes programokkal, bemutatókkal várták az érdeklődőket. Szülők, gyerekek és kollégák lelkesen próbáltak ki mindent, amit csak lehetett. Az umszkis diákok és tanárok éjszakába nyúlóan dolgoztak, fáradhatatlanul beszéltek, be- és megmutattak az iskola fő profiljait a látogatóknak.'
+    },
+    //Konyvtar
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image:'KEPEK/',
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Könyvtár', title: 'Könyvtár',
+        content: 'HOSSZÚ SZÖVEG'
+    },
+    //Újpesti Középiskolai Börze
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/68_újpesti iskolák börzéje.png',
+        pocketTitle: 'Újpesti Középiskolai Börze',
+        gallery: [
+            'KEPEK/68_újpesti iskolák börzéje/I.jpg',
+            'KEPEK/68_újpesti iskolák börzéje/J.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Újpesti Középiskolai Börze', title: 'Újpesti Középiskolai Börze', dropCap: true,
+        content: 'A többnapos rendezvényen a pályaválasztás előtt álló diákok és szüleik segítséget kapnak a továbbtanulási lehetőségek feltérképezésben akár budapesti vagy Budapest környéki iskolaválasztásban gondolkoznak. Az iskolák bemutatkozása mellett, a helyszínen lehetőséget biztosítnak pályaorientációs szolgáltatás igénybe vételére is, hogy a diákok célirányosabban tájékozódjanak az iskolák képzési kínálatáról.'
+    },
+    //diákszaj
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: '',
+        pocketTitle: 'Diákszáj',
+        gallery: [
+            'KEPEK/69_diákszáj/Juliánus Béla.png',
+            'KEPEK/69_diákszáj/Szulejmán.png'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Diákszáj', title: 'Diákszáj', dropCap: true,
+        content: 'Az emberek nagy része vizuális típus. A tanári pálya egyik öröm- és egyszerre kudarcforrása, ha egy-egy kevésbé jól sikerült módon megfogalmazott mondat kapcsán elindult a belső képalkotás. Mára ez a mentális műfaj élővé a meme-k által vált. Néhány mondat kapcsán kreált meme illusztrálja ezeket most. <br>"Szulejmán szultán Szigetvár alatt tehetetlen haragjában megütötte a gutát."<br>"Amikor Juliánus barát meghozta a tatát veszedelem hírét, IV. Béla várromokat építtetett."<br>"Dugonics Titusz fenekét a falnak támasztotta és azon felmászott a bástyára."<br>"Vörösmarty Mihály az MTK tagja volt."'
+    },
+    //24oras angol ora - Guinness rekord - Uniós csatlakozás
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/70_uniós csatlakozás, guinness (2).jpg',
+        pocketTitle: '24 órás angol óra - Guinness rekord - Uniós csatlakozás',
+        gallery: [
+            'KEPEK/70_uniós csatlakozás, guinness.jpg',
+            'KEPEK/70_uniós csatlakozás, guinness (2).jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Guinness rekord és uniós csatlakozás', title: '24 órás angol óra – Guinness rekord - Uniós csatlakozás', dropCap: true,
+        content: 'Az UMSZKI-ban hogyan ünnepeltük uniós csatlakozásunkat?<br>Az akkor érettségi előtt álló 13.H osztály angol órákat tartottak "Nyelvtudással lépünk Európába " jelszóval. Volt matematika, informatika, testnevelés, irodalom, fizika, zene... és minden angolul, izgalmas szórakoztató feladatokkal. Összefogtak a tanárok és a szülők, és hozzásegítették a csapatot a Guinness-rekord felállításához. Az akkori Oktatási Minisztérium volt az egyik támogató. Szép emlék.'
+    },
+    //sikerek nemet nyelvbol
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: ''
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Sikerek', title: 'Sikerek német nyelvből', dropCap: true,
+        content: 'Német nyelvi és civilizáció verseny, Német nyelvi vers-és prózamondó iskolai verseny, „Gewinne einen Sprachkurs”'
+    },
+    //Ujpesti fáklyás ballagás
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/72_újpesti fáklyás menet.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Újpesti fáklyás ballagás', title: 'Újpesti fáklyás ballagás', dropCap: true,
+        content: ''
+    },
+    //Technikai dolgozók
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/73_technikai dolgozók.JPG',
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Emlékek - Technikai dolgozók', title: 'Technikai dolgozók',
+        content: 'A tanárokon, oktatókon és a diákokon túl ki mindenki járul még hozzá egy iskola mindennapjaihoz, működtetéséhez?<br>A tanulmányi osztály, a titkárság, a munkaügyért felelős, a gazdasági felelős, a portás, a gondnok, a konyhai alkalmazottak, a takarítók, a kertész, a raktáros, az árubeszerző. Legtöbbször ők is back stage-ben teszik a dolgukat, de nélkülük egyetlen közintézmény sem működni sehogy. Ha ez a működés olajozott és zökkenőmentes, ahhoz ők is hozzájárulnak nap mint nap. Újabb érdekesség az épület eredeti állapotát illetően, hogy régen nem volt portásfülke, a mai 121-es tanári szoba volt a portás tartózkodási helye. Innen egy ablakon keresztül - ez ma is létezik - lehetett rálátni a nagykapura. Ebből a helyiségből egy vas csigalépcső vezetett le a portás lakásba.'
+    },
+    //75 éves az iskola
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/74_75 éves az iskola.jpg',
+        pocketTitle: '75 éves az iskola',
+        gallery: [
+            'KEPEK/74_75 éves az iskola/A. oldal.jpg',
+            'KEPEK/74_75 éves az iskola/B (2).jpg',
+            'KEPEK/74_75 éves az iskola/B. oldal.jpg',
+            'KEPEK/74_75 éves az iskola/B.jpg',
+            'KEPEK/74_75 éves az iskola/F.jpg',
+            'KEPEK/74_75 éves az iskola/Kép16.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – 75 éves az iskola', title: '75 éves az iskola', dropCap: true,
+        content: 'A teljes 2002/2003-as tanév a hetvenöt éves fennállás ünneplésének jegyében zajlott. A hivatalos ünnepség nyitánya a 2002. szeptember 1-jei tanévnyitó volt. Emlékezetessé az tette ezt a napot, hogy eljött nagyon sok régi diákunk és tanárunk. Az iskolavezetés és az alapítvány közösen szervezte az eseményt. November elején avatták a múzeumot, és ezidőtájt került sor az öregdiák találkozóra is. A 75. Jubileumi Évkönyv kiadása az ünnepségsorozat fontos eleme volt. Az évkönyvet Gál Katalin tanárnő – egyben könyvtár-vezető - szerkesztette. A helytörténeti vetélkedő az Újpesthez kötődő, elhunyt akadémikusok márványtábláján szereplő személyek életútjának, tevékenységének alapos ismeretéről szólt. A vetélkedőre – a jubileumi tanév rendezvényeként – 2002. novemberének közepén - több kerületi középiskola részvételével - került sor. A jubileumi év utolsó eseménye 2003. júniusában a technikusi oklevélosztó ünnepségen történt. Ekkor került sor – történetünkben először – Arany Technikusi Oklevél átadására.'
+    },
+    //A régi múzeum
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/75_75 éves műzeum.JPG',
+        pocketTitle: 'A régi múzeum',
+        gallery: [
+            'KEPEK/75_75 éves iskolamúzeum/A.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/B.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/C.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/D.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/E.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/F.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/G.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – A régi múzeum', title: 'A régi múzeum',
+        content: 'A múzeum – melynek korrekt neve Iskolatörténeti állandó kiállítás – átadására 2002.11.08-án a tantestület jelenlétében került sor. Másnap a jubileumi öregdiák találkozón a megjelentek körében óriási sikert aratott. Azóta is sok-sok látogatója volt. A korábbi lánghegesztő műhely  felszámolásával és a kovács műhely korhű felújításával iskolamúzeum kialakítására került sor. A jubileumi tanév egyik fő attrakciója az iskolamúzeum létrehozása volt. A munka már az előző tanévben elkezdődött. Egyrészt a helyszín kialakítása, másrészt a tárlók elkészítése, valamint a kiállítás anyagának összeszedése. A múzeum a korábbi lánghegesztő műhely helyén lett kialakítva. Meg kívánom jegyezni, hogy ez a helyiség eredetileg a kovács-műhely része volt. Valamikor az ötvenes években lett leválasztva. A múzeum szerves része, a kovácsműhely, mely az épület egyetlen olyan helyisége, ahol zömében az eredeti berendezés és eszközök megmaradtak.'
+    },
+    //Osztálytablók, osztálytalálkozók
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/776_osztálytalálkozók.jpg',
+        pocketTitle: 'Osztálytablók, osztálytalálkozók',
+        gallery: [
+            'KEPEK/776_osztálytalálkozók.jpg',
+            'KEPEK/76_osztálytabló.png'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Esemény – Osztálytablók, osztálytalálkozók', title: 'Osztálytablók, osztálytalálkozók', dropCap: true,
+        content: 'Az osztálytablókról az adott korra, korszakra jellemző hangulat sugárzik. A tablók kivitelezése is az adott kor stílusát tükrözik. Urbán Kornélnak köszönhetően az elmúlt száz év tablóinak zöme fellelhető az iskolatörténeti gyűjteményben időrendbe sorakoztatva. "Találkozunk öt év múlva." Ez az idézet, felirat szerepelt hagyományosan a legtöbb tablón az 1960-as évektől. Ez a cselekvésre felszólító mondat az öttel és tízzel osztható számokhoz köthető évfordulók örömmel teljesíthető kötelezettségeit eredményezi: öt, tíz, húsz, huszonöt, harminc, negyven, ötven, sőt hatvan éves osztálytalálkozók szerveződtek és szerveződnek folyamatosan. Hagyomány az iskolában, hogy az osztálytalálkozókon emléktáblát avatnak a főbejárat mellett az újratalálkozás emlékét őrizendő.'
+    },
+    //Újpesti akadémikusok emléktábláinak koszorúzása
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/77_újpesti akadémikusok emléktáblái.jpeg',
+        pocketTitle: 'Újpesti akadémikusok emléktábláinak koszorúzása',
+        gallery: [
+            'KEPEK/77_újpesti akadémikusok emléktáblái.jpeg',
+            'KEPEK/77_AKADÉMIKUSOK EMLÉKTÁBLÁI.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Újpesti akadémikusok emléktábláinak koszorúzása', title: 'Újpesti akadémikusok emléktábláinak koszorúzása', dropCap: true,
+        content: 'A magyar tudomány ünnepe november 3-a, arra emlékezve, hogy Széchenyi István 1825-ben ezen a napon ajánlotta fel birtokainak jövedelmét a Magyar Tudós Társaság (a mai MTA) megalapítására. A hivatalosan 2003 óta megtartott ünnep célja a tudományos élet eredményeinek bemutatása és a társadalommal való megismertetése. A magyar tudomány napja alkalmából 2008 óta tartanak megemlékezést az iskola kertjében, az emlékezetünkben élő újpesti akadémikusok márványtáblája, később márványtáblái előtt.  Az akadémikusokra emlékezve fontos, hogy az utókor méltó legyen nagy elődeihez, és emlékezzen újpesti kötődésű tudósaira. <a href="https://www.youtube.com/watch?v=0RxP8TP5OtA&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=24" target="_blank">Megállapodás ÚKTV Híradó</a>'
+    },
+    //angol kéttannyelvűség
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: '',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Angol kéttannyelvűség', title: 'Angol kéttannyelvűség', dropCap: true,
+        content: 'A két tanítási nyelvű osztályokban az előkészítő év után több tantárgyat idegennyelven oktatunk: matematika, történelem/fizika, illetve az egyébként is célnyelven tartott civilizáció tantárgy. Ezekből a tantárgyakból az érettségin az oktatott nyelven zajlik a vizsga, valamint idegen nyelvből emelt szintű érettségit tesznek le a diákok. Az emelt szintű érettségi, valamint az idegen nyelven tanult tárgyak felsőfokú nyelvvizsgaként jelennek meg az érettségi bizonyítványban. Sok értékes programba vonják be diákjaikat az angok munkaközösség tanárai: iskolai versmondó versenyek a könyvtárban, kéttannyelvű iskolák versenye, Creative Writing, angolnyelvű színjátszó verseny a Berzeviczyben. Kasza Gyuláné Bánó Kacskovics Judit sokat tett azért, hogy 1995-ben elindulhasson a gimnáziumi képzés nálunk. Neki köszönhetjük, hogy - országosan az elsők közt - itt kezdődött meg a két tanítási nyelvű oktatás 1998-ban, s ehhez kapcsolódóan 2002-től intézményünk nyelvvizsgaközpont is lett. Folyamatosan azon dolgozott, hogy a képzés sokoldalúbb és színvonalasabb legyen. <a href="https://www.youtube.com/watch?v=Z5lxTw0C_7I" target="_blank">Angolul szavaltak a diákok az UMSZKI-ban</a>'
+    },
+    //német kéttannyelvűség
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/79_német kéttannyelvű.png',
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Német kéttannyelvűség', title: 'Német kéttannyelvűség', dropCap: true,
+        content: 'Az első évfolyam 2000-ben indult.'
+    },
+    //URBÁN KORNÉL
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/80_urbán kornél.jpg',
+        pocketTitle: 'Urbán Kornél',
+        gallery: [
+            'KEPEK/80_Urbán Kornél/1_érettségi tablókép.jpg',
+            'KEPEK/80_Urbán Kornél/2_tanárként.jpg',
+            'KEPEK/80_Urbán Kornél/3_munka közben.jpg',
+            'KEPEK/80_Urbán Kornél/4_nyugdíjasként.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Urbán Kornél', title: 'Urbán Kornél', subtitle: '(1940-2020)',
+        content: 'Urbán Kornél villamosmérnök, mérnöktanár. Iskolánkban érettségizett, és az egyetem után 49 éven át volt az iskola tanára. Újpestért díjas tanár. Az Újpesti Városvédő Egyesület alapítótagja. Az Újpesti Közművelődési Kör tagja is volt, és az Újpest Internetes Lexikon főszerkesztő-helyettese. 2022-ben emléktáblát avattak a tiszteletére. Az iskolatörténeti gyűjteménynek jelentős része az ő jóvoltából kerülhet az érdeklődők elé. Szöllősy Marianne helytörténész, az Újpesti Városvédő Egyesület elnöke, az Újpesti Helytörténeti Gyűjtemény vezetője életút-interjút készített vele, mely az <a href="">Újpesti Helytörténeti Értesítő 2020 szeptemberi számában olvasható</a><br>Ennek a virtuálisan lapozható emlékönyvnek az összeállításánál is Urbán Kornél az iskolával kapcsolatos, évtizedek alatt összegyűjtött anyagai szolgáltak alapul, csakúgy mint az iskolatörténeti gyűjtemény esetében.'
+    },
+    //STUDIÓ
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image:'KEPEK/',
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Könyvtár', title: 'Könyvtár',
+        content: 'HOSSZÚ SZÖVEG'
+    },
 
     //MINTA//
     // --- SZEMÉLYEK (Kék téma) ---
