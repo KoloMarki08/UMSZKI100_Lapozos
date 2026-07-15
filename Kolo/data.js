@@ -2,6 +2,20 @@ const pages = [
     { type: 'transparent', eraCss: 'era-transparent' },
     { type: 'front-cover', eraCss: 'era-cover' },
 
+    // --- TARTALOMJEGYZÉK (ToC SPREAD) ---
+    { 
+        type: 'toc-left', 
+        eraCss: 'era-toc', 
+        header: 'TARTALOM', 
+        title: 'Első rész' 
+    },
+    { 
+        type: 'toc-right', 
+        eraCss: 'era-toc', 
+        header: 'TARTALOM', 
+        title: 'Második rész' 
+    },
+
     // --- BEVEZETÉS ---
     { 
         type: 'chapter', eraCss: 'era-uniform', header: 'ANTRÉ 75 éves jubileumi', title: 'Az újpesti magyar állami fa- és fémipari szakiskola', dropCap: true,
@@ -27,8 +41,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        tocTitle: 'Személyek - Foerk Ernő',
-        header: 'SZEMÉLYEK', title: 'Foerk Ernő', subtitle: '(1868–1934)',
+        header: 'Személyek - Foerk Ernő', title: 'Foerk Ernő', subtitle: '(1868–1934)',
         content: 'Iskolánk tervezője, Foerk Ernő [ejtsd: "förk"] a magyar késő historizmus egyik legjelentősebb építésze, iparművész és műemlékvédelmi szakember volt. Legismertebb alkotása a szegedi Fogadalmi templom, a szegedi dóm, amelynek terveit Schulek Frigyes eredeti elképzeléseit átdolgozva készítette el. Temesváron született, eredetileg szobrásznak készült, majd a bécsi Képzőművészeti Akadémián tanult építészetet. Hazatérése után Steindl Imre tanársegédje volt a Műegyetemen, ahol részt vett az Országház belső tereinek kialakításában. Emléktáblája egykori óbudai lakóházán és a szegedi Dóm altemplomában is megtalálható, ahol nyugszik. 1907-ben elnyerte a Ferenc József rend lovagkeresztjét, 1931-ben a Corvin koszorút. Foerk Ernő 1911-ben írta ezt magáról: „Két lény lakozik bennem, az egyik az alkotó művész, a másik a búvárkodó, tanulmányozó tudós ember."'
     },
     //Zsolnay csempék
@@ -219,7 +232,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        header: 'Helyszín - Az udvar platánjai', subtitle: 'Ady Endre: A platánfa álma',
+        header: 'Helyszín - Az udvar platánjai', title: 'Ady Endre: A platánfa álma',
         content: 'A Nap huga, zöld szemü lány,<br>(Kit imádnak álom-vitézek)<br>Megszánt egy holdas éjjelen<br>És megigézett.<br><br>Két lábam elhült s szétbomolt<br>Gyökerekként a mélybe szállva<br>S itt állok a fehér mezőn,<br>Mint árva platánfa.<br><br>Girhes, szomorú derekam<br>Szökkenve büszke lombot ontott,<br>Lombom a felhőket veri<br>S elhagytak a gondok.<br><br>Állok: várom a Nap hugát<br>Némán a nagy, éji mezőben<br>S koronámról hull a levél<br>Zörgőn, búsan, rőten.'
     },
     //Radioamator URH-allomas HG5KCC
@@ -1032,7 +1045,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        header: 'Helyszín – Könyvtár', title: 'Könyvtár',
+        header: 'Helyszín – Könyvtár', title: 'Studió',
         content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket "dobozos műsorként" emlegetik, tartják számon az iskola polgárai. A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért. Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A "back stage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed. A stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
     },
     //építőtáborok,golyatáborok

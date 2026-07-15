@@ -3,9 +3,20 @@ const spreadsData = [];
 const tocData = [];
 
 function initBookData() {
+    let tocCounter = 1; // Sorszámláló a tartalomjegyzékhez
+
     pages.forEach((page, index) => {
-        if (page.type === 'chapter' && page.tocTitle) {
-            tocData.push({ title: page.tocTitle, target: Math.floor(index / 2) });
+        if (page.type === 'chapter' || page.type === 'text' || page.type === 'image') {
+            // JAVÍTÁS: Szigorúan csak a valódi címeket (title vagy tocTitle) engedjük be!
+            const titleStr = page.tocTitle || page.title;
+            
+            if (titleStr && !tocData.find(t => t.title === titleStr)) {
+                tocData.push({ 
+                    title: titleStr, 
+                    target: Math.floor(index / 2),
+                    number: tocCounter++ 
+                });
+            }
         }
     });
 
@@ -14,8 +25,8 @@ function initBookData() {
         const leftPage = pages[i];
         const rightPage = pages[i + 1];
 
-        const isLeftCountable = leftPage && ['text', 'chapter', 'toc', 'image'].includes(leftPage.type);
-        const isRightCountable = rightPage && ['text', 'chapter', 'toc', 'image'].includes(rightPage.type);
+        const isLeftCountable = leftPage && ['text', 'chapter', 'toc-left', 'toc-right', 'image'].includes(leftPage.type);
+        const isRightCountable = rightPage && ['text', 'chapter', 'toc-left', 'toc-right', 'image'].includes(rightPage.type);
 
         spreadsData.push({
             leftPage: leftPage,
@@ -31,7 +42,7 @@ function buildPageElement(pageData, pageNum, side) {
     if (!pageData) return pageDiv;
 
     const isTransparent = pageData.eraCss === 'era-transparent';
-    pageDiv.className = `page-content ${pageData.eraCss || ''} ${isTransparent ? '' : 'lined'}`;
+    pageDiv.className = `page-content ${pageData.eraCss || ''} ${isTransparent ? '' : 'lined'} page-${side}`;
 
     if (isTransparent) return pageDiv;
 
@@ -57,17 +68,16 @@ function buildPageElement(pageData, pageNum, side) {
             mainImg.src = pageData.image;
             mainImg.className = 'main-page-image';
             mainImg.alt = 'Fejezet kép';
+            if (pageData.imagePosition) mainImg.style.objectPosition = pageData.imagePosition;
             imgContainer.appendChild(mainImg);
         }
 
         const pocketContainer = content.querySelector('.pocket-container');
         if (pageData.gallery && pageData.gallery.length > 0) {
             const pageIndex = pages.indexOf(pageData);
-
             const wrapper = document.createElement('div');
             wrapper.className = 'pocket-wrapper';
             wrapper.dataset.pageIndex = pageIndex;
-
             const photosDiv = document.createElement('div');
             photosDiv.className = 'pocket-photos';
 
@@ -99,31 +109,31 @@ function buildPageElement(pageData, pageNum, side) {
         const body = content.querySelector('.chapter-body');
         body.innerHTML = '';
 
-        if (pageData.type === 'toc') {
-            tocData.forEach(item => {
+        if (pageData.type === 'toc-left' || pageData.type === 'toc-right') {
+            body.classList.add('toc-grid'); 
+            
+            const halfLength = Math.ceil(tocData.length / 2);
+            const itemsToRender = pageData.type === 'toc-left' 
+                ? tocData.slice(0, halfLength) 
+                : tocData.slice(halfLength);
+
+            itemsToRender.forEach(item => {
                 const span = document.createElement('span');
                 span.className = 'toc-link';
                 span.dataset.target = item.target;
-                span.textContent = item.title;
+                span.textContent = `${item.number}. ${item.title}`;
                 body.appendChild(span);
             });
         } else if (pageData.content) {
-            let cleanContent = pageData.content.replace(/(<br\s*\/?>\s*)+<a/g, '\n\n<a');
-            const paragraphs = cleanContent.split('\n\n');
+            // Itt a <br> már normális sortörésként viselkedik, ugrálás nélkül!
+            const paragraphs = pageData.content.split('\n\n');
             paragraphs.forEach((pText, index) => {
-                if (pText.trim().startsWith('<a')) {
-                    const footerLinks = document.createElement('div');
-                    footerLinks.className = 'page-footer-links-block';
-                    footerLinks.innerHTML = pText;
-                    body.appendChild(footerLinks);
-                } else {
-                    const p = document.createElement('p');
-                    p.innerHTML = pText;
-                    if (index === 0 && pageData.dropCap) {
-                        p.className = 'drop-cap';
-                    }
-                    body.appendChild(p);
+                const p = document.createElement('p');
+                p.innerHTML = pText;
+                if (index === 0 && pageData.dropCap) {
+                    p.className = 'drop-cap';
                 }
+                body.appendChild(p);
             });
         }
     }

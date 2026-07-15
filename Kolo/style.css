@@ -379,7 +379,8 @@ body::before {
 
 .pocket-photo {
     width: auto;
-    max-width: 32%; /* Kicsit megnövelve, hogy a fekvő képeknek is legyen helye */
+    max-width: 32%;
+    /* Kicsit megnövelve, hogy a fekvő képeknek is legyen helye */
     height: 16vh;
     object-fit: contain;
     border: 0.5vh solid #fff;
@@ -754,7 +755,8 @@ body::before {
 
 .gallery-tile-img {
     width: auto;
-    max-width: 45vh; /* Engedi a szélesebb/panoráma képeket is szépen megjelenni */
+    max-width: 45vh;
+    /* Engedi a szélesebb/panoráma képeket is szépen megjelenni */
     height: 32vh;
     object-fit: contain;
     border: 0.5vh solid #fff;
@@ -819,6 +821,77 @@ footer {
     letter-spacing: 0.3vw;
     z-index: 10;
     pointer-events: none;
+    /* Ezeket a sorokat add hozzá az elhalványuláshoz: */
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Amikor a könyv idle állapotban van, a footer megjelenik */
+#scene.idle ~ footer {
+    opacity: 1;
+}
+
+/* --- TARTALOMJEGYZÉK (ToC) SPECIÁLIS DESIGN --- */
+
+.era-toc {
+    color: #3a2a18;
+    background-color: #f4ecd8 !important;
+}
+
+/* Vonalak (füzetminta) brutális eltüntetése erről a két oldalról */
+.era-toc::before {
+    display: none !important;
+}
+
+/* Bal oldali tartalomjegyzék oldal - a kép bal fele */
+.page-left.era-toc {
+    background-color: #f4ecd8 !important;
+    background-image:
+        linear-gradient(rgba(244, 236, 216, 0.85), rgba(244, 236, 216, 0.85)),
+        url('KEPEK/0_címlap.jpg') !important;
+    background-size: 100% 100%, 200% 100% !important;
+    background-position: center, left center !important;
+    background-repeat: no-repeat !important;
+    /* A trükk: a felső színátmenet 'normal', a kép 'multiply' */
+    background-blend-mode: normal, multiply !important;
+}
+
+/* Jobb oldali tartalomjegyzék oldal - a kép jobb fele */
+.page-right.era-toc {
+    background-color: #f4ecd8 !important;
+    background-image:
+        linear-gradient(rgba(244, 236, 216, 0.85), rgba(244, 236, 216, 0.85)),
+        url('KEPEK/0_címlap.jpg') !important;
+    background-size: 100% 100%, 200% 100% !important;
+    background-position: center, right center !important;
+    background-repeat: no-repeat !important;
+    background-blend-mode: normal, multiply !important;
+}
+
+/* Kétoszlopos elrendezés */
+.toc-grid {
+    column-count: 2;
+    column-gap: 3vw;
+    margin-top: 1vh;
+    height: 100%;
+    text-align: left; /* Ezt a sort add hozzá! */
+}
+
+.toc-grid .toc-link {
+    display: block;
+    width: 100%;
+    font-size: 1.35vh;
+    line-height: 1.25;
+    margin-bottom: 0.7vh;
+    text-decoration: none;
+    border-bottom: none;
+    break-inside: avoid;
+    font-weight: 600;
+    /* Picit vastagabb betű, hogy kiemelkedjen a rajz elől */
+}
+
+.toc-grid .toc-link:hover {
+    color: #901a1e;
 }
 
 @media (max-width: 860px) {

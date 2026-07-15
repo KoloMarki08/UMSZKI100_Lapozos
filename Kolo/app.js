@@ -17,7 +17,7 @@ let wasDragged = false;
 let rafId = null;
 let pendingTransform = '';
 let idleTimeout;
-const IDLE_TIME_LIMIT = 90000;
+const IDLE_TIME_LIMIT = 600000;
 
 function requestFullScreen() {
     if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
