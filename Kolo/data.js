@@ -312,7 +312,7 @@ const pages = [
     { 
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/25_autómodellező és gépjármű szakkör.jpg',
-        pocketTitle: 'Autómodellező és Gépjármű Szakkör',
+        pocketTitle: 'Autómodellező és Gépjármű Szakkör',//roviíteni
         gallery: [
             'KEPEK/25_.jpg',
             'KEPEK/25_autómodellező/A.jpg',
@@ -850,8 +850,8 @@ const pages = [
         image: 'KEPEK/68_újpesti iskolák börzéje.png',
         pocketTitle: 'Újpesti Középiskolai Börze',
         gallery: [
-            'KEPEK/68_újpesti iskolák börzéje/I.jpg',
-            'KEPEK/68_újpesti iskolák börzéje/J.jpg'
+            'KEPEK/68_középiskolai börze/I.jpg',
+            'KEPEK/68_középiskolai börze/J.jpg'
         ]
     },
     {
@@ -1028,94 +1028,311 @@ const pages = [
     //STUDIÓ
     { 
         type: 'image', eraCss: 'era-helyiseg',
-        image:'KEPEK/',
+        image:'KEPEK/81_studió.JPG',
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         header: 'Helyszín – Könyvtár', title: 'Könyvtár',
-        content: 'HOSSZÚ SZÖVEG'
+        content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket "dobozos műsorként" emlegetik, tartják számon az iskola polgárai. A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért. Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A "back stage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed. A stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
     },
-
-    //MINTA//
-    // --- SZEMÉLYEK (Kék téma) ---
+    //építőtáborok,golyatáborok
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/82_építőtáborok.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Építőtáborok, gólyatáborok', title: 'Építőtáborok, gólyatáborok', dropCap: true,
+        content: 'A 70-es évek egyik fontos momnetuma a Sziklai Sándor hansági KISZ- (Kommunista Ifjúsági Szövetség) építőtábor. Építőtáborokat a gazdasági mellett nevelési és propagandacélokból már az ötvenes évektől szerveztek (bizonyos iskolákban elvárás volt a diákoktól néhány heti önkéntes munka felajánlása), ám csúcspontjukat nem ekkor érték el. Azaz: ami a résztvevőket illeti nem ekkorra tehető a csúcs, hanem a hetvenes évekre (annak is inkább a végére) vagyis a klasszikus kádári pangás időszakára. Míg 1960-ban 22 ezer fiú és lány dolgozott nyáron önkéntes munkán, 1982-re mintegy 54 ezerre nőtt a nyári munkára a huszonegy felállított KISZ-táborba érkezett fiatalok száma. Természetesen a nagyberuházásokra érkező fiatalok mellett számos egyéb építőtábor is létezett, amelyekben elsősorban mezőgazdasági munkát végeztek a diákok, gyümölcs- és zöldségszedés  (szőlőszüret, kukoricacímerezés, paradicsomszedés) és mindezek feldolgozása volt a legtöbb esetben az elvégzendő munka. Pécs melletti Szilágypuszta: gyümölcsszedés. Új korszak, új tábortípus: a gólyatábor merőben más szándékkal szerveződött.'
+    },
+    //nyelvi táborok
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Nyelvi táborok', title: 'Nyelvi táborok', dropCap: true,
+        content: '1996 - Tiszapüspöki Pályázattal indult. Balatoni táborok.'
+    },
+    //Erasmus+
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/84_erasmus.JPG'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Erasmus+', title: 'Erasmus+', dropCap: true,
+        content: 'Az Erasmus+ az Európai Unió átfogó programja, amely az oktatást, a képzést, az ifjúságügyet és a sportot támogatja Európában. A jelenlegi, 2021-től 2027-ig tartó ciklusban kiemelt figyelmet fordítanak a társadalmi befogadásra, a zöld és digitális átállásra, valamint a fiatalok demokratikus életben való részvételének ösztönzésére. Tanulók és tanárok csoportos vagy egyéni mobilitását, szakmai látogatásokat, úgynevezett job-shadowingokat tesz lehetővé. Az iskola 2001 ót vesz részt uniós pályázatokban. Mindig bővül, folyamatosan változik a partneriskolák listája. Az igazgatóság előtti folyosórészen létrehozott Erasmus-fal jól szemlélteti a kapcsolathálót. <a href="https://edir.umszki.hu/p/erasmus" target="_blank">Weboldal linkje</a>'
+    },
+    //Budapesti Műszaki Szakképzlsi Centrum
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/85_szakmaszerkezet_technikum.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – BMSZC', title: 'Budapesti Műszaki Szakképzési Centrum', dropCap: true,
+        content: 'A 2010-es évek elejétől a magyar köznevelés és szakképzés gyökeresen átalakult. Az iskolák állami fenntartásba vételével (Klebelsberg Központ, majd a Szakképzési Centrumok megalakulásával) a klasszikus önkormányzati TISZK-társulások megszűntek vagy beolvadtak a mai centralizált szakképzési struktúrába. A TISZK a Térségi Integrált Szakképző Központ rövidítése volt. Napjainkban Magyarországon a szakképzés gerincét a 44 állami fenntartású szakképzési centrum alkotja, amelyek összesen 365 szakképző iskolát integrálnak. Ezek az intézmények fogják össze a térségi szakképzést, biztosítva a technikai hátteret és a munkaerőpiaci kapcsolatokat a tanulók számára. A BMSZC tizenkét nagy múltú iskolát tömörít, a modern technológia oktatására fókuszálva.'
+    },
+    //World Schoolar's Cup 2018
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/86_World Schcolars Cup 2018.jpg',
+        pocketTitle: 'World Schoolars Cup 2018',
+        gallery: [
+            'KEPEK/86_World Scholars Cup 2018/A_1.jpg',
+            'KEPEK/86_World Scholars Cup 2018/A.jpg',
+            'KEPEK/86_World Scholars Cup 2018/B.png',
+            'KEPEK/86_World Scholars Cup 2018/C.jpg',
+            'KEPEK/86_World Scholars Cup 2018/D.jpg',
+            'KEPEK/86_World Scholars Cup 2018/E.jpg',
+            'KEPEK/86_World Scholars Cup 2018/F.jpg',
+            'KEPEK/86_World Scholars Cup 2018/G.jpg',
+            'KEPEK/86_World Scholars Cup 2018/H.jpg',
+            'KEPEK/86_World Scholars Cup 2018/I.jpg',
+            'KEPEK/86_World Scholars Cup 2018/J.jpeg',
+            'KEPEK/86_World Scholars Cup 2018/K.jpg',
+            'KEPEK/86_World Scholars Cup 2018/L.jpeg',
+            'KEPEK/86_World Scholars Cup 2018/M.jpg',
+            'KEPEK/86_World Scholars Cup 2018/N.png'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – World Schoolars Cup 2018', title: 'World Schoolars Cup 2018', dropCap: true,
+        content: 'HOSSZU SZOVEG'
+    },
+    //Lányok az UMSZKIban
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/55_Landler Jenő.jpg',
+        image: 'KEPEK/87_lányok.jpg',
+        pocketTitle: 'Lányok az Umszkiban',
+        gallery: [
+            'KEPEK/87_lányok.jpg',
+            'KEPEK/87_lányok az iskolában.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        header: 'Személyek - Landler Jenő', title: 'Landler Jenő', subtitle: '(1875–1928)',
-        content: 'Magyar kommunista politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált, a Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény megnevezésében 35 éven át jelen volt Landler Jenő neve:<br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
+        header: 'Személyek - Lányok', title: 'Lányok az Umszkiban',
+        content: '1945-ben az iparügyi miniszter (69 259/II./3.-1945 számú) rendelete tette lehetővé, hogy középfokú iparoktatási intézmények nappali tanulói közé lányok is felvehetők legyenek. Később a 13.970/1947. számú kormányrendelet a műszaki középiskola létesítéséről rendelkezett és megerősítette a lányok ilyen intézményben való továbbtanulási jogát. Iskolánkba az 1949/50-es tanévben vettek fel két leány. Ők voltak az „első fecskék”. Közülük egy fő, Svéd Mariann tett képesítő vizsgát az 1952/53. tanévben a IV. B osztályban. Vele indult tehát a történet. A következő, az  1950/51-es tanévben tizenegy leány került felvételre, közöttük volt Sásdi Mária is. Az országos tanévnyitóra iskolánkban került sor. Darvas József miniszter tartotta az ünnepélyes tanévnyitót az akkori körtermünkben. A fő üzenet a lányok megjelenésének hangsúlyozása volt az iparoktatásban. A filmhíradó is beszámolt a jeles eseményről, melybe beleszőtték Sásdi Mária történetét is, üzenve a fiatal lányoknak, hogy várja Őket az iparoktatás. 80-as években gépszerkesztői szakon sok lány került az iskolába. A tanulói létszámokat az 1951 és 1980 közötti időintervallumban vizsgálva láthatjuk, hogy a 10%-ot is meghaladta a lánytanulók aránya ebben az időszakban. Az iskola életében jelentős változást hozott a gimnáziumi képzés, hiszen a gimnáziumi osztályokba addig soha nem tapasztalt mértékben jelentkeztek lányok. Ez az arány a technikusi képzés újragondolásával nagyon visszaesett. 2020-as években már 30 fő alatt volt a nappali tagozaton tanuló lányok létszáma. A 2026-ban felvétel nyertek között két lány szerepel, akárcsak 1949/50-ben.'
     },
-
-
-    // --- TÖRTÉNET (Piros téma) ---
-    { 
-        type: 'image', eraCss: 'era-esemeny',
-        image: 'https://images.unsplash.com/photo-1551131628-6623bc17e826?w=800&q=80',
-        pocketTitle: 'További képek',
-        gallery: [
-            'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&q=80',
-            'https://images.unsplash.com/photo-1580536417537-eb4a4d6b63f5?w=400&q=80'
-        ]
-    },
-    {
-        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        header: 'Esemény – Mérföldkövek', title: 'Az Újjáépítés és Fejlődés', subtitle: 'Korszakok a történelemben',
-        content: 'Az iskola <b>1927-es alapítása</b> után hamar szembesült a világtörténelem viharaival. A háború és az azt követő újjáépítés komoly próbatétel elé állította a közösséget.<br><br>A korszak történelmi hátterének mélyebb megértéséhez érdemes átlapozni a <a href="https://zanza.tv" target="_blank">Zanza.tv történelmi oktatótárát</a>. Később, a technológiai robbanással a híradástechnika, majd a 90-es évektől az informatika forradalma határozta meg a mindennapokat.'
-    },
-
-    // --- HELYSZÍN (Zöld téma) - 10 képes galéria ---
-    { 
-        type: 'image', eraCss: 'era-helyiseg',
-        image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80',
-        pocketTitle: 'További képek',
-        gallery: [
-            'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80',
-            'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80',
-            'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&q=80',
-            'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80',
-            'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=80',
-            'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=80',
-            'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&q=80',
-            'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&q=80',
-            'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80',
-            'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=80'
-        ]
-    },
-    {
-        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        header: 'Helyszín – Tanácsterem', title: 'Tanácsterem',
-        content: '1927 óta működő intézményünk 114-es termében, korábban naplószobájában, kapott helyett 2022 novemberében a megújult iskolatörténeti gyűjtemény.<br><br>Ennek alapjául az iskola alagsorában 20 éven át működő múzeum anyaga és Urbán Kornélnak – iskolánk egykori diákjának és későbbi mérnöktanárának – hagyatéka szolgált.'
-    },
-
-    { 
-        type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/95_új múzeum.jpg',
-    },
-    {
-        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        tocTitle: 'Helyiség - Új múzeum',
-        header: 'Új múzeum', subtitle: 'Iskolatörténeti gyűjtemény',
-        content: '1927 óta működő intézményünk 114-es termében, korábban naplószobájában, kapott helyett 2022 novemberében a megújult iskolatörténeti gyűjtemény.<br>Ennek a gyűjteménynek alapjául az iskola alagsorában 20 éven át működő múzeum anyaga és Urbán Kornélnak – iskolánk egykori diákjának és későbbi mérnöktanárának – hagyatéka szolgált. Az ajtón elhelyezett táblán szereplő felirat: „Iskolatörténeti gyűjtemény Urbán Kornél emlékére” is ezt hirdeti. Még a 2002-ben, iskolánk fennállásának 75. évfordulójára alapított Iskola- és technikatörténeti gyűjtemény az ERASMUS+ “Sustainability- Preserving Europe for the Future Generations” projekt keretében és eredményeként újult meg intézményünk 95. tanévében. Az ünnepélyes átadás 2022. november 9-én volt.<br>A kibővített múzeumban igyekeztünk megmutatni Urbán Kornél hagyatékának az iskolára vonatkozó jelentős részét. Ezért is választottunk a gyűjtemény méltó mottójaként az alábbi Ipolyi Arnold idézetet:<br>„Őrizzük emlékeinket, gyűjtsük össze töredékeinket, nehogy végleg elvesszenek,<br>s ezáltal is üresebb legyen a múlt, szegényebb a jelen, kétesebb a jövő.”'
-
-    },
-
-    // --- EGYÉB (Arany téma) ---
+    //3D-s nyomtató
     { 
         type: 'image', eraCss: 'era-targyak',
-        image: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&q=80',
-        pocketTitle: 'További képek',
+        image: 'KEPEK/',
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Tárgyak - 3D nyomtató', title: '3D nyomtató',
+        content: ''
+    },
+    //Dr.Nyárs Csaba-díj, Czellér András-díj
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/89_nyárs csaba díj.JPG',
+        pocketTitle: 'Dr. Nyárs Csaba-díj, Czellér András-díj',
         gallery: [
-            'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80',
-            'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&q=80'
+            'KEPEK/89_nyárs csaba díj/G.JPG',
+            'KEPEK/89_nyárs csaba díj/I.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Díjak', title: 'Dr. Nyárs Csaba-díj, Czellér András-díj (2024)', dropCap: true,
+        content: '2016 decemberében került sor először a Nyárs Csaba-díj átadására. A díjat Dr. Nyárs Csaba, a jeles újpesti lokálpatrióta alapította azzal a céllal, hogy az UMSZKI - a kitűnő újpesti technikusképző intézmény – két diákja és két tanára részesüljön minden évben az elismerésben. A díj átadására az iskolai karácsonyi ünnepségen kerül sor. Dr. Nyárs Csaba a közjegyzőnél hitelesített díj-alapító okirat alapján az iskolai alapítványnál három millió forintot helyezett el a finanszírozásra. A mindenkori díjazottak az 50.000 forintos pénzjutalom mellé egy, az épületünket ábrázoló ezüst kitűzőt kapnak díszdobozban, valamint egy díszes oklevelet.<br>Czellér S. András iskolánk diákja volt. Számos tapasztalattal rendelkezik az energiaipar, a nemzetközi kereskedelem, az üzleti és a szoftverfejlesztés területén.  A 2022-ben létrehozott iskolatörténeti gyűjteményt látva 50 éves osztálytalálkozójuk alkalmával ajánlott fel jutalmazás céljára felhasználható pénzösszeget, valamint az iskola új múzeumának fejlesztésére szolgáló jelentős összeget.'
+    },
+    //90. tanév ünnepe
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/90_.JPG',
+        pocketTitle: '90. tanév ünnepe',
+        gallery: [
+            'KEPEK/90_szülinap/A - P1013055.JPG',
+            'KEPEK/90_szülinap/A (2).jpg',
+            'KEPEK/90_szülinap/A-x21230905_1649694451739587_4875766784013359516_n.jpg',
+            'KEPEK/90_szülinap/A.jpg',
+            'KEPEK/90_szülinap/B - Bicskei Gy.-1.jpg',
+            'KEPEK/90_szülinap/B - DSCF1033.JPG',
+            'KEPEK/90_szülinap/B - P1013056.JPG',
+            'KEPEK/90_szülinap/B.jpg',
+            'KEPEK/90_szülinap/Berki Bea.jpg',
+            'KEPEK/90_szülinap/C.JPG',
+            'KEPEK/90_szülinap/D (2).JPG',
+            'KEPEK/90_szülinap/D (3).JPG',
+            'KEPEK/90_szülinap/D-P1013059.JPG',
+            'KEPEK/90_szülinap/D.jpg',
+            'KEPEK/90_szülinap/E - szept1. előkészület2.JPG',
+            'KEPEK/90_szülinap/E -P1013065.JPG',
+            'KEPEK/90_szülinap/E.jpg',
+            'KEPEK/90_szülinap/F.jpg',
+            'KEPEK/90_szülinap/G.JPG',
+            'KEPEK/90_szülinap/J.jpg',
+            'KEPEK/90_szülinap/P1013062.JPG',
+            'KEPEK/90_szülinap/P1013063.JPG',
+            'KEPEK/90_szülinap/P1013064.JPG',
+            'KEPEK/90_szülinap/P1013067.JPG',
+            'KEPEK/90_szülinap/P1013069.JPG',
+            'KEPEK/90_szülinap/P1013070.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – 90. tanév ünnepe', title: '90. tanév ünnepe', dropCap: true,
+        content: ''
+    },
+    //címer rekonstrukció
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/91_homlokzat.JPG',
+        pocketTitle: 'Címer rekonstrukció',
+        gallery: [
+            'KEPEK/91_címer rekonstrukció/27_iskolacímerek.jpg',
+            'KEPEK/91_címer rekonstrukció/36222849_337497080115360_6456547593601155072_n.jpg',
+            'KEPEK/91_címer rekonstrukció/36269341_10204356952720590_8321282094122663936_n.jpg',
+            'KEPEK/91_címer rekonstrukció/36312680_337496553448746_6207689779652329472_n.jpg',
+            'KEPEK/91_címer rekonstrukció/36316749_1852273668170779_1388618671177334784_n.jpg',
+            'KEPEK/91_címer rekonstrukció/IMG_4794 - A.JPG',
+            'KEPEK/91_címer rekonstrukció/IMG_6427.JPG',
+            'KEPEK/91_címer rekonstrukció/IMG_6434 - D.JPG',
+            'KEPEK/91_címer rekonstrukció/IMG_6503 - N.JPG',
+            'KEPEK/91_címer rekonstrukció/iskolacímer.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        tocTitle: 'IV. Egyéb – A múlt darabkái',
-        header: 'IV. FEJEZET – EGYÉB', title: 'Ikonikus Tárgyak', subtitle: 'Műszerek és emlékek',
-        content: 'Az archívumban számtalan olyan tárgy maradt fenn, amely egy adott kor technológiai csúcsát képviselte. Régi oszcilloszkópok, mechanikus számológépek és kézzel írt naplók.<br><br>Ezek az <b>egyéb kincsek</b> mesélik el talán a legpontosabban, mennyit változott a világ. Ha érdekel a régi műszerek restaurálása és története, érdemes körülnézni a <a href="https://wikipedia.org" target="_blank">Wikipédia technológia-történeti</a> lapjain.'
+        header: 'Tárgyak - Címer', title: 'Címer rekonstrukció',
+        content: 'Az 1950/51-es tanévben az akkori hatalom eltávolította az iskola homlokzatát díszítő magyar címert. Helyére évziedekre a vörös csillag került. A rendszerváltás után ugyan a csillag lekerült, de közel 30 éven át semmi nem történt a homlokzattal. 2018 júniusának végén került vissza az építő, Foerk Ernő eredeti tervei alapján az iskola homlokzatára a címer rekonstrukciója. A projekt megvalósulásának támogatói között köszönthettük Újpest legjelentősebb civil szervezeteit, jónéhány volt diákunkat, újpesti lokálpatriótákat és több újpesti vállalkozót. Az eseményen az igazgatóasszony összefoglalta a címer történetét és méltatta azt a széleskörű társadalmi összefogást, ami lehetővé tette a megvalósítást. Ugyanakkor készült egy gránit tábla is, mely emléket állít a jeles eseménynek és tiszteleg a megvalósítók és támogatók előtt. A reprezentatív képen a bejárati vaskapun látható iskolajelvény is látszik. Érdekesség, hogy ez az 1949/50-es tanévben került oda, tehát néhány hónappal a homlokzati címer eltávolítása előtt. Diákok készítették Durkó László tanár úr irányításával.<br><a href="https://youtu.be/jlxM2OHSKsk" target="_blank">Szabó Tamás által készített videó</a>'    
+    },
+    //Az iskolakert
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image:'KEPEK/92_iskolakert.jpg',
+        pocketTitle: 'Az iskolakert',
+        gallery: [
+            'KEPEK/92_iskolakert.jpg',
+            'KEPEK/92B_iskolakert.jpg',
+            'KEPEK/92_iskolakert/1928_nincs kerítés.jpg',
+            'KEPEK/92_iskolakert/1932_van kerítéés.jpg',
+            'KEPEK/92_iskolakert/1960-as évek.jpg',
+            'KEPEK/92_iskolakert/G.JPG',
+            'KEPEK/92_iskolakert/H.JPG',
+            'KEPEK/92_iskolakert/NYÁR_1.jpg',
+            'KEPEK/92_iskolakert/NYÁR_2.jpg',
+            'KEPEK/92_iskolakert/ŐSZ_1.jpg',
+            'KEPEK/92_iskolakert/P1011977.JPG',
+            'KEPEK/92_iskolakert/P1011982.JPG',
+            'KEPEK/92_iskolakert/TAVASZ_2.jpg',
+            'KEPEK/92_iskolakert/TAVASZ_3.jpg',
+            'KEPEK/92_iskolakert/TAVASZ_4.jpg',
+            'KEPEK/92_iskolakert/TÉL_1.jpg',
+            'KEPEK/92_iskolakert/TÉL_3.jpg',
+            'KEPEK/92_iskolakert/TÉL_4.jpg',
+            'KEPEK/92_iskolakert/umszki_004.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Iskolakert', title: 'Az iskolakert',
+        content: 'Az udvar platánfái és hársfája mellett az épületet körülölelő területnek is megvannak szemet gyönyörködtető kertészeti csodái. Előkertünk eredendően újpesti közpark volt. Amikor az épület 1927-ben elkészült még nem volt kerítése. 1932-ben a város megállapodott a tulajdonosi jogokat gyakorló Kereskedelemügyi Minisztériummal, hogy az előkert nyilvános park legyen, vállalva ekkor a park kialakítását és fenntartását. Később Lenkei László megbízott tanácselnökhelyettes 1957-ben kelt leveléből kiderül, hogy 1948-ban Döbrentei Károlyné polgármester „kérte az iskola körüli park közterület céljára való átengedését, arra való hivatkozással, hogy Újpest a közterületi parkot erősen nélkülözi”. Igaz, ekkor még a Hősök Ligete létezett, de már elhanyagoltan, a város rendelkezésére állt, feltehetően már építési területként gondoltak rá. Lenkei László leveléből az is kiderül, hogy az iskola igazgatója Bartos Lívia – forráshiányra hivatkozva – szerette volna továbbra is város gondozására bízni az előkertünket, amit nem sikerült elérnie. A jellegzetes jegenye sor elöregedett, egyik másik ki is dőlt, megrongálva a kerítést, sőt az egyik a villamos felső-vezetéket is. 2003 és 2007 között lettek kivágva – egy kivételével – az előkert fái. Helyükre juharfák kerültek. A kivágás és ültetés az önkormányzat segítségével történt. 2005-ben történt egy teljes kertészeti felújítás. A kertgondozás azóta is folyamatos. Az iskola parkfenntartói feladatát kitűnően teljesíti, hiszen az iskolakert manapság is gondos kezekben van: a Görgey út felőli fasor mentén bokrok, virágágyások színesítik az összképet.'
+    },
+    //UMSZKI diákdíj
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/93_umszki diákdíj.JPG'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – UMSZKI diákdíj', title: 'UMSZKI diákdíj', dropCap: true,
+        content: '2004 óta minden évben UMSZKI diákdíj átadására került sor. Ezt mindig a legkiválóbbak kapják. A tanulmányi eredmény, a tanulmányi versenyeken elért eredmény, az iskola diákközösségének szervezésében végzett munka képezi egyebek mellett a kiválasztás szempontjait.'
+    },
+    //Lézergravírozás
+    { 
+        type: 'image', eraCss: 'era-targyak',
+        image: 'KEPEK/'
+    },
+    {
+        type: 'chapter', eraCss: 'era-targyak', dropCap: true,
+        header: 'Tárgyak - Lézergravírozás', title: 'Lézergravírozás',
+        content: 'A lézergravírozás egy modern, érintésmentes anyagmegmunkálási eljárás, amely során egy nagy intenzitású lézersugár az anyag felületét felhevíti, elégeti vagy elpárologtatja, így hozva létre a tartós mintát vagy feliratot. Ez a technológia rendkívül precíz, gyors és tiszta, mivel nincs szükség a munkadarab mechanikus rögzítésére.'    
+    },
+    //Iskolatörténeti gyűjtemény - a megújult iskolamúzeum
+    { 
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/95_új múzeum.jpg',
+        pocketTitle: 'Iskolatörténeti gyűjtemény',
+        gallery: [
+            'KEPEK/95_új múzeum.jpg',
+            'KEPEK/95_ÚJMÚZEUM.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
+        header: 'Helyszín – Új múzeum', title: 'Iskolatörténeti gyűjtemény - a megújult iskolatörténeti gyűjtemény',
+        content: '1927 óta működő intézményünk 114-es termében, korábban naplószobájában, kapott helyett 2022 novemberében a megújult iskolatörténeti gyűjtemény. Ennek a gyűjteménynek alapjául az iskola alagsorában 20 éven át működő múzeum anyaga és Urbán Kornélnak – iskolánk egykori diákjának és későbbi mérnöktanárának – hagyatéka szolgált. Az ajtón elhelyezett táblán szereplő felirat: „Iskolatörténeti gyűjtemény Urbán Kornél emlékére” is ezt hirdeti. Még a 2002-ben, iskolánk fennállásának 75. évfordulójára alapított Iskola- és technikatörténeti  gyűjtemény az ERASMUS+ “Sustainability- Preserving Europe for the Future Generations” projekt keretében és eredményeként újult meg intézményünk 95. tanévében. Az ünnepélyes átadás 2022. november 9-én volt. A Landler-UMSZKI egykori diákja, később évtizedeken át itt tanító tanára, Urbán Kornél munkálkodott az intézmény eseményeinek nyomon követésén, az iskola történetének dokumentálásán, az iskolavezetés, az osztályfőnökök, a szaktanárok, az osztályok „feltérképezésén”. A kibővített múzeumban igyekeztünk megmutatni hagyatékának az iskolára vonatkozó jelentős részét. Ezért is választottunk a gyűjtemény méltó mottójaként az alábbi Ipolyi Arnold idézetet:<br>„Őrizzük emlékeinket, gyűjtsük össze töredékeinket, nehogy végleg elvesszenek,<br>s ezáltal is üresebb legyen a múlt, szegényebb a jelen, kétesebb a jövő.”'
+    },
+    //Híressegeink
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/96_hírességeink.png',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - Hírességeink', title: 'Hírességeink',
+        content: 'A "Miből/kiből lesz a cserebogár?" ismert magyar szólás, amelyet arra a meglepő fejlődésre vagy átalakulásra használunk, amikor egy csendes ember, egy kisgyermek később nagy sikereket ér el, vagy komoly pályát fut be.<br>Fenyő Miklós -zenész<br>Zana József - színész<br>Janicsák Veca - énekesnő<br>Szőke Richárd - színész<br>Dietz Gusztáv - MMA harcos, karakterszínész<br>Magonyi László - DJ<br>Rónai Sándor - parlamenti képviselő<br>Molnár Tamás - zenész, dalszövegíró, énekes<br>Wintermantel Zsolt - Újpest egykori polgármestere<br>Gáti József - Bánki Donát Főiskola címzetes egyetemi docense, okleveles gépészmérnök, IWE, EWE, technikatörténész<br>Sinóros-Szabó Botond - a Debreceni Egyetem professzora<br>Csóka Gergely - világutazó<br>Oláh Viktor - British Telekom mérnöke<br>Kalydy Zoltán - ’83 – ’91 a női judo válogatott edzője<br>Berta Tamás - LGT gitárosa<br>Mihály László - az Ameriaki Fizikai Társaság tagja, az MTA tagja New York-i tanszékvezető<br>Bólyos Ibolya - manöken<br>Márk Iván - Balázs Béla-díjas operatőr <br>Kovács Antal - Máté Romano Drom ütőse<br>Csizmár Gábor - ’90-es évek munkaügyi minisztere<br>Halácsy Péter  - Budapest School, Kitchen BP., PREZI, MOKK megalkotója<br>Bagi László - grafikus (Philadelphia)<br>Baksa Attila - űrkutató, üstököskutató<br>Stubnya Béla - színész<br>Barabás Zoltán - rádióriporter, író<br>Virágh Csaba - UTE jégkorongozó, edző<br>Marton Tibor - MAC jégkorongozó és edző<br>Hermann Tivadar - maratonfutó, író<br>dr. Márton Tibor - Bánki Donát Főiskola egyetemi tanár, tanszékvezető, főigazgató-helyettes<br>'    
+    },
+    //kulturális örökség napja
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/97_kulturalis örökseg.JPG',
+        pocketTitle: 'Kulturális örökség napja',
+        gallery:[
+            'KEPEK/97_kulturális örökség napja/97_kulturális örökség napja.JPG',
+            'KEPEK/97_kulturális örökség napja/IMG_2441.JPG',
+            'KEPEK/97_kulturális örökség napja/UMSZKI_KÖN_2024_2.JPG',
+            'KEPEK/97_kulturális örökség napja/UMSZKI_KÖN_2024_3.JPG'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Kulturális örökség napja', title: 'Kulturális örökség napja', dropCap: true,
+        content: 'Magyarország legnagyobb ingyenes műemléki fesztiválja a kulturális örökség napja, amelyet minden év szeptemberének harmadik hétvégéjén rendeznek meg. Az esemény az európai örökség napok - European Heritage Days - hazai programsorozata. Ingyenes épületséták, köztük iskolánk bejárása is elérhető ekkor. Az iskolatörténeti gyűjtemény, a kovácsműhely, a tanműhelyek szakszerű vezetés során kerülnek bemutatásra,  lehetőség nyílik az iskola történetének alapos feltárására, megismerésére ezen alkalmakkor.'
+    },
+    //Az iskolában forgatott filmek
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/98_film2.jpg',
+        pocketTitle: 'Az iskolában forgatott filmek',
+        gallery: [
+            'KEPEK/98_film1.jpg',
+            'KEPEK/98_film2.jpg'
+        ]
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – Filmek', title: 'Az iskolában forgatott filmek',
+        content: 'FOMO - (FEAR OF MISSING OUT) 2019-ben bemutatott, provokatív magyar ifjúsági dráma, amelyet Hartung Attila rendezett. A film a Z-generáció életmódját, az online jelenlét kényszerét és a közösségi média sötét oldalát mutatja be. <br>MANGO MATERNICA - 2026-van bemutatott magyar film, Nagy Borbála rendezésében. Három nő gyermekvállalását mutatja be nemcsak az X-és Y-generáció szemszögéből közelítve meg az élet ezen fontos döntését.<br>Nemcsak az iskola egyes részeinek, részleteinek felismerése jelenthet élménytmindkét film esetében, hanem mert mondanivalójuk örökérvényű, mégha a XXI. század 10-es, 20-as éveiben játszódnak is.'
+    },
+    //100. tanév ünnep
+    { 
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/99_100_unnep.jpg'
+    },
+    {
+        type: 'chapter', eraCss: 'era-esemeny',
+        header: 'Történet – 100. tanév ünnep', title: '100. tanév ünnep', dropCap: true,
+        content: 'Mikor ez az iskola megnyitotta a kapuit, még nem volt internet, nem volt okostelefon, és a diákok sem a TikTokon nézték a legújabb trendeket, hanem örültek, ha nem fagyott be a tintatartójuk. Egy 100 éves „szülinapost” köszöntünk, de ez az épület nem egy múzeum. Bár a falak már sokat láttak – rengeteg felelést, titokban tartott és lebuktatott puskázásokat, első szerelmeket és hatalmas világmegváltó beszélgetéseket a folyosókon –, az iskola valójában mi vagyunk. Mi, akik most ide járunk, és ők, akik látogatóba jönnek vissza, emlékeket kutatva, nosztalgiázva. Egy ilyen évfordulón mindenki hajlamos nagy szavakat használni a „tudás templomáról”, de legyünk őszinték: ez az iskola azért maradt fenn száz évig, mert mindig volt benne élet. Mert a tanárok nemcsak tanítottak, hanem többnyire végtelenül türelmesek voltak, a diákok pedig nemcsak tanultak, hanem közösséget is építettek, életre szóló barátságok köttettek. Ne úgy tekintsünk erre a 100 évre, mint egy poros történelemkönyvre! Legyen inkább mindez egy hatalmas családi album, amibe mindig újabb és újabb fotók és emlékek kerülnek. Kívánjuk az iskolának, hogy a következő száz évben is maradjon fiatalos, a diákoknak, hogy találják meg itt a hangjukat, a tanároknak pedig, hogy legyen még sok-sok generáció, akikre büszkék lehetnek. Boldog születésnapot, Landler, UMSZKI, százévesek csak egyszer vagyunk!'    
+    },
+    //A 100. tanév tantestületének tablója
+    { 
+        type: 'image', eraCss: 'era-szemelyek',
+        image: 'KEPEK/',
+    },
+    {
+        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        header: 'Személyek - 100. tanév tantestületének tablója', title: 'A 100. tanév tantestületének tablója',
+        content: 'Tanár nélkül nincs jövő. Ez a kijelentés a pedagógusok társadalmi alapkövét hangsúlyozza: ők azok, akik nemcsak tudást adnak át, hanem formálják a következő generációk kritikai gondolkodását, értékrendjét és alkalmazkodóképességét.  A technológia hiába teszi elérhetővé az információt, a tanár segít azt rendszerezni és értelmezni.  Az iskola a szocializáció helyszíne, ahol a tanár mintaként szolgál az együttműködéshez és a közösségi léthez. Minőségi oktatás nélkül nincs innováció, képzett munkaerő, így hosszú távú gazdasági fejlődés sem.<br>"Iskolák. Világítótornyok, barátom! A jövő fényjelei! Száz és száz kis magot tartalmazó gubók, belőlük fog megszületni az új, a jobb, a bölcsebb." (Sir Arthur Conan Doyle)'
     },
 
     { type: 'back-cover', eraCss: 'era-cover' },
