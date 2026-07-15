@@ -964,7 +964,7 @@ const pages = [
         image: 'KEPEK/776_osztálytalálkozók.jpg',
         pocketTitle: 'Osztálytablók, osztálytalálkozók',
         gallery: [
-            'KEPEK/776_osztálytalálkozók.jpg',
+            'KEPEK/76_osztálytalálkozók.jpg',
             'KEPEK/76_osztálytabló.png'
         ]
     },

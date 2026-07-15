@@ -339,9 +339,11 @@ body::before {
 }
 
 .main-page-image {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    height: auto;
     max-height: 35vh;
-    object-fit: cover;
+    object-fit: contain;
     border: 0.5vh solid #fff;
     box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.2);
     border-radius: 0.3vh;
@@ -376,9 +378,10 @@ body::before {
 }
 
 .pocket-photo {
-    width: 28%;
+    width: auto;
+    max-width: 32%; /* Kicsit megnövelve, hogy a fekvő képeknek is legyen helye */
     height: 16vh;
-    object-fit: cover;
+    object-fit: contain;
     border: 0.5vh solid #fff;
     box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -750,9 +753,10 @@ body::before {
 }
 
 .gallery-tile-img {
-    width: 32vh;
+    width: auto;
+    max-width: 45vh; /* Engedi a szélesebb/panoráma képeket is szépen megjelenni */
     height: 32vh;
-    object-fit: cover;
+    object-fit: contain;
     border: 0.5vh solid #fff;
     border-radius: 1vh;
     box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.4);
