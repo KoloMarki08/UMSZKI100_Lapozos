@@ -3,36 +3,47 @@ const spreadsData = [];
 const tocData = [];
 
 function initBookData() {
-    let tocCounter = 1; // Sorszámláló a tartalomjegyzékhez
+    let tocCounter = 1;
 
+    // 1. Automatikus, duplikációmentes cím-begyűjtés
     pages.forEach((page, index) => {
         if (page.type === 'chapter' || page.type === 'text' || page.type === 'image') {
-            // JAVÍTÁS: Szigorúan csak a valódi címeket (title vagy tocTitle) engedjük be!
             const titleStr = page.tocTitle || page.title;
-            
+
             if (titleStr && !tocData.find(t => t.title === titleStr)) {
-                tocData.push({ 
-                    title: titleStr, 
+                tocData.push({
+                    title: titleStr,
                     target: Math.floor(index / 2),
-                    number: tocCounter++ 
+                    number: tocCounter++
                 });
             }
         }
     });
 
-    let realPageNum = 1;
+    let currentThemeNum = '';
+
+    // 2. Oldalpárok összeállítása és a témaszám kiosztása SPREAD-enként
     for (let i = 0; i < pages.length; i += 2) {
         const leftPage = pages[i];
         const rightPage = pages[i + 1];
+        const spreadIndex = i / 2;
 
-        const isLeftCountable = leftPage && ['text', 'chapter', 'toc-left', 'toc-right', 'image'].includes(leftPage.type);
-        const isRightCountable = rightPage && ['text', 'chapter', 'toc-left', 'toc-right', 'image'].includes(rightPage.type);
+        // Ha ezen az oldalpáron kezdődik egy új téma a TOC szerint, frissítjük a számot
+        const tocItem = tocData.find(t => t.target === spreadIndex);
+        if (tocItem) {
+            currentThemeNum = tocItem.number;
+        }
+
+        const noNumTypes = ['front-cover', 'back-cover', 'transparent', 'toc-left', 'toc-right'];
+
+        const showLeftNum = leftPage && !noNumTypes.includes(leftPage.type);
+        const showRightNum = rightPage && !noNumTypes.includes(rightPage.type);
 
         spreadsData.push({
             leftPage: leftPage,
-            leftNum: isLeftCountable ? realPageNum++ : '',
+            leftNum: showLeftNum ? currentThemeNum : '',
             rightPage: rightPage,
-            rightNum: isRightCountable ? realPageNum++ : ''
+            rightNum: showRightNum ? currentThemeNum : ''
         });
     }
 }
@@ -95,6 +106,44 @@ function buildPageElement(pageData, pageNum, side) {
             wrapper.appendChild(photosDiv);
             wrapper.appendChild(frontDiv);
             pocketContainer.appendChild(wrapper);
+        } else if (pageData.content) {
+
+            imgContainer.style.flex = 'none';
+            imgContainer.style.height = 'calc(var(--base-lh) * 10)';
+            imgContainer.style.paddingBottom = '0';
+
+            pocketContainer.style.alignItems = 'flex-start';
+            pocketContainer.style.height = 'auto';
+
+            const textDiv = document.createElement('div');
+            textDiv.className = 'chapter-body';
+            textDiv.style.width = '100%';
+
+            if (pageData.header) {
+                const headerDiv = document.createElement('div');
+                headerDiv.className = 'page-header';
+                headerDiv.textContent = pageData.header;
+                textDiv.appendChild(headerDiv);
+            }
+
+            if (pageData.title) {
+                const titleDiv = document.createElement('div');
+                titleDiv.className = 'chapter-title';
+                titleDiv.textContent = pageData.title;
+                textDiv.appendChild(titleDiv);
+            }
+
+            const paragraphs = pageData.content.split('\n\n');
+            paragraphs.forEach((pText, index) => {
+                const p = document.createElement('p');
+                p.innerHTML = pText;
+                if (index === 0 && pageData.dropCap) {
+                    p.className = 'drop-cap';
+                }
+                textDiv.appendChild(p);
+            });
+
+            pocketContainer.appendChild(textDiv);
         }
     } else {
         const header = content.querySelector('.page-header');
@@ -110,11 +159,11 @@ function buildPageElement(pageData, pageNum, side) {
         body.innerHTML = '';
 
         if (pageData.type === 'toc-left' || pageData.type === 'toc-right') {
-            body.classList.add('toc-grid'); 
-            
+            body.classList.add('toc-grid');
+
             const halfLength = Math.ceil(tocData.length / 2);
-            const itemsToRender = pageData.type === 'toc-left' 
-                ? tocData.slice(0, halfLength) 
+            const itemsToRender = pageData.type === 'toc-left'
+                ? tocData.slice(0, halfLength)
                 : tocData.slice(halfLength);
 
             itemsToRender.forEach(item => {
@@ -125,7 +174,6 @@ function buildPageElement(pageData, pageNum, side) {
                 body.appendChild(span);
             });
         } else if (pageData.content) {
-            // Itt a <br> már normális sortörésként viselkedik, ugrálás nélkül!
             const paragraphs = pageData.content.split('\n\n');
             paragraphs.forEach((pText, index) => {
                 const p = document.createElement('p');

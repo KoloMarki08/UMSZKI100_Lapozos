@@ -378,11 +378,11 @@ body::before {
 }
 
 .pocket-photo {
-    width: auto;
-    max-width: 32%;
-    /* Kicsit megnövelve, hogy a fekvő képeknek is legyen helye */
-    height: 16vh;
-    object-fit: contain;
+    width: auto;      /* Fix 30% helyett automatikus, hogy rásimuljon a képre */
+    max-width: 32%;   /* Gátat szabunk, hogy a túl széles képek ne lógjanak ki nagyon */
+    height: 16vh;     /* A magasság fix marad az egységesség miatt */
+    object-fit: cover;
+    object-position: center 20%;
     border: 0.5vh solid #fff;
     box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -424,10 +424,12 @@ body::before {
     align-items: center;
     justify-content: center;
     font-family: 'IM Fell English', serif;
-    font-size: 3.2vh;
+    font-size: 2.8vh; /* Picit kisebb, hogy a két sor szellősebben elférjen */
     color: #5a4220;
     clip-path: polygon(0 0, 5% 15%, 95% 15%, 100% 0, 100% 100%, 0 100%);
-    padding-top: 2.5vh;
+    padding: 2.5vh 2vw 0; /* Oldalsó térköz hozzáadva, hogy ne érjen a széléhez a szöveg */
+    text-align: center; /* Garantált KÖZÉPRE IGAZÍTÁS */
+    line-height: 1.1; /* Szűkebb sorköz a címeknek */
 }
 
 .pocket-wrapper:hover .pocket-photo.img-0 {

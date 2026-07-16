@@ -6,14 +6,12 @@ const pages = [
     { 
         type: 'toc-left', 
         eraCss: 'era-toc', 
-        header: 'TARTALOM', 
-        title: 'Első rész' 
+        header: 'TARTALOM' 
     },
     { 
         type: 'toc-right', 
         eraCss: 'era-toc', 
-        header: 'TARTALOM', 
-        title: 'Második rész' 
+        header: 'TARTALOM'
     },
 
     // --- BEVEZETÉS ---
@@ -963,7 +961,8 @@ const pages = [
             'KEPEK/75_75 éves iskolamúzeum/D.jpg',
             'KEPEK/75_75 éves iskolamúzeum/E.jpg',
             'KEPEK/75_75 éves iskolamúzeum/F.jpg',
-            'KEPEK/75_75 éves iskolamúzeum/G.jpg'
+            'KEPEK/75_75 éves iskolamúzeum/G.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/H.jpg'
         ]
     },
     {
@@ -1288,12 +1287,14 @@ const pages = [
     //Híressegeink
     { 
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/96_hírességeink.png',
+        image: 'KEPEK/96_hírességeink.png', dropCap: true,
+        pocketTitle: 'Hírességeink',
+        content:'A "Miből/kiből lesz a cserebogár?" ismert magyar szólás, amelyet arra a meglepő fejlődésre vagy átalakulásra használunk, amikor egy csendes ember, egy kisgyermek később nagy sikereket ér el, vagy komoly pályát fut be.<br>Fenyő Miklós -zenész<br>Zana József - színész<br>Janicsák Veca - énekesnő<br>Szőke Richárd - színész<br>Dietz Gusztáv - MMA harcos, karakterszínész<br>Magonyi László - DJ<br>Rónai Sándor - parlamenti képviselő<br>Molnár Tamás - zenész, dalszövegíró, énekes<br>Wintermantel Zsolt - Újpest egykori polgármestere'
     },
     {
-        type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
+        type: 'chapter', eraCss: 'era-szemelyek',
         header: 'Személyek - Hírességeink', title: 'Hírességeink',
-        content: 'A "Miből/kiből lesz a cserebogár?" ismert magyar szólás, amelyet arra a meglepő fejlődésre vagy átalakulásra használunk, amikor egy csendes ember, egy kisgyermek később nagy sikereket ér el, vagy komoly pályát fut be.<br>Fenyő Miklós -zenész<br>Zana József - színész<br>Janicsák Veca - énekesnő<br>Szőke Richárd - színész<br>Dietz Gusztáv - MMA harcos, karakterszínész<br>Magonyi László - DJ<br>Rónai Sándor - parlamenti képviselő<br>Molnár Tamás - zenész, dalszövegíró, énekes<br>Wintermantel Zsolt - Újpest egykori polgármestere<br>Gáti József - Bánki Donát Főiskola címzetes egyetemi docense, okleveles gépészmérnök, IWE, EWE, technikatörténész<br>Sinóros-Szabó Botond - a Debreceni Egyetem professzora<br>Csóka Gergely - világutazó<br>Oláh Viktor - British Telekom mérnöke<br>Kalydy Zoltán - ’83 – ’91 a női judo válogatott edzője<br>Berta Tamás - LGT gitárosa<br>Mihály László - az Ameriaki Fizikai Társaság tagja, az MTA tagja New York-i tanszékvezető<br>Bólyos Ibolya - manöken<br>Márk Iván - Balázs Béla-díjas operatőr <br>Kovács Antal - Máté Romano Drom ütőse<br>Csizmár Gábor - ’90-es évek munkaügyi minisztere<br>Halácsy Péter  - Budapest School, Kitchen BP., PREZI, MOKK megalkotója<br>Bagi László - grafikus (Philadelphia)<br>Baksa Attila - űrkutató, üstököskutató<br>Stubnya Béla - színész<br>Barabás Zoltán - rádióriporter, író<br>Virágh Csaba - UTE jégkorongozó, edző<br>Marton Tibor - MAC jégkorongozó és edző<br>Hermann Tivadar - maratonfutó, író<br>dr. Márton Tibor - Bánki Donát Főiskola egyetemi tanár, tanszékvezető, főigazgató-helyettes<br>'    
+        content: 'Csóka Gergely - világutazó<br>Oláh Viktor - British Telekom mérnöke<br>Kalydy Zoltán - ’83 – ’91 a női judo válogatott edzője<br>Berta Tamás - LGT gitárosa<br>Mihály László - az Ameriaki Fizikai Társaság tagja, az MTA tagja New York-i tanszékvezető<br>Bólyos Ibolya - manöken<br>Márk Iván - Balázs Béla-díjas operatőr <br>Kovács Antal - Máté Romano Drom ütőse<br>Csizmár Gábor - ’90-es évek munkaügyi minisztere<br>Halácsy Péter  - Budapest School, Kitchen BP., PREZI, MOKK megalkotója<br>Bagi László - grafikus (Philadelphia)<br>Baksa Attila - űrkutató, üstököskutató<br>Stubnya Béla - színész<br>Barabás Zoltán - rádióriporter, író<br>Virágh Csaba - UTE jégkorongozó, edző<br>Marton Tibor - MAC jégkorongozó és edző<br>Hermann Tivadar - maratonfutó, író<br>dr. Márton Tibor - Bánki Donát Főiskola egyetemi tanár, tanszékvezető, főigazgató-helyettes<br>'    
     },
     //kulturális örökség napja
     { 
