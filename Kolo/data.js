@@ -1348,6 +1348,19 @@ const pages = [
         header: 'Személyek - 100. tanév tantestületének tablója', title: 'A 100. tanév tantestületének tablója',
         content: 'Tanár nélkül nincs jövő. Ez a kijelentés a pedagógusok társadalmi alapkövét hangsúlyozza: ők azok, akik nemcsak tudást adnak át, hanem formálják a következő generációk kritikai gondolkodását, értékrendjét és alkalmazkodóképességét.  A technológia hiába teszi elérhetővé az információt, a tanár segít azt rendszerezni és értelmezni.  Az iskola a szocializáció helyszíne, ahol a tanár mintaként szolgál az együttműködéshez és a közösségi léthez. Minőségi oktatás nélkül nincs innováció, képzett munkaerő, így hosszú távú gazdasági fejlődés sem.<br>"Iskolák. Világítótornyok, barátom! A jövő fényjelei! Száz és száz kis magot tartalmazó gubók, belőlük fog megszületni az új, a jobb, a bölcsebb." (Sir Arthur Conan Doyle)'
     },
+    //Szerkesztoseg
+    { 
+        type: 'impresszum', 
+        eraCss: 'era-toc', 
+        title: 'SZERKESZTŐSÉG',
+        content:'Urbán Kornél<br>Gulyás Ildikó<br>Soósné Varga Lia<br>Kovács Péter<br>Kolonics Márk' 
+    },
+    { 
+        type: 'impresszum', 
+        eraCss: 'era-toc', 
+        title: 'SZERKESZTŐSÉG',
+        content:'Urbán Kornél<br>Gulyás Ildikó<br>Soósné Varga Lia<br>Kovács Péter<br>Kolonics Márk'
+    },
 
     { type: 'back-cover', eraCss: 'era-cover' },
     { type: 'transparent', eraCss: 'era-transparent' }

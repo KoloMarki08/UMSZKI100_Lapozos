@@ -34,7 +34,7 @@ function initBookData() {
             currentThemeNum = tocItem.number;
         }
 
-        const noNumTypes = ['front-cover', 'back-cover', 'transparent', 'toc-left', 'toc-right'];
+        const noNumTypes = ['front-cover', 'back-cover', 'transparent', 'toc-left', 'toc-right', 'impresszum'];
 
         const showLeftNum = leftPage && !noNumTypes.includes(leftPage.type);
         const showRightNum = rightPage && !noNumTypes.includes(rightPage.type);
