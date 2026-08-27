@@ -1,8 +1,8 @@
 :root {
     --desk-dark: #1a0f05;
     --desk-mid: #3b2209;
-    --page-h: 92vh;
-    --page-w: min(48vw, calc(var(--page-h) * 0.7));
+    --page-h: 98vh;
+    --page-w: min(47.5vw, calc(var(--page-h) * 0.72));
     --base-lh: 3.6vh;
 }
 
@@ -22,6 +22,11 @@ body {
     justify-content: center;
     font-family: 'Crimson Text', Georgia, serif;
     background: radial-gradient(ellipse at 40% 60%, var(--desk-mid) 0%, var(--desk-dark) 70%);
+
+    /* iOS tablet/mobil betűsimítás - ETTŐL LESZ SZÉP A SZÖVEG IPAD-EN */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body::before {
@@ -43,7 +48,7 @@ body::before {
 }
 
 #scene.idle {
-    transform: scale(0.65) translateY(20vh) rotateX(15deg);
+    transform: scale(0.60) translateY(20vh) rotateX(15deg);
     filter: brightness(0.4);
     pointer-events: none;
 }
@@ -378,9 +383,9 @@ body::before {
 }
 
 .pocket-photo {
-    width: auto;      /* Fix 30% helyett automatikus, hogy rásimuljon a képre */
-    max-width: 32%;   /* Gátat szabunk, hogy a túl széles képek ne lógjanak ki nagyon */
-    height: 16vh;     /* A magasság fix marad az egységesség miatt */
+    width: auto;
+    max-width: 32%;
+    height: 16vh;
     object-fit: cover;
     object-position: center 20%;
     border: 0.5vh solid #fff;
@@ -424,12 +429,12 @@ body::before {
     align-items: center;
     justify-content: center;
     font-family: 'IM Fell English', serif;
-    font-size: 2.8vh; /* Picit kisebb, hogy a két sor szellősebben elférjen */
+    font-size: 2.8vh;
     color: #5a4220;
     clip-path: polygon(0 0, 5% 15%, 95% 15%, 100% 0, 100% 100%, 0 100%);
-    padding: 2.5vh 2vw 0; /* Oldalsó térköz hozzáadva, hogy ne érjen a széléhez a szöveg */
-    text-align: center; /* Garantált KÖZÉPRE IGAZÍTÁS */
-    line-height: 1.1; /* Szűkebb sorköz a címeknek */
+    padding: 2.5vh 2vw 0;
+    text-align: center;
+    line-height: 1.1;
 }
 
 .pocket-wrapper:hover .pocket-photo.img-0 {
@@ -498,13 +503,11 @@ body::before {
     z-index: 1;
 }
 
-/* A JS intézi a térközöket */
 .chapter-body p {
     margin-bottom: 0;
     text-indent: 0;
 }
 
-/* Külön osztály a dinamikusan lekerülő linkekhez */
 .page-footer-links-block {
     display: block;
     margin-top: 0;
@@ -758,7 +761,6 @@ body::before {
 .gallery-tile-img {
     width: auto;
     max-width: 45vh;
-    /* Engedi a szélesebb/panoráma képeket is szépen megjelenni */
     height: 32vh;
     object-fit: contain;
     border: 0.5vh solid #fff;
@@ -823,29 +825,24 @@ footer {
     letter-spacing: 0.3vw;
     z-index: 10;
     pointer-events: none;
-    /* Ezeket a sorokat add hozzá az elhalványuláshoz: */
     opacity: 0;
     transition: opacity 0.8s ease;
 }
 
-/* Amikor a könyv idle állapotban van, a footer megjelenik */
-#scene.idle ~ footer {
+#scene.idle~footer {
     opacity: 1;
 }
 
 /* --- TARTALOMJEGYZÉK (ToC) SPECIÁLIS DESIGN --- */
-
 .era-toc {
     color: #3a2a18;
     background-color: #f4ecd8 !important;
 }
 
-/* Vonalak (füzetminta) brutális eltüntetése erről a két oldalról */
 .era-toc::before {
     display: none !important;
 }
 
-/* Bal oldali tartalomjegyzék oldal - a kép bal fele */
 .page-left.era-toc {
     background-color: #f4ecd8 !important;
     background-image:
@@ -854,11 +851,9 @@ footer {
     background-size: 100% 100%, 200% 100% !important;
     background-position: center, left center !important;
     background-repeat: no-repeat !important;
-    /* A trükk: a felső színátmenet 'normal', a kép 'multiply' */
     background-blend-mode: normal, multiply !important;
 }
 
-/* Jobb oldali tartalomjegyzék oldal - a kép jobb fele */
 .page-right.era-toc {
     background-color: #f4ecd8 !important;
     background-image:
@@ -870,13 +865,12 @@ footer {
     background-blend-mode: normal, multiply !important;
 }
 
-/* Kétoszlopos elrendezés */
 .toc-grid {
     column-count: 2;
     column-gap: 3vw;
     margin-top: 1vh;
     height: 100%;
-    text-align: left; /* Ezt a sort add hozzá! */
+    text-align: left;
 }
 
 .toc-grid .toc-link {
@@ -889,73 +883,103 @@ footer {
     border-bottom: none;
     break-inside: avoid;
     font-weight: 600;
-    /* Picit vastagabb betű, hogy kiemelkedjen a rajz elől */
 }
 
 .toc-grid .toc-link:hover {
     color: #901a1e;
 }
 
-@media (max-width: 860px) {
+
+/* =========================================================
+   ---- TABLET & KISEBB KÉPERNYŐ OPTIMALIZÁLÁS ----
+   Nincsenek fix pixelek, csak arányos képernyő egységek!
+========================================================= */
+
+/* Fekvő (Landscape) Tablet (pl. iPad Mini fektetve 4:3) */
+@media (max-aspect-ratio: 16/10) and (min-aspect-ratio: 1/1) {
     :root {
-        --page-h: 85vh;
-    }
-
-    #scene {
-        transform: scale(1);
-    }
-
-    .chapter-title {
-        font-size: 20px;
-    }
-
-    .chapter-body {
-        font-size: 14px;
-        line-height: 28px;
-    }
-
-    .pocket-wrapper {
-        width: 95%;
-    }
-
-    .pocket-photo {
-        height: 14vh;
-        width: 30%;
-    }
-
-    .gallery-tile-grid {
-        gap: 2vh;
-        padding: 2vh 5vw;
-    }
-
-    .gallery-tile-img {
-        width: 25vh;
-        height: 25vh;
-    }
-
-    #bookmark {
-        right: -20px;
-        padding: 10px 0;
-        font-size: 10px;
-        width: 25px;
-        top: 15px;
-        height: 100px;
-    }
-
-    #bookmark:hover {
-        right: -25px;
-    }
-
-    .main-page-image {
-        max-height: 25vh;
+        --page-h: 96vh;
+        --page-w: 46vw;
+        --base-lh: 4vh;
+        /* Kicsit nagyobb sorköz, hogy szellősebb legyen a 4:3 arányon */
     }
 
     .page-content {
-        padding: 25px 25px 35px;
+        padding: 5vh 5vw 6vh;
+    }
+
+    .chapter-title {
+        font-size: 3.2vh;
+    }
+
+    .chapter-body {
+        font-size: 2vh;
     }
 
     .drop-cap::first-letter {
-        font-size: 48px;
-        margin: 4px 6px 0 0;
+        font-size: 8vh;
+    }
+}
+
+/* Álló (Portrait) Tablet és Mobil (pl. iPad Mini állítva) */
+@media (max-aspect-ratio: 1/1) {
+    :root {
+        --page-h: 96vh;
+        --page-w: 47vw;
+        /* Majdnem kitölti, de hagy helyet a fülnek */
+        --base-lh: 2.5vh;
+        /* Sűrűbb sorköz, hogy a keskeny lapon is kiférjen a szöveg */
+    }
+
+    .page-content {
+        padding: 5vh 5vw 6vh;
+    }
+
+    .chapter-title {
+        font-size: 2.2vh;
+    }
+
+    .chapter-body {
+        font-size: 1.6vh;
+        /* Kisebb betű, hogy ne csússzon ki a keretből */
+    }
+
+    .drop-cap::first-letter {
+        font-size: 6vh;
+    }
+
+    .pocket-wrapper {
+        width: 100%;
+        height: 12vh;
+    }
+
+    .pocket-photo {
+        height: 11vh;
+    }
+
+    .pocket-front {
+        font-size: 2vh;
+        padding-top: 1.5vh;
+    }
+
+    .cover-front-title {
+        font-size: 3.5vh;
+    }
+
+    .cover-front-logo {
+        width: 14vh;
+        height: 14vh;
+    }
+
+    /* Álló módban a könyvjelző fület is picit átméretezzük, hogy biztosan elférjen */
+    #bookmark {
+        width: 2.5vh;
+        height: 14vh;
+        right: -2.5vh;
+        font-size: 1.2vh;
+    }
+
+    #bookmark:hover {
+        right: -3vh;
     }
 }

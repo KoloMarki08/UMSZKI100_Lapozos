@@ -48,12 +48,20 @@ function resetIdleTimer() {
     idleTimeout = setTimeout(putDownBook, IDLE_TIME_LIMIT);
 }
 
-['pointerdown', 'pointermove', 'keydown', 'wheel', 'click'].forEach(evt => {
-    window.addEventListener(evt, () => {
-        requestFullScreen();
-        if (scene.classList.contains('idle')) wakeUpBook();
-        else resetIdleTimer();
-    });
+// ---- VISSZAÁLLÍTOTT FULLSCREEN HÍVÁS ----
+['touchstart', 'mousedown', 'keydown', 'click'].forEach(evt => {
+    window.addEventListener(evt, (e) => {
+        // F11 (Fullscreen) automatikus indítása érintéskor vagy kattintáskor
+        if (evt === 'click' || evt === 'touchstart') {
+            requestFullScreen();
+        }
+
+        if (scene.classList.contains('idle')) {
+            wakeUpBook();
+        } else {
+            resetIdleTimer();
+        }
+    }, { passive: false });
 });
 
 window.addEventListener('load', () => setTimeout(() => wakeUpBook(), 600));
@@ -69,7 +77,7 @@ function renderSpread(index) {
     const spread = spreadsData[index];
     staticLeft.innerHTML = ''; staticLeft.appendChild(buildPageElement(spread.leftPage, spread.leftNum, 'left'));
     staticRight.innerHTML = ''; staticRight.appendChild(buildPageElement(spread.rightPage, spread.rightNum, 'right'));
-    
+
     // Elosztó algoritmus meghívása biztonságosan frame-renderelés után
     requestAnimationFrame(() => { distributePageElements(); });
 }
@@ -155,12 +163,13 @@ function startDrag(e) {
     isDragging = true;
     dragDirection = 0;
     dragProgress = 0;
-    startX = e.clientX;
+    startX = e.clientX || (e.touches && e.touches[0].clientX);
 }
 
 function moveDrag(e) {
     if (!isDragging || isFlipping) return;
-    const deltaX = e.clientX - startX;
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    const deltaX = clientX - startX;
 
     if (Math.abs(deltaX) > 10) wasDragged = true;
 
@@ -204,7 +213,7 @@ function openGalleryModal(pageIndex) {
     if (!page || !page.gallery) return;
 
     const modalBody = document.getElementById('modal-body');
-    modalBody.innerHTML = ''; 
+    modalBody.innerHTML = '';
 
     const grid = document.createElement('div');
     grid.className = 'gallery-tile-grid';
@@ -216,13 +225,13 @@ function openGalleryModal(pageIndex) {
         img.src = imgUrl;
         img.className = 'gallery-tile-img';
         img.draggable = false;
-        
+
         img.addEventListener('click', (e) => {
-            if(wasGridDragged) return; 
-            e.stopPropagation(); 
+            if (wasGridDragged) return;
+            e.stopPropagation();
             openLightbox(imgUrl);
         });
-        
+
         grid.appendChild(img);
     });
 
@@ -240,28 +249,28 @@ function openGalleryModal(pageIndex) {
         gridStartX = e.pageX - grid.offsetLeft;
         scrollLeft = grid.scrollLeft;
     });
-    
+
     grid.addEventListener('mouseleave', () => {
         isGridDown = false;
         grid.classList.remove('active-drag');
     });
-    
+
     grid.addEventListener('mouseup', () => {
         isGridDown = false;
         grid.classList.remove('active-drag');
     });
-    
+
     grid.addEventListener('mousemove', (e) => {
         if (!isGridDown) return;
         e.preventDefault();
         const x = e.pageX - grid.offsetLeft;
-        const walk = (x - gridStartX) * 2; 
+        const walk = (x - gridStartX) * 2;
         if (Math.abs(walk) > 5) wasGridDragged = true;
         grid.scrollLeft = scrollLeft - walk;
     });
 
     grid.addEventListener('click', (e) => {
-        if (wasGridDragged) return; 
+        if (wasGridDragged) return;
         if (e.target === grid) {
             closeModal();
         }
@@ -318,39 +327,39 @@ lightbox.addEventListener('click', () => {
     lightbox.classList.remove('active');
 });
 
-// --- AUTOMATIKUS SORKÖZ-ELOSZTÓ (Eltünteti a bekarikázott hézagokat) ---
+// --- AUTOMATIKUS SORKÖZ-ELOSZTÓ ---
 function distributePageElements() {
     const bodies = document.querySelectorAll('.chapter-body');
     bodies.forEach(body => {
         const elements = body.children;
-        if (elements.length <= 1) return; 
-        
+        if (elements.length <= 1) return;
+
         for (let el of elements) { el.style.marginBottom = ''; }
-        
+
         const pageContent = body.closest('.page-content');
         if (!pageContent) return;
-        
+
         const totalHeight = pageContent.clientHeight;
         const paddingBottom = parseFloat(getComputedStyle(pageContent).paddingBottom) || 0;
         const maxBottom = totalHeight - paddingBottom;
-        
+
         const baseLhStr = getComputedStyle(document.documentElement).getPropertyValue('--base-lh');
         const baseLhVal = parseFloat(baseLhStr) || 3.6;
         const baseLhPx = baseLhVal * (window.innerHeight / 100);
-        
+
         let currentBottom = body.offsetTop + body.offsetHeight;
         let safetyCounter = 0;
-        
+
         while ((maxBottom - currentBottom) >= baseLhPx && safetyCounter < 40) {
             safetyCounter++;
             let changed = false;
             for (let i = 0; i < elements.length - 1; i++) {
                 if ((maxBottom - currentBottom) < baseLhPx) break;
-                
+
                 const el = elements[i];
                 const currentMargin = parseFloat(getComputedStyle(el).marginBottom) || 0;
                 el.style.marginBottom = `${currentMargin + baseLhPx}px`;
-                
+
                 currentBottom = body.offsetTop + body.offsetHeight;
                 changed = true;
             }
