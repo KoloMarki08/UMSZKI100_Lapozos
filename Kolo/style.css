@@ -23,7 +23,7 @@ body {
     font-family: 'Crimson Text', Georgia, serif;
     background: radial-gradient(ellipse at 40% 60%, var(--desk-mid) 0%, var(--desk-dark) 70%);
 
-    /* iOS tablet/mobil betűsimítás - ETTŐL LESZ SZÉP A SZÖVEG IPAD-EN */
+    /* iOS tablet/mobil betűsimítás - ETTŐL LESZ SZÉP A SZÖVEG IPAD-EN ÉS ANDROIDON */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -239,6 +239,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
+    /* Egységes finom sötét vonal minden világos háttéren */
     background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px),
             rgba(0, 0, 0, .1) calc(var(--base-lh) - 1px), rgba(0, 0, 0, .1) var(--base-lh));
     background-position: 0 2.8vh;
@@ -570,7 +571,10 @@ body::before {
     right: 4vw;
 }
 
-/* HÁTTEREK ÉS SZÍNTÉMÁK */
+/* =========================================================
+   HÁTTEREK ÉS SZÍNTÉMÁK (ÚJ SZÍNEK A KÉP ALAPJÁN)
+========================================================= */
+
 .era-transparent {
     background: transparent !important;
     box-shadow: none !important;
@@ -591,59 +595,64 @@ body::before {
     display: none !important;
 }
 
+/* 5. Egyszerű Fekete-fehér (Alap/Bevezető) */
 .era-uniform {
-    background: #f4ecd8;
-    color: #3a2a18;
+    background: #F8F8F8;
+    color: #1A1A1A;
 }
 
-.era-szemelyek {
-    background: #19468a;
-    color: #f0f4f8;
+.era-uniform .pocket-front {
+    background: #E8E8E8;
+    color: #111111;
+    border-top-color: #D0D0D0;
 }
 
-.era-szemelyek .lined::before {
-    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) var(--base-lh));
-}
-
-.era-szemelyek .pocket-front {
-    background: #113366;
-    color: #fff;
-    border-top-color: #2a5a9a;
-}
-
-.era-esemeny {
-    background: #7c2c18;
-    color: #fdf5e6;
-}
-
-.era-esemeny .lined::before {
-    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) var(--base-lh));
-}
-
-.era-esemeny .pocket-front {
-    background: #5a1e0f;
-    color: #fff;
-    border-top-color: #8c3a22;
-}
-
+/* Bal alsó kép: Pasztell Zöld (Helyszínek) */
 .era-helyiseg {
-    background: #0d7904;
-    color: #f0fdf0;
-}
-
-.era-helyiseg .lined::before {
-    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) calc(var(--base-lh) - 1px), rgba(255, 255, 255, 0.15) var(--base-lh));
+    background: #7E9F76;
+    color: #152411;
 }
 
 .era-helyiseg .pocket-front {
-    background: #085002;
-    color: #fff;
-    border-top-color: #1a9a0f;
+    background: #698A61;
+    color: #0D170A;
+    border-top-color: #587551;
 }
 
+/* Jobb alsó kép: Pasztell Világoskék (Személyek) */
+.era-szemelyek {
+    background: #CFE5F5;
+    color: #122838;
+}
+
+.era-szemelyek .pocket-front {
+    background: #B5CDE0;
+    color: #0C1E2B;
+    border-top-color: #9BB3C7;
+}
+
+/* Jobb felső kép: Bézs/Világosbarna (Események) */
+.era-esemeny {
+    background: #CAA682;
+    color: #2B1D10;
+}
+
+.era-esemeny .pocket-front {
+    background: #B5916D;
+    color: #1F140A;
+    border-top-color: #9E7D5B;
+}
+
+/* Bal felső kép: Pasztell Sárga (Emléktárgyak) */
 .era-targyak {
-    background: #cea210;
-    color: #2a1a0a;
+    background: #F2E394;
+    color: #332B09;
+}
+
+.era-targyak .pocket-front {
+    background: #DFCE7B;
+    color: #241E05;
+    border-top-color: #C7B665;
 }
 
 .toc-link {
@@ -892,16 +901,14 @@ footer {
 
 /* =========================================================
    ---- TABLET & KISEBB KÉPERNYŐ OPTIMALIZÁLÁS ----
-   Nincsenek fix pixelek, csak arányos képernyő egységek!
 ========================================================= */
 
-/* Fekvő (Landscape) Tablet (pl. iPad Mini fektetve 4:3) */
+/* Fekvő (Landscape) Tablet (pl. iPad Mini fektetve vagy Android 16:10) */
 @media (max-aspect-ratio: 16/10) and (min-aspect-ratio: 1/1) {
     :root {
         --page-h: 96vh;
         --page-w: 46vw;
         --base-lh: 4vh;
-        /* Kicsit nagyobb sorköz, hogy szellősebb legyen a 4:3 arányon */
     }
 
     .page-content {
@@ -921,14 +928,12 @@ footer {
     }
 }
 
-/* Álló (Portrait) Tablet és Mobil (pl. iPad Mini állítva) */
+/* Álló (Portrait) Tablet és Mobil */
 @media (max-aspect-ratio: 1/1) {
     :root {
         --page-h: 96vh;
         --page-w: 47vw;
-        /* Majdnem kitölti, de hagy helyet a fülnek */
         --base-lh: 2.5vh;
-        /* Sűrűbb sorköz, hogy a keskeny lapon is kiférjen a szöveg */
     }
 
     .page-content {
@@ -941,7 +946,6 @@ footer {
 
     .chapter-body {
         font-size: 1.6vh;
-        /* Kisebb betű, hogy ne csússzon ki a keretből */
     }
 
     .drop-cap::first-letter {
@@ -971,7 +975,6 @@ footer {
         height: 14vh;
     }
 
-    /* Álló módban a könyvjelző fület is picit átméretezzük, hogy biztosan elférjen */
     #bookmark {
         width: 2.5vh;
         height: 14vh;
