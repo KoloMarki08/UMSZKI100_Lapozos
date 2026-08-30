@@ -6,12 +6,12 @@ const pages = [
     {
         type: 'toc-left',
         eraCss: 'era-toc',
-        header: 'TARTALOM'
+        header: 'TARTALOMJEGYZÉK'
     },
     {
         type: 'toc-right',
         eraCss: 'era-toc',
-        header: 'TARTALOM'
+        header: 'TARTALOMJEGYZÉK'
     },
 
     // --- 1. BEVEZETÉS (Alap - Fehér) ---
