@@ -1865,17 +1865,17 @@ const pages = [
     },
 
     // --- SZERKESZTŐSÉG ÉS ZÁRÓ OLDALAK ---
-    {
-        type: 'impresszum',
-        eraCss: 'era-toc',
-        title: 'SZERKESZTŐSÉG',
-        content: 'Urbán Kornél<br>Gulyás Ildikó<br>Soósné Varga Lia<br>Kovács Péter<br>Kolonics Márk'
+    { 
+        type: 'impresszum', 
+        eraCss: 'era-toc', 
+        title: 'IMPRESSZUM',
+        content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A SZÖVEGEKET ÉS A FOTÓKAT ÖSSZEÁLLÍTOTTA:</b><br>Urbán Kornél<br>Gulyás Ildikó<br><br><b>AZ UMSZKI100 EMLÉKKÖNYV SEGÉDSZERKESZTŐI:</b><br>Andorfer János<br>Braun Éva<br>Hegyiné Závori Szilvia<br>Kovács János<br>Kluka Norbert<br>Seres József<br>Soósné Varga Lia<br>Zabari Tibor<br><br><b>AZ EMLÉKKÖNYVET ÖSSZEÁLLÍTOTTA ÉS GONDOZTA:</b><br>Gulyás Ildikó</div>' 
     },
-    {
-        type: 'impresszum',
-        eraCss: 'era-toc',
-        title: 'SZERKESZTŐSÉG',
-        content: 'Urbán Kornél<br>Gulyás Ildikó<br>Soósné Varga Lia<br>Kovács Péter<br>Kolonics Márk'
+    { 
+        type: 'impresszum', 
+        eraCss: 'era-toc', 
+        title: 'IMPRESSZUM',
+        content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A FOTÓK GONDOZÁSÁBAN SEGÉDKEZETT:</b><br>Kecskeméti József<br><br><b>A KIADVÁNYT SZERKESZTETTE:</b><br>Kolonics Márk<br>Kovács Péter<br><br><b>A KIADVÁNYT LEKTORÁLTA:</b><br>Widder László<br><br><b>FELELŐS KIADÓ:</b><br>Ziegler Tünde Edit</div>'
     },
 
     { type: 'back-cover', eraCss: 'era-cover' },
