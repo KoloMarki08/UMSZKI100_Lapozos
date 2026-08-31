@@ -233,18 +233,7 @@ body::before {
 }
 
 .lined::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Egységes finom sötét vonal minden világos háttéren */
-    background-image: repeating-linear-gradient(transparent, transparent calc(var(--base-lh) - 1px),
-            rgba(0, 0, 0, .1) calc(var(--base-lh) - 1px), rgba(0, 0, 0, .1) var(--base-lh));
-    background-position: 0 2.8vh;
-    pointer-events: none;
-    z-index: 0;
+    display: none !important; /* Vonalazás kikapcsolása */
 }
 
 /* BORÍTÓK */
@@ -496,10 +485,13 @@ body::before {
 }
 
 .chapter-body {
-    font-size: 1.8vh;
-    line-height: var(--base-lh);
+    font-size: 1.8vh; /* Ha még tömörebbet szeretnél, ezt átírhatod 1.7vh-ra is */
+    line-height: 1.35; /* Eredeti var(--base-lh) cseréje szűkebb sorközre */
     color: inherit;
-    text-align: justify;
+    text-align: justify; /* Sorkizárás */
+    hyphens: auto; /* Automatikus szóelválasztás bekapcsolása */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     position: relative;
     z-index: 1;
 }

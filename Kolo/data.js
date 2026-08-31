@@ -120,7 +120,6 @@ const pages = [
             'KEPEK/7_mappa_KOVÁCSMŰHELY/1.JPG',
             'KEPEK/7_mappa_KOVÁCSMŰHELY/2.JPG',
             'KEPEK/7_mappa_KOVÁCSMŰHELY/3.JPG',
-            'KEPEK/7_mappa_KOVÁCSMŰHELY/4.JPG',
             'KEPEK/7_mappa_KOVÁCSMŰHELY/5.JPG',
             'KEPEK/7_mappa_KOVÁCSMŰHELY/6.JPG'
         ]
@@ -169,7 +168,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        header: 'Személyek - Szabó Béla', title: 'Szabó Béla', subtitle: '(1899 Józseffalva -  )',
+        header: 'Személyek - Szabó Béla', title: 'Szabó Béla', subtitle: '(1899 Józseffalva - ?)',
         content: 'Szabó Béla 1925-ben szerzett gépészmérnöki oklevelet a Királyi József Műegyetemen, mely a mai Budapesti Műszaki Egyetem jogelődje.<br>1927-től műhelyfőnöke az iskolának. Berendezte a fémipari tanműhelyeket, a gépházat és a szertárakat. Majd megbízott igazgató lett 1940-től. A II. világháború frontjának közeledtével 1944 októberében megkezdte az iskola gépi berendezéseinek mentését, részben elásatta, részben befalaztatta azokat. A tanítás 1944. november 17-én megszakadt, és csak 1945. május 7-én indult újra. 1948 januárjában Szabó Bélát felmentették igazgatói állásából.<br>Az őt ábrázoló gúnyrajzzal szemléltették az akkor kialakult helyzetet: A "fémipart a tenyerén hordozza", a faipar meg a "kalapács súlya alatt nyög".'
     },
 
@@ -458,12 +457,7 @@ const pages = [
     // --- 27. Az orosz nyelv oktatása (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/27_orosz nyelv.jpg',
-        pocketTitle: 'További képek',
-        gallery: [
-            'KEPEK/27_iskolacímer.jpg',
-            'KEPEK/27_iskolacímerek.jpg'
-        ]
+        image: 'KEPEK/27_orosz nyelv.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,

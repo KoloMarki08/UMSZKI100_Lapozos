@@ -79,7 +79,15 @@ function buildPageElement(pageData, pageNum, side) {
             mainImg.src = pageData.image;
             mainImg.className = 'main-page-image';
             mainImg.alt = 'Fejezet kép';
+            mainImg.style.cursor = 'pointer'; // Egérkurzor mutatóra vált
             if (pageData.imagePosition) mainImg.style.objectPosition = pageData.imagePosition;
+
+            // --- ÚJ KÓD: KATTINTÁS ESEMÉNY A NAGYÍTÁSHOZ ---
+            mainImg.addEventListener('click', (e) => {
+                e.stopPropagation(); // Megakadályozzuk, hogy a kattintástól lapozzon a könyv
+                openLightbox(pageData.image); // Meghívjuk az app.js galéria nagyítóját
+            });
+
             imgContainer.appendChild(mainImg);
         }
 
@@ -119,17 +127,12 @@ function buildPageElement(pageData, pageNum, side) {
             textDiv.className = 'chapter-body';
             textDiv.style.width = '100%';
 
-            if (pageData.header) {
-                const headerDiv = document.createElement('div');
-                headerDiv.className = 'page-header';
-                headerDiv.textContent = pageData.header;
-                textDiv.appendChild(headerDiv);
-            }
-
+            // Header törölve, a Title veszi át a legfelső helyet
             if (pageData.title) {
                 const titleDiv = document.createElement('div');
                 titleDiv.className = 'chapter-title';
                 titleDiv.textContent = pageData.title;
+                titleDiv.style.marginBottom = '2vh'; // Kicsi szünet a cím és a szöveg között
                 textDiv.appendChild(titleDiv);
             }
 
@@ -146,11 +149,19 @@ function buildPageElement(pageData, pageNum, side) {
             pocketContainer.appendChild(textDiv);
         }
     } else {
+        // Header teljes törlése a HTML-ből
         const header = content.querySelector('.page-header');
-        if (pageData.header) header.textContent = pageData.header; else header.remove();
+        if (header) header.remove();
 
+        // A Cím (Title) veszi át a főszerepet
         const title = content.querySelector('.chapter-title');
-        if (pageData.title) title.textContent = pageData.title; else title.remove();
+        if (pageData.title || pageData.header) {
+            // Ha a data.js-ben csak header van (pl. a TARTALOM oldalnál), azt is nagy címként kezeli
+            title.textContent = pageData.title || pageData.header;
+            title.style.marginBottom = '2vh'; // Kicsi szünet a cím és a szöveg között
+        } else {
+            title.remove();
+        }
 
         const year = content.querySelector('.chapter-year');
         if (pageData.subtitle) year.textContent = pageData.subtitle; else year.remove();
