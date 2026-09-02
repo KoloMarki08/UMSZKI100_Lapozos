@@ -14,6 +14,16 @@ const pages = [
         title: 'TARTALOMJEGYZÉK'
     },
 
+    // --- 0. Csak kepek (Alap - Fehér) ---
+    {
+        type: 'image', eraCss: 'era-uniform',
+        image: 'KEPEK/',
+    },
+    {
+        type: 'image', eraCss: 'era-uniform',
+        image: 'KEPEK/',
+    },
+
     // --- 1. BEVEZETÉS (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
@@ -43,16 +53,16 @@ const pages = [
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/2_FoerkErno.jpg',
-        pocketTitle: 'Foerk tervek',
+        pocketTitle: 'Foerk-tervek',
         gallery: [
             'KEPEK/2_Foerk tervek/ÉGy 69.222..4.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222.2.5.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222.6-.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222.10.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222.12.jpg',
-            'KEPEK/2_Foerk tervek/1.jpg',
+            'KEPEK/2_Foerk tervek/2_1.jpg',
             'KEPEK/2_Foerk tervek/2.jpg',
-            'KEPEK/2_Foerk tervek/2_1.jpg'
+            'KEPEK/2_Foerk tervek/1.jpg'
         ]
     },
     {
@@ -68,7 +78,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Zsolnay csempék',
+        title: 'Zsolnay-csempék',
         content: 'Az iskola folyosóin látható eredeti falicsempék az 1920-as évekre jellemző - a szecesszió és az art deco határán álló - építészeti stílushoz illeszkednek. A korszak hasonló középületeiben - például hentesüzletekben, más iskolákban - gyakran használtak mázas pirogránit alapanyagú, fagyálló és könnyen tisztítható csempéket, melyek közül a legnevesebbek a pécsi Zsolnay-gyárból kerültek ki.<br>A pirogránit a Zsolnay-gyárban az 1880-as évek elején kifejlesztett, rendkívül tartós építészeti és díszítő kerámiafajta. Neve a görög "tűz" (pyro) és a "gránit" szóból ered, utalva arra, hogy ez az anyag fagy- és saválló, valamint ellenáll az időjárás viszontagságainak. Mesterségesen készített, a gránithoz hasonló kő. Könnyen olvadó agyagból készül. Az agyagot égetik, porrá őrölik, nyers, nehezen olvadó agyaggal keverik, vízgőzzel gyengén megnedvesítik és nagy nyomás mellett préselik, azután újraégetik. Igen kemény, szívós és ellenálló, végül különböző színű és típusú mázakkal vonják be.<br>Falakat raknak ki vele, valamint például folyosók burkolására is használják.'
     },
 
@@ -76,11 +86,11 @@ const pages = [
     {
         type: 'text', eraCss: 'era-esemeny',
         title: 'Iskolanevek, korszakok', dropCap: true,
-        content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 - 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 - 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 - 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 - 1948 Állami Műszaki Középiskola<br>1948 - 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 - 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől - 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal<br>1955 - 1958 Landler Jenő Gépipari Technikum<br>1958 - 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 - 1970 Landler Jenő Gép- és Híradásipari Technikum'
+        content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br><br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 - 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 - 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 - 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 - 1948 Állami Műszaki Középiskola<br>1948 - 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 - 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől - 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal'
     },
     {
         type: 'text', eraCss: 'era-esemeny',
-        content: '1970 - 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 - 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 - 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 - 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 - 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 - 2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 - 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 - 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
+        content: '<br>1955 - 1958 Landler Jenő Gépipari Technikum<br>1958 - 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 - 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 - 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 - 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 - 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 - 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 - 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 - 2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 - 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 - 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
     },
 
     // --- 5. Blockner Gyula (Személyek - Kék) ---
@@ -251,7 +261,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Iskola egyensapka',
+        title: 'Iskolai egyensapka',
         content: 'Az 1960-as években kötelező volt az iskolai egyenruha viselése.<br>A korszak technikumaira és szakiskoláira jellemző módon a diákok kötelező jelleggel sötétkék sapkát viseltek, amelynek az elején vagy oldalán az iskola egyedi, zománcozott fém sapkajelvénye vagy iskolajelvénye szerepelt.<br>Az 1961/65-ben iskolánkba járt évfolyam egy diákjának visszaemlékezése szerint: „Az iskolához kapcsolódó külsőségek közül talán a legnépszerűtlenebb a diáksapka volt. Ezt némi visszafordíthatatlan átalakítással kabátzsebben hordhatóvá tettük, és csak közvetlenül az iskola kapuja előtt raktuk a fejünkre.”. Viselői közül többen viszont szívesen emlékeznek vissza az iskolai egyensapkára.'
     },
 
@@ -308,7 +318,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Jegesmedve relikvia',
+        title: 'Jegesmedve-relikvia',
         content: 'A jegesmedve szobor felirata szerint az 1945/46. évi középiskolás labdarúgó-bajnokságot a Landler akkori csapata nyerte meg. A győztesek neve a réztábláról leolvasható.<br>A jegesmedve tehát több mint 80 éve lakik az iskola falai között. Tanáriból múzeumba, múzeumból a 114-es terembe cammogott át, és őrzi az iskolatörténeti gyűjteményt társaival együtt.'
     },
 
@@ -1306,7 +1316,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Technikai dolgozók',
-        content: 'A tanárokon, oktatókon, a vezetőségen és a diákokon túl ki mindenki járul még hozzá egy iskola mindennapjaihoz?<br>A titkárság, a tanulmányi osztály, a munkaügyi felelős, a gazdasági felelős, a portások, a gondnok, a karbantartók, az udvaros, a konyhai alkalmazottak, a takarítók, a kertész, a raktáros, az árubeszerző.<br>Legtöbbször ők leginkább a "back stage"-ben teszik a dolgukat, de nélkülük egyetlen közintézmény sem tudna működni sehogy. Ha ez a működés olajozott és zökkenőmentes, ahhoz ők is hozzájárulnak nap mint nap.<br>Ismét egy érdekesség az épület eredeti állapotát illetően, hogy kezdetben nem volt portásfülke. A mai 121-es tanári szoba volt a portás tartózkodási helye. Innen egy ablakon keresztül - ez ma is létezik - lehetett rálátni a nagykapura. Ebből a helyiségből egy vas csigalépcső vezetett le a portáslakásba.'
+        content: 'A tanárokon, oktatókon, a vezetőségen és a diákokon túl ki mindenki járul még hozzá egy iskola mindennapjaihoz?<br>A titkárság, a tanulmányi osztály, a munkaügyi felelős, a gazdasági felelős, a portások, a gondnok, a karbantartók, az udvaros, a konyhai alkalmazottak, a takarítók, a kertész, a raktáros, az árubeszerző.<br>Legtöbbször ők leginkább a "backstage"-ben teszik a dolgukat, de nélkülük egyetlen közintézmény sem tudna működni sehogy. Ha ez a működés olajozott és zökkenőmentes, ahhoz ők is hozzájárulnak nap mint nap.<br>Ismét egy érdekesség az épület eredeti állapotát illetően, hogy kezdetben nem volt portásfülke. A mai 121-es tanári szoba volt a portás tartózkodási helye. Innen egy ablakon keresztül - ez ma is létezik - lehetett rálátni a nagykapura. Ebből a helyiségből egy vas csigalépcső vezetett le a portáslakásba.'
     },
 
     // --- 74. 75 éves az iskola (Események - Bézs) ---
@@ -1455,7 +1465,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'Stúdió',
-        content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket "dobozos műsorként" emlegetik, tartják számon az iskola polgárai.<br>A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért.<br><br>Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A "back stage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed.<br>A mindenkori stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
+        content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket "dobozos műsorként" emlegetik, tartják számon az iskola polgárai.<br>A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért.<br><br>Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A "backstage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed.<br>A mindenkori stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
     },
 
     // --- 82. Építőtáborok (Események - Bézs) ---
