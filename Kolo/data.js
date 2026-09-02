@@ -62,7 +62,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Foerk Ernő', subtitle: '(1868–1934)',
+        title: 'Foerk Ernő', subtitle: '(1868 Temesvár –1934 Budapest)',
         content: 'Iskolánk tervezője, Foerk Ernő [ejtsd: \'förk\'] a magyar késő historizmus egyik legjelentősebb építésze, iparművésze és műemlékvédelmi szakembere volt.<br>Legismertebb alkotása a Szegedi Dóm, amelynek terveit Schulek Frigyes eredeti elképzeléseinek átdolgozásával készítette el. Temesvárott született, eredetileg szobrásznak készült, majd a bécsi Képzőművészeti Akadémián tanult építészetet. Hazatérése után Steindl Imre tanársegédje volt a Műegyetemen, ahol részt vett az Országház belső tereinek kialakításában. Emléktáblája egykori óbudai lakóházán és a Szegedi Dóm altemplomában is megtalálható, ahol nyugszik. 1907-ben nyerte el a Ferenc József-rend lovagkeresztjét, 1931-ben a Corvin-koszorút.<br>Foerk Ernő 1911-ben ezt írta magáról: „Két lény lakozik bennem, az egyik az alkotó művész, a másik a búvárkodó, tanulmányozó tudós ember."'
     },
 
@@ -85,7 +85,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Iskolanevek, korszakok',
-        content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br><br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 - 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 - 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 - 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 - 1948 Állami Műszaki Középiskola<br>1948 - 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 - 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől - 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal<br><br>1955 - 1958 Landler Jenő Gépipari Technikum<br>1958 - 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 - 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 - 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 - 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 - 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 - 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 - 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 - 2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 - 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 - 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
+        content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br><br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 - 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 - 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 - 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 - 1948 Állami Műszaki Középiskola<br>1948 - 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 - 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől - 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal<br>1955 - 1958 Landler Jenő Gépipari Technikum<br>1958 - 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 - 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 - 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 - 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 - 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 - 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 - 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 - 2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 - 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 - 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
     },
 
     // --- 5. Blockner Gyula (Személyek - Kék) ---
@@ -145,18 +145,18 @@ const pages = [
         content: 'Mivel az első hároméves fémipari képzés 1927-ben indult, így 1930-ban végzett az első osztály. Nyolc tanuló tett vizsgát.<br>A tablóhoz érdekes módon jutott hozzá az iskola. 1977-ben lett az intézmény 50 éves. Az ötvenéves évforduló ünnepléséhez kapcsolódó eseményeket az újságban is meghirdették. Erre jelentkezett Somlyai (Staufer) Endre. Ő ajándékozta saját tablóját az iskolának. A tablón Blockner Gyula, Szabó Béla s Király Endre is látható, akik meghatározó személyiségei voltak az intézménynek.'
     },
 
-    // --- 9. A kapu feletti címer szimbolikája (Emléktárgyak - Sárga) ---
+    // --- 9. A főbejárat feletti címer szimbolikája (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/9_a főbejárat feletti címer szimbolikája.jpg',
-        pocketTitle: 'A kapu feletti címer',
+        pocketTitle: 'A főbejárat feletti címer szimbolikája',
         gallery: [
             'KEPEK/9_címer szimbolika/9_bejárat.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'A kapu feletti címer szimbolikája',
+        title: 'A főbejárat feletti címer szimbolikája',
         content: 'A főbejárat kovácsoltvas díszítésének tervrajzán pajzs alakú magyar címer stilizált változata látható.<br>A szimbolika a következő: a kettős kereszt a magyar államiság és a keresztény hagyomány egyik legfontosabb jelképe. A kettős kereszt a középkor óta a magyar címer része, és a keresztény hitre, valamint a történelmi Magyar Királyságra utal. A vízszintes sávok az Árpád-házi uralkodók vörös-ezüst sávozására emlékeztetnek. A címertanban ez a magyar államiság történelmi folytonosságát jelképezi. A kör alakú keret, vagyis a címer kör alakú medalionba foglalása gyakori szecessziós és historizáló épületdíszítési megoldás, amely kiemeli a nemzeti jelképet. A babér- vagy tölgyágak hagyományosan a dicsőség, a tudomány, a siker vagy az erő, állhatatosság, kitartás jelképei. A négy irányban elhelyezett virágmotívumok elsősorban dekoratív szerepűek, de a szimmetriát és a teljességet is hangsúlyozzák. A szecessziós növényi indák, azaz az ornamentika, az életet, a fejlődést és a folytonosságot szimbolizálják.<br>A magyar címer alkalmazása az intézmény állami jellegét és nemzeti kötődését hangsúlyozza, míg a növényi ornamentika az épület historizáló-szecessziós díszítőstílusához igazodik.'
     },
 
@@ -176,14 +176,14 @@ const pages = [
         content: 'Szabó Béla 1925-ben szerzett gépészmérnöki oklevelet a Királyi József Műegyetemen, mely a mai Budapesti Műszaki Egyetem jogelődje.<br>1927-től műhelyfőnöke az iskolának. Berendezte a fémipari tanműhelyeket, a gépházat és a szertárakat. Majd megbízott igazgató lett 1940-től. A II. világháború frontjának közeledtével 1944 októberében megkezdte az iskola gépi berendezéseinek mentését, részben elásatta, részben befalaztatta azokat. A tanítás 1944. november 17-én megszakadt, és csak 1945. május 7-én indult újra. 1948 januárjában Szabó Bélát felmentették igazgatói állásából.<br>Az őt ábrázoló gúnyrajzzal szemléltették az akkor kialakult helyzetet: A "fémipart a tenyerén hordozza", a faipar meg a "kalapács súlya alatt nyög".'
     },
 
-    // --- 11. Lépcsőház / Lépcsőházi gondolat (Helyszínek - Zöld) ---
+    // --- 11. Lépcsőház (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/11_LÉPCSŐHÁZ.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'A lépcsőházi gondolat',
+        title: 'Lépcsőház',
         content: 'A lépcsőházi gondolat (franciául esprit d\'escalier) arra a helyzetre utal, amikor a tökéletes válasz, éles elméjű visszavágás vagy okos gondolat csak akkor jut eszünkbe, amikor már véget ért a beszélgetés, és elhagytuk a helyszínt.<br>A kifejezés a híres 18. századi francia filozófustól és írótól, Denis Diderot-tól ered. E fogalmat A színészparadoxon című esszéjében írta le először.<br>Történt egyszer, hogy Diderot hivatalos volt egy vacsorára. A társasági eseményen valaki egy olyan megjegyzést vagy érvet szegezett neki, amely teljesen váratlanul érte és elnémította a filozófust. „A magamfajta érzékeny ember, akit teljesen letaglóz a vele szembeállított érv, elveszíti a fejét, és csak a lépcső alján tér magához.”<br>Amikor Diderot-nak végre eszébe jutott a tökéletes, megsemmisítő válasz, már fizikailag is elhagyta a társaságot: elköszönt, kilépett a szalonból, és a lépcsőn gyalogolt lefelé a földszintre. Ekkor már késő volt visszafordulni, a pillanat végérvényesen elveszett.<br>Így született meg a kifejezés, amely a mai napig tökéletesen leírja a bosszantó fáziskésést, s amely azt is bizonyítja, hogy az ember élethosszig tanul.'
     },
 
@@ -198,11 +198,11 @@ const pages = [
         content: 'Ez az ólomüveg a kőművesek és kőfaragók céhének jelképét ábrázolja. A szimbólum elemei a mesterség alapvető szerszámai, amelyek gyakran megjelennek céhes címereken és szabadkőműves jelképrendszerben is:<br>- a körző és a derékszög a pontosság és a mértéktartás szimbólumai,<br>- a gyalu és a vésők a megmunkálás és a finomítás eszközei.<br>A vörös háttér gyakran használt szín a történelmi céhes üvegablakokon. Hasonló ólomüveg alkotások Európa-szerte megtalálhatók régi városházákon vagy céhházakban. Például a németországi Stade városházáján látható egy, a XVIII. századból származó kőműves céhpecsét, amely szinte azonos elrendezésű.<br>Ezek a "medálok" az adott mesterség tiszteletére és a szakmai közösség összetartozásának jeléül készültek.'
     },
 
-    // --- 13. Az igazgatói előtt (Helyszínek - Zöld) ---
+    // --- 13. Az igazgatóság helytörténete (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/13_igazgatóság helytörténete.jpg',
-        pocketTitle: 'Az igazgatói előtt',
+        pocketTitle: 'Az igazgatóság helytörténete',
         gallery: [
             'KEPEK/13_igazgatói előtt/K.jpg',
             'KEPEK/13_igazgatói előtt/L.jpg',
@@ -213,19 +213,19 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Az igazgatói előtt',
+        title: 'Az igazgatóság helytörténete',
         content: 'Íme, az egykori igazgatói lakás hallja. Ma az igazgatóság előtere.<br>Dr. Szentirmay János az 1951/52-es tanév elején lett az iskola igazgatója. Ő volt az első igazgató, aki nem költözött be a szolgálati lakásba, viszont készült átalakíttatni a teret. Egy tervezőiroda elkészítette a terveket, de a következő tanévben a szegedi technikum ottani igazgatóhelyettese, Badár Gábor lett az igazgató, és családjával beköltözött a lakásba, az átalakítás így elmaradt.<br>1957 szeptemberétől Bartos Lívia lett az új igazgató. A korábbi igazgató, Badár Gábor 1962-ig még bent lakott az iskolában. Miután Bartos Lívia nem vette igénybe a szolgálati lakás lehetőségét, így az átépítés után itt alakították ki - első ütemben - az igazgatói irodát és később a teljes irodai blokkot.<br>Érdemes végigböngészni az eredeti Foerk-tervrajzon, hogy melyik helyiség miként szolgált a kezdetekkor.'
     },
 
-    // --- 14. Korabeli kisfilm (Személyek - Kék) ---
+    // --- 14. Korabeli filmhíradó (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/14_1950_kisfilm.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Korabeli kisfilm',
-        content: '<a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">1950-es tanévnyitó kisfilm megtekintése</a><br>„Így határozta el Sásdi Mária, hogy a szovjet minta nyomán szervezett gépészeti technikumban tanul tovább.” – az 1950-es tanévnyitó ünnepséget és jó pár, kordokumentumként is nagyra értékelhető pillanatot eleveníti meg a kisfilm az 1950-es évből.'
+        title: 'Korabeli filmhíradó',
+        content: '„Így határozta el Sásdi Mária, hogy a szovjet minta nyomán szervezett gépészeti technikumban tanul tovább.” – az 1950-es tanévnyitó ünnepséget és jó pár, kordokumentumként is nagyra értékelhető pillanatot eleveníti meg a kisfilm az 1950-es évből.<br><a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">1950-es tanévnyitó kisfilm megtekintése</a>'
     },
 
     // --- 15. Az iskola egykori körterme (Helyszínek - Zöld) ---
@@ -257,7 +257,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Iskola egyensapka',
+        title: 'Iskolai egyensapka',
         content: 'Az 1960-as években kötelező volt az iskolai egyenruha viselése.<br>A korszak technikumaira és szakiskoláira jellemző módon a diákok kötelező jelleggel sötétkék sapkát viseltek, amelynek az elején vagy oldalán az iskola egyedi, zománcozott fém sapkajelvénye vagy iskolajelvénye szerepelt.<br>Az 1961/65-ben iskolánkba járt évfolyam egy diákjának visszaemlékezése szerint: „Az iskolához kapcsolódó külsőségek közül talán a legnépszerűtlenebb a diáksapka volt. Ezt némi visszafordíthatatlan átalakítással kabátzsebben hordhatóvá tettük, és csak közvetlenül az iskola kapuja előtt raktuk a fejünkre.”. Viselői közül többen viszont szívesen emlékeznek vissza az iskolai egyensapkára.'
     },
 
@@ -265,7 +265,7 @@ const pages = [
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/18_platánok.jpg',
-        pocketTitle: 'Platánok',
+        pocketTitle: 'Az udvar platánjai',
         gallery: [
             'KEPEK/18_platánfák/1.jpg',
             'KEPEK/18_platánfák/2.jpg',
@@ -276,15 +276,15 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Ady Endre: A platánfa álma',
-        content: 'A platánfa az egyik legrobusztusabb, leghosszabb életű és legnagyobb termetű városi díszfa, amely akár a 30-40 méteres magasságot és a több száz éves kort is elérheti. Jellegzetes, foltokban leváló kérge és hatalmas, árnyékot adó koronája miatt a magyar parkok és szélesebb sugárutak ikonikus növénye.<br>Rendkívüli módon bírja a szennyezett városi levegőt, és jól tolerálja, ha a gyökérzete burkolt felületek (aszfalt, térkő) közé van szorítva.<br><br>A Nap huga, zöld szemü lány,<br>(Kit imádnak álom-vitézek)<br>Megszánt egy holdas éjjelen<br>És megigézett.<br><br>Két lábam elhült s szétbomolt<br>Gyökerekként a mélybe szállva<br>S itt állok a fehér mezőn,<br>Mint árva platánfa.<br><br>Girhes, szomorú derekam<br>Szökkenve büszke lombot ontott,<br>Lombom a felhőket veri<br>S elhagytak a gondok.<br><br>Állok: várom a Nap hugát<br>Némán a nagy, éji mezőben<br>S koronámról hull a levél<br>Zörgőn, búsan, rőten.'
+        title: 'Az udvar platánjai',
+        content: 'A platánfa az egyik legrobusztusabb, leghosszabb életű és legnagyobb termetű városi díszfa, amely akár a 30-40 méteres magasságot és a több száz éves kort is elérheti. Jellegzetes, foltokban leváló kérge és hatalmas, árnyékot adó koronája miatt a magyar parkok és szélesebb sugárutak ikonikus növénye.<br>Rendkívüli módon bírja a szennyezett városi levegőt, és jól tolerálja, ha a gyökérzete burkolt felületek (aszfalt, térkő) közé van szorítva.<br><br><b>Ady Endre: A platánfa álma</b><br><br>A Nap huga, zöld szemü lány,<br>(Kit imádnak álom-vitézek)<br>Megszánt egy holdas éjjelen<br>És megigézett.<br><br>Két lábam elhült s szétbomolt<br>Gyökerekként a mélybe szállva<br>S itt állok a fehér mezőn,<br>Mint árva platánfa.<br><br>Girhes, szomorú derekam<br>Szökkenve büszke lombot ontott,<br>Lombom a felhőket veri<br>S elhagytak a gondok.<br><br>Állok: várom a Nap hugát<br>Némán a nagy, éji mezőben<br>S koronámról hull a levél<br>Zörgőn, búsan, rőten.'
     },
 
     // --- 19. Rádióamatőr URH-állomás (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/19_rádióamatőrök_1957 Galyatető.jpg',
-        pocketTitle: 'Rádióamatőr Album',
+        pocketTitle: 'Rádióamatőr album',
         gallery: [
             'KEPEK/19_rádióamatőr_ALBUM/A.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/B.jpg',
@@ -298,21 +298,21 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'Rádióamatőr URH-állomás HG5KCC',
-        content: 'A HG5KCC rádióamatőr URH kollektív állomás 1954/55-ben indult.<br>Vajda György pedagógus felismerte, hogy új szak sikeres indításához kevés a tárgyi és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr-tevékenység elterjesztése volt.<br>Az akkor még a rádióamatőrök körében is fehér foltnak számító URH-sávot választotta, mindehhez az adót, vevőt és antennát - más lehetőség nem lévén - házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítésén volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált.<br>1955-ben Vajda György rádióamatőr-vizsgát tett, és adóengedélyt kapott URH kollektív rádióamatőr-adóállomás működtetetésére. Az országban ekkor kevesebb mint tíz ilyen állomás működött. 1956-ban már két nemzetközi URH-versenyen indultak a landleres diákok.<br><a href="https://www.youtube.com/watch?v=_Ba6nP37G2c" target="_blank">https://www.youtube.com/watch?v=_Ba6nP37G2c</a><br><a href="https://www.youtube.com/watch?v=UlsbM1RyCFA" target="_blank">https://www.youtube.com/watch?v=UlsbM1RyCFA</a><br><a href="https://www.youtube.com/watch?v=sMVTM5Jjqj0" target="_blank">https://www.youtube.com/watch?v=sMVTM5Jjqj0</a>'
+        content: 'A HG5KCC rádióamatőr URH kollektív állomás 1954/55-ben indult.<br>Vajda György pedagógus felismerte, hogy új szak sikeres indításához kevés a tárgyi és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr-tevékenység elterjesztése volt.<br>Az akkor még a rádióamatőrök körében is fehér foltnak számító URH-sávot választotta, mindehhez az adót, vevőt és antennát - más lehetőség nem lévén - házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítésén volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált.<br>1955-ben Vajda György rádióamatőr-vizsgát tett, és adóengedélyt kapott URH kollektív rádióamatőr-adóállomás működtetetésére. Az országban ekkor kevesebb mint tíz ilyen állomás működött. 1956-ban már két nemzetközi URH-versenyen indultak a landleres diákok.<br><a href="https://www.youtube.com/watch?v=_Ba6nP37G2c" target="_blank">Videó 1</a><br><a href="https://www.youtube.com/watch?v=UlsbM1RyCFA" target="_blank">Videó 2</a><br><a href="https://www.youtube.com/watch?v=sMVTM5Jjqj0" target="_blank">Videó 3</a>'
     },
 
-    // --- 20. Jegesmedve relikvia (Emléktárgyak - Sárga) ---
+    // --- 20. Jegesmedve-relikvia (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/20_jegesmedve relikvia.jpg',
-        pocketTitle: 'További képek',
+        pocketTitle: 'Jegesmedve-relikvia',
         gallery: [
             'KEPEK/20_jegesmedve/20_jegesmedve átadás 1945_46.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Jegesmedve relikvia',
+        title: 'Jegesmedve-relikvia',
         content: 'A jegesmedve szobor felirata szerint az 1945/46. évi középiskolás labdarúgó-bajnokságot a Landler akkori csapata nyerte meg. A győztesek neve a réztábláról leolvasható.<br>A jegesmedve tehát több mint 80 éve lakik az iskola falai között. Tanáriból múzeumba, múzeumból a 114-es terembe cammogott át, és őrzi az iskolatörténeti gyűjteményt társaival együtt.'
     },
 
@@ -349,11 +349,11 @@ const pages = [
         content: 'Az iskola rádióműhelyének első tanára Dr. Radnai László volt. Az első rádióadó-engedélyesek közül ő volt a HA4SA. Továbbá: HA053RS, HAF3RL, HAF3HI, HA4EA, HA7PD, VE2AZQ, WA1FHU. 96 éves korában, 2008-ban hunyt el az Egyesült Államokban. Halálával az amatőr rádiózás elvesztette "nagy öregjeinek" meghatározó egyéniségét, tanítómesterét: Dr. HEAVISIDE-ot, aki ezen a néven, 1947-től, az egyes rádiótechnikai újságok hasábjain ismertette meg többekkel az amatőr rádiózás rejtelmeit, érdekességeit.<br>Aradon született, de Szolnokon nevelkedett. Középiskolásként találkozott az amatőr rádiózással. Otthon kristálydetektoros vevőkészülék építésébe fogott. 1928-ban belépett a magyar SWL mozgalom tagjai közé, ahol a HA053RS azonosító jelet kapta. A sávban hallott morzejelek arra ösztönözték, hogy gyorsan megtanulja a jelek vételét, adását a maga által készített "billentyűvel". A II. világháború után a Honvédelmi Minisztérium rádiós munkatársaként Debrecenben, Budapesten régi katonai rádiók felkutatásával foglalkozott. Operátorkodott a Bólyai Honvéd Műszaki Akadémia HA9F amatőr rádióállomásán.<br>A Falk Miksa utcai lakása és a Honvéd utcában lévő HM között kiépített ex-Hertz (ma Windom) antennára rövid időn belül már egy RL12P35 csővel felépített adó kapcsolódott, és megjelent a sávokban a HA4EA amatőr állomás. Az 1948 februárjában a megalakuló Magyar Rövidhullámú Rádióamatőrök Egyesülete (MRRE) titkárjává választotta. 1949-ben átadták az első kilenc darab hivatalos rádióamatőradó-engedélyt, ezek között a HA4SA engedélyét is. 1954-55-ben rövid ideig a Központi Rádióklub RH szakosztályának vezetője volt és szerkesztette a Klub Híradót.<br>1956-ban családostól elhagyta az országot és előbb Kanadában (VE2AZQ), majd az Egyesült Államokban (WA1FHU) talált új otthonra, munkára és vissza a rádióamatőrséghez, az amatőr rádiós barátokra és szervezetre, az ARRL-re, akiktől érdemeiért a W1PL hívójelet is megkapja.<br>Munkájában a katonai hírrendszerek fejlesztésével, majd az elektromágneses interferencia kérdéseivel foglalkozott. Ezen a téren elért eredményeiért a New York-i Tudományos Akadémia tagjai sorába fogadta.<br>Hosszú idő után 1990-ben látogatott ismét haza mint az általa megalakított Nemzetközi Magyar Amatőr Rádióklub tagja és Örökös Tiszteletbeli Elnöke. A VI. Határmenti Rádióamatőr Találkozó alkalmából a magyar Old Timer Kör közfelkiáltással megválasztotta - elismerve a 70 éves rádióamatőrök érdekében végzett tevékenysége érdemeit - örökös díszelnökének.<br><a href="https://www.youtube.com/watch?v=et5lfmGm4R4" target="_blank">https://www.youtube.com/watch?v=et5lfmGm4R4</a>'
     },
 
-    // --- 23. Tanár-diák sportesemény 1943-ból (Események - Bézs) ---
+    // --- 23. Egy 1943-as kirándulás emléke (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/23_1943-as kirándulás emléke.jpg',
-        pocketTitle: 'Tanár-diák sportesemény',
+        pocketTitle: 'Egy 1943-as kirándulás emléke',
         gallery: [
             'KEPEK/23_1943-as kirándulás emléke/A..jpg',
             'KEPEK/23_1943-as kirándulás emléke/B..jpg',
@@ -362,7 +362,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Tanár-diák sportesemény 1943-ból',
+        title: 'Egy 1943-as kirándulás emléke',
         content: 'Kezdetben szokás volt, hogy a tantestület és a diákság minden évben közösen kirándult.<br>Az 1943-as év júniusi kirándulása Visegrádon volt, ahol sor került egy focimeccsre az elméleti és gyakorlati tanárok között. Az elméletiek 3:1-re győztek.<br>A képen Szabó Béla, az iskola akkori igazgatója őrzi a kaput nemcsak vigyázó szemeivel.'
     },
 
@@ -394,11 +394,11 @@ const pages = [
         content: 'Megannyi tanműhelytípus a gyakorlati oktatás központi helyszíne, ahol a diákok a valós ipari környezetet modellező körülmények között sajátíthatják el szakmájuk alapjait:<br>kovácstanműhely, lánghegesztő műhely, öntöde, távbeszélőműhely, vezérlőszoba, gépműhely, rádióműhely, belsőégésű motorok gépterme, daraboló, lakatosműhely, forgácsoló műhely, ívhegesztő műhely, elektronikai műhelyek, informatikatermek, számítógéptermek váltották, váltják egymást a hosszú évtizedek alatt.<br>A műhelygyakorlatokon elsődleges cél és feladat a gépek, szerszámok biztonságos kezelésének elsajátítása, a biztonsági előírások és rutinszerű alkalmazásuk rögzítése, valódi termékek vagy makettek önálló legyártása, projektek megvalósítása.'
     },
 
-    // --- 25. Autómodellező és Gépjármű Szakkör (Események - Bézs) ---
+    // --- 25. Autómodellező és gépjármű szakkör (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/25_autómodellező és gépjármű szakkör.jpg',
-        pocketTitle: 'Autómodellező és Gépjármű Szakkör',
+        pocketTitle: 'Autómodellező és gépjármű szakkör',
         gallery: [
             'KEPEK/25_autómodellező/1.jpg',
             'KEPEK/25_autómodellező/2.jpg',
@@ -412,15 +412,15 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Autómodellező és Gépjármű Szakkör',
+        title: 'Autómodellező és gépjármű szakkör',
         content: 'A műhelyben Fekete Gyula tanár úr vezetésével működött az autómodellező és gépjármű szakkör. A tanár úr volt diákja, Halász Erika (1953-57) segítségével elérte, hogy annak munkahelye - a Csepel Motorkerékpárgyár - egy Pannónia motorkerékpárt adományozott az iskolának alkatrészekben, amik zömükben hibásak voltak. Felújításuk és az összeszerelés 1959 őszétől a szakkörben történt. A munkába bekapcsolódott az 1959/60. tanév III.B osztályának néhány lelkes tanulója is.<br>Fekete Gyula tanár úr 1934 és 1967 között oktatott az iskolában fémforgácsolás gyakorlatot, ezen belül zömében esztergálást. Hobbiját a gépjárművek jelentették. Nyugdíjasként 1968 és 1974 között az iskola gépkocsiját vezette.<br>A reprezentatív fotón sóvárgó tekintetek követik a "száguldó" Mucsi Ferencet, aki egyike volt az összeszerelést végző diákoknak. A képen jól látszik, hogy ekkor az udvarnak még nem volt szilárd burkolata.<br>Egy, az ecseri piacon beszerzett Mercedes személygépjármű is így került a szakkörbe járó diákok kezei közé.'
     },
 
-    // --- 26. Az iskola "helyrajza" (Helyszínek - Zöld) ---
+    // --- 26. Az iskola „helyrajza” (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/26_az iskola helyrajza.jpg',
-        pocketTitle: 'További képek',
+        pocketTitle: 'Az iskola „helyrajza” ',
         gallery: [
             'KEPEK/26_az iskola helyrajza/1.jpg',
             'KEPEK/26_az iskola helyrajza/2 (2).jpg',
@@ -435,7 +435,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Az iskola "helyrajza"',
+        title: 'Az iskola „helyrajza” ',
         content: 'Iskolánk mögött egykor egy csodaszép park - a Hősök ligete - állt. 1935-ben adták át. A mellékelt térképen is látható, hogy a Szent Imre út, Leiningen Károly utca, Munkácsy Mihály utca és Bajza János utca által határolt területen feküdt.<br>Volt ott egy halastó, melynek két oldalát egy szép fahíd kötötte össze. Középtájon egy mesterségesen kialakított kis dombon vezetett át a sétány. Innen teljes pompájában lehetett áttekinteni a bokrokkal, fákkal és virágokkal díszített parkot. Körben kerítés volt, bejáratként a Corvin utca - akkor Revízió utca - magasságában kialakított díszes kovácsoltvas kapu szolgált.<br>Erre a részre építették az Országzászló nevet viselő I. világháborús emlékművet az elhunyt hősök tiszteletére. A ’30-as évektől Újpest itt rendezte a nemzeti ünnepek megemlékezéseit ünnepélyes zászlófelvonással.<br>A II. világháború alatt a környéken élők szükségből a fákat kivágták és eltüzelték, majd a háború után az emlékmű is lebontásra került. Erre a területre épült nem sokkal később a Szent Imre út vonalában egy lakóépület, mögötte óvoda, bölcsőde és a Bajza József Általános Iskola. Mindezek ma is működnek.<br>Míg a park létezett, diákjaink - különösen a kollégisták - alkalomadtán el-eljártak oda, kedvelt találkahelyük volt.'
     },
 
@@ -450,11 +450,11 @@ const pages = [
         content: 'Az érettségivel záruló képzések tantervében mindig szerepel az idegen nyelv.<br>Idegen nyelvi képzés nálunk az 1943/44-es tanévben a dolgozók tagozatán indult. Külsős óraadó tanárral oldották meg a német nyelv tanítását. Ez az osztály az 1946/47-es tanévben végzett.<br>A nappali tagozaton az 1947/48-as tanévben indult az érettségit adó képzés. Az első három évben németet tanultak a diákok a Könyves Gimnáziumból átjárt óraadó tanár, Kalavszky István irányításával. Negyedikben át kellett térniük az orosz nyelvre. Az 1948/49-es tanévtől a fenntartó az orosz nyelv oktatását írta elő annak ellenére, hogy erre képzett tanár akkor még nem állt rendelkezésre.<br>"Ki tud többet a Szovjetunióról?" - ez volt a vetélkedő címe, mely évtizedekig meghatározta az orosz nyelvtanuláshoz kötődő tudás irányvonalát.'
     },
 
-    // --- 28. Major Tamás a Landlerben (Személyek - Kék) ---
+    // --- 28. Major Tamás színművész a Landlerben (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/28_MAJOR TAMÁS.jpg',
-        pocketTitle: 'Major Tamás a Landlerben',
+        pocketTitle: 'Major Tamás színművész a Landlerben',
         gallery: [
             'KEPEK/28_Major Tamás/A.jpg',
             'KEPEK/28_Major Tamás/B.jpg',
@@ -465,7 +465,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Major Tamás a Landlerben',
+        title: 'Major Tamás színművész a Landlerben',
         content: 'Major Tamás színművész a diákklub vendége volt 1972-ben.<br>Az iskolai diákszervezet - az akkori KISZ - szervezésében a diákok láthatták a Nemzeti Színház akkori stúdiószínházában, a Katona József Színházban Peter Weiss: A luzitán szörny című drámáját.<br>Az előadás egy sajátos és emlékezetes színházi produkció volt, melynek hatástörténetéhez iskolánk is kapcsolódik oly módon, hogy az előadást követően Major Tamás, a színház főrendezője - kiemelkedő színészegyéniség - meglátogatta az iskolát, és a diákklubban élményt jelentő beszélgetést folytatott az érdeklődő diákokkal.'
     },
 
@@ -485,7 +485,7 @@ const pages = [
         content: 'Bartos Lívia diplomáját a Budapesti Műszaki Egyetem Gépészmérnöki Karának gazdaságmérnöki szakán, gépipari ágazaton szerezte. 23 éven át látta el az iskola igazgatói teendőit 1957 és 1980 között.<br>Neki köszönhető, hogy a mi iskolánkat bízták meg az országban először számítástechnikai oktatás bevezetésével.'
     },
 
-    // --- 30. Az első nemzetközi kapocs (Események - Bézs) ---
+    // --- 30. Az iskola első nemzetközi cserekapcsolata (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/30_az iskola első nemzetközi.jpg',
@@ -505,7 +505,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Az első nemzetközi kapocs', subtitle: 'Kranj, Ljubljana',
+        title: 'Az iskola első nemzetközi cserekapcsolata', subtitle: 'Kranj, Ljubljana',
         content: 'Tudvalevő, hogy a szocializmus időszakában a külföldre utazás nem alapjog, hanem korlátozott kiváltság volt, amelyet a pártállam szigorú rendőrségi és politikai ellenőrzés alatt tartott. Az állampolgárok utazási lehetőségeit élesen kettéválasztotta a „keleti” és a „nyugati” országok világába.<br>Mivel a ’60-as évek közepére csökkent a feszültség Magyarország és Jugoszlávia között, politikai nyomásra a KGM Oktatási Osztálya kapcsolatfelvételt szervezett. Mint kiemelkedően jó iskola, az akkori Landler lett kijelölve a projektre. Az útra 1964 szeptemberében került sor. A vendéglátó iskola egy Ljubljánában működő szakképző intézmény volt.<br>Ez volt tehát az első külföldi kapcsolata az iskolának még a rendszerváltást megelőző korszakban.'
     },
 
@@ -524,7 +524,7 @@ const pages = [
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/32_udvarátalakítás.jpg',
-        pocketTitle: 'További képek',
+        pocketTitle: 'Udvarátalakítás',
         gallery: [
             'KEPEK/32_udvarátalakítás/1.jpg',
             'KEPEK/32_udvarátalakítás/2.jpg',
@@ -542,7 +542,7 @@ const pages = [
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/33_szalagavatók.jpg',
-        pocketTitle: 'További képek',
+        pocketTitle: 'Szalagavatók, szalagtűzők',
         gallery: [
             'KEPEK/33_szalagavatók/1.jpg',
             'KEPEK/33_szalagavatók/10.jpg',
@@ -589,15 +589,15 @@ const pages = [
         content: '„Itt végzett az édesapám.” „Ide járt a nagyapám.” „Járt ide a családból több mindenki.” „Anyu is itt végzett.” Az iskolánkba beiratkozó kilencedikesek esetében legtöbbször már a beiratkozáskor kiderül, hogy a család az iskolához valamilyen módon kötődik, kapcsolódik.<br>Egy iskola értékének talán egyik legnagyobb fokmérője az, amikor az egykori diákok ide hozzák, ide íratják be gyermekeiket, mert itt látják biztosítva fejlődésüket, jövőjüket.<br>A 75. Jubileumi évkönyv 64. és 65. oldalán olvasható három család generációinak története a Landlerhez/Umszkihoz fűződően.'
     },
 
-    // --- 36. Évkönyvek (Emléktárgyak - Sárga) ---
+    // --- 36. Évkönyvek, honlapok (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/36_évkönyvek.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Évkönyvek',
-        content: 'A kezdet kezdetén évenként megjelentetett iskolai Értesítők tájékoztattak a tanév eseményeiről, adatairól összegzőleg.<br>Ezeket váltották 1940-től az Évkönyvek. Az utolsó évkönyv 1980-ban került kiadásra. A középiskolák és szakiskolák évkönyvei, köztük az újpesti Landleré is elsősorban digitális archívumokban, antikváriumokban és helytörténeti gyűjteményekben érhetők el. Fontos szempont az évkönyvek közti keresésnél, hogy Landler Jenő nevét több szakiskola és középiskola viselte a XX. század második felében: Budapesten, Debrecenben és Nagykanizsán is volt „Landler”. Sok landleres diák relikviaként gyűjti ezeket az évkönyveket.<br><br>A \'80-as évek vége és a \'90-es évek eleje az eseményeknek ilyen módon történő rögzítéséről nem gondoskodott.<br>Az iskola első internetes bejegyzése 1998-ból való, és ettől az évtől kezdve honlapok ismertetik az érdeklődőkkel az iskola adatait, sikereit, eredményeit:<br><a href="https://old.umszki.hu/" target="_blank">https://old.umszki.hu/</a><br><a href="https://edir.umszki.hu/" target="_blank">https://edir.umszki.hu/</a>'
+        title: 'Évkönyvek, honlapok',
+        content: 'A kezdet kezdetén évenként megjelentetett iskolai Értesítők tájékoztattak a tanév eseményeiről, adatairól összegzőleg.<br>Ezeket váltották 1940-től az Évkönyvek. Az utolsó évkönyv 1980-ban került kiadásra. A középiskolák és szakiskolák évkönyvei, köztük az újpesti Landleré is elsősorban digitális archívumokban, antikváriumokban és helytörténeti gyűjteményekben érhetők el. Fontos szempont az évkönyvek közti keresésnél, hogy Landler Jenő nevét több szakiskola és középiskola viselte a XX. század második felében: Budapesten, Debrecenben és Nagykanizsán is volt „Landler”. Sok landleres diák relikviaként gyűjti ezeket az évkönyveket.<br><br>A \'80-as évek vége és a \'90-es évek eleje az eseményeknek ilyen módon történő rögzítéséről nem gondoskodott.<br>Az iskola első internetes bejegyzése 1998-ból való, és ettől az évtől kezdve honlapok ismertetik az érdeklődőkkel az iskola adatait, sikereit, eredményeit:<br><a href="https://old.umszki.hu/" target="_blank">Iskolánk elavult honlapja</a><br><a href="https://edir.umszki.hu/" target="_blank">Iskolánk jelenlegi honlapja</a>'
     },
 
     // --- 37. Híradástechnikai képzés (Alap - Fehér) ---
@@ -619,11 +619,11 @@ const pages = [
         content: 'Szerencsésen egészült ki az iskola profilja az \'50-es években az akkor újdonságnak számító híradásipari tagozattal. Ebben az időszakban vált az iskola a főváros egyik legnagyobb oktatási intézményévé.<br>A híradástechnikai technikusképzés az 1953/54-es tanévben - az országban másodikként - indult be. Vajda György műhelyfőnök az akkor kihasználatlan és akkorra meglehetősen elhanyagolt öntödei szárnyban tervezte a gyakorlati képzést egy rádió és egy távbeszélő műhely létrehozásával.'
     },
 
-    // --- 38. Sportélet és sportsikerek (Személyek - Kék) ---
+    // --- 38. Sportélet, sportsikerek (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/38_sportélet.jpg',
-        pocketTitle: 'Sportélet Album',
+        pocketTitle: 'Sportélet album',
         gallery: [
             'KEPEK/38_sportélet/0.jpg',
             'KEPEK/38_sportélet/1.jpg',
@@ -646,8 +646,8 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Sportélet és sportsikerek',
-        content: 'Szinte lehetetlen vállalkozás a 100 év minden sporttal kapcsolatos eseményét, említésre érdemes személyét hiánytalanul felsorakoztatni.<br>Szöllősi Antal, iskolánk legendás testnevelő tanára a \'40-es évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott.<br>Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt.<br>Kis Alajos labdarúgóedző csapatával országos nagypályás bajnokságon is részt vett.<br>Szenczi László tanár úr az UTE, majd a Honvéd atlétikaedzője, és korábban Molnár Imréné testnevelő tanár országos és fővárosi atlétikai versenyekre vitte a diákokat.<br><br>Andorfer János - iskolánk volt diákja, jelenlegi tanára - 1993-tól vette át a kispályás labdarúgócsapatot, és 2018-ig nevezte, vitte, kísérte rendszeresen a diákokat kerületi, városi labdarúgó tornákra. A Budapesti Diáksport Szövetség középiskolák részére a kispályás Pesti Srác Kupát hirdette meg, melyen diákjaink rendszeresen vettek részt. A tanár urat 2015-ben felkérték a kerületi középiskolás válogatott vezetésére. Umszkis diákjaink az ifjúsági országos curling bajnokságon 6. helyezést értek el. Országos floorball-bajnokságon is szerepeltek. Diákolimpiai eredmények, az Amatőr Teremlabdarúgó Bajnokság eredményei, kosárlabda, sportlövészet, röplabda, tollaslabda, judo színesítik a palettát, és a kör így sem teljes.<br><br><b>Neves sportolóink, a teljesség igénye nélkül:</b><div style="column-count: 3; column-gap: 1.5vw; font-size: 1.3vh; line-height: 1.4; margin-top: 1vh;">Hagya István - magasugró<br>Gáll Mária - tornász<br>Bakos István - kézilabdázó<br>Jakab István - kézilabdázó<br>Sütő József - atléta, maratoni<br>Fekete Sándor - atléta<br>Tóth Zoltán - labdarúgó<br>Nyirádi György - kajakozó<br>Mózes András - atléta, maratoni<br>Brabant Béla - gyeplabda<br>Tóth Zoltán - hajómodellező<br>Ancsin János - jégkorongozó<br>Brockhauser István - labdarúgó<br>Sztankó Éva - röplabdázó<br>Szűcs Lajos - labdarúgó<br>Hoboth Sándor - röplabdázó<br>Giczy Csaba - kajakozó<br>Füzesi Zsolt - labdarúgó<br>Kovács Zoltán - vízilabdázó<br>Vass Sándor - kézilabdázó<br>Móró Endre - thai-boxoló<br>Spránitz Gábor - sportlövő<br>Vass Károly - kézilabdázó<br>Monostori Attila - vízilabdázó<br>Lange Péter - Sail Racing Team<br>Battlay Krisztina - röplabdázó<br>Lőw Zsolt - labdarúgó<br>Nyerges Krisztián - labdarúgó<br>Czingli László - tornász<br>Szirányi Bence - jégkorongozó<br>Németh Zsanett - birkózó<br>Guczoghy György - tornász<br>Ágh György - vízilabdázó<br>Farkas János - kalapácsvető<br>Nagy Tibor - labdarúgó<br>Sebeők Mátyás - jiu-jitsu<br>Kolonics Márk - kyokushin karate</div>'
+        title: 'Sportélet, sportsikerek',
+        content: 'Szinte lehetetlen vállalkozás a 100 év minden sporttal kapcsolatos eseményét, említésre érdemes személyét hiánytalanul felsorakoztatni.<br>Szöllősi Antal, iskolánk legendás testnevelő tanára a \'40-es évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott.<br>Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt.<br>Kis Alajos labdarúgóedző csapatával országos nagypályás bajnokságon is részt vett.<br>Szenczi László tanár úr az UTE, majd a Honvéd atlétikaedzője, és korábban Molnár Imréné testnevelő tanár országos és fővárosi atlétikai versenyekre vitte a diákokat.<br><br>Andorfer János - iskolánk volt diákja, jelenlegi tanára - 1993-tól vette át a kispályás labdarúgócsapatot, és 2018-ig nevezte, vitte, kísérte rendszeresen a diákokat kerületi, városi labdarúgó tornákra. A Budapesti Diáksport Szövetség középiskolák részére a kispályás Pesti Srác Kupát hirdette meg, melyen diákjaink rendszeresen vettek részt. A tanár urat 2015-ben felkérték a kerületi középiskolás válogatott vezetésére. Umszkis diákjaink az ifjúsági országos curling bajnokságon 6. helyezést értek el. Országos floorball-bajnokságon is szerepeltek. Diákolimpiai eredmények, az Amatőr Teremlabdarúgó Bajnokság eredményei, kosárlabda, sportlövészet, röplabda, tollaslabda, judo színesítik a palettát, és a kör így sem teljes.<br><br><b>Neves sportolóink, a teljesség igénye nélkül:</b><div style="column-count: 3; column-gap: 1.5vw; font-size: 1.3vh; line-height: 1.4; margin-top: 1vh;">Hagya István - magasugró<br>Gáll Mária - tornász<br>Bakos István - kézilabdázó<br>Jakab István - kézilabdázó<br>Sütő József - atléta, maratoni<br>Fekete Sándor - atléta<br>Tóth Zoltán - labdarúgó<br>Nyirádi György - kajakozó<br>Mózes András - atléta, maratoni<br>Brabant Béla - gyeplabda<br>Tóth Zoltán - hajómodellező<br>Ancsin János - jégkorongozó<br>Brockhauser István - labdarúgó<br>Sztankó Éva - röplabdázó<br>Szűcs Lajos - labdarúgó<br>Hoboth Sándor - röplabdázó<br>Giczy Csaba - kajakozó<br>Füzesi Zsolt - labdarúgó<br>Kovács Zoltán - vízilabdázó<br>Vass Sándor - kézilabdázó<br>Móró Endre - thai-boxoló<br>Spránitz Gábor - sportlövő<br>Vass Károly - kézilabdázó<br>Monostori Attila - vízilabdázó<br>Lange Péter - Sail Racing Team<br>Battlay Krisztina - röplabdázó<br>Lőw Zsolt - labdarúgó<br>Nyerges Krisztián - labdarúgó<br>Czingli László - tornász<br>Szirányi Bence - jégkorongozó<br>Németh Zsanett - birkózó<br>Guczoghy György - tornász<br>Ágh György - vízilabdázó<br>Farkas János - kalapácsvető<br>Nagy Tibor - labdarúgó<br>Sebeők Mátyás - jiu-jitsu<br>Kolonics Márk - karatéka</div>'
     },
 
     // --- 39. Csizmadia Ferenc (Személyek - Kék) ---
@@ -666,7 +666,7 @@ const pages = [
         content: 'Csizmadia Ferenc 1962-ben szerzett hőerőgépész-diplomát a Budapesti Műszaki Egyetem Gépészmérnöki Karán.<br>Pályája kezdetén a Ganz-Mávagnál Diesel-motorok turbófeltöltőinek és levegőhűtőinek fejlesztésével foglalkozott. A mérnöki munka mellett gépipari technikumokban is tanított esti tagozaton. Az itt szerzett élmények vitték egyre közelebb a pedagógusi pályához.<br>1980 és 2000 között volt iskolánk igazgatója, nyugdíjazása után is tevékenykedett óraadóként, tankönyvszerzőként.'
     },
 
-    // --- 40. Művésztanárok, képzőművészeink (Személyek - Kék) ---
+    // --- 40. Művésztanáraik, képzőművészeink (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/40_művésztanáraink_képzőm.jpg',
@@ -699,7 +699,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Művésztanárok, Képzőművészeink',
+        title: 'Művésztanáraik, Képzőművészeink',
         content: 'A reprezentatív kép alkotója a szignó alapján Guzsváry János, aki testnevelő tanár, gerelyhajító atléta és képzőművész volt egy személyben.<br>Laurencsik Béla mindamellett, hogy mérnök, mérnöktanár volt, Képzőművészeti Főiskolát is végzett.<br><br>Király Endre az iskola kimagasló tanáregyénisége volt. Kohóipari mérnöki végzettségével kiváló és kreatív öntőipari mérnökként - melyet több szabadalma sok gyakorlati tapasztalata is alátámaszt - pályázta meg a tanári állást, amit elnyert, és 1928-ban megkezdte tanári pályafutását. Sokoldalú ember volt. A festészethez való vonzódása végigkísérte életét. Több kiállítása volt: 1917-ben Szibériában, hadifogsága idején, 1934-ben Budapesten a Műcsarnokban, 1952-ben Vácon és 1960-ban időskora lakhelyén a svájci Lausanne-ban.<br>Bótos Sándor 1959 és 1981 között volt az iskola tanára. Szabadkézi rajzot és ábrázoló geometriát tanított. Csendes, visszahúzódó szuverén egyéniség volt. Diákjai nagyon kedvelték: tudása, tanítási módszere és egyénisége okán is. A tantestületben nagy tisztelet övezte. Szerénységére jellemző, hogy festőművészi tevékenységéről, sikereiről az iskolában soha nem beszélt.'
     },
 
@@ -722,7 +722,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-uniform', dropCap: true,
         title: 'Gépészet',
-        content: 'A gépészeti ágazatot bemutató kisfilm:<br><a href="https://www.youtube.com/watch?v=F3HLp9LxE8o" target="_blank">https://www.youtube.com/watch?v=F3HLp9LxE8o</a><br><br>A gépészeti ágazati képzés technikus szintű szakképzettség megszerzésével zárul. Választható szakmairányok: CAD-CAM szakmairány, ipar szakmairány, vegyipar szakmairány.<br>A CAD-CAM szakmairányon végzett gépésztechnikus ipari termékeket modellez számítógéppel. Mérnöki felkészültséget nem igénylő szinten részt vesz a gépelemek és azok gyártásának tervezésében. Elvégzi a forgácsolással gyártható termékek CNC (számítógép által vezérelt) gépeken való megmunkálásának előkészítését.<br><br>Az ipar és a vegyipar szakmairányon végzett gépésztechnikus mérnöki felkészültséget nem igénylő gépészeti jellegű fejlesztő, tervező, irányító és ellenőrző feladatokat lát el. Megszervezi a gépek, berendezések biztonságos üzemeltetését. Hibás működés esetén feltárja a hiba okát, elvégzi, illetve irányítja a javítási, karbantartási, szerelési folyamatokat. Részt vesz a gépelemek, gépegységek tervezési munkálataiban, az új technológiák bevezetésében és alkalmazásában. Méréseket, elemzéseket folytat a gyártóeszközök optimális működésének biztosítása érdekében.<br>A gépgyártás-technológiai technikus önállóan vagy mérnöki irányítással részt vesz gépalkatrészek gyártásának tervezésében, gyártásában, gépek, géprendszerek, mechanikus berendezések működtetésében, szerelésében, karbantartásában és javításában.<br><br>A gépgyártás-technológiai technikus meghatározza a gyártás technológiai adatait, biztosítja a gyártóeszközök üzemeltetési feltételeit. Irányítja az általa tervezett gyártási folyamatot. Gyártás közben méréseket, ellenőrzéseket végez, azok eredményét dokumentálja. Megtervezi a gépek karbantartási folyamatait, és részt vesz azok végrehajtásában. Robotokat üzemeltet, azok működését felügyeli.'
+        content: 'A gépészeti ágazatot bemutató kisfilm:<br><a href="https://www.youtube.com/watch?v=F3HLp9LxE8o" target="_blank">Ide kattintva megtekintheti a kisfilmet</a><br><br>A gépészeti ágazati képzés technikus szintű szakképzettség megszerzésével zárul. Választható szakmairányok: CAD-CAM szakmairány, ipar szakmairány, vegyipar szakmairány.<br>A CAD-CAM szakmairányon végzett gépésztechnikus ipari termékeket modellez számítógéppel. Mérnöki felkészültséget nem igénylő szinten részt vesz a gépelemek és azok gyártásának tervezésében. Elvégzi a forgácsolással gyártható termékek CNC (számítógép által vezérelt) gépeken való megmunkálásának előkészítését.<br><br>Az ipar és a vegyipar szakmairányon végzett gépésztechnikus mérnöki felkészültséget nem igénylő gépészeti jellegű fejlesztő, tervező, irányító és ellenőrző feladatokat lát el. Megszervezi a gépek, berendezések biztonságos üzemeltetését. Hibás működés esetén feltárja a hiba okát, elvégzi, illetve irányítja a javítási, karbantartási, szerelési folyamatokat. Részt vesz a gépelemek, gépegységek tervezési munkálataiban, az új technológiák bevezetésében és alkalmazásában. Méréseket, elemzéseket folytat a gyártóeszközök optimális működésének biztosítása érdekében.<br>A gépgyártás-technológiai technikus önállóan vagy mérnöki irányítással részt vesz gépalkatrészek gyártásának tervezésében, gyártásában, gépek, géprendszerek, mechanikus berendezések működtetésében, szerelésében, karbantartásában és javításában.<br><br>A gépgyártás-technológiai technikus meghatározza a gyártás technológiai adatait, biztosítja a gyártóeszközök üzemeltetési feltételeit. Irányítja az általa tervezett gyártási folyamatot. Gyártás közben méréseket, ellenőrzéseket végez, azok eredményét dokumentálja. Megtervezi a gépek karbantartási folyamatait, és részt vesz azok végrehajtásában. Robotokat üzemeltet, azok működését felügyeli.'
     },
 
     // --- 42. Elektronika (Alap - Fehér) ---
@@ -745,7 +745,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-uniform', dropCap: true,
         title: 'Elektronika',
-        content: 'Az elektronikai ágazatot bemutató kisfilm:<br><a href="https://www.youtube.com/watch?v=0yaMR7XflqQ" target="_blank">https://www.youtube.com/watch?v=0yaMR7XflqQ</a><br><br>Az elektronikai technikus a gyártó és a kiszolgáló ágazatok elektronikai és elektrotechnikai szakembere. Alapvető feladatai közé tartozik az elektromos, valamint az elektronikus berendezések, műszerek tervezése, gyártása, összeszerelése, mérése, javítása és karbantartása. Együtt dolgozik a mérnökségi területekkel.<br><br>Ismeri és alkalmazza a villamos-biztonságtechnikai, illetőleg a korszerű ESD (elektrosztatikus kisülés elleni) védelmi előírásokat.<br>A reprezentatív képen az elkészült áramkör működésének ellenőrzése zajlik a képen.<br><br><a href="https://edir.umszki.hu/p/elektronikai-projektek-mp-3-lejatszo" target="_blank">https://edir.umszki.hu/p/elektronikai-projektek-mp-3-lejatszo</a><br><a href="https://edir.umszki.hu/p/elektronikai-projektek-robotkar" target="_blank">https://edir.umszki.hu/p/elektronikai-projektek-robotkar</a>'
+        content: 'Az elektronikai ágazatot bemutató kisfilm:<br><a href="https://www.youtube.com/watch?v=0yaMR7XflqQ" target="_blank">Ide kattintva megtekintheti a kisfilmet</a><br><br>Az elektronikai technikus a gyártó és a kiszolgáló ágazatok elektronikai és elektrotechnikai szakembere. Alapvető feladatai közé tartozik az elektromos, valamint az elektronikus berendezések, műszerek tervezése, gyártása, összeszerelése, mérése, javítása és karbantartása. Együtt dolgozik a mérnökségi területekkel.<br><br>Ismeri és alkalmazza a villamos-biztonságtechnikai, illetőleg a korszerű ESD (elektrosztatikus kisülés elleni) védelmi előírásokat.<br>A reprezentatív képen az elkészült áramkör működésének ellenőrzése zajlik a képen.<br><br><a href="https://edir.umszki.hu/p/elektronikai-projektek-mp-3-lejatszo" target="_blank">MP3 lejátszó</a><br><a href="https://edir.umszki.hu/p/elektronikai-projektek-robotkar" target="_blank">Robotkar</a>'
     },
 
     // --- 43. Informatika (Alap - Fehér) ---
@@ -797,7 +797,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'Tanári szobák',
-        content: 'Ennek az épületnek nincs hagyományos értelemben vett nagy, közös tanári szobája. Helyette tanári szobái vannak, ahol kettő-három-négy-öt oktató kap közösen helyet, munkateret. A diákok ezekben a tanári szobákban érik el, érik utol tanáraikat a szünetekben, tanórák előtt és után.<br>S amikor a \'60-as években ezek a tanári szobaajtók összenyíltak, tantestületi vacsorák tették emlékezetessé az akkori tantestület mindennapjait:<br><br>Egy tantestületi vacsora emlékei 1967-ből:<br><a href="https://www.youtube.com/watch?v=Qsb-9d8y3Ag" target="_blank">https://www.youtube.com/watch?v=Qsb-9d8y3Ag</a><br><a href="https://www.youtube.com/watch?v=2s-FGVlW1LI" target="_blank">https://www.youtube.com/watch?v=2s-FGVlW1LI</a><br><a href="https://www.youtube.com/watch?v=LAmmof_LS1c" target="_blank">https://www.youtube.com/watch?v=LAmmof_LS1c</a><br><a href="https://www.youtube.com/watch?v=dtbWKrULnJI" target="_blank">https://www.youtube.com/watch?v=dtbWKrULnJI</a><br><a href="https://www.youtube.com/watch?v=5XwYrA2MT7Y" target="_blank">https://www.youtube.com/watch?v=5XwYrA2MT7Y</a><br><br>Egy tantestületi vacsora emlékei 1969-ből:<br><a href="https://www.youtube.com/watch?v=5BZI6spfChk" target="_blank">https://www.youtube.com/watch?v=5BZI6spfChk</a><br><a href="https://www.youtube.com/watch?v=fMfLYrT76IE" target="_blank">https://www.youtube.com/watch?v=fMfLYrT76IE</a><br><a href="https://www.youtube.com/watch?v=PFtCYstWymM" target="_blank">https://www.youtube.com/watch?v=PFtCYstWymM</a><br><a href="https://www.youtube.com/watch?v=iqbgCSvFWgU" target="_blank">https://www.youtube.com/watch?v=iqbgCSvFWgU</a>'
+        content: 'Ennek az épületnek nincs hagyományos értelemben vett nagy, közös tanári szobája. Helyette tanári szobái vannak, ahol kettő-három-négy-öt oktató kap közösen helyet, munkateret. A diákok ezekben a tanári szobákban érik el, érik utol tanáraikat a szünetekben, tanórák előtt és után.<br>S amikor a \'60-as években ezek a tanári szobaajtók összenyíltak, tantestületi vacsorák tették emlékezetessé az akkori tantestület mindennapjait:<br><br>Egy tantestületi vacsora emlékei 1967-ből:<br><a href="https://www.youtube.com/watch?v=Qsb-9d8y3Ag" target="_blank">Videó 1</a><br><a href="https://www.youtube.com/watch?v=2s-FGVlW1LI" target="_blank">Videó 2</a><br><a href="https://www.youtube.com/watch?v=LAmmof_LS1c" target="_blank">Videó 3</a><br><a href="https://www.youtube.com/watch?v=dtbWKrULnJI" target="_blank">Videó 4</a><br><a href="https://www.youtube.com/watch?v=5XwYrA2MT7Y" target="_blank">Videó 5</a><br><br>Egy tantestületi vacsora emlékei 1969-ből:<br><a href="https://www.youtube.com/watch?v=5BZI6spfChk" target="_blank">Videó 1</a><br><a href="https://www.youtube.com/watch?v=fMfLYrT76IE" target="_blank">Videó 2</a><br><a href="https://www.youtube.com/watch?v=PFtCYstWymM" target="_blank">Videó 3</a><br><a href="https://www.youtube.com/watch?v=iqbgCSvFWgU" target="_blank">Videó 4</a>'
     },
 
     // --- 46. Diák voltam, tanár lettem (Személyek - Kék) ---
@@ -815,7 +815,7 @@ const pages = [
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/47_ballagás.jpg',
-        pocketTitle: 'További képek',
+        pocketTitle: 'Ballagások',
         gallery: [
             'KEPEK/47_ballagás/1.jpg',
             'KEPEK/47_ballagás/10.jpg',
@@ -839,14 +839,14 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Ballagások',
-        content: 'Most búcsúzunk és elmegyünk, a mi időnk lejárt.<br>Itt hagyjuk kedves iskolánk, indulunk messze már.<br>Tanáraink diáktársak, a szívünk nem feled,<br>Te kedves osztály, víg tanyánk, immár isten veled, immár isten veled!<br><br>Az élet szólít, menni kell, de válni oly nehéz,<br>A küszöbről a vén diák még egyszer visszanéz.<br>Sok kedves emlék fűz ide, amely most megszakad,<br>De az élet szólít, menni kell, csüggedni nem szabad, csüggedni nem szabad.<br><br>Szétszór a sors, mint szél a port, ki tudja, merre vet.<br>De szívünk egyszer visszahoz ölelni titeket.<br>Ne fájjon hát a búcsúzás, ne sirass hű barát!<br>Még visszatér a vén diák, viszontlátásra hát! Viszontlátásra hát!<br><br>Az 1968-as ballagás felvételei:<br><a href="https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27" target="_blank">https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27</a>'
+        content: 'Most búcsúzunk és elmegyünk, a mi időnk lejárt.<br>Itt hagyjuk kedves iskolánk, indulunk messze már.<br>Tanáraink diáktársak, a szívünk nem feled,<br>Te kedves osztály, víg tanyánk, immár isten veled, immár isten veled!<br><br>Az élet szólít, menni kell, de válni oly nehéz,<br>A küszöbről a vén diák még egyszer visszanéz.<br>Sok kedves emlék fűz ide, amely most megszakad,<br>De az élet szólít, menni kell, csüggedni nem szabad, csüggedni nem szabad.<br><br>Szétszór a sors, mint szél a port, ki tudja, merre vet.<br>De szívünk egyszer visszahoz ölelni titeket.<br>Ne fájjon hát a búcsúzás, ne sirass hű barát!<br>Még visszatér a vén diák, viszontlátásra hát! Viszontlátásra hát!<br><br><a href="https://www.youtube.com/watch?v=4uezzqbeYOs&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=27" target="_blank">Az 1968-as ballagás felvételei</a>'
     },
 
-    // --- 48. Aula, zsibongó (Helyszínek - Zöld) ---
+    // --- 48. A zsibongó (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/48_a zsibongó.jpg',
-        pocketTitle: 'Aula és a zsibongó',
+        pocketTitle: 'A zsibongó',
         gallery: [
             'KEPEK/48_zsibongó/2.jpg',
             'KEPEK/48_zsibongó/3.jpg',
@@ -856,7 +856,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Aula és a zsibongó',
+        title: 'A zsibongó',
         content: 'Foerk Ernő tervei a Corvin utcai oldalon, két szinten, a fő- és műhelyépület között átjárást biztosítottak. A műhelyépület földszintjét a főépület alagsorával ajtók betervezésével kapcsolta össze. A műhelyépület emeletét a főépület földszintjével az eredeti tervek szerint kőoszlopokon álló, kőpárkányos pergolával, a szintkülönbséget lépcsők beiktatásával oldotta meg.<br>Egy diákklub kialakításának terve kapcsán, az 1983 áprilisában íródott talajmechanikai szakvéleményben a következő olvasható:<br><br>„A raktárhelyiség kb. 40 évvel ezelőtt készült a gépműhely és a szomszédos épületszárny között. Eredetileg a két épület között az udvar felőli oldalon csak egy keskeny átjáró volt, alul árkádos megoldással. Később ezt bővítették újabb pillérsor és íves falazat építésével. A bővítés során a pillérekre és a falazatra acéltartókat helyeztek, és közöttük téglaboltozatot alakítottak ki.” Így alakult ki a zárt raktárépület, melynek födémét leaszfaltozták. Az emeleten az átjárási funkciót megtartották. A Corvin utca felé a kijárat viszont megszűnt. Ennek az átalakításnak feltehetően egyik célja az volt, hogy a szűkös koksztárolási kapacitást így valamivel növelni tudták a \'30-as évek legvégén.<br>A \'80-as években zajló átalakítás két lépcsőben történt. Először 1983-ban a kihasználatlan raktárhelyiségből diákklub létesült. Majd 1987 után - a különállóan működő faipari iskola kiköltözése kapcsán - az átjáró, melyet Sóhajok hídjaként emlegettek a landleres diákok, beépítésre került, így jött létre az aula.<br>A 2000-es években sok éven át üldögélt az aulában egy tárlóban egy óriási plüssgorilla, ami mára az iskolatörténeti gyűjteményt őrzi nagy erőkkel.'
     },
 
@@ -904,26 +904,26 @@ const pages = [
         content: '1977-ben került sor az 50 éves évforduló ünneplésére. Az akkori iskolavezetés a három napos "Landler Napok" rendezvénysorozatába - május 5-6-7. - illesztette és a ballagási ünnepséggel vonta össze az eseményt.<br>A rendezvénysorozatban:<br>a kispesti Landler Gimnázium részvételével politikai vetélkedő,<br>zászlóavatás,<br>emléktábla-avatás,<br>iskolatörténet-kiállítási megnyitó,<br>kézilabdatorna,<br>a Landler Gimnázium és a kassai testvériskola részvételével Ady Endre szavalóverseny,<br>irodalmi pályázat szerepelt a programok között.<br>Az esti majálison a P. Mobil együttes lépett fel az iskolaudvaron.'
     },
 
-    // --- 51. KGM - Technikumok az iparoktatásért (Emléktárgyak - Sárga) ---
+    // --- 51. Zsolnay-relikvia (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/51_Zsolnay relikvia.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'KGM - Technikumok az iparoktatásért',
+        title: 'Zsolnay-relikvia',
         content: 'A „KGM - TECHNIKUMOK AZ IPAROKTATÁSÉRT 1952–1972” felirat szerepel a jubileumi eozinmázas Zsolnay porcelánvázán és emlékplaketten. A tárgyakat feltehetően Gazder Antal iparművész tervezte 1972-ben a minisztérium alá tartozó szakoktatási hálózat fennállásának 20. évfordulójára.<br><br>A KGM: a Kohó- és Gépipari Minisztérium rövidítése, amely a szocialista Magyarország egyik legfontosabb ipari szervezete volt 1950 és 1980 között.<br><br>1952–1972: a két évszám az adott oktatási struktúra vagy az önálló minisztériumi szintű technikumi hálózat megalakulásának 20 éves jubileumát jelöli.'
     },
 
-    // --- 52. Tanári kirándulások (Események - Bézs) ---
+    // --- 52. Tantestületi kirándulások (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/52_tantestületi kir.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Tanári kirándulások',
-        content: 'A tanári kirándulások az \'50-es évektől kezdődtek. Helyszíneket felidézni erről az időszakról ezidáig nem sikerült. Viszont egy 1968-as kirándulás felvételei négy összeállításban megtekinthetők:<br><br><a href="https://www.youtube.com/watch?v=HIjiH655OWs" target="_blank">https://www.youtube.com/watch?v=HIjiH655OWs</a><br><a href="https://www.youtube.com/watch?v=OdiwdCWJprM" target="_blank">https://www.youtube.com/watch?v=OdiwdCWJprM</a><br><a href="https://www.youtube.com/watch?v=xxCfwaUGvKk" target="_blank">https://www.youtube.com/watch?v=xxCfwaUGvKk</a><br><a href="https://www.youtube.com/watch?v=Bxi_Y7eihE0" target="_blank">https://www.youtube.com/watch?v=Bxi_Y7eihE0</a><br><br>A \'70-es, \'80-as években biztosan tudott, hogy Kassán is megfordult a tantestület. Éveken át Meldorf városának ottani intézményével ápolt igazán szoros baráti kapcsolatot a Landler tantestülete. Erről az időszakról remek hangulatú tanári focimeccsek fotói maradtak fenn.<br><br>A \'90-es években Balatonszentgyörgy-Vörs, Firenze, Róma, Nápoly, Párizs volt úti cél.<br><br>Míg a 2000-es években Bécsben fordultak meg a tantestület tagjai.<br><br>A 2020-as évekből ezidáig kellemes csapatépítő túra emlékei Egerből és Kiskunmajsáról maradtak fenn.'
+        title: 'Tantestületi kirándulások',
+        content: 'A tanári kirándulások az \'50-es évektől kezdődtek. Helyszíneket felidézni erről az időszakról ezidáig nem sikerült. Viszont egy 1968-as kirándulás felvételei négy összeállításban megtekinthetők:<br><br><a href="https://www.youtube.com/watch?v=HIjiH655OWs" target="_blank">Videó 1</a><br><a href="https://www.youtube.com/watch?v=OdiwdCWJprM" target="_blank">Videó 2</a><br><a href="https://www.youtube.com/watch?v=xxCfwaUGvKk" target="_blank">Videó 3</a><br><a href="https://www.youtube.com/watch?v=Bxi_Y7eihE0" target="_blank">Videó 4</a><br><br>A \'70-es, \'80-as években biztosan tudott, hogy Kassán is megfordult a tantestület. Éveken át Meldorf városának ottani intézményével ápolt igazán szoros baráti kapcsolatot a Landler tantestülete. Erről az időszakról remek hangulatú tanári focimeccsek fotói maradtak fenn.<br><br>A \'90-es években Balatonszentgyörgy-Vörs, Firenze, Róma, Nápoly, Párizs volt úti cél.<br><br>Míg a 2000-es években Bécsben fordultak meg a tantestület tagjai.<br><br>A 2020-as évekből ezidáig kellemes csapatépítő túra emlékei Egerből és Kiskunmajsáról maradtak fenn.'
     },
 
     // --- 53. Madártávlatból (Helyszínek - Zöld) ---
@@ -934,7 +934,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'Madártávlatból',
-        content: 'Iskolánk és annak környéke madártávlatból:<br><br><a href="https://www.youtube.com/watch?v=5wylxrdFFBI" target="_blank">https://www.youtube.com/watch?v=5wylxrdFFBI</a>'
+        content: 'Iskolánk és annak környéke madártávlatból:<br><br><a href="https://www.youtube.com/watch?v=5wylxrdFFBI" target="_blank">A videó megtekintéséhez kattintson ide</a>'
     },
 
     // --- 54. Tankönyvszerzőink (Személyek - Kék) ---
@@ -945,7 +945,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Tankönyvszerzőink',
-        content: 'A Landler/Umszki tanárainak, oktatóinak megjelent tankönyvei:<br><table style="width: 100%; font-size: 1.45vh; line-height: 1.35; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 50%; vertical-align: top; padding-right: 1vw;">dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Z. - Juhász R. - Masa L.: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Szakmai alapismeretek I. (1988)</td><td style="width: 50%; vertical-align: top;">Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1., 2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)</td></tr></table>'
+        content: 'A Landler/Umszki tanárainak, oktatóinak megjelent tankönyvei:<br><br>dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Z. - Juhász R. - Masa L.: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Szakmai alapismeretek I. (1988)<br>Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1., 2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)'
     },
 
     // --- 55. Landler Jenő (Személyek - Kék) ---
@@ -964,7 +964,7 @@ const pages = [
         content: 'Landler Jenő (1875–1928) magyar szociáldemokrata politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált. A Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény nevében 35 éven át szerepelt a neve:<br><br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
     },
 
-    // --- 56. OSZTV (Események - Bézs) ---
+    // --- 56. Tanulmányi versenyek (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/56_tanulmányi versen.jpg',
@@ -980,7 +980,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Országos Szakmai Tanulmányi Verseny',
+        title: 'Tanulmányi versenyek',
         content: 'Az OSZTV, az Országos Szakmai Tanulmányi Verseny a hazai szakképzés egyik legfontosabb megmérettetése.<br>A versenyen történő sikeres részvétel legfontosabb előnyei közt szerepel a vizsgák alóli mentesség és az esetleges karrierlehetőség. Ugyanis az országos szintű helyezés komoly szakmai elismerést és előnyt jelent a munkaerőpiacon. Területi előválogatók, középdöntők előzik meg az országos döntőt. A legmagasabb pontszámot elérő tanulók a budapesti Szakma Sztár Fesztivál keretein belül mérkőznek meg a végső helyezésekért.<br>Minden tanévben számos tanulónk indul ezen a megmérettetésen több-kevesebb sikerrel.'
     },
 
@@ -1001,7 +1001,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         title: 'Iskolazászló',
-        content: 'Az 1977-es ballagáson, az 50 éves ünnepség napján a ballagók már az előző napon felavatott zászló mögött vonultak. Az egyik oldala nemzeti színű volt, a másik oldalon egyszínű piros mezőben az akkori iskolacímer volt látható. Valószínűsíthető, hogy ettől az időponttól minden ballagáson elöl ezt az iskolazászlót vitték. A kezdeti időszakból az 1977-es, az 1980-as és az 1986-os ballagásról maradt fenn „zászlós fotó”. A 2002-es múzeum avatóünnepségén az 1977-ben felavatott iskolazászló ott díszelgett a falon.<br><br>Ugyanis az iskola fennállásának 75. évfordulóján, a fenntartó képviselője új zászlót adott át. Ennek egyik oldalán a magyar címer, másik oldalán az iskolacímer volt látható. Azóta minden ballagási menet élén ez haladt.<br>A zászlót az igazgatói iroda előterében helyezték el. A rendszerváltás után új címeres zászló készült, hiszen akkor már nem volt aktuális önmagában a vörös szín, és a névváltozás miatt a rajta lévő iskolacímer sem.'
+        content: 'Az 1977-es ballagáson, az 50 éves ünnepség napján a ballagók már az előző napon felavatott zászló mögött vonultak. Az egyik oldala nemzeti színű volt, a másik oldalon egyszínű piros mezőben az akkori iskolacímer volt látható. Valószínűsíthető, hogy ettől az időponttól minden ballagáson elöl ezt az iskolazászlót vitték. A kezdeti időszakból az 1977-es, az 1980-as és az 1986-os ballagásról maradt fenn „zászlós fotó”. A 2002-es múzeum avatóünnepségén az 1977-ben felavatott iskolazászló ott díszelgett a falon.<br>Ugyanis az iskola fennállásának 75. évfordulóján, a fenntartó képviselője új zászlót adott át. Ennek egyik oldalán a magyar címer, másik oldalán az iskolacímer volt látható. Azóta minden ballagási menet élén ez haladt.<br>A zászlót az igazgatói iroda előterében helyezték el. A rendszerváltás után új címeres zászló készült, hiszen akkor már nem volt aktuális önmagában a vörös szín, és a névváltozás miatt a rajta lévő iskolacímer sem.'
     },
 
     // --- 58. Iskolai ünnepségek (Események - Bézs) ---
@@ -1012,10 +1012,10 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Iskolai ünnepségek',
-        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik - a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások -, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.<br><br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br><br><table style="width: 100%; font-size: 1.45vh; line-height: 1.4; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 33%; vertical-align: top; padding-right: 1vw;">évnyitó<br>aradi vértanúk emléknapja (október 6.)<br>az 1956-os forradalom emléknapja (október 23.)</td><td style="width: 33%; vertical-align: top; padding-right: 1vw;">a magyar nyelv napja (november 13.)<br>a magyar kultúra napja (január 22.)<br>kommunista diktatúrák áldozatainak emléknapja (február 25.)</td><td style="width: 33%; vertical-align: top;">az 1848–49-es forradalom emléknapja (március 15.)<br>a holokauszt áldozatainak emléknapja (április 16.)<br>nemzeti összetartozás napja (június 4.)<br>évzáró</td></tr></table>'
+        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik - a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások -, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.<br><br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br><br>évnyitó<br>aradi vértanúk emléknapja (október 6.)<br>az 1956-os forradalom emléknapja (október 23.)<br>a magyar nyelv napja (november 13.)<br>a magyar kultúra napja (január 22.)<br>kommunista diktatúrák áldozatainak emléknapja (február 25.)<br>az 1848–49-es forradalom emléknapja (március 15.)<br>a holokauszt áldozatainak emléknapja (április 16.)<br>nemzeti összetartozás napja (június 4.)<br>évzáró'
     },
 
-    // --- 59. Vákuumtechnikai műhely (Helyszínek - Zöld) ---
+    // --- 59. Elektroncső (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/59_elektroncső.jpg',
@@ -1032,15 +1032,15 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Elektroncső gyártás',
-        content: 'Az 1961/62-es tanévben az iskola tanműhelyében – a mai raktár helyén – alakítottak ki a Tungsram Gyár jóvoltából egy vákuumtechnikai műhelyt. Ebben az időszakban a gyárnak egyre több technikusra volt szüksége, hiszen a hagyományos izzólámpakészítés mellett felfutott a fénycsőgyártás. Az elektroncsőgyártás volumene pedig a növekedő Orion, Videoton televíziógyártás miatt nőtt jelentősen. Telepítettek ponthegesztő gépet és vákuumszivattyút is.<br>Az iskolában az izzólámpa- és elektroncsőgyártás befejező műveleteire került sor. A tanulók először a gázlánggal felhevített üveg megmunkálását – hajlítást, összeforrasztást – gyakorolták. Ezt követte az izzólámpakészítés néhány művelete, majd következett az EL 84 elektroncső gyártása.<br><br>A műveletek a következők voltak: a gyárban előszerelt komplett szerelvényt ponthegesztéssel a kivezetéssel ellátott üvegtalphoz rögzítették; a vákuumcsonkkal ellátott búrát a szerelvényezett üvegtalppal összeolvasztották gázláng segítségével; majd következett a vákuumszivattyúzás, a getterezés és a funkcionális működés vizsgálata.<br><br>A vákuumtechnikai műhely működtetése az 1971/72-es tanévben fejeződött be. Ennek oka, hogy a híradástechnikai profilt a számítástechnikai képzés váltotta fel.'
+        title: 'Elektroncső',
+        content: 'Az 1961/62-es tanévben az iskola tanműhelyében – a mai raktár helyén – alakítottak ki a Tungsram Gyár jóvoltából egy vákuumtechnikai műhelyt. Ebben az időszakban a gyárnak egyre több technikusra volt szüksége, hiszen a hagyományos izzólámpakészítés mellett felfutott a fénycsőgyártás. Az elektroncsőgyártás volumene pedig a növekedő Orion, Videoton televíziógyártás miatt nőtt jelentősen. Telepítettek ponthegesztő gépet és vákuumszivattyút is.<br>Az iskolában az izzólámpa- és elektroncsőgyártás befejező műveleteire került sor. A tanulók először a gázlánggal felhevített üveg megmunkálását – hajlítást, összeforrasztást – gyakorolták. Ezt követte az izzólámpakészítés néhány művelete, majd következett az EL 84 elektroncső gyártása.<br>A műveletek a következők voltak: a gyárban előszerelt komplett szerelvényt ponthegesztéssel a kivezetéssel ellátott üvegtalphoz rögzítették; a vákuumcsonkkal ellátott búrát a szerelvényezett üvegtalppal összeolvasztották gázláng segítségével; majd következett a vákuumszivattyúzás, a getterezés és a funkcionális működés vizsgálata.<br>A vákuumtechnikai műhely működtetése az 1971/72-es tanévben fejeződött be. Ennek oka, hogy a híradástechnikai profilt a számítástechnikai képzés váltotta fel.'
     },
 
-    // --- 60. Versenyek, LMS (Események - Bézs) ---
+    // --- 60. Sikerek közismereti tantárgyakból (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/60_sikerek közismereti.jpg',
-        pocketTitle: 'Közismereti sikerek',
+        pocketTitle: 'Sikerek közismereti tantárgyakból',
         gallery: [
             'KEPEK/60_sikerek közismereti tárgyakból/1.jpg',
             'KEPEK/60_sikerek közismereti tárgyakból/2.jpg',
@@ -1050,22 +1050,22 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Tanulmányi versenyek, LMS',
-        content: 'A \'70-es, \'80-as években a Landler Művészeti Stúdió – LMS – tevékenysége sok diákot megmozgatott. Versmondó versenyek, színházi előadások kerültek megrendezésre.<br>2005-ben – a 100 éves József Attila évfordulón - 24 órás felolvasást szerveztek az akkori humán munkaközösség tagjai a méltó ünnepléshez.<br><br>A Szép magyar beszéd, az Implom József Középiskolai Helyesírási Verseny, az Édes anyanyelvünk, a Bolyai Anyanyelvi Csapatverseny, a költészet napjához közel eső Hatágú síp vers- és prózamondó verseny, az Újpesti Helytörténeti Vetélkedő, az Újpesti Akadémikusok Vetélkedője tették és teszik mozgalmassá és még tartalmasabbá diákjaink nagy részének iskolaéveit évtizedek óta.<br><br>A matematika munkaközösség is évről-évre változatos lehetőségeket kínál a tanulóknak, hiszen a Zrínyi Ilona Matematikaverseny, a Kenguru Nemzetközi Matematikaverseny, a Gordiusz Matematikaverseny, a Bolyai Matematika Csapatverseny, az Arany Dániel Matematikaverseny mind-mind újabb és újabb esélyt nyújt a megmérettetésekhez, tudásfelméréshez.'
+        title: 'Sikerek közismereti tantárgyakból',
+        content: 'A \'70-es, \'80-as években a Landler Művészeti Stúdió – LMS – tevékenysége sok diákot megmozgatott. Versmondó versenyek, színházi előadások kerültek megrendezésre.<br>2005-ben – a 100 éves József Attila évfordulón - 24 órás felolvasást szerveztek az akkori humán munkaközösség tagjai a méltó ünnepléshez.<br>A Szép magyar beszéd, az Implom József Középiskolai Helyesírási Verseny, az Édes anyanyelvünk, a Bolyai Anyanyelvi Csapatverseny, a költészet napjához közel eső Hatágú síp vers- és prózamondó verseny, az Újpesti Helytörténeti Vetélkedő, az Újpesti Akadémikusok Vetélkedője tették és teszik mozgalmassá és még tartalmasabbá diákjaink nagy részének iskolaéveit évtizedek óta.<br>A matematika munkaközösség is évről-évre változatos lehetőségeket kínál a tanulóknak, hiszen a Zrínyi Ilona Matematikaverseny, a Kenguru Nemzetközi Matematikaverseny, a Gordiusz Matematikaverseny, a Bolyai Matematika Csapatverseny, az Arany Dániel Matematikaverseny mind-mind újabb és újabb esélyt nyújt a megmérettetésekhez, tudásfelméréshez.'
     },
 
-    // --- 61. Kovács Mihály (Személyek - Kék) ---
+    // --- 61. A Magyar Köztársaság Ezüst Érdemkeresztje (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/61_kovács mihály.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Kovács Mihály',
-        content: 'Az iskola történetének eddigi legmagasabb szintű kitüntetését Kovács Mihály kapta. 1995-ben Göncz Árpád köztársasági elnöktől vehette át a Magyar Köztársaság Ezüst Érdemkereszt kitüntetést. A Magyar Ezüst Érdemkereszt a független és demokratikus Magyarország érdekeinek előmozdítása, valamint a nemzet szolgálata terén végzett kimagasló, példamutató tevékenység elismerésére adományozható állami kitüntetés.<br><br>Kovács Mihály tanár úr emlékét az alábbi videófilm is őrzi:<br><br><a href="https://www.youtube.com/watch?v=2X9oa6YFFCs&list=PLgQbRN68uStpzHCOXW7TFELVJ9sJX1HoZ&index=13" target="_blank">Videó</a>'
+        title: 'A Magyar Köztársaság Ezüst Érdemkeresztje',
+        content: 'Az iskola történetének eddigi legmagasabb szintű kitüntetését Kovács Mihály kapta. 1995-ben Göncz Árpád köztársasági elnöktől vehette át a Magyar Köztársaság Ezüst Érdemkereszt kitüntetést. A Magyar Ezüst Érdemkereszt a független és demokratikus Magyarország érdekeinek előmozdítása, valamint a nemzet szolgálata terén végzett kimagasló, példamutató tevékenység elismerésére adományozható állami kitüntetés.<br>Kovács Mihály tanár úr emlékét az alábbi videófilm is őrzi:<br><a href="https://www.youtube.com/watch?v=2X9oa6YFFCs&list=PLgQbRN68uStpzHCOXW7TFELVJ9sJX1HoZ&index=13" target="_blank">Videó</a>'
     },
 
-    // --- 62. Számítástechnika kezdete / TPA 1001 (Emléktárgyak - Sárga) ---
+    // --- 62. Az első számítógép (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/62_ELSŐ SZÁMÍTÓGÉP.jpg',
@@ -1088,11 +1088,11 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Az első számítógép: TPA 1001',
-        content: 'Érdemes áttekintenünk az előzményeket. A félvezetők megjelenése az ötvenes évek végétől - elsősorban az Egyesült Államokban - ugrásszerű fejlődést hozott a számítástechnikában.<br>A KGST-ben 1969-ben zajlott az áttörés, az országok között kiosztották a gyártási feladatokat. Magyarország a rendszer legkisebb gépének (R10) gyártását kapta. A Kohó- és Gépipari Minisztériumnak, az iskola akkori fenntartójának feladata egyrészt a gyártás megszervezése, másrészt az ehhez és a legyártott gépek üzemeltetéséhez szükséges középfokú végzettségű munkaerő képzésének biztosítása volt.<br>A középfokú szakemberképzésre a Landlert találták legalkalmasabbnak, hiszen az elektronikához kapcsolódó színvonalas technikusképzés itt zajlott. Később a koncepció annyiban megváltozott, hogy a gyártás Székesfehérváron valósult meg.<br><br>Iskolánkban az 1971/72-es tanévben indult a számítástechnikai műszerészképzés, mely a híradástechnikai technikus képzésünket váltotta fel. Akkor a 3.A és C osztályban történt az átállás, valamint mindhárom újonnan beiskolázott első osztályban.<br>Ennek a projektnek a megvalósításához kapcsolódóan kaptuk a KFKI által gyártott TPA 1001 nevű számítógépet. Ebben az időben az országban mindössze 170 darab számítógép volt. Mi voltunk az első középiskola, amely számítógéppel rendelkezett.<br><br>A TPA 1001 1971. szeptember 8-án lett üzembe helyezve. Az elméleti képzés megszervezését Nagy Imre tanár úr, a gyakorlati képzését Urbán Kornél tanár úr kapta feladatul. A gép a 9.B jelű helyiségben kapott helyet a földszinten. A kábeleknek álmennyezetet és -padlót alakítottak ki.'
+        title: 'Az első számítógép',
+        content: 'Érdemes áttekintenünk az előzményeket. A félvezetők megjelenése az ötvenes évek végétől - elsősorban az Egyesült Államokban - ugrásszerű fejlődést hozott a számítástechnikában.<br>A KGST-ben 1969-ben zajlott az áttörés, az országok között kiosztották a gyártási feladatokat. Magyarország a rendszer legkisebb gépének (R10) gyártását kapta. A Kohó- és Gépipari Minisztériumnak, az iskola akkori fenntartójának feladata egyrészt a gyártás megszervezése, másrészt az ehhez és a legyártott gépek üzemeltetéséhez szükséges középfokú végzettségű munkaerő képzésének biztosítása volt.<br>A középfokú szakemberképzésre a Landlert találták legalkalmasabbnak, hiszen az elektronikához kapcsolódó színvonalas technikusképzés itt zajlott. Később a koncepció annyiban megváltozott, hogy a gyártás Székesfehérváron valósult meg.<br>Iskolánkban az 1971/72-es tanévben indult a számítástechnikai műszerészképzés, mely a híradástechnikai technikus képzésünket váltotta fel. Akkor a 3.A és C osztályban történt az átállás, valamint mindhárom újonnan beiskolázott első osztályban.<br>Ennek a projektnek a megvalósításához kapcsolódóan kaptuk a KFKI által gyártott TPA 1001 nevű számítógépet. Ebben az időben az országban mindössze 170 darab számítógép volt. Mi voltunk az első középiskola, amely számítógéppel rendelkezett.<br>A TPA 1001 1971. szeptember 8-án lett üzembe helyezve. Az elméleti képzés megszervezését Nagy Imre tanár úr, a gyakorlati képzését Urbán Kornél tanár úr kapta feladatul. A gép a 9.B jelű helyiségben kapott helyet a földszinten. A kábeleknek álmennyezetet és -padlót alakítottak ki.'
     },
 
-    // --- 63. Görgey Artúr szobor (Helyszínek - Zöld) ---
+    // --- 63. Görgey Artúr utca 26. (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/63_Görgey szobor koszorúzás.jpg',
@@ -1109,8 +1109,8 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Görgey Artúr szobor',
-        content: 'Az 1880-as években Vasút utca volt, majd 1926-tól Horthy Miklós utca, 1945-től Dózsa György utca, 1991-től Görgey Artúr utca lett. A végleges elnevezés arra utal, hogy 1849 januárjában itt vonult át Görgey Artúr hadserege.<br><br>Görgey Artúr (1818–1916), az 1848–49-es forradalom és szabadságharc honvéd tábornokának mellszobra Újpesten a róla elnevezett utcában, pontosabban a Görgey és Corvin utca sarkán áll. A mellszobor egy 150 cm magas talapzaton nyugszik. Alkotója Gömbös László szobrászművész. Alkotását 1998-ban állították fel.<br><br>Az utóbbi évtizedekben iskolánk az 1848–49-es forradalom és szabadságharc kapcsán megrendezett megemlékezéseken évről évre képviselteti magát a szobor megkoszorúzásakor.'
+        title: 'Görgey Artúr utca 26.',
+        content: 'Az 1880-as években Vasút utca volt, majd 1926-tól Horthy Miklós utca, 1945-től Dózsa György utca, 1991-től Görgey Artúr utca lett. A végleges elnevezés arra utal, hogy 1849 januárjában itt vonult át Görgey Artúr hadserege.<br>Görgey Artúr (1818–1916), az 1848–49-es forradalom és szabadságharc honvéd tábornokának mellszobra Újpesten a róla elnevezett utcában, pontosabban a Görgey és Corvin utca sarkán áll. A mellszobor egy 150 cm magas talapzaton nyugszik. Alkotója Gömbös László szobrászművész. Alkotását 1998-ban állították fel.<br>Az utóbbi évtizedekben iskolánk az 1848–49-es forradalom és szabadságharc kapcsán megrendezett megemlékezéseken évről évre képviselteti magát a szobor megkoszorúzásakor.'
     },
 
     // --- 64. Hackné Nyerges Rita (Személyek - Kék) ---
@@ -1129,10 +1129,10 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Hackné Nyerges Rita',
-        content: 'Hackné Nyerges Rita 1989-ben végzett az Eötvös Loránd Tudományegyetem Természettudományi Karán okleveles matematika szakos középiskolai tanárként, majd Kecskeméten, Szegeden, és a Corvinus Egyetemen tett további szakvizsgákat.<br><br>Volt az iskola matematikát angol nyelven oktató tanára, mérési csoportjának vezetője, reál-szakterületének vezetője, igazgatóhelyettese és igazgatója 2012 és 2018 között.'
+        content: 'Hackné Nyerges Rita 1989-ben végzett az Eötvös Loránd Tudományegyetem Természettudományi Karán okleveles matematika szakos középiskolai tanárként, majd Kecskeméten, Szegeden, és a Corvinus Egyetemen tett további szakvizsgákat.<br>Volt az iskola matematikát angol nyelven oktató tanára, mérési csoportjának vezetője, reál-szakterületének vezetője, igazgatóhelyettese és igazgatója 2012 és 2018 között.'
     },
 
-    // --- 65. Internetes weboldal (Események - Bézs) ---
+    // --- 65. Szakmai sikerek (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/65_tanulmányi verseny.jpg',
@@ -1146,8 +1146,8 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Internetes archívum',
-        content: 'Az intézmény minden korszakának megvoltak a maga szakmai sikerei. Az évkönyvek után az internetes weboldal vált hivatottá ezen események rögzítésére. Bár 2024-ben honlapunk is megújult, de feltétlenül érdemes végigböngészni a régi weboldal idevonatkozó bejegyzéseit is, hiszen az elmúlt évtizedek sikerei ott is sorakoznak:<br><a href="https://old.umszki.hu/eredmenyeink/szakmai-eredmenyek.html" target="_blank">https://old.umszki.hu/eredmenyeink/szakmai-eredmenyek.html</a><br><br>Mind közül talán az egyik legékesebb a Szakma Sztár FANUC Ipari Robotika Verseny I. helyezése, ahol két diákunk megnyerte az ipari robotika versenyt.'
+        title: 'Szakmai sikerek',
+        content: 'Az intézmény minden korszakának megvoltak a maga szakmai sikerei. Az évkönyvek után az internetes weboldal vált hivatottá ezen események rögzítésére. Bár 2024-ben honlapunk is megújult, de feltétlenül érdemes végigböngészni a régi weboldal idevonatkozó bejegyzéseit is, hiszen az elmúlt évtizedek sikerei ott is sorakoznak:<br><a href="https://old.umszki.hu/eredmenyeink/szakmai-eredmenyek.html" target="_blank">Szakmai eredményeik</a><br><br>Mind közül talán az egyik legékesebb a Szakma Sztár FANUC Ipari Robotika Verseny I. helyezése, ahol két diákunk megnyerte az ipari robotika versenyt.'
     },
 
     // --- 66. Szakmák éjszakája (Események - Bézs) ---
@@ -1163,7 +1163,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Szakmák éjszakája',
+        title: 'Szakmák Éjszakája',
         content: '2016. április 15-én került első ízben a Szakmák Éjszakájának megrendezésére az UMSZKI-ban. Ez az interaktív bemutatókra épülő program igen komoly érdeklődésre tartott számot.<br>Látogathatóak voltak a műhelyek és a szaktantermek, ahol különlegesen érdekes programokkal, bemutatókkal várták az érdeklődőket. Gyerekek, szüleik és a kollégák lelkesen próbálták ki a rendelkezésükre álló eszközöket.<br>Az umszkis diákok és tanárok éjszakába nyúlóan dolgoztak, fáradhatatlanul beszéltek, be- és megmutatták az iskola fő profiljait a látogatóknak.'
     },
 
@@ -1222,7 +1222,7 @@ const pages = [
         content: 'Az emberek nagy része vizuális típus. A tanári pálya egyik öröm- és egyszerre kudarcforrása, ha egy-egy kevésbé jól sikerült módon megfogalmazott mondat kapcsán elindult a belső képalkotás. Mára ez a mentális műfaj élővé a meme-k által vált.<br>„Amikor Julianus barát meghozta a tatát veszedelem hírét, IV. Béla várromokat építtetett.”<br>„Szulejmán szultán Szigetvár alatt tehetetlen haragjában megütötte a gutát.”<br>„Dugonics Titusz fenekét a falnak támasztotta és azon felmászott a bástyára.”<br>„Vörösmarty Mihály az MTK tagja volt.”<br>A 75. Jubileumi évkönyv 81-84. oldalán olvasható a félrefogalmazások gyűjteménye.'
     },
 
-    // --- 70. Guinness rekord és uniós csatlakozás (Események - Bézs) ---
+    // --- 70. 24 órás angol óra – Guinness rekord – uniós csatlakozás (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/70_uniós csatlakozás, guinness.jpg',
@@ -1233,15 +1233,15 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: '24 órás angol óra',
+        title: '24 órás angol óra – Guinness rekord – uniós csatlakozás',
         content: 'Hogyan ünnepeltük az UMSZKI-ban uniós csatlakozásunkat?<br>Az akkor érettségi előtt álló 13.H osztálynak angolórákat tartottak "Nyelvtudással lépünk Európába" címszóval. Matematika, informatika, testnevelés, irodalom, fizika, zene szerepelt a programban, és minden angolul izgalmas, szórakoztató feladatokkal.<br>Összefogtak a tanárok és a szülők, és hozzásegítették a csapatot a Guinness-rekord felállításához. Az akkori Oktatási Minisztérium volt az egyik támogató.<br>A fotó azt a pillanatot örökíti meg, amikor 24 óra elteltével John Lennon Imagine című dalának felcsendülésével zárult a rekordkísérlet: sikerrel. Szép emlék!'
     },
 
-    // --- 71. Gólyatábor (Események - Bézs) ---
+    // --- 71. Gólyatábor, gólyanap (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/71_gólyatábor_gólyanap.jpg',
-        pocketTitle: 'Gólyatábor',
+        pocketTitle: 'Gólyatábor, gólyanap',
         gallery: [
             'KEPEK/71_gólyatábor, gólyanap/1.jpg',
             'KEPEK/71_gólyatábor, gólyanap/2.jpg',
@@ -1251,7 +1251,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Gólyatábor',
+        title: 'Gólyatábor, gólyanap',
         content: 'A gólyatábor/gólyanap az első és legfontosabb közösségi esemény a középiskolai évek megkezdése előtt.<br>Ez a rendezvény segít abban, hogy a frissen felvett diákok, a gólyák még a tanévkezdés előtt megismerjék egymást, az évfolyamukat, az osztálytársaikat, az osztályfőnöküket, a felsőbb éveseket és az adott intézmény működését. Napközbeni csapatjátékok, sportversenyek, ismerkedős játékok, pontszerző versenyek és ügyességi feladatok teszik emlékezetessé ezt az első találkozót. Az eskütétel szimbolikus beavatás.<br>De hivatalos tájékoztatókkal is segítik a szervezők a kezdeti nehézségek leküzdésében a diákokat.'
     },
 
@@ -1346,7 +1346,7 @@ const pages = [
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/76_osztálytalálkozók.jpg',
-        pocketTitle: 'Osztálytablók',
+        pocketTitle: 'Osztálytablók, osztálytalálkozók',
         gallery: [
             'KEPEK/76_ osztálytalálkozók/1.jpg',
             'KEPEK/76_ osztálytalálkozók/2.jpg',
@@ -1363,11 +1363,11 @@ const pages = [
         content: 'Az osztálytablókról az adott korra, korszakra jellemző hangulat sugárzik. A tablók kivitelezése is az adott kor stílusát tükrözi.<br>Urbán Kornélnak köszönhetően az elmúlt száz év tablóinak zöme fellelhető az iskolatörténeti gyűjteményben időrendbe sorakoztatva.<br>"Találkozzunk öt év múlva!" Ez az idézet, felirat szerepel hagyományosan a legtöbb tablón az 1960-as évektől. Ennek a cselekvésre felszólító mondatnak eredményeképpen öt-, tíz-, húsz-, huszonöt, harminc-, negyven-, ötven-, sőt hatvanéves osztálytalálkozók szerveződtek és szerveződnek folyamatosan.<br>Hagyomány az iskolában, hogy az egybegyűltek megemlékeznek megboldogult osztálytársaikról, tanáraikról, és emléktáblát is avatnak az osztálytalálkozókon a főbejárat mellett az újratalálkozás emlékét őrzendő.<br><br><a href="http://umszki100.guest.umszki.intra/tablo/" target="_blank">Virtuális Tabló Archívum</a>'
     },
 
-    // --- 77. Újpesti akadémikusok koszorúzása (Események - Bézs) ---
+    // --- 77. Újpesti akadémikusok emléktábláinak koszorúzása (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/77_újpesti akadémikusok emléktáblái.jpg',
-        pocketTitle: 'Akadémikusok',
+        pocketTitle: 'Koszorúzás',
         gallery: [
             'KEPEK/77_akadémikusok/1.jpg',
             'KEPEK/77_akadémikusok/2.jpg',
@@ -1376,7 +1376,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Újpesti akadémikusok koszorúzása',
+        title: 'Újpesti akadémikusok emléktábláinak koszorúzása',
         content: 'A magyar tudomány ünnepe november 3-a, arra emlékezve, hogy Széchenyi István gróf 1825-ben ezen a napon ajánlotta fel birtokainak jövedelmét a Magyar Tudós Társaság, a mai MTA megalapítására. A hivatalosan 2003 óta megtartott ünnep célja a tudományos élet eredményeinek bemutatása és a társadalommal való megismertetése.<br>A magyar tudomány napja alkalmából 2008 óta tartanak megemlékezést az iskola kertjében az emlékezetünkben élő újpesti akadémikusok márványtáblája, később márványtáblái előtt. Az akadémikusokra emlékezve fontos, hogy az utókor méltó legyen nagy elődeihez, és emlékezzen újpesti kötődésű tudósaira.<br><br><a href="https://www.youtube.com/watch?v=0RxP8TP5OtA&list=PLRBjWMbjjxPrQ4qAmQNh75SSORMQ6QbIc&index=24" target="_blank">Megállapodás ÚKTV Híradó</a>'
     },
 
@@ -1420,17 +1420,18 @@ const pages = [
         content: 'Urbán Kornél (1940-2020) villamosmérnök, mérnöktanár.<br>Iskolánkban érettségizett, és az egyetem után 49 éven át volt az iskola pedagógusa. Újpestért Díjas tanár. Az Újpesti Városvédő Egyesület alapítótagja. Az Újpesti Közművelődési Kör tagja és az Újpest Internetes Lexikon főszerkesztő-helyettese is volt.<br>2022-ben emléktáblát avattak a tiszteletére. Az iskolatörténeti gyűjteménynek jelentős része az ő jóvoltából kerülhetett az érdeklődők elé.<br><br>Szöllősy Marianne helytörténész, az Újpesti Városvédő Egyesület elnöke, az Újpesti Helytörténeti Gyűjtemény vezetője életút-interjút készített vele, mely az Újpesti Helytörténeti Értesítő 2020. szeptemberi számában olvasható:<br><a href="http://www.ujpest.hu/galeria/dokumentumok/helytorteneti_ertesito/uhe-202009.pdf" target="_blank">Újpesti Helytörténeti Értesítő 2020. szeptember (29-31. oldal)</a><br><br>Ennek a virtuálisan lapozható emlékkönyvnek az összeállításánál is Urbán Kornél az iskolával kapcsolatos, évtizedek alatt összegyűjtött anyagai szolgáltak alapul csakúgy, mint az iskolatörténeti gyűjtemény esetében.'
     },
 
-    // --- 81. Stúdió (Helyszínek - Zöld) ---
+    // --- 81. A stúdió (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/81_stúdiósok.jpg',
+        pocketTitle: 'A stúdió',
         gallery: [
             'KEPEK/81_stúdiósok/81_stúdió.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Stúdió',
+        title: 'A stúdió',
         content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket "dobozos műsorként" emlegetik, tartják számon az iskola polgárai.<br>A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért.<br><br>Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A "backstage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed.<br>A mindenkori stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
     },
 
@@ -1481,7 +1482,7 @@ const pages = [
         content: 'Pályázattal indultak útjukra nyelvtanárok kezdeményezésére a nyelvi táborok is a \'90-es évek végén, 1996-ban Tiszapüspökiben volt az első. Ezt az emlékezetes tábort 2018-ig balatoni táborok követték, ahol az angol és német munkaközösség tagjai szerveztek szórakoztató, közösségépítő programokban gazdag táborokat a leendő két tanítási nyelvű osztályoknak.'
     },
 
-    // --- 84. Erasmus+ (Események - Bézs) ---
+    // --- 84. Pályázati sikerek: Erasmus +, VELUX-alapítvány (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/84_erasmus.jpg',
@@ -1499,8 +1500,8 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Erasmus+',
-        content: 'A két tannyelvű képzés kapcsán az egyik célkitűzés, hogy tanulóink alkalmassá váljanak arra, hogy tanulmányaikat akár magyarul, akár idegen nyelven folytassák, illetve szakmájukat mind a két nyelven gyakorolják. E cél elérése érdekében elengedhetetlenek a nemzetközi kapcsolatok és az együttműködések.<br>A rendszerváltás és az Unióhoz való csatlakozás után lehetőségünk nyílt a nemzetközi kapcsolatok kiépítésére, így pályázatok útján különböző projekteket valósítunk meg. Az iskola 2001 óta vesz részt uniós pályázatokban. Részesei voltunk a Leonardo, a Comenius, az Erasmus és jelenleg is az Erasmus+ projekteknek.<br>Az Erasmus+ az Európai Unió átfogó programja. Kiemelt figyelmet fordítanak a társadalmi befogadásra, a zöld és digitális átállásra, valamint a fiatalok demokratikus életben való részvételének ösztönzésére.<br><br>A partneriskolák listája folyamatosan változik. Az évente elnyert támogatásból legjobban teljesítő diákjaink egyhónapos külföldi gyakorlaton vehetnek részt, oktatóink pedig szakmai látogatásokon, külföldi intézményekben vagy továbbképző tanfolyamokon bővíthetik ismereteiket és szerezhetnek új tapasztalatokat.<br>Az igazgatóság előtti folyosórészen létrehozott Erasmus-fal jól szemlélteti a kapcsolathálót.<br>2018-ban a Velux Fundation program igazgatója kereste fel iskolánkat, pályázati lehetőséget ajánlva egy jelentős pénzügyi támogatáshoz. Ez a szervezet a dán Velux gyár alapítványa, amely több pályázatot hirdet minden évben, és nemcsak a hazai, de a közép-európai oktatást is támogatja.<br>A sikeres pályázat eredményeként 2019-ben elindulhatott az a projekt, amelyben másfél millió eurót kaptunk az iskola műszaki parkjának fejlesztésére. A projekt öt éve alatt a legmodernebb eszközöket szerezhettük be szakmai képzésünk minden területére. A támogatás jelentős fejlődést biztosított.<br><br><a href="https://edir.umszki.hu/p/erasmus" target="_blank">https://edir.umszki.hu/p/erasmus</a>'
+        title: 'Pályázati sikerek: Erasmus +, VELUX-alapítvány',
+        content: 'A két tannyelvű képzés kapcsán az egyik célkitűzés, hogy tanulóink alkalmassá váljanak arra, hogy tanulmányaikat akár magyarul, akár idegen nyelven folytassák, illetve szakmájukat mind a két nyelven gyakorolják. E cél elérése érdekében elengedhetetlenek a nemzetközi kapcsolatok és az együttműködések.<br>A rendszerváltás és az Unióhoz való csatlakozás után lehetőségünk nyílt a nemzetközi kapcsolatok kiépítésére, így pályázatok útján különböző projekteket valósítunk meg. Az iskola 2001 óta vesz részt uniós pályázatokban. Részesei voltunk a Leonardo, a Comenius, az Erasmus és jelenleg is az Erasmus+ projekteknek.<br>Az Erasmus+ az Európai Unió átfogó programja. Kiemelt figyelmet fordítanak a társadalmi befogadásra, a zöld és digitális átállásra, valamint a fiatalok demokratikus életben való részvételének ösztönzésére.<br><br>A partneriskolák listája folyamatosan változik. Az évente elnyert támogatásból legjobban teljesítő diákjaink egyhónapos külföldi gyakorlaton vehetnek részt, oktatóink pedig szakmai látogatásokon, külföldi intézményekben vagy továbbképző tanfolyamokon bővíthetik ismereteiket és szerezhetnek új tapasztalatokat.<br>Az igazgatóság előtti folyosórészen létrehozott Erasmus-fal jól szemlélteti a kapcsolathálót.<br>2018-ban a Velux Fundation program igazgatója kereste fel iskolánkat, pályázati lehetőséget ajánlva egy jelentős pénzügyi támogatáshoz. Ez a szervezet a dán Velux gyár alapítványa, amely több pályázatot hirdet minden évben, és nemcsak a hazai, de a közép-európai oktatást is támogatja.<br>A sikeres pályázat eredményeként 2019-ben elindulhatott az a projekt, amelyben másfél millió eurót kaptunk az iskola műszaki parkjának fejlesztésére. A projekt öt éve alatt a legmodernebb eszközöket szerezhettük be szakmai képzésünk minden területére. A támogatás jelentős fejlődést biztosított.<br><br><a href="https://edir.umszki.hu/p/erasmus" target="_blank">Erasmus+</a>'
     },
 
     // --- 85. BMSZC (Alap - Fehér) ---
@@ -1535,11 +1536,11 @@ const pages = [
         content: 'A World Scholar\'s Cup 2006-ban alapított amerikai szervezésű, évente megrendezett versenysorozat. Három szakasza van. A regionális, a globális-nemzetközi és a döntő. A versenyen háromfős csapatok indulhatnak. A sikeres szerepléshez a magas szintű nyelvtudás csak alapfeltétel. A versenyzőknek nagyfokú intelligenciával, széleskörű általános műveltséggel, kreatív gondolkodással kell rendelkezniük.<br>A helyi fordulókon több mint 30.000 résztvevő indult, ez összesen 10.000 csapat, hat kontinens 58 országából 120 regionális fordulóból. Az egyik regionális verseny Budapesten volt. Csapatunk a senior kategóriában a 2. helyet szerezte meg, így kvalifikálta magát a nemzetközi barcelonai fordulóra, ahol kiválóan szerepelt és továbbjutott. A döntőre a Yale Egyetem kampuszán került sor 760 csapattal.<br><br>2018-ban az Innovációs és Technológiai Minisztérium és fenntartónk, a BMSZC felvállalta a részvételhez szükséges költségeket. Csapatban két ezüst-, egyéniben négy ezüst- és négy aranyérmet szerzett. Felkészítő és kísérőtanáraik Fekete Katalin és Karácsony Éva voltak.<br>A tematika Egy összegabalyodott világ (An Entangled World) volt, mely fordulónként a következő tudományterületeket érintette:<br>- természettudomány: A memória tudománya (Science: The Science of Memory);<br>- irodalom: Az elválaszthatatlanság hangjai (Literature: Voices of the Inseparable);<br>- művészetek és zene: Öleld át a távolságot (Art & Music: Braving the Distance);<br>- történelem: Diplomáciatörténet (History: The History of Diplomacy);<br>- speciális terület: Emberi kapcsolatok (Special area: Human Relationships).'
     },
 
-    // --- 87. Lányok az Umszkiban (Személyek - Kék) ---
+    // --- 87. Lányok a Landlerben/Umszkiban (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/87_lányok.jpg',
-        pocketTitle: 'Lányok az Umszkiban',
+        pocketTitle: 'Lányok a Landlerben/Umszkiban',
         gallery: [
             'KEPEK/87_lányok az umszkiban/1.jpg',
             'KEPEK/87_lányok az umszkiban/2.jpg',
@@ -1551,19 +1552,19 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Lányok az Umszkiban',
+        title: 'Lányok a Landlerben/Umszkiban',
         content: '1945-ben az iparügyi miniszter rendelete tette lehetővé, hogy középfokú iparoktatási intézmények nappali tagozatos tanulói közé lányok is felvehetők legyenek. Egy későbbi kormányrendelet műszaki középiskolák létesítéséről rendelkezett, és megerősítette a lányok ilyen intézményben való továbbtanulási jogát.<br>Iskolánkba az 1949/50-es tanévben két leány vettek fel. Ők voltak az "első fecskék". Közülük egy fő, Svéd Mariann tett három évvel később képesítő vizsgát a IV. B osztályban. Vele indult tehát a történet.<br>A következő, az 1950/51-es tanévben tizenegy leányt vettek fel, közöttük volt az 1950-es filmhíradóban szereplő Sásdi Mária is. Az országos tanévnyitóra iskolánkban került sor. Darvas József miniszter tartotta az ünnepélyes tanévnyitót akkori körtermünkben. A filmhíradóban Sásdi Mária történetével üzentek a fiatal lányoknak, hogy várja Őket az iparoktatás.<br><br>A \'80-as években gépszerkesztői szakon sok lány került az iskolába. A tanulói létszámokat az 1951 és 1980 közötti időintervallumban vizsgálva láthatjuk, hogy a 10%-ot is meghaladta a lánytanulók aránya ebben az időszakban.<br>Az iskola életében jelentős változást hozott a gimnáziumi képzés, hiszen a gimnáziumi osztályokba addig soha nem tapasztalt mértékben jelentkeztek lányok. Ez az arány a technikusi képzés újragondolásával nagyon visszaesett. A 2020-as években már 30 fő alatt volt a nappali tagozaton tanuló lányok összlétszáma.<br>A 2026/27-es tanévre felvétel nyertek között két lány szerepel, akárcsak 1949/50-ben.'
     },
 
-    // --- 88. Igazgatók (Személyek - Kék) ---
+    // --- 88. Iskolavezetés (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
         image: 'KEPEK/88_iskolavezetés.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Igazgatóink',
-        content: 'Intézményünk 100 éve alatt számos nagyszerű pedagógus vezette az iskolát, akiknek szakmai elhivatottsága, közösségépítő munkája és fejlesztő törekvései formálták az itt tanuló generációkat. Különböző történelmi és társadalmi kihívások közepette álltak helyt, biztosítva az oktatás magas színvonalát.<br><br>Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br><table style="width: 100%; font-size: 1.45vh; line-height: 1.4; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 50%; vertical-align: top; padding-right: 1vw;">BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980</td><td style="width: 50%; vertical-align: top;">CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –</td></tr></table>'
+        title: 'Iskolavezetés',
+        content: 'Intézményünk 100 éve alatt számos nagyszerű pedagógus vezette az iskolát, akiknek szakmai elhivatottsága, közösségépítő munkája és fejlesztő törekvései formálták az itt tanuló generációkat. Különböző történelmi és társadalmi kihívások közepette álltak helyt, biztosítva az oktatás magas színvonalát.<br><br>Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br>BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980<br>CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –'
     },
 
     // --- 89. Dr. Nyárs Csaba-díj, Czellér András-díj (Események - Bézs) ---
@@ -1585,11 +1586,11 @@ const pages = [
         content: '2016 decemberében került sor először a Nyárs Csaba-díj átadására. A díjat Dr. Nyárs Csaba, a jeles újpesti lokálpatrióta alapította azzal a céllal, hogy az újpesti technikusképző intézmény, az UMSZKI két diákja és két tanára részesüljön minden évben az elismerésben. A díjak átadására az iskolai karácsonyi ünnepségen kerül sor.<br>Dr. Nyárs Csaba a közjegyzőnél hitelesített díj alapítóokirata alapján az iskolai alapítványnál három millió forintot helyezett el a finanszírozásra.<br><br>A mindenkori díjazott diákok az 50.000 forintos pénzjutalom mellé egy, az épületünket ábrázoló ezüst kitűzőt kapnak díszdobozban, valamint egy díszes oklevelet.<br><br>Czellér S. András iskolánk diákja volt. Számos tapasztalattal rendelkezik az energiaipar, a nemzetközi kereskedelem, az üzleti és a szoftverfejlesztés területén. Az iskolatörténeti gyűjteményt látva 50 éves osztálytalálkozójuk alkalmával, 2024-ben ajánlott fel jutalmazás céljára és az iskola új múzeumának fejlesztésére felhasználható jelentős pénzösszeget.'
     },
 
-    // --- 90. 90. tanév ünnepe (Események - Bézs) ---
+    // --- 90. 90. tanév (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/90_ünnep.jpg',
-        pocketTitle: '90. tanév ünnepe',
+        pocketTitle: '90. tanév',
         gallery: [
             'KEPEK/90_szülinap/1.jpg',
             'KEPEK/90_szülinap/10.jpg',
@@ -1618,15 +1619,15 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: '90. tanév ünnepe',
-        content: '"Miénk a Landler/UMSZKI" néven indult a programsorozat a 2017/2018-as tanévben.<br>2017 szeptemberében a tanévnyitó ünnepélyességét a tanári kórus teremtette meg:<br><a href="https://www.youtube.com/watch?v=zDaICws4dzE" target="_blank">Tanári kórus videó</a><br>A tanárok kórusa A Pál utcai fiúk című musical ikonikussá vált betétdalát adta elő.<br>A következő programok szerepeltek a délutáni események sorában: sikeres, régi diákok bemutatkozó előadásai a tantermekben, judo-bemutató, divatbemutató, néptánc az udvari színpadon. A rendezvény ideje alatt a műhely helyiségeiben és a szaktantermekben az ott tanító tanárok különféle bemutatókkal várták az érdeklődőket. Az udvaron kürtőskalácssütés zajlott, az irodai előtérben működött az UMSZKI-shop, ahol feliratos ajándéktárgyakat árusítottak. A bevétel az alapítványhoz folyt be diákjóléti célokra történő felhasználásra.<br><br>18 órakor indult a hivatalos ünnepség. A tanári kórus ismételt. Érdekes színfoltja volt az ünnepségnek, hogy az iskola legrégebbi diákja Környei (Kühnel) Ernő - aki 1939 és 1942 között tanult az iskolánkban - e jeles alkalommal Platina Oklevelet vett át.<br>Az ünnepély után kitűnő zenei produkciókkal léptek fel öregdiákjaink az udvari színpadon.<br>A jubileumi ünnepség csúcspontja, az esti látványos tűzijáték, méltó lezárása volt a jeles napnak.<br>Ez az alkalom is bizonyította, hogy az iskolai közösségek nemcsak osztályszinten működnek, az ilyen események nagyszerű keretet adnak a közösségek találkozóinak, bár ritkán adódnak.<br><br>Az Újpesti Közösségi Televízió (ÚKTV) Körkép extra műsora:<br><a href="https://www.youtube.com/watch?v=8c-27xbCUrk" target="_blank">https://www.youtube.com/watch?v=8c-27xbCUrk</a><br><a href="https://youtu.be/SnNSlBIvgEQ" target="_blank">https://youtu.be/SnNSlBIvgEQ</a>'
+        title: '90. tanév',
+        content: '"Miénk a Landler/UMSZKI" néven indult a programsorozat a 2017/2018-as tanévben.<br>2017 szeptemberében a tanévnyitó ünnepélyességét a tanári kórus teremtette meg:<br><a href="https://www.youtube.com/watch?v=zDaICws4dzE" target="_blank">Tanári kórus videó</a><br><br>A tanárok kórusa A Pál utcai fiúk című musical ikonikussá vált betétdalát adta elő.<br>A következő programok szerepeltek a délutáni események sorában: sikeres, régi diákok bemutatkozó előadásai a tantermekben, judo-bemutató, divatbemutató, néptánc az udvari színpadon. A rendezvény ideje alatt a műhely helyiségeiben és a szaktantermekben az ott tanító tanárok különféle bemutatókkal várták az érdeklődőket. Az udvaron kürtőskalácssütés zajlott, az irodai előtérben működött az UMSZKI-shop, ahol feliratos ajándéktárgyakat árusítottak. A bevétel az alapítványhoz folyt be diákjóléti célokra történő felhasználásra.<br><br>18 órakor indult a hivatalos ünnepség. A tanári kórus ismételt. Érdekes színfoltja volt az ünnepségnek, hogy az iskola legrégebbi diákja Környei (Kühnel) Ernő - aki 1939 és 1942 között tanult az iskolánkban - e jeles alkalommal Platina Oklevelet vett át.<br>Az ünnepély után kitűnő zenei produkciókkal léptek fel öregdiákjaink az udvari színpadon.<br>A jubileumi ünnepség csúcspontja, az esti látványos tűzijáték, méltó lezárása volt a jeles napnak.<br>Ez az alkalom is bizonyította, hogy az iskolai közösségek nemcsak osztályszinten működnek, az ilyen események nagyszerű keretet adnak a közösségek találkozóinak, bár ritkán adódnak.<br><br>Az Újpesti Közösségi Televízió (ÚKTV) Körkép extra műsora:<br><a href="https://www.youtube.com/watch?v=8c-27xbCUrk" target="_blank">Videó 1</a><br><a href="https://youtu.be/SnNSlBIvgEQ" target="_blank">Videó 2</a>'
     },
 
-    // --- 91. Címer rekonstrukció (Emléktárgyak - Sárga) ---
+    // --- 91. Címerrekonstrukció (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/91_címer .jpg',
-        pocketTitle: 'Címer rekonstrukció',
+        pocketTitle: 'Címerrekonstrukció',
         gallery: [
             'KEPEK/91_címerrekonstrukció/1.jpg',
             'KEPEK/91_címerrekonstrukció/2.jpg',
@@ -1639,8 +1640,8 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Címer rekonstrukció',
-        content: 'Az 1950/51-es tanévben az akkori hatalom eltávolította az iskola homlokzatát díszítő magyar címert. Helyére, évtizedekre a vörös csillag került. A rendszerváltás után ugyan a csillag lekerült, de közel 30 éven át semmi nem történt a homlokzattal.<br>2018 júniusának végén került vissza az építő, Foerk Ernő eredeti tervei alapján az iskola homlokzatára a címer rekonstrukciója. A projekt megvalósulásának támogatói között köszönthettük Újpest legjelentősebb civil szervezeteit, jónéhány volt diákunkat, újpesti lokálpatriótákat és több újpesti vállalkozót.<br><br>Az eseményen az igazgatóasszony összefoglalta a címer történetét, és méltatta azt a széleskörű társadalmi összefogást, ami lehetővé tette a megvalósítást. Ugyanakkor készült egy gránittábla is, mely emléket állít a jeles eseménynek, és tiszteleg a megvalósítók és támogatók előtt.<br>A reprezentatív képen a bejárati vaskapun látható iskolajelvény is látszik. Érdekesség, hogy ez az 1949/50-es tanévben került oda, tehát néhány hónappal a homlokzati címer eltávolítása előtt. Diákok készítették Durkó László tanár úr irányításával.<br><br>Szabó Tamás által készített videó:<br><a href="https://youtu.be/jlxM2OHSKsk" target="_blank">https://youtu.be/jlxM2OHSKsk</a>'
+        title: 'Címerrekonstrukció',
+        content: 'Az 1950/51-es tanévben az akkori hatalom eltávolította az iskola homlokzatát díszítő magyar címert. Helyére, évtizedekre a vörös csillag került. A rendszerváltás után ugyan a csillag lekerült, de közel 30 éven át semmi nem történt a homlokzattal.<br>2018 júniusának végén került vissza az építő, Foerk Ernő eredeti tervei alapján az iskola homlokzatára a címer rekonstrukciója. A projekt megvalósulásának támogatói között köszönthettük Újpest legjelentősebb civil szervezeteit, jónéhány volt diákunkat, újpesti lokálpatriótákat és több újpesti vállalkozót.<br><br>Az eseményen az igazgatóasszony összefoglalta a címer történetét, és méltatta azt a széleskörű társadalmi összefogást, ami lehetővé tette a megvalósítást. Ugyanakkor készült egy gránittábla is, mely emléket állít a jeles eseménynek, és tiszteleg a megvalósítók és támogatók előtt.<br>A reprezentatív képen a bejárati vaskapun látható iskolajelvény is látszik. Érdekesség, hogy ez az 1949/50-es tanévben került oda, tehát néhány hónappal a homlokzati címer eltávolítása előtt. Diákok készítették Durkó László tanár úr irányításával.<br><br>Szabó Tamás által készített videó:<br><a href="https://youtu.be/jlxM2OHSKsk" target="_blank">Videó</a>'
     },
 
     // --- 92. Az iskolakert (Helyszínek - Zöld) ---
@@ -1677,21 +1678,22 @@ const pages = [
         content: 'Az udvar platánfái és hársfája mellett az épületet körül ölelő területnek is megvannak a szemet gyönyörködtető kertészeti csodái.<br>Előkertünk eredendően újpesti közpark volt. Amikor az épület 1927-ben elkészült még nem volt kerítése. 1932-ben a város megállapodott a tulajdonosi jogokat gyakorló Kereskedelemügyi Minisztériummal, hogy az előkert nyilvános park legyen, vállalva ekkor a park kialakítását és fenntartását.<br>Később egy 1957-ben kelt levélből kiderül, hogy 1948-ban Döbrentei Károlyné polgármester "kérte az iskola körüli park közterület céljára való átengedését, arra való hivatkozással, hogy Újpest a közterületi parkokat erősen nélkülözi". Igaz, ekkor még a Hősök ligete létezett, de már elhanyagoltan, feltehetően ekkor már építési területként gondoltak rá.<br><br>A levélből az is kiderül, hogy az iskola igazgatója Bartos Lívia - forráshiányra hivatkozva - szerette volna továbbra is város gondozására bízni az előkertünket, sikerültelenül.<br>A jellegzetes jegenyesor elöregedett, egyik-másik ki is dőlt, megrongálva a kerítést, a villamos felsővezetékét. 2003 és 2007 között vágták ki - egy kivételével - az előkert fáit. Helyükre juharfák kerültek. A kivágás és ültetés az önkormányzat segítségével történt. 2005-ben történt egy teljes kertészeti felújítás. A kertgondozás azóta is folyamatos.<br>Az iskola parkfenntartói feladatát kitűnően teljesíti, hiszen az iskolakert manapság is gondos kezekben van: a Görgey utca felőli fasor mentén bokrok, virágágyások színesítik az összképet.'
     },
 
-    // --- 93. UMSZKI diákdíj (Események - Bézs) ---
+    // --- 93. UMSZKI Diákdíj (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
         image: 'KEPEK/93_umszki diákdíj.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'UMSZKI diákdíj',
+        title: 'UMSZKI Diákdíj',
         content: '2004 óta minden évben sor kerül az UMSZKI Diákdíj átadására, melyet mindig az adott tanév legkiválóbbjai kapnak. A tanulmányi eredmény, a tanulmányi versenyeken való részvétel és elért eredmény, az iskola diákközösségének szervezésében végzett munka, az iskolai rendezvényeken történő aktív és színvonalas részvétel, a jó sportteljesítmény képezik - egyebek mellett - a kiválasztás szempontjait.<br>Az UMSZKI Diákdíjasok neveit megörökítő tablók az irodák előtti folyosó átjárójában olvashatók.'
     },
 
-    // --- 94. CNC és 3D nyomtató, lézervágó (Események - Bézs / era-targyak) ---
+    // --- 94. Korszerű gyártástechnológiák (Események - Bézs / era-targyak) ---
     {
         type: 'image', eraCss: 'era-targyak',
         image: 'KEPEK/94_korszerű gyártás.jpg',
+        pocketTitle: 'Korszerű gyártástechnológiák',
         gallery: [
             'KEPEK/94_korszerű gyártástechnológiák/3c477d76-e2fc-428f-8b99-7285bbb65e69.jpg',
             'KEPEK/94_korszerű gyártástechnológiák/88b7348d-1f5f-4a64-9f7e-f9b79c2af188.jpg',
@@ -1704,11 +1706,11 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'CNC, 3D nyomtató, lézervágó',
-        content: 'Az 1980-as évek közepétől vette kezdetét az ismerkedés a CNC-technikával, melynek előzménye az osztrák gyártmányú asztali CNC-gép, az EMCO volt. Ezeket követték a \'90-es évek elején a magyar gyártmányú Miniturn esztergagépek, melyek szintén oktatógépek voltak. Itt jelent meg a magyar Hunor programozástechnológia. Ennek továbbfejlesztése lett az ún. NCT programozási formula.<br>Ennek a folyamatnak óriási lendületet adott a 2008-ban külső telephelyen kialakított gyártórendszerekkel rendelkező géppark, itt már ipari termelésre alkalmas CNC, maró- és esztergagépek álltak rendelkezésre, kiegészítve mindezeket robottechnikával.<br>2018-ban a Velux Fundation program igazgatója kereste fel iskolánkat, pályázati lehetőséget ajánlva egy jelentős pénzügyi támogatáshoz. Ez a szervezet a dán Velux gyár alapítványa, amely több pályázatot hirdet minden évben, és nemcsak a hazai, de a közép-európai oktatást is támogatja.<br>A sikeres pályázat eredményeként 2019-ben elindulhatott az a projekt, amelyben másfél millió eurót kaptunk az iskola műszaki parkjának fejlesztésére. A projekt öt éve alatt a legmodernebb eszközöket szerezhettük be szakmai képzésünk minden területére. A támogatás jelentős fejlődést biztosított. Itt jelentek meg az új programozási nyelven alkalmazható, korszerű CNC-gépek (lézervágó, marógép, robotok), és 3D nyomtatórendszerek, melyek azóta is részét képezik az oktatásnak.<br>A lézergravírozás egy modern, érintésmentes anyagmegmunkálási eljárás, amely során egy nagy intenzitású lézersugár az anyag felületét felhevíti, elégeti vagy elpárologtatja, így hozva létre a tartós mintát vagy feliratot. Ez a technológia rendkívül precíz, gyors és tiszta, mivel nincs szükség a munkadarab mechanikus rögzítésére. Iskolánkba két lézervágógép található: egy CO2 lézervágógép, kisebb 100 W-os teljesítménnyel és egy Fiber lézervágógép 1000 W-os lézerteljesítménnyel. A kisebb teljesítményű géppel alapvetően fa- és plexilemezeket vágunk. Az 1000 W-os géppel fémlemezeket is meg tudunk munkálni. Nagy hasznát vesszük fémburkolatok készítésénél.<br>3D-s nyomtatás: sokféle eljárás létezik. Alapvetően egy alapanyagból (műanyag szál, folyékony gyanta, fémpor) kívánt geometriájú 3D-s testet állítunk elő. Ez egy gyors prototípusgyártó technológia. Ez egy nagyon kreatív gyártástechnológiáról van szó, ami felkelti a tanulók érdeklődését.<br><a href="https://www.facebook.com/reel/537165151381445" target="_blank">3D nyomtatás videó 1</a> <a href="https://www.facebook.com/reel/445166807643279" target="_blank">3D nyomtatás videó 2</a> <a href="https://www.facebook.com/reel/316719927319749" target="_blank">3D nyomtatás videó 3</a> <a href="https://www.facebook.com/reel/632347194734573" target="_blank">3D nyomtatás videó 4</a> <a href="https://www.facebook.com/reel/3629050570493301" target="_blank">3D nyomtatás videó 5</a> <a href="https://www.youtube.com/channel/UCXyNFstcN_FktZI2tk61TvA" target="_blank">YouTube Csatorna</a>'
+        title: 'Korszerű gyártástechnológiák',
+        content: 'Az 1980-as évek közepétől vette kezdetét az ismerkedés a CNC-technikával, melynek előzménye az osztrák gyártmányú asztali CNC-gép, az EMCO volt. Ezeket követték a \'90-es évek elején a magyar gyártmányú Miniturn esztergagépek, melyek szintén oktatógépek voltak. Itt jelent meg a magyar Hunor programozástechnológia. Ennek továbbfejlesztése lett az ún. NCT programozási formula.<br>Ennek a folyamatnak óriási lendületet adott a 2008-ban külső telephelyen kialakított gyártórendszerekkel rendelkező géppark, itt már ipari termelésre alkalmas CNC, maró- és esztergagépek álltak rendelkezésre, kiegészítve mindezeket robottechnikával.<br>2018-ban a Velux Fundation program igazgatója kereste fel iskolánkat, pályázati lehetőséget ajánlva egy jelentős pénzügyi támogatáshoz. Ez a szervezet a dán Velux gyár alapítványa, amely több pályázatot hirdet minden évben, és nemcsak a hazai, de a közép-európai oktatást is támogatja.<br>A sikeres pályázat eredményeként 2019-ben elindulhatott az a projekt, amelyben másfél millió eurót kaptunk az iskola műszaki parkjának fejlesztésére. A projekt öt éve alatt a legmodernebb eszközöket szerezhettük be szakmai képzésünk minden területére. A támogatás jelentős fejlődést biztosított. Itt jelentek meg az új programozási nyelven alkalmazható, korszerű CNC-gépek (lézervágó, marógép, robotok), és 3D nyomtatórendszerek, melyek azóta is részét képezik az oktatásnak.<br>A lézergravírozás egy modern, érintésmentes anyagmegmunkálási eljárás, amely során egy nagy intenzitású lézersugár az anyag felületét felhevíti, elégeti vagy elpárologtatja, így hozva létre a tartós mintát vagy feliratot. Ez a technológia rendkívül precíz, gyors és tiszta, mivel nincs szükség a munkadarab mechanikus rögzítésére. Iskolánkba két lézervágógép található: egy CO2 lézervágógép, kisebb 100 W-os teljesítménnyel és egy Fiber lézervágógép 1000 W-os lézerteljesítménnyel. A kisebb teljesítményű géppel alapvetően fa- és plexilemezeket vágunk. Az 1000 W-os géppel fémlemezeket is meg tudunk munkálni. Nagy hasznát vesszük fémburkolatok készítésénél.<br>3D-s nyomtatás: sokféle eljárás létezik. Alapvetően egy alapanyagból (műanyag szál, folyékony gyanta, fémpor) kívánt geometriájú 3D-s testet állítunk elő. Ez egy gyors prototípusgyártó technológia. Ez egy nagyon kreatív gyártástechnológiáról van szó, ami felkelti a tanulók érdeklődését.<br><a href="https://www.facebook.com/reel/537165151381445" target="_blank">3D nyomtatás videó 1</a> <a href="https://www.facebook.com/reel/445166807643279" target="_blank">3D nyomtatás videó 2</a> <a href="https://www.facebook.com/reel/316719927319749" target="_blank">3D nyomtatás videó 3</a><br><a href="https://www.facebook.com/reel/632347194734573" target="_blank">3D nyomtatás videó 4</a> <a href="https://www.facebook.com/reel/3629050570493301" target="_blank">3D nyomtatás videó 5</a> <a href="https://www.youtube.com/channel/UCXyNFstcN_FktZI2tk61TvA" target="_blank">YouTube Csatorna</a>'
     },
 
-    // --- 95. Iskolatörténeti gyűjtemény (Helyszínek - Zöld) ---
+    // --- 95. Iskolatörténeti gyűjtemény - a megújult iskolamúzeum (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
         image: 'KEPEK/95_ÚJMÚZEUM.jpg',
@@ -1724,7 +1726,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
-        title: 'Iskolatörténeti gyűjtemény',
+        title: 'Iskolatörténeti gyűjtemény - a megújult iskolamúzeum',
         content: '1927 óta működő intézményünk 114-es termében, korábban naplószobájában, kapott helyett 2022 novemberében a megújult iskolatörténeti gyűjtemény.<br>Ennek a gyűjteménynek alapjául az iskola alagsorában 20 éven át működő múzeum anyaga és Urbán Kornélnak - iskolánk egykori diákjának és későbbi mérnöktanárának - hagyatéka szolgált. Az ajtón elhelyezett táblán szereplő felirat: "Iskolatörténeti gyűjtemény Urbán Kornél emlékére" is ezt hirdeti. Más szóval az iskolánk fennállásának 75. évfordulójára alapított Iskola- és technikatörténeti gyűjtemény az ERASMUS+ "Sustainability- Preserving Europe for the Future Generations" projekt keretében és eredményeként tudott megújulni, kibővülni intézményünk 95. tanévében.<br><br>Az ünnepélyes átadás 2022. november 9-én volt.<br>A Landler/UMSZKI egykori diákja, később évtizedeken át itt tanító tanára, Urbán Kornél munkálkodott az intézmény eseményeinek nyomon követésén, az iskola történetének dokumentálásán, az iskolavezetés, az osztályfőnökök, a szaktanárok, az osztályok "feltérképezésén". A kibővített múzeumban igyekszünk megmutatni hagyatékának az iskolára vonatkozó jelentős részét.<br>Ezért is választottuk a gyűjtemény méltó mottójaként az alábbi Ipolyi Arnold idézetet:<br><br>„Őrizzük emlékeinket, gyűjtsük össze töredékeinket, nehogy végleg elvesszenek, s ezáltal is üresebb legyen a múlt, szegényebb a jelen, kétesebb a jövő.”'
     },
 
@@ -1736,7 +1738,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Hírességeink',
-        content: 'A "Miből/kiből lesz a cserebogár?" szólás, amelyet arra a meglepő fejlődésre vagy átalakulásra használunk, amikor egy csendes ember, egy kisgyermek később nagy sikereket ér el, komoly pályát fut be.<br><br><table style="width: 100%; font-size: 1.60vh; line-height: 1.45; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 50%; vertical-align: top; padding-right: 1vw;">Fenyő Miklós - zenész, énekes<br>Zana József - színművész<br>Janicsák Veca - énekesnő<br>Szőke Richárd - színész<br>Dietz Gusztáv - MMA harcos, színész<br>Magonyi László - DJ<br>Rónai Sándor - parlamenti képviselő<br>Molnár Tamás - zenész, énekes<br>Wintermantel Zsolt - polgármester<br>Bartók Béla - önkormányzati képviselő<br>Gáti József - egyetemi docens<br>Sinóros-Szabó Botond - egyetemi professzor<br>Csóka Gergely - világutazó<br>Oláh Viktor - British Telekom mérnöke<br>Kalydy Zoltán - judo válogatott edzője<br>Berta Tamás - az LGT gitárosa<br>Mihály László - MTA tag, tanszékvezető</td><td style="width: 50%; vertical-align: top;">Bólyos Ibolya - manöken<br>Márk Iván - Balázs Béla-díjas operatőr<br>Kovács Antal Máté - a Romano Drom ütőse<br>Csizmár Gábor - munkaügyi miniszter<br>Halácsy Péter - PREZI, MOKK megalkotója<br>Bagi László - grafikus (Philadelphia)<br>Baksa Attila - űrkutató, üstököskutató<br>Stubnya Béla - színész<br>Barabás Zoltán - rádióriporter, író<br>Virágh Csaba - UTE jégkorongozó, edző<br>Marton Tibor - MAC jégkorongozó, edző<br>Hermann Tivadar - maratonfutó, író<br>dr. Márton Tibor - egyetemi tanár, tanszékvezető</td></tr></table>'
+        content: 'A "Miből/kiből lesz a cserebogár?" szólás, amelyet arra a meglepő fejlődésre vagy átalakulásra használunk, amikor egy csendes ember, egy kisgyermek később nagy sikereket ér el, komoly pályát fut be.<br><br><table style="width: 100%; font-size: 1.70vh; line-height: 1.45; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 50%; vertical-align: top; padding-right: 1vw;">Fenyő Miklós - zenész, énekes<br>Zana József - színművész<br>Janicsák Veca - énekesnő<br>Szőke Richárd - színész<br>Dietz Gusztáv - MMA harcos, színész<br>Magonyi László - DJ<br>Rónai Sándor - parlamenti képviselő<br>Molnár Tamás - zenész, énekes<br>Wintermantel Zsolt - polgármester<br>Bartók Béla - önkormányzati képviselő<br>Gáti József - egyetemi docens<br>Sinóros-Szabó Botond - egyetemi professzor<br>Csóka Gergely - világutazó<br>Oláh Viktor - British Telekom mérnöke<br>Kalydy Zoltán - judo válogatott edzője<br>Berta Tamás - az LGT gitárosa<br>Mihály László - MTA tag, tanszékvezető</td><td style="width: 50%; vertical-align: top;">Bólyos Ibolya - manöken<br>Márk Iván - Balázs Béla-díjas operatőr<br>Kovács Antal Máté - a Romano Drom ütőse<br>Csizmár Gábor - munkaügyi miniszter<br>Halácsy Péter - PREZI, MOKK megalkotója<br>Bagi László - grafikus (Philadelphia)<br>Baksa Attila - űrkutató, üstököskutató<br>Stubnya Béla - színész<br>Barabás Zoltán - rádióriporter, író<br>Virágh Csaba - UTE jégkorongozó, edző<br>Marton Tibor - MAC jégkorongozó, edző<br>Hermann Tivadar - maratonfutó, író<br>dr. Márton Tibor - egyetemi tanár, tanszékvezető</td></tr></table>'
     },
 
     // --- 97. Kulturális örökség napja (Események - Bézs) ---
