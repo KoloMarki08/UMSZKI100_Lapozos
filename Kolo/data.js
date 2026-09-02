@@ -1495,7 +1495,8 @@ const pages = [
             'KEPEK/84_pályázati sikerek/5.jpg',
             'KEPEK/84_pályázati sikerek/6.jpg',
             'KEPEK/84_pályázati sikerek/7.jpg',
-            'KEPEK/84_pályázati sikerek/8.jpg'
+            'KEPEK/84_pályázati sikerek/8.jpg',
+            'KEPEK/84_pályázati sikerek/9.jpg'
         ]
     },
     {
