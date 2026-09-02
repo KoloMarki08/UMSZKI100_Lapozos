@@ -1,6 +1,6 @@
 const pages = [
     { type: 'transparent', eraCss: 'era-transparent' },
-    { type: 'front-cover', eraCss: 'era-cover' },
+    { type: 'front-cover', eraCss: 'era-cover', image: 'KEPEK/0_címlap.jpg' },
 
     // --- TARTALOMJEGYZÉK (ToC SPREAD) ---
     {
@@ -17,11 +17,11 @@ const pages = [
     // --- 0. Csak kepek (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
-        image: 'KEPEK/',
+        image: 'KEPEK/1_oldal elé_balra.jpg',
     },
     {
         type: 'image', eraCss: 'era-uniform',
-        image: 'KEPEK/',
+        image: 'KEPEK/1_oldal elé_jobbra.jpg',
     },
 
     // --- 1. BEVEZETÉS (Alap - Fehér) ---
@@ -35,12 +35,7 @@ const pages = [
             'KEPEK/1_magyar állami/4.jpg',
             'KEPEK/1_magyar állami/5.jpg',
             'KEPEK/1_magyar állami/6.jpg',
-            'KEPEK/1_magyar állami/7.jpg',
-            'KEPEK/1_magyar állami/Baloldali sarok-pavilon- igazgatóság.jpg',
-            'KEPEK/1_magyar állami/Tervező, miniszter, polgármester-1.jpg',
-            'KEPEK/1_magyar állami/Tető készítés.jpg',
-            'KEPEK/1_magyar állami/Épül a műhelyépület.jpg',
-            'KEPEK/1_magyar állami/épitesbal.jpg'
+            'KEPEK/1_magyar állami/7.jpg'
         ]
     },
     {
@@ -55,14 +50,14 @@ const pages = [
         image: 'KEPEK/2_FoerkErno.jpg',
         pocketTitle: 'Foerk-tervek',
         gallery: [
+            'KEPEK/2_Foerk tervek/1.jpg',
+            'KEPEK/2_Foerk tervek/2.jpg',
+            'KEPEK/2_Foerk tervek/G.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222..4.jpg',
-            'KEPEK/2_Foerk tervek/ÉGy 69.222.2.5.jpg',
-            'KEPEK/2_Foerk tervek/ÉGy 69.222.6-.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222.10.jpg',
             'KEPEK/2_Foerk tervek/ÉGy 69.222.12.jpg',
-            'KEPEK/2_Foerk tervek/2_1.jpg',
-            'KEPEK/2_Foerk tervek/2.jpg',
-            'KEPEK/2_Foerk tervek/1.jpg'
+            'KEPEK/2_Foerk tervek/ÉGy 69.222.2.5.jpg',
+            'KEPEK/2_Foerk tervek/ÉGy 69.222.6-.jpg'
         ]
     },
     {
@@ -74,7 +69,7 @@ const pages = [
     // --- 3. Zsolnay csempék (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/3_Zsolnay csempék.jpg',
+        image: 'KEPEK/3_Zsolnay-csempék.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
@@ -84,19 +79,19 @@ const pages = [
 
     // --- 4. Iskolanevek, korszakok (Események - Bézs) ---
     {
-        type: 'text', eraCss: 'era-esemeny',
-        title: 'Iskolanevek, korszakok', dropCap: true,
-        content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br><br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 - 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 - 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 - 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 - 1948 Állami Műszaki Középiskola<br>1948 - 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 - 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől - 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal'
+        type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/4_korszakok.jpg'
     },
     {
-        type: 'text', eraCss: 'era-esemeny',
-        content: '<br>1955 - 1958 Landler Jenő Gépipari Technikum<br>1958 - 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 - 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 - 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 - 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 - 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 - 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 - 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 - 2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 - 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 - 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
+        type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
+        title: 'Iskolanevek, korszakok',
+        content: '1926 óta a XX. és XXI. század minden nehézségének, fordulatának lenyomatát adják az elmúlt 100 év névváltoztatásai, névváltozatai:<br><br>1927 - 1941 Újpesti Magyar Királyi Állami Fa- és Fémipari Szakiskola<br>1941 - 1943 Gépészeti Tagozattal Működő Felsőipariskola<br>1943 - 1946 Felsőipariskola Gépészeti- és Faipari Tagozatokkal<br>1946 - 1947 2. Számú Vas- és Fémipari Felsőipariskola Faipari Tagozattal<br>1947 Újpesti Magyar Állami Felsőipariskola<br>1947 - 1948 Állami Műszaki Középiskola<br>1948 - 1949 Általános Gépészeti Állami Műszaki Szakközépiskola Általános Faipari Tagozattal<br>1950 - 1951 6. Számú Ipari Gimnázium Vas-, Fém-, Gép- és Faipari Tagozattal<br>1951 januárjától Általános Gépészeti Technikum Faipari Tagozattal<br>1951 szeptemberétől - 1955 2. Számú Általános Gépészeti Technikum Faipari Tagozattal<br><br>1955 - 1958 Landler Jenő Gépipari Technikum<br>1958 - 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 - 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 - 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 - 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 - 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola<br>1990 - 1995 Újpesti Műszaki Szakközépiskola<br>1995 - 1998 Újpesti Műszaki Szakközépiskola és Gimnázium<br>1999 - 2001 Újpesti Kéttannyelvű Műszaki Szakközépiskola és Gimnázium<br>2001 - 2005 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Gimnázium<br>2005 - 2012 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium<br>2012 - 2015 Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola és Szakiskola<br>2015 - 2017 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskolája és Szakiskolája<br>2017 - 2019 Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Szakgimnáziuma és Szakközépiskolája<br>2020 - Budapesti Műszaki Szakképzési Centrum Újpesti Két Tanítási Nyelvű Műszaki Technikum'
     },
 
     // --- 5. Blockner Gyula (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/5_Blockner Gyula.jpg',
+        image: 'KEPEK/5_Blockner.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -107,7 +102,7 @@ const pages = [
     // --- 6. Laurencsik Béla (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/6_Laurencsik Béla.jpg',
+        image: 'KEPEK/6_Laurencsik.jpg',
         pocketTitle: 'Laurencsik Béla',
         gallery: [
             'KEPEK/6_Laurencsik/1931_három igazgató.jpg'
@@ -122,14 +117,15 @@ const pages = [
     // --- 7. Kovácsműhely (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/7_kovácsműhely.JPG',
+        image: 'KEPEK/7_kovácsműhely.jpg',
         pocketTitle: 'Kovácsműhely',
         gallery: [
-            'KEPEK/7_mappa_KOVÁCSMŰHELY/1.JPG',
-            'KEPEK/7_mappa_KOVÁCSMŰHELY/2.JPG',
-            'KEPEK/7_mappa_KOVÁCSMŰHELY/3.JPG',
-            'KEPEK/7_mappa_KOVÁCSMŰHELY/5.JPG',
-            'KEPEK/7_mappa_KOVÁCSMŰHELY/6.JPG'
+            'KEPEK/7_kovácsműhely/1.jpg',
+            'KEPEK/7_kovácsműhely/2.jpg',
+            'KEPEK/7_kovácsműhely/3.jpg',
+            'KEPEK/7_kovácsműhely/4.jpg',
+            'KEPEK/7_kovácsműhely/5.jpg',
+            'KEPEK/7_kovácsműhely/6.jpg'
         ]
     },
     {
@@ -152,7 +148,7 @@ const pages = [
     // --- 9. A kapu feletti címer szimbolikája (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/9_a kapu feletti címer szimbolikája.jpg',
+        image: 'KEPEK/9_a főbejárat feletti címer szimbolikája.jpg',
         pocketTitle: 'A kapu feletti címer',
         gallery: [
             'KEPEK/9_címer szimbolika/9_bejárat.jpg'
@@ -171,7 +167,7 @@ const pages = [
         pocketTitle: 'Szabó Béla',
         gallery: [
             'KEPEK/10_Szabó/bA.jpg',
-            'KEPEK/10_Szabó/Szabó gúnyrajz.png'
+            'KEPEK/10_Szabó/Szabó gúnyrajz.jpg'
         ]
     },
     {
@@ -183,7 +179,7 @@ const pages = [
     // --- 11. Lépcsőház / Lépcsőházi gondolat (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/11_LÉPCSŐHÁZ.JPG',
+        image: 'KEPEK/11_LÉPCSŐHÁZ.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -205,14 +201,14 @@ const pages = [
     // --- 13. Az igazgatói előtt (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/13_igazgatói előtt.JPG',
+        image: 'KEPEK/13_igazgatóság helytörténete.jpg',
         pocketTitle: 'Az igazgatói előtt',
         gallery: [
-            'KEPEK/13_igazgatói előtt/K.JPG',
+            'KEPEK/13_igazgatói előtt/K.jpg',
             'KEPEK/13_igazgatói előtt/L.jpg',
             'KEPEK/13_igazgatói előtt/M.jpg',
             'KEPEK/13_igazgatói előtt/N.jpg',
-            'KEPEK/13_igazgatói előtt/O.JPG'
+            'KEPEK/13_igazgatói előtt/O.jpg'
         ]
     },
     {
@@ -224,18 +220,18 @@ const pages = [
     // --- 14. Korabeli kisfilm (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/14_1950_kisfilm.png'
+        image: 'KEPEK/14_1950_kisfilm.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Korabeli kisfilm',
-        content: '„Így határozta el Sásdi Mária, hogy a szovjet minta nyomán szervezett gépészeti technikumban tanul tovább.” – az 1950-es tanévnyitó ünnepséget és jó pár, kordokumentumként is nagyra értékelhető pillanatot eleveníti meg a kisfilm az 1950-es évből.<br><a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">1950-es tanévnyitó kisfilm megtekintése</a>'
+        content: '<a href="https://www.youtube.com/watch?v=ayaf8uwFNB8" target="_blank">1950-es tanévnyitó kisfilm megtekintése</a><br>„Így határozta el Sásdi Mária, hogy a szovjet minta nyomán szervezett gépészeti technikumban tanul tovább.” – az 1950-es tanévnyitó ünnepséget és jó pár, kordokumentumként is nagyra értékelhető pillanatot eleveníti meg a kisfilm az 1950-es évből.'
     },
 
     // --- 15. Az iskola egykori körterme (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/15_az iskola egykori körterme.png',
+        image: 'KEPEK/15_az iskola egykori körterme.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -257,22 +253,22 @@ const pages = [
     // --- 17. Iskola egyensapka (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/17_iskolai egyensapka.png'
+        image: 'KEPEK/17_iskolai egyensapka.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Iskolai egyensapka',
+        title: 'Iskola egyensapka',
         content: 'Az 1960-as években kötelező volt az iskolai egyenruha viselése.<br>A korszak technikumaira és szakiskoláira jellemző módon a diákok kötelező jelleggel sötétkék sapkát viseltek, amelynek az elején vagy oldalán az iskola egyedi, zománcozott fém sapkajelvénye vagy iskolajelvénye szerepelt.<br>Az 1961/65-ben iskolánkba járt évfolyam egy diákjának visszaemlékezése szerint: „Az iskolához kapcsolódó külsőségek közül talán a legnépszerűtlenebb a diáksapka volt. Ezt némi visszafordíthatatlan átalakítással kabátzsebben hordhatóvá tettük, és csak közvetlenül az iskola kapuja előtt raktuk a fejünkre.”. Viselői közül többen viszont szívesen emlékeznek vissza az iskolai egyensapkára.'
     },
 
     // --- 18. Az udvar platánjai (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/18_platán.jpg',
+        image: 'KEPEK/18_platánok.jpg',
         pocketTitle: 'Platánok',
         gallery: [
             'KEPEK/18_platánfák/1.jpg',
-            'KEPEK/18_platánfák/2.JPG',
+            'KEPEK/18_platánfák/2.jpg',
             'KEPEK/18_platánfák/3.jpg',
             'KEPEK/18_platánfák/4.jpg',
             'KEPEK/18_platánfák/5.jpg'
@@ -293,10 +289,8 @@ const pages = [
             'KEPEK/19_rádióamatőr_ALBUM/A.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/B.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/C.jpg',
-            'KEPEK/19_rádióamatőr_ALBUM/D.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/E.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/F.jpg',
-            'KEPEK/19_rádióamatőr_ALBUM/G.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/H.jpg',
             'KEPEK/19_rádióamatőr_ALBUM/I.jpg'
         ]
@@ -304,13 +298,13 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'Rádióamatőr URH-állomás HG5KCC',
-        content: 'A HG5KCC rádióamatőr URH kollektív állomás 1954/55-ben indult.<br>Vajda György pedagógus felismerte, hogy új szak sikeres indításához kevés a tárgyi és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr-tevékenység elterjesztése volt.<br>Az akkor még a rádióamatőrök körében is fehér foltnak számító URH-sávot választotta, mindehhez az adót, vevőt és antennát - más lehetőség nem lévén - házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítésén volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált.<br>1955-ben Vajda György rádióamatőr-vizsgát tett, és adóengedélyt kapott URH kollektív rádióamatőr-adóállomás működtetetésére. Az országban ekkor kevesebb mint tíz ilyen állomás működött. 1956-ban már két nemzetközi URH-versenyen indultak a landleres diákok.<br><a href="https://www.youtube.com/watch?v=_Ba6nP37G2c" target="_blank">videó 1</a><br><a href="https://www.youtube.com/watch?v=UlsbM1RyCFA" target="_blank">videó 2</a><br><a href="https://www.youtube.com/watch?v=sMVTM5Jjqj0" target="_blank">videó 3</a>'
+        content: 'A HG5KCC rádióamatőr URH kollektív állomás 1954/55-ben indult.<br>Vajda György pedagógus felismerte, hogy új szak sikeres indításához kevés a tárgyi és személyi feltételekkel foglalkozni. Szükség van a tanulók köréből egy olyan csoport szervezésére, mely a szakirány összes diákja számára mintául szolgál és az érdeklődők számára a tananyagon túlmutató ismeretanyag elsajátítását teszi lehetővé. 1954-ben szakkört alapított, melynek célja a rádióamatőr-tevékenység elterjesztése volt.<br>Az akkor még a rádióamatőrök körében is fehér foltnak számító URH-sávot választotta, mindehhez az adót, vevőt és antennát - más lehetőség nem lévén - házilag kellett előállítani. A tevékenység súlypontja így a készülékek, eszközök megépítésén volt, ami nagyon jól támogatta az iskola képzési céljainak megvalósulását. A rádióamatőr tevékenység sokak számára élethosszig tartó hobbivá vált.<br>1955-ben Vajda György rádióamatőr-vizsgát tett, és adóengedélyt kapott URH kollektív rádióamatőr-adóállomás működtetetésére. Az országban ekkor kevesebb mint tíz ilyen állomás működött. 1956-ban már két nemzetközi URH-versenyen indultak a landleres diákok.<br><a href="https://www.youtube.com/watch?v=_Ba6nP37G2c" target="_blank">https://www.youtube.com/watch?v=_Ba6nP37G2c</a><br><a href="https://www.youtube.com/watch?v=UlsbM1RyCFA" target="_blank">https://www.youtube.com/watch?v=UlsbM1RyCFA</a><br><a href="https://www.youtube.com/watch?v=sMVTM5Jjqj0" target="_blank">https://www.youtube.com/watch?v=sMVTM5Jjqj0</a>'
     },
 
     // --- 20. Jegesmedve relikvia (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/20_jegesmedve relikvia.JPG',
+        image: 'KEPEK/20_jegesmedve relikvia.jpg',
         pocketTitle: 'További képek',
         gallery: [
             'KEPEK/20_jegesmedve/20_jegesmedve átadás 1945_46.jpg'
@@ -318,7 +312,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
-        title: 'Jegesmedve-relikvia',
+        title: 'Jegesmedve relikvia',
         content: 'A jegesmedve szobor felirata szerint az 1945/46. évi középiskolás labdarúgó-bajnokságot a Landler akkori csapata nyerte meg. A győztesek neve a réztábláról leolvasható.<br>A jegesmedve tehát több mint 80 éve lakik az iskola falai között. Tanáriból múzeumba, múzeumból a 114-es terembe cammogott át, és őrzi az iskolatörténeti gyűjteményt társaival együtt.'
     },
 
@@ -328,8 +322,9 @@ const pages = [
         image: 'KEPEK/21_tornaterem.jpg',
         pocketTitle: 'Tornaterem képei',
         gallery: [
-            'KEPEK/21_tornaterem/A.jpg',
-            'KEPEK/21_tornaterem/B.jpg'
+            'KEPEK/21_tornaterem/1.jpg',
+            'KEPEK/21_tornaterem/2.jpg',
+            'KEPEK/21_tornaterem/3.jpg'
         ]
     },
     {
@@ -341,29 +336,28 @@ const pages = [
     // --- 22. Dr. Radnai László (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/22_Radnai.jpg',
+        image: 'KEPEK/22_Radnai László.jpg',
         pocketTitle: 'Dr. Radnai László',
         gallery: [
             'KEPEK/22_Radnai László/1.jpg',
-            'KEPEK/22_Radnai László/2.png',
-            'KEPEK/22_Radnai László/3.png'
+            'KEPEK/22_Radnai László/2.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Dr. Radnai László', subtitle: '(1912–2008)',
-        content: 'Az iskola rádióműhelyének első tanára Dr. Radnai László volt. Az első rádióadó-engedélyesek közül ő volt a HA4SA. Továbbá: HA053RS, HAF3RL, HAF3HI, HA4EA, HA7PD, VE2AZQ, WA1FHU. 96 éves korában, 2008-ban hunyt el az Egyesült Államokban. Halálával az amatőr rádiózás elvesztette "nagy öregjeinek" meghatározó egyéniségét, tanítómesterét: Dr. HEAVISIDE-ot, aki ezen a néven, 1947-től, az egyes rádiótechnikai újságok hasábjain ismertette meg többekkel az amatőr rádiózás rejtelmeit, érdekességeit.<br>Aradon született, de Szolnokon nevelkedett. Középiskolásként találkozott az amatőr rádiózással. Otthon kristálydetektoros vevőkészülék építésébe fogott. 1928-ban belépett a magyar SWL mozgalom tagjai közé, ahol a HA053RS azonosító jelet kapta. A sávban hallott morzejelek arra ösztönözték, hogy gyorsan megtanulja a jelek vételét, adását a maga által készített "billentyűvel". A II. világháború után a Honvédelmi Minisztérium rádiós munkatársaként Debrecenben, Budapesten régi katonai rádiók felkutatásával foglalkozott. Operátorkodott a Bólyai Honvéd Műszaki Akadémia HA9F amatőr rádióállomásán.<br>A Falk Miksa utcai lakása és a Honvéd utcában lévő HM között kiépített ex-Hertz (ma Windom) antennára rövid időn belül már egy RL12P35 csővel felépített adó kapcsolódott, és megjelent a sávokban a HA4EA amatőr állomás. Az 1948 februárjában a megalakuló Magyar Rövidhullámú Rádióamatőrök Egyesülete (MRRE) titkárjává választotta. 1949-ben átadták az első kilenc darab hivatalos rádióamatőradó-engedélyt, ezek között a HA4SA engedélyét is. 1954-55-ben rövid ideig a Központi Rádióklub RH szakosztályának vezetője volt és szerkesztette a Klub Híradót.<br>1956-ban családostól elhagyta az országot és előbb Kanadában (VE2AZQ), majd az Egyesült Államokban (WA1FHU) talált új otthonra, munkára és vissza a rádióamatőrséghez, az amatőr rádiós barátokra és szervezetre, az ARRL-re, akiktől érdemeiért a W1PL hívójelet is megkapja.<br>Munkájában a katonai hírrendszerek fejlesztésével, majd az elektromágneses interferencia kérdéseivel foglalkozott. Ezen a téren elért eredményeiért a New York-i Tudományos Akadémia tagjai sorába fogadta.<br>Hosszú idő után 1990-ben látogatott ismét haza mint az általa megalakított Nemzetközi Magyar Amatőr Rádióklub tagja és Örökös Tiszteletbeli Elnöke. A VI. Határmenti Rádióamatőr Találkozó alkalmából a magyar Old Timer Kör közfelkiáltással megválasztotta - elismerve a 70 éves rádióamatőrök érdekében végzett tevékenysége érdemeit - örökös díszelnökének. <a href="https://www.youtube.com/watch?v=et5lfmGm4R4" target="_blank">Videó</a>'
+        content: 'Az iskola rádióműhelyének első tanára Dr. Radnai László volt. Az első rádióadó-engedélyesek közül ő volt a HA4SA. Továbbá: HA053RS, HAF3RL, HAF3HI, HA4EA, HA7PD, VE2AZQ, WA1FHU. 96 éves korában, 2008-ban hunyt el az Egyesült Államokban. Halálával az amatőr rádiózás elvesztette "nagy öregjeinek" meghatározó egyéniségét, tanítómesterét: Dr. HEAVISIDE-ot, aki ezen a néven, 1947-től, az egyes rádiótechnikai újságok hasábjain ismertette meg többekkel az amatőr rádiózás rejtelmeit, érdekességeit.<br>Aradon született, de Szolnokon nevelkedett. Középiskolásként találkozott az amatőr rádiózással. Otthon kristálydetektoros vevőkészülék építésébe fogott. 1928-ban belépett a magyar SWL mozgalom tagjai közé, ahol a HA053RS azonosító jelet kapta. A sávban hallott morzejelek arra ösztönözték, hogy gyorsan megtanulja a jelek vételét, adását a maga által készített "billentyűvel". A II. világháború után a Honvédelmi Minisztérium rádiós munkatársaként Debrecenben, Budapesten régi katonai rádiók felkutatásával foglalkozott. Operátorkodott a Bólyai Honvéd Műszaki Akadémia HA9F amatőr rádióállomásán.<br>A Falk Miksa utcai lakása és a Honvéd utcában lévő HM között kiépített ex-Hertz (ma Windom) antennára rövid időn belül már egy RL12P35 csővel felépített adó kapcsolódott, és megjelent a sávokban a HA4EA amatőr állomás. Az 1948 februárjában a megalakuló Magyar Rövidhullámú Rádióamatőrök Egyesülete (MRRE) titkárjává választotta. 1949-ben átadták az első kilenc darab hivatalos rádióamatőradó-engedélyt, ezek között a HA4SA engedélyét is. 1954-55-ben rövid ideig a Központi Rádióklub RH szakosztályának vezetője volt és szerkesztette a Klub Híradót.<br>1956-ban családostól elhagyta az országot és előbb Kanadában (VE2AZQ), majd az Egyesült Államokban (WA1FHU) talált új otthonra, munkára és vissza a rádióamatőrséghez, az amatőr rádiós barátokra és szervezetre, az ARRL-re, akiktől érdemeiért a W1PL hívójelet is megkapja.<br>Munkájában a katonai hírrendszerek fejlesztésével, majd az elektromágneses interferencia kérdéseivel foglalkozott. Ezen a téren elért eredményeiért a New York-i Tudományos Akadémia tagjai sorába fogadta.<br>Hosszú idő után 1990-ben látogatott ismét haza mint az általa megalakított Nemzetközi Magyar Amatőr Rádióklub tagja és Örökös Tiszteletbeli Elnöke. A VI. Határmenti Rádióamatőr Találkozó alkalmából a magyar Old Timer Kör közfelkiáltással megválasztotta - elismerve a 70 éves rádióamatőrök érdekében végzett tevékenysége érdemeit - örökös díszelnökének.<br><a href="https://www.youtube.com/watch?v=et5lfmGm4R4" target="_blank">https://www.youtube.com/watch?v=et5lfmGm4R4</a>'
     },
 
     // --- 23. Tanár-diák sportesemény 1943-ból (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/23_Szabó Gyula véd.jpg',
+        image: 'KEPEK/23_1943-as kirándulás emléke.jpg',
         pocketTitle: 'Tanár-diák sportesemény',
         gallery: [
-            'KEPEK/23_tanár_diák sportesemény_1943/A..jpg',
-            'KEPEK/23_tanár_diák sportesemény_1943/B..jpg',
-            'KEPEK/23_tanár_diák sportesemény_1943/C..jpg'
+            'KEPEK/23_1943-as kirándulás emléke/A..jpg',
+            'KEPEK/23_1943-as kirándulás emléke/B..jpg',
+            'KEPEK/23_1943-as kirándulás emléke/C..jpg'
         ]
     },
     {
@@ -375,25 +369,23 @@ const pages = [
     // --- 24. Tanműhelyek (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/24_TANMŰHELY.jpg',
+        image: 'KEPEK/24_tanműhelyek.jpg',
         pocketTitle: 'Tanműhely',
         gallery: [
-            'KEPEK/24_TANMŰHELY/1951 tanműhely.jpg',
-            'KEPEK/24_TANMŰHELY/1951.jpg',
-            'KEPEK/24_TANMŰHELY/a rádióműhely ma-1.JPG',
-            'KEPEK/24_TANMŰHELY/a rádióműhely ma-2.JPG',
-            'KEPEK/24_TANMŰHELY/a rádióműhely ma-3.JPG',
-            'KEPEK/24_TANMŰHELY/A.jpg',
-            'KEPEK/24_TANMŰHELY/abb.jpg',
-            'KEPEK/24_TANMŰHELY/alaprajz.jpg',
-            'KEPEK/24_TANMŰHELY/B.jpg',
-            'KEPEK/24_TANMŰHELY/E1.JPG',
-            'KEPEK/24_TANMŰHELY/E2.JPG',
-            'KEPEK/24_TANMŰHELY/E3.JPG',
-            'KEPEK/24_TANMŰHELY/Ebb.JPG',
-            'KEPEK/24_TANMŰHELY/G1.jpg',
-            'KEPEK/24_TANMŰHELY/G2.jpg',
-            'KEPEK/24_TANMŰHELY/G3.jpg'
+            'KEPEK/24_tanműhelyek/E1.jpg',
+            'KEPEK/24_tanműhelyek/E2.jpg',
+            'KEPEK/24_tanműhelyek/E3.jpg',
+            'KEPEK/24_tanműhelyek/G3.jpg',
+            'KEPEK/24_tanműhelyek/G4.jpg',
+            'KEPEK/24_tanműhelyek/G5.jpg',
+            'KEPEK/24_tanműhelyek/G6.jpg',
+            'KEPEK/24_tanműhelyek/G7.jpg',
+            'KEPEK/24_tanműhelyek/G8.jpg',
+            'KEPEK/24_tanműhelyek/H1.jpg',
+            'KEPEK/24_tanműhelyek/R1.jpg',
+            'KEPEK/24_tanműhelyek/R2.jpg',
+            'KEPEK/24_tanműhelyek/R3.jpg',
+            'KEPEK/24_tanműhelyek/R4.jpg'
         ]
     },
     {
@@ -415,14 +407,7 @@ const pages = [
             'KEPEK/25_autómodellező/5.jpg',
             'KEPEK/25_autómodellező/6.jpg',
             'KEPEK/25_autómodellező/7.jpg',
-            'KEPEK/25_autómodellező/8.jpg',
-            'KEPEK/25_autómodellező/A.jpg',
-            'KEPEK/25_autómodellező/AA.jpg',
-            'KEPEK/25_autómodellező/B.jpg',
-            'KEPEK/25_autómodellező/C.jpg',
-            'KEPEK/25_autómodellező/D.jpg',
-            'KEPEK/25_autómodellező/D (2).jpg',
-            'KEPEK/25_autómodellező/E.jpg'
+            'KEPEK/25_autómodellező/8.jpg'
         ]
     },
     {
@@ -437,7 +422,7 @@ const pages = [
         image: 'KEPEK/26_az iskola helyrajza.jpg',
         pocketTitle: 'További képek',
         gallery: [
-            'KEPEK/26_az iskola helyrajza/1.JPG',
+            'KEPEK/26_az iskola helyrajza/1.jpg',
             'KEPEK/26_az iskola helyrajza/2 (2).jpg',
             'KEPEK/26_az iskola helyrajza/3.jpg',
             'KEPEK/26_az iskola helyrajza/4.jpg',
@@ -445,12 +430,7 @@ const pages = [
             'KEPEK/26_az iskola helyrajza/6.jpg',
             'KEPEK/26_az iskola helyrajza/7.jpg',
             'KEPEK/26_az iskola helyrajza/8.jpg',
-            'KEPEK/26_az iskola helyrajza/9.jpg',
-            'KEPEK/26_az iskola helyrajza/C.jpg',
-            'KEPEK/26_az iskola helyrajza/D.jpg',
-            'KEPEK/26_az iskola helyrajza/E.jpg',
-            'KEPEK/26_az iskola helyrajza/F - beolvasás0007.jpg',
-            'KEPEK/26_az iskola helyrajza/F.jpg'
+            'KEPEK/26_az iskola helyrajza/9.jpg'
         ]
     },
     {
@@ -462,12 +442,7 @@ const pages = [
     // --- 27. Az orosz nyelv oktatása (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/27_orosz nyelv.jpg',
-        pocketTitle: 'További képek',
-        gallery: [
-            'KEPEK/27_iskolacímer.jpg',
-            'KEPEK/27_iskolacímerek.jpg'
-        ]
+        image: 'KEPEK/27_orosz nyelv.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -513,10 +488,11 @@ const pages = [
     // --- 30. Az első nemzetközi kapocs (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/30_jugoszláv kapcsolatok.jpg',
+        image: 'KEPEK/30_az iskola első nemzetközi.jpg',
         pocketTitle: 'Jugoszláv kapcsolatok',
         gallery: [
             'KEPEK/30_az iskola első nemzetközi/1.jpg',
+            'KEPEK/30_az iskola első nemzetközi/10.jpg',
             'KEPEK/30_az iskola első nemzetközi/2.jpg',
             'KEPEK/30_az iskola első nemzetközi/3.jpg',
             'KEPEK/30_az iskola első nemzetközi/4.jpg',
@@ -524,8 +500,7 @@ const pages = [
             'KEPEK/30_az iskola első nemzetközi/6.jpg',
             'KEPEK/30_az iskola első nemzetközi/7.jpg',
             'KEPEK/30_az iskola első nemzetközi/8.jpg',
-            'KEPEK/30_az iskola első nemzetközi/9.jpg',
-            'KEPEK/30_az iskola első nemzetközi/10.jpg'
+            'KEPEK/30_az iskola első nemzetközi/9.jpg'
         ]
     },
     {
@@ -548,13 +523,13 @@ const pages = [
     // --- 32. Udvarátalakítás (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/32_udvarátalakítás.JPG',
+        image: 'KEPEK/32_udvarátalakítás.jpg',
         pocketTitle: 'További képek',
         gallery: [
-            'KEPEK/32_udvarátalakítás/506756959_24373468445573047_4629253520149042485_n.jpg',
-            'KEPEK/32_udvarátalakítás/A.JPG',
-            'KEPEK/32_udvarátalakítás/D.jpg',
-            'KEPEK/32_udvarátalakítás/E.JPG'
+            'KEPEK/32_udvarátalakítás/1.jpg',
+            'KEPEK/32_udvarátalakítás/2.jpg',
+            'KEPEK/32_udvarátalakítás/3.jpg',
+            'KEPEK/32_udvarátalakítás/4.jpg'
         ]
     },
     {
@@ -570,21 +545,20 @@ const pages = [
         pocketTitle: 'További képek',
         gallery: [
             'KEPEK/33_szalagavatók/1.jpg',
-            'KEPEK/33_szalagavatók/2.jpg',
-            'KEPEK/33_szalagavatók/3.jpg',
-            'KEPEK/33_szalagavatók/4.jpg',
-            'KEPEK/33_szalagavatók/5.JPG',
-            'KEPEK/33_szalagavatók/6.JPG',
-            'KEPEK/33_szalagavatók/7.JPG',
-            'KEPEK/33_szalagavatók/8.JPG',
-            'KEPEK/33_szalagavatók/9.JPG',
             'KEPEK/33_szalagavatók/10.jpg',
             'KEPEK/33_szalagavatók/11.jpg',
             'KEPEK/33_szalagavatók/12.jpg',
             'KEPEK/33_szalagavatók/13.jpg',
             'KEPEK/33_szalagavatók/14.jpg',
             'KEPEK/33_szalagavatók/15.jpg',
-            'KEPEK/33_szalagavatók/1958_szalagtűző farsang.jpg'
+            'KEPEK/33_szalagavatók/2.jpg',
+            'KEPEK/33_szalagavatók/3.jpg',
+            'KEPEK/33_szalagavatók/4.jpg',
+            'KEPEK/33_szalagavatók/5.jpg',
+            'KEPEK/33_szalagavatók/6.jpg',
+            'KEPEK/33_szalagavatók/7.jpg',
+            'KEPEK/33_szalagavatók/8.jpg',
+            'KEPEK/33_szalagavatók/9.jpg'
         ]
     },
     {
@@ -595,7 +569,8 @@ const pages = [
 
     // --- 34. Tanácsterem (Helyszínek - Zöld) ---
     {
-        type: 'image', eraCss: 'era-helyiseg'
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/34_tanacsterem.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -606,7 +581,7 @@ const pages = [
     // --- 35. Dinasztiák (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/35_dinasztiák.png',
+        image: 'KEPEK/35_dinasztiák.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -617,7 +592,7 @@ const pages = [
     // --- 36. Évkönyvek (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/36_Évkönyvek.jpg'
+        image: 'KEPEK/36_évkönyvek.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
@@ -628,7 +603,7 @@ const pages = [
     // --- 37. Híradástechnikai képzés (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
-        image: 'KEPEK/37_híradástechnika kezdete.jpg',
+        image: 'KEPEK/37_híradás.jpg',
         pocketTitle: 'Híradástechnikai képzés',
         gallery: [
             'KEPEK/37_híradástechnikai képzés/1.jpg',
@@ -652,6 +627,13 @@ const pages = [
         gallery: [
             'KEPEK/38_sportélet/0.jpg',
             'KEPEK/38_sportélet/1.jpg',
+            'KEPEK/38_sportélet/10.jpg',
+            'KEPEK/38_sportélet/11.jpg',
+            'KEPEK/38_sportélet/12.jpg',
+            'KEPEK/38_sportélet/13.jpg',
+            'KEPEK/38_sportélet/14.jpg',
+            'KEPEK/38_sportélet/15.jpg',
+            'KEPEK/38_sportélet/16.jpg',
             'KEPEK/38_sportélet/2.jpg',
             'KEPEK/38_sportélet/3.jpg',
             'KEPEK/38_sportélet/4.jpg',
@@ -659,21 +641,13 @@ const pages = [
             'KEPEK/38_sportélet/6.jpg',
             'KEPEK/38_sportélet/7.jpg',
             'KEPEK/38_sportélet/8.jpg',
-            'KEPEK/38_sportélet/9.jpg',
-            'KEPEK/38_sportélet/10.jpg',
-            'KEPEK/38_sportélet/11.jpg',
-            'KEPEK/38_sportélet/12.jpg',
-            'KEPEK/38_sportélet/13.jpg',
-            'KEPEK/38_sportélet/14.jpg',
-            'KEPEK/38_sportélet/15.jpg',
-            'KEPEK/38_sportélet/1989 Meldorfi tanári focicsapat.jpg',
-            'KEPEK/38_sportélet/A.jpg',
+            'KEPEK/38_sportélet/9.jpg'
         ]
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Sportélet és sportsikerek',
-        content: 'Szinte lehetetlen vállalkozás a 100 év minden sporttal kapcsolatos eseményét, említésre érdemes személyét hiánytalanul felsorakoztatni.<br>Szöllősi Antal, iskolánk legendás testnevelő tanára a \'40-es évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott.<br>Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt.<br>Kis Alajos labdarúgóedző csapatával országos nagypályás bajnokságon is részt vett.<br>Szenczi László tanár úr az UTE, majd a Honvéd atlétikaedzője, és korábban Molnár Imréné testnevelő tanár országos és fővárosi atlétikai versenyekre vitte a diákokat.<br>Andorfer János - iskolánk volt diákja, jelenlegi tanára - 1993-tól vette át a kispályás labdarúgócsapatot, és 2018-ig nevezte, vitte, kísérte rendszeresen a diákokat kerületi, városi labdarúgó tornákra. A Budapesti Diáksport Szövetség középiskolák részére a kispályás Pesti Srác Kupát hirdette meg, melyen diákjaink rendszeresen vettek részt. A tanár urat 2015-ben felkérték a kerületi középiskolás válogatott vezetésére. Umszkis diákjaink az ifjúsági országos curling bajnokságon 6. helyezést értek el. Országos floorball-bajnokságon is szerepeltek. Diákolimpiai eredmények, az Amatőr Teremlabdarúgó Bajnokság eredményei, kosárlabda, sportlövészet, röplabda, tollaslabda, judo színesítik a palettát, és a kör így sem teljes.<br><br><b>Neves sportolóink, a teljesség igénye nélkül:</b><div style="column-count: 3; column-gap: 1.5vw; font-size: 1.3vh; line-height: 1.4; margin-top: 1vh;">Hagya István - magasugró<br>Gáll Mária - tornász<br>Bakos István - kézilabdázó<br>Jakab István - kézilabdázó<br>Sütő József - atléta, maratoni<br>Fekete Sándor - atléta<br>Tóth Zoltán - labdarúgó<br>Nyirádi György - kajakozó<br>Mózes András - atléta, maratoni<br>Brabant Béla - gyeplabda<br>Tóth Zoltán - hajómodellező<br>Ancsin János - jégkorongozó<br>Brockhauser István - labdarúgó<br>Sztankó Éva - röplabdázó<br>Szűcs Lajos - labdarúgó<br>Hoboth Sándor - röplabdázó<br>Giczy Csaba - kajakozó<br>Füzesi Zsolt - labdarúgó<br>Kovács Zoltán - vízilabdázó<br>Vass Sándor - kézilabdázó<br>Móró Endre - thai-boxoló<br>Spránitz Gábor - sportlövő<br>Vass Károly - kézilabdázó<br>Monostori Attila - vízilabdázó<br>Lange Péter - Sail Racing Team<br>Battlay Krisztina - röplabdázó<br>Lőw Zsolt - labdarúgó<br>Nyerges Krisztián - labdarúgó<br>Czingli László - tornász<br>Szirányi Bence - jégkorongozó<br>Németh Zsanett - birkózó<br>Guczoghy György - tornász<br>Ágh György - vízilabdázó<br>Farkas János - kalapácsvető<br>Nagy Tibor - labdarúgó<br>Sebeők Mátyás - jiu-jitsu<br>Kolonics Márk - karatéka</div>'
+        content: 'Szinte lehetetlen vállalkozás a 100 év minden sporttal kapcsolatos eseményét, említésre érdemes személyét hiánytalanul felsorakoztatni.<br>Szöllősi Antal, iskolánk legendás testnevelő tanára a \'40-es évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott.<br>Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt.<br>Kis Alajos labdarúgóedző csapatával országos nagypályás bajnokságon is részt vett.<br>Szenczi László tanár úr az UTE, majd a Honvéd atlétikaedzője, és korábban Molnár Imréné testnevelő tanár országos és fővárosi atlétikai versenyekre vitte a diákokat.<br><br>Andorfer János - iskolánk volt diákja, jelenlegi tanára - 1993-tól vette át a kispályás labdarúgócsapatot, és 2018-ig nevezte, vitte, kísérte rendszeresen a diákokat kerületi, városi labdarúgó tornákra. A Budapesti Diáksport Szövetség középiskolák részére a kispályás Pesti Srác Kupát hirdette meg, melyen diákjaink rendszeresen vettek részt. A tanár urat 2015-ben felkérték a kerületi középiskolás válogatott vezetésére. Umszkis diákjaink az ifjúsági országos curling bajnokságon 6. helyezést értek el. Országos floorball-bajnokságon is szerepeltek. Diákolimpiai eredmények, az Amatőr Teremlabdarúgó Bajnokság eredményei, kosárlabda, sportlövészet, röplabda, tollaslabda, judo színesítik a palettát, és a kör így sem teljes.<br><br><b>Neves sportolóink, a teljesség igénye nélkül:</b><div style="column-count: 3; column-gap: 1.5vw; font-size: 1.3vh; line-height: 1.4; margin-top: 1vh;">Hagya István - magasugró<br>Gáll Mária - tornász<br>Bakos István - kézilabdázó<br>Jakab István - kézilabdázó<br>Sütő József - atléta, maratoni<br>Fekete Sándor - atléta<br>Tóth Zoltán - labdarúgó<br>Nyirádi György - kajakozó<br>Mózes András - atléta, maratoni<br>Brabant Béla - gyeplabda<br>Tóth Zoltán - hajómodellező<br>Ancsin János - jégkorongozó<br>Brockhauser István - labdarúgó<br>Sztankó Éva - röplabdázó<br>Szűcs Lajos - labdarúgó<br>Hoboth Sándor - röplabdázó<br>Giczy Csaba - kajakozó<br>Füzesi Zsolt - labdarúgó<br>Kovács Zoltán - vízilabdázó<br>Vass Sándor - kézilabdázó<br>Móró Endre - thai-boxoló<br>Spránitz Gábor - sportlövő<br>Vass Károly - kézilabdázó<br>Monostori Attila - vízilabdázó<br>Lange Péter - Sail Racing Team<br>Battlay Krisztina - röplabdázó<br>Lőw Zsolt - labdarúgó<br>Nyerges Krisztián - labdarúgó<br>Czingli László - tornász<br>Szirányi Bence - jégkorongozó<br>Németh Zsanett - birkózó<br>Guczoghy György - tornász<br>Ágh György - vízilabdázó<br>Farkas János - kalapácsvető<br>Nagy Tibor - labdarúgó<br>Sebeők Mátyás - jiu-jitsu<br>Kolonics Márk - kyokushin karate</div>'
     },
 
     // --- 39. Csizmadia Ferenc (Személyek - Kék) ---
@@ -695,21 +669,32 @@ const pages = [
     // --- 40. Művésztanárok, képzőművészeink (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/40_művésztanáraink.jpg',
+        image: 'KEPEK/40_művésztanáraink_képzőm.jpg',
         pocketTitle: 'Képzőművészeink',
         gallery: [
-            'KEPEK/40_művésztanáraink/1_LAURENCSIK/1.jpg',
-            'KEPEK/40_művésztanáraink/1_LAURENCSIK/2.jpg',
+            'KEPEK/40_művésztanáraink/1_LAURENCSIK/A.jpg',
+            'KEPEK/40_művésztanáraink/1_LAURENCSIK/B.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/0.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/1.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/10.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/11.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/12.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/13.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/2.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/3.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/4.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/5.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/6.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/7.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/8.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/9.jpg',
             'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/A.jpg',
             'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/B.jpg',
             'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/C.jpg',
-            'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/D.jpg'
+            'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/D.jpg',
+            'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/E.jpg',
+            'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/F.jpg',
+            'KEPEK/40_művésztanáraink/3_BÓTOS SÁNDOR/G.jpg'
         ]
     },
     {
@@ -721,11 +706,17 @@ const pages = [
     // --- 41. Gépészet (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
-        image: 'KEPEK/41_gépészet.png',
+        image: 'KEPEK/41_gépész.jpg',
         pocketTitle: 'Gépészet',
         gallery: [
+            'KEPEK/41_gépészet/1.jpg',
+            'KEPEK/41_gépészet/2.jpg',
+            'KEPEK/41_gépészet/3.jpg',
             'KEPEK/41_gépészet/4.jpg',
-            'KEPEK/41_gépészet/5.jpg'
+            'KEPEK/41_gépészet/5.jpg',
+            'KEPEK/41_gépészet/6.jpg',
+            'KEPEK/41_gépészet/7.jpg',
+            'KEPEK/41_gépészet/8.jpg'
         ]
     },
     {
@@ -760,7 +751,7 @@ const pages = [
     // --- 43. Informatika (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
-        image: 'KEPEK/43_informatika.png',
+        image: 'KEPEK/43_informatika.jpg',
         pocketTitle: 'Informatika',
         gallery: [
             'KEPEK/43_informatika/1.jpg',
@@ -786,9 +777,9 @@ const pages = [
         pocketTitle: 'Műhelyfőnökök',
         gallery: [
             'KEPEK/44_ műhelyfőnökök  (2002)/Barabás Gábor.jpg',
-            'KEPEK/44_ műhelyfőnökök  (2002)/Garai József.jpg',
             'KEPEK/44_ műhelyfőnökök  (2002)/Műhelyfőnökök-2002.12.10-2.jpg',
             'KEPEK/44_ műhelyfőnökök  (2002)/Urbán Kornél.jpg',
+            'KEPEK/44_ műhelyfőnökök  (2002)/Garai József.jpg',
             'KEPEK/44_ műhelyfőnökök  (2002)/Vajda György.jpg'
         ]
     },
@@ -800,7 +791,8 @@ const pages = [
 
     // --- 45. Tanári szobák (Helyszínek - Zöld) ---
     {
-        type: 'image', eraCss: 'era-helyiseg'
+        type: 'image', eraCss: 'era-helyiseg',
+        image: 'KEPEK/45_tanári szoba.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -811,7 +803,7 @@ const pages = [
     // --- 46. Diák voltam, tanár lettem (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: ''
+        image: 'KEPEK/46_diák voltam, tanár lettem.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -825,7 +817,15 @@ const pages = [
         image: 'KEPEK/47_ballagás.jpg',
         pocketTitle: 'További képek',
         gallery: [
-            'KEPEK/47_ballagás/1.JPG',
+            'KEPEK/47_ballagás/1.jpg',
+            'KEPEK/47_ballagás/10.jpg',
+            'KEPEK/47_ballagás/11.jpg',
+            'KEPEK/47_ballagás/12.jpg',
+            'KEPEK/47_ballagás/13.jpg',
+            'KEPEK/47_ballagás/14.jpg',
+            'KEPEK/47_ballagás/15.jpg',
+            'KEPEK/47_ballagás/16.jpg',
+            'KEPEK/47_ballagás/17.jpg',
             'KEPEK/47_ballagás/2.jpg',
             'KEPEK/47_ballagás/3.jpg',
             'KEPEK/47_ballagás/4.jpg',
@@ -833,14 +833,7 @@ const pages = [
             'KEPEK/47_ballagás/6.jpg',
             'KEPEK/47_ballagás/7.jpg',
             'KEPEK/47_ballagás/8.jpg',
-            'KEPEK/47_ballagás/9.jpg',
-            'KEPEK/47_ballagás/10.jpg',
-            'KEPEK/47_ballagás/11.jpg',
-            'KEPEK/47_ballagás/12.jpg',
-            'KEPEK/47_ballagás/13.JPG',
-            'KEPEK/47_ballagás/14.jpg',
-            'KEPEK/47_ballagás/15.jpg',
-            'KEPEK/47_ballagás/16.jpg'
+            'KEPEK/47_ballagás/9.jpg'
         ]
     },
     {
@@ -852,18 +845,13 @@ const pages = [
     // --- 48. Aula, zsibongó (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/48_aula.jpg',
+        image: 'KEPEK/48_a zsibongó.jpg',
         pocketTitle: 'Aula és a zsibongó',
         gallery: [
-            'KEPEK/48_aula_zsibongó/1.jpg',
-            'KEPEK/48_aula_zsibongó/2.JPG',
-            'KEPEK/48_aula_zsibongó/3.JPG',
-            'KEPEK/48_aula_zsibongó/4.JPG',
-            'KEPEK/48_aula_zsibongó/5.JPG',
-            'KEPEK/48_aula_zsibongó/C.JPG',
-            'KEPEK/48_aula_zsibongó/D.JPG',
-            'KEPEK/48_aula_zsibongó/E.JPG',
-            'KEPEK/48_aula_zsibongó/F.JPG'
+            'KEPEK/48_zsibongó/2.jpg',
+            'KEPEK/48_zsibongó/3.jpg',
+            'KEPEK/48_zsibongó/4.jpg',
+            'KEPEK/48_zsibongó/5.jpg'
         ]
     },
     {
@@ -880,7 +868,7 @@ const pages = [
         gallery: [
             'KEPEK/49_Zombori/1.jpg',
             'KEPEK/49_Zombori/2.jpg',
-            'KEPEK/49_Zombori/3.JPG'
+            'KEPEK/49_Zombori/3.jpg'
         ]
     },
     {
@@ -896,6 +884,10 @@ const pages = [
         pocketTitle: '50. évforduló',
         gallery: [
             'KEPEK/50_évforduló/1.jpg',
+            'KEPEK/50_évforduló/10.jpg',
+            'KEPEK/50_évforduló/11.jpg',
+            'KEPEK/50_évforduló/12.jpg',
+            'KEPEK/50_évforduló/13.jpg',
             'KEPEK/50_évforduló/2.jpg',
             'KEPEK/50_évforduló/3.jpg',
             'KEPEK/50_évforduló/4.jpg',
@@ -903,14 +895,7 @@ const pages = [
             'KEPEK/50_évforduló/6.jpg',
             'KEPEK/50_évforduló/7.jpg',
             'KEPEK/50_évforduló/8.jpg',
-            'KEPEK/50_évforduló/9.jpg',
-            'KEPEK/50_évforduló/10.jpg',
-            'KEPEK/50_évforduló/11.jpg',
-            'KEPEK/50_évforduló/12.jpg',
-            'KEPEK/50_évforduló/13.jpg',
-            'KEPEK/50_évforduló/A - Az ünnepség.jpg',
-            'KEPEK/50_évforduló/B - Ünnepi beszéd.jpg',
-            'KEPEK/50_évforduló/C - Elnökség.jpg'
+            'KEPEK/50_évforduló/9.jpg'
         ]
     },
     {
@@ -922,31 +907,29 @@ const pages = [
     // --- 51. KGM - Technikumok az iparoktatásért (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/51_Zsolnay relikvia.jpg',
-        content: ''
+        image: 'KEPEK/51_Zsolnay relikvia.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         title: 'KGM - Technikumok az iparoktatásért',
-        content: 'A „KGM - TECHNIKUMOK AZ IPAROKTATÁSÉRT 1952–1972” felirat szerepel a jubileumi eozinmázas Zsolnay porcelánvázán és emlékplaketten. A tárgyakat feltehetően Gazder Antal iparművész tervezte 1972-ben a minisztérium alá tartozó szakoktatási hálózat fennállásának 20. évfordulójára.<br>A KGM: a Kohó- és Gépipari Minisztérium rövidítése, amely a szocialista Magyarország egyik legfontosabb ipari szervezete volt 1950 és 1980 között.<br><br>1952–1972: a két évszám az adott oktatási struktúra vagy az önálló minisztériumi szintű technikumi hálózat megalakulásának 20 éves jubileumát jelöli.'
+        content: 'A „KGM - TECHNIKUMOK AZ IPAROKTATÁSÉRT 1952–1972” felirat szerepel a jubileumi eozinmázas Zsolnay porcelánvázán és emlékplaketten. A tárgyakat feltehetően Gazder Antal iparművész tervezte 1972-ben a minisztérium alá tartozó szakoktatási hálózat fennállásának 20. évfordulójára.<br><br>A KGM: a Kohó- és Gépipari Minisztérium rövidítése, amely a szocialista Magyarország egyik legfontosabb ipari szervezete volt 1950 és 1980 között.<br><br>1952–1972: a két évszám az adott oktatási struktúra vagy az önálló minisztériumi szintű technikumi hálózat megalakulásának 20 éves jubileumát jelöli.'
     },
 
     // --- 52. Tanári kirándulások (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/52_tantestületi kir.jpg',
-        content: 'A tanári kirándulások az \'50-es évektől kezdődtek. Helyszíneket felidézni erről az időszakról ezidáig nem sikerült. Viszont egy 1968-as kirándulás felvételei négy összeállításban megtekinthetők:<br><br><a href="https://www.youtube.com/watch?v=HIjiH655OWs" target="_blank">https://www.youtube.com/watch?v=HIjiH655OWs</a><br><a href="https://www.youtube.com/watch?v=OdiwdCWJprM" target="_blank">https://www.youtube.com/watch?v=OdiwdCWJprM</a><br><a href="https://www.youtube.com/watch?v=xxCfwaUGvKk" target="_blank">https://www.youtube.com/watch?v=xxCfwaUGvKk</a><br><a href="https://www.youtube.com/watch?v=Bxi_Y7eihE0" target="_blank">https://www.youtube.com/watch?v=Bxi_Y7eihE0</a>'
+        image: 'KEPEK/52_tantestületi kir.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Tanári kirándulások',
-        content: 'A \'70-es, \'80-as években biztosan tudott, hogy Kassán is megfordult a tantestület. Éveken át Meldorf városának ottani intézményével ápolt igazán szoros baráti kapcsolatot a Landler tantestülete. Erről az időszakról remek hangulatú tanári focimeccsek fotói maradtak fenn.<br><br>A \'90-es években Balatonszentgyörgy-Vörs, Firenze, Róma, Nápoly, Párizs volt úti cél.<br><br>Míg a 2000-es években Bécsben fordultak meg a tantestület tagjai.<br><br>A 2020-as évekből ezidáig kellemes csapatépítő túra emlékei Egerből és Kiskunmajsáról maradtak fenn.'
+        content: 'A tanári kirándulások az \'50-es évektől kezdődtek. Helyszíneket felidézni erről az időszakról ezidáig nem sikerült. Viszont egy 1968-as kirándulás felvételei négy összeállításban megtekinthetők:<br><br><a href="https://www.youtube.com/watch?v=HIjiH655OWs" target="_blank">https://www.youtube.com/watch?v=HIjiH655OWs</a><br><a href="https://www.youtube.com/watch?v=OdiwdCWJprM" target="_blank">https://www.youtube.com/watch?v=OdiwdCWJprM</a><br><a href="https://www.youtube.com/watch?v=xxCfwaUGvKk" target="_blank">https://www.youtube.com/watch?v=xxCfwaUGvKk</a><br><a href="https://www.youtube.com/watch?v=Bxi_Y7eihE0" target="_blank">https://www.youtube.com/watch?v=Bxi_Y7eihE0</a><br><br>A \'70-es, \'80-as években biztosan tudott, hogy Kassán is megfordult a tantestület. Éveken át Meldorf városának ottani intézményével ápolt igazán szoros baráti kapcsolatot a Landler tantestülete. Erről az időszakról remek hangulatú tanári focimeccsek fotói maradtak fenn.<br><br>A \'90-es években Balatonszentgyörgy-Vörs, Firenze, Róma, Nápoly, Párizs volt úti cél.<br><br>Míg a 2000-es években Bécsben fordultak meg a tantestület tagjai.<br><br>A 2020-as évekből ezidáig kellemes csapatépítő túra emlékei Egerből és Kiskunmajsáról maradtak fenn.'
     },
 
     // --- 53. Madártávlatból (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/53_MADÁR.jpg'
+        image: 'KEPEK/53_madártávlat.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -957,12 +940,12 @@ const pages = [
     // --- 54. Tankönyvszerzőink (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/54_ tankönyvszerzőink.png'
+        image: 'KEPEK/54_ tankönyvszerzőink.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Tankönyvszerzőink',
-        content: 'A Landler/Umszki tanárainak, oktatóinak megjelent tankönyvei:<br>dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Z. - Juhász R. - Masa L.: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Szakmai alapismeretek I. (1988)<br>Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1., 2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)'
+        content: 'A Landler/Umszki tanárainak, oktatóinak megjelent tankönyvei:<br><table style="width: 100%; font-size: 1.45vh; line-height: 1.35; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 50%; vertical-align: top; padding-right: 1vw;">dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Z. - Juhász R. - Masa L.: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Szakmai alapismeretek I. (1988)</td><td style="width: 50%; vertical-align: top;">Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1., 2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)</td></tr></table>'
     },
 
     // --- 55. Landler Jenő (Személyek - Kék) ---
@@ -971,24 +954,28 @@ const pages = [
         image: 'KEPEK/55_Landler Jenő.jpg',
         pocketTitle: 'Landler Jenő',
         gallery: [
-            'KEPEK/55_Landler Jenő/55_Landler.jpg',
-            'KEPEK/55_Landler Jenő/101061967_3242993852401541_2394157664352337920_n.jpg'
-        ],
-        content: ''
+            'KEPEK/55_Landler Jenő/101061967_3242993852401541_2394157664352337920_n.jpg',
+            'KEPEK/55_Landler Jenő/55_Landler.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Landler Jenő',
-        content: 'Landler Jenő (1875–1928) magyar szociáldemokrata politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált. A Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br>Az intézmény nevében 35 éven át szerepelt a neve:<br><br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
+        content: 'Landler Jenő (1875–1928) magyar szociáldemokrata politikus, jogász, a 20. századi magyar munkásmozgalom egyik kulcsfigurája. A kommün bukása után emigrált. A Kommunisták Magyarországi Pártja egyik vezetője maradt haláláig.<br><br>Az intézmény nevében 35 éven át szerepelt a neve:<br><br>1955 – 1958 Landler Jenő Gépipari Technikum<br>1958 – 1965 Landler Jenő Híradásipari és Közlekedésgépészeti Technikum<br>1965 – 1970 Landler Jenő Gép- és Híradásipari Technikum<br>1970 – 1974 Landler Jenő Gép- és Híradásipari Technikum és Szakközépiskola<br>1974 – 1977 Landler Jenő Híradástechnikai és Gépészeti Szakközépiskola<br>1977 – 1990 Landler Jenő Gép- és Híradásipari Szakközépiskola'
     },
 
     // --- 56. OSZTV (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/56_tanulmányi versenyek.png',
+        image: 'KEPEK/56_tanulmányi versen.jpg',
         pocketTitle: 'Tanulmányi versenyek',
         gallery: [
-            'KEPEK/56_tanulmányi versenyek/medium_IMG_20250510_130934_Copy_947e4fd4d8.jpg'
+            'KEPEK/56_tanulmányi versenyek/1.jpg',
+            'KEPEK/56_tanulmányi versenyek/2.jpg',
+            'KEPEK/56_tanulmányi versenyek/3.jpg',
+            'KEPEK/56_tanulmányi versenyek/4.jpg',
+            'KEPEK/56_tanulmányi versenyek/5.jpg',
+            'KEPEK/56_tanulmányi versenyek/6.jpg'
         ]
     },
     {
@@ -1000,37 +987,32 @@ const pages = [
     // --- 57. Iskolazászló (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/57_iskolazászló.JPG',
+        image: 'KEPEK/57_iskolazászló.jpg',
         pocketTitle: 'Iskolazászló',
         gallery: [
             'KEPEK/57_iskolazászló/1.jpg',
             'KEPEK/57_iskolazászló/1B.jpg',
             'KEPEK/57_iskolazászló/2.jpg',
             'KEPEK/57_iskolazászló/3.jpg',
-            'KEPEK/57_iskolazászló/4.JPG',
+            'KEPEK/57_iskolazászló/4.jpg',
             'KEPEK/57_iskolazászló/6.jpg'
-        ],
-        content: ''
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         title: 'Iskolazászló',
-        content: 'Az 1977-es ballagáson, az 50 éves ünnepség napján a ballagók már az előző napon felavatott zászló mögött vonultak. Az egyik oldala nemzeti színű volt, a másik oldalon egyszínű piros mezőben az akkori iskolacímer volt látható. Valószínűsíthető, hogy ettől az időponttól minden ballagáson elöl ezt az iskolazászlót vitték. A kezdeti időszakból az 1977-es, az 1980-as és az 1986-os ballagásról maradt fenn „zászlós fotó”. A 2002-es múzeum avatóünnepségén az 1977-ben felavatott iskolazászló ott díszelgett a falon.<br>Ugyanis az iskola fennállásának 75. évfordulóján, a fenntartó képviselője új zászlót adott át. Ennek egyik oldalán a magyar címer, másik oldalán az iskolacímer volt látható. Azóta minden ballagási menet élén ez haladt.<br>A zászlót az igazgatói iroda előterében helyezték el. A rendszerváltás után új címeres zászló készült, hiszen akkor már nem volt aktuális önmagában a vörös szín, és a névváltozás miatt a rajta lévő iskolacímer sem.'
+        content: 'Az 1977-es ballagáson, az 50 éves ünnepség napján a ballagók már az előző napon felavatott zászló mögött vonultak. Az egyik oldala nemzeti színű volt, a másik oldalon egyszínű piros mezőben az akkori iskolacímer volt látható. Valószínűsíthető, hogy ettől az időponttól minden ballagáson elöl ezt az iskolazászlót vitték. A kezdeti időszakból az 1977-es, az 1980-as és az 1986-os ballagásról maradt fenn „zászlós fotó”. A 2002-es múzeum avatóünnepségén az 1977-ben felavatott iskolazászló ott díszelgett a falon.<br><br>Ugyanis az iskola fennállásának 75. évfordulóján, a fenntartó képviselője új zászlót adott át. Ennek egyik oldalán a magyar címer, másik oldalán az iskolacímer volt látható. Azóta minden ballagási menet élén ez haladt.<br>A zászlót az igazgatói iroda előterében helyezték el. A rendszerváltás után új címeres zászló készült, hiszen akkor már nem volt aktuális önmagában a vörös szín, és a névváltozás miatt a rajta lévő iskolacímer sem.'
     },
 
     // --- 58. Iskolai ünnepségek (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/58_iskolai ünnep.jpeg',
-        pocketTitle: 'Ünnepségek',
-        gallery: [
-            'KEPEK/58_iskolai ünnepségek.JPG'
-        ]
+        image: 'KEPEK/58_iskolai ünnep.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Iskolai ünnepségek',
-        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br>évnyitó,<br>az aradi vértanúk emléknapja (október 6.),<br>az 1956-os forradalom és szabadságharc emléknapja (október 23.),<br>a magyar nyelv napja (november 13.),<br>a magyar kultúra napja (január 22.),<br>a kommunista diktatúrák áldozatainak emléknapja (február 25.),<br>az 1848–49-es forradalom és szabadságharc emléknapja (március 15.),<br>a holokauszt magyarországi áldozatainak emléknapja (április 16.),<br>a nemzeti összetartozás napja (június 4.),<br>évzáró.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik – a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások –, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel. '
+        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik - a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások -, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.<br><br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br><br><table style="width: 100%; font-size: 1.45vh; line-height: 1.4; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 33%; vertical-align: top; padding-right: 1vw;">évnyitó<br>aradi vértanúk emléknapja (október 6.)<br>az 1956-os forradalom emléknapja (október 23.)</td><td style="width: 33%; vertical-align: top; padding-right: 1vw;">a magyar nyelv napja (november 13.)<br>a magyar kultúra napja (január 22.)<br>kommunista diktatúrák áldozatainak emléknapja (február 25.)</td><td style="width: 33%; vertical-align: top;">az 1848–49-es forradalom emléknapja (március 15.)<br>a holokauszt áldozatainak emléknapja (április 16.)<br>nemzeti összetartozás napja (június 4.)<br>évzáró</td></tr></table>'
     },
 
     // --- 59. Vákuumtechnikai műhely (Helyszínek - Zöld) ---
@@ -1039,42 +1021,31 @@ const pages = [
         image: 'KEPEK/59_elektroncső.jpg',
         pocketTitle: 'Elektroncső',
         gallery: [
-            'KEPEK/59_elektroncső/1.JPG',
+            'KEPEK/59_elektroncső/1.jpg',
             'KEPEK/59_elektroncső/2.jpg',
             'KEPEK/59_elektroncső/3.jpg',
             'KEPEK/59_elektroncső/4.jpg',
             'KEPEK/59_elektroncső/5.jpg',
-            'KEPEK/59_elektroncső/6.JPG',
-            'KEPEK/59_elektroncső/7.JPG',
-            'KEPEK/59_elektroncső/A.JPG',
-            'KEPEK/59_elektroncső/B.jpg',
-            'KEPEK/59_elektroncső/C.JPG',
-            'KEPEK/59_elektroncső/D.jpg',
-            'KEPEK/59_elektroncső/E.jpg',
-            'KEPEK/59_elektroncső/F.jpg',
-            'KEPEK/59_elektroncső/G.JPG',
-            'KEPEK/59_elektroncső/H.jpg'
-        ],
-        content: ''
+            'KEPEK/59_elektroncső/6.jpg',
+            'KEPEK/59_elektroncső/7.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'Elektroncső gyártás',
-        content: 'Az 1961/62-es tanévben az iskola tanműhelyében – a mai raktár helyén – alakítottak ki a Tungsram Gyár jóvoltából egy vákuumtechnikai műhelyt. Ebben az időszakban a gyárnak egyre több technikusra volt szüksége, hiszen a hagyományos izzólámpakészítés mellett felfutott a fénycsőgyártás. Az elektroncsőgyártás volumene pedig a növekedő Orion, Videoton televíziógyártás miatt nőtt jelentősen. Telepítettek ponthegesztő gépet és vákuumszivattyút is.<br>Az iskolában az izzólámpa- és elektroncsőgyártás befejező műveleteire került sor. A tanulók először a gázlánggal felhevített üveg megmunkálását – hajlítást, összeforrasztást – gyakorolták. Ezt követte az izzólámpakészítés néhány művelete, majd következett az EL 84 elektroncső gyártása.<br>A műveletek a következők voltak: a gyárban előszerelt komplett szerelvényt ponthegesztéssel a kivezetéssel ellátott üvegtalphoz rögzítették; a vákuumcsonkkal ellátott búrát a szerelvényezett üvegtalppal összeolvasztották gázláng segítségével; majd következett a vákuumszivattyúzás, a getterezés és a funkcionális működés vizsgálata.<br><br>A vákuumtechnikai műhely működtetése az 1971/72-es tanévben fejeződött be. Ennek oka, hogy a híradástechnikai profilt a számítástechnikai képzés váltotta fel.'
+        content: 'Az 1961/62-es tanévben az iskola tanműhelyében – a mai raktár helyén – alakítottak ki a Tungsram Gyár jóvoltából egy vákuumtechnikai műhelyt. Ebben az időszakban a gyárnak egyre több technikusra volt szüksége, hiszen a hagyományos izzólámpakészítés mellett felfutott a fénycsőgyártás. Az elektroncsőgyártás volumene pedig a növekedő Orion, Videoton televíziógyártás miatt nőtt jelentősen. Telepítettek ponthegesztő gépet és vákuumszivattyút is.<br>Az iskolában az izzólámpa- és elektroncsőgyártás befejező műveleteire került sor. A tanulók először a gázlánggal felhevített üveg megmunkálását – hajlítást, összeforrasztást – gyakorolták. Ezt követte az izzólámpakészítés néhány művelete, majd következett az EL 84 elektroncső gyártása.<br><br>A műveletek a következők voltak: a gyárban előszerelt komplett szerelvényt ponthegesztéssel a kivezetéssel ellátott üvegtalphoz rögzítették; a vákuumcsonkkal ellátott búrát a szerelvényezett üvegtalppal összeolvasztották gázláng segítségével; majd következett a vákuumszivattyúzás, a getterezés és a funkcionális működés vizsgálata.<br><br>A vákuumtechnikai műhely működtetése az 1971/72-es tanévben fejeződött be. Ennek oka, hogy a híradástechnikai profilt a számítástechnikai képzés váltotta fel.'
     },
 
     // --- 60. Versenyek, LMS (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/60_sikerek magyar.jpg',
+        image: 'KEPEK/60_sikerek közismereti.jpg',
         pocketTitle: 'Közismereti sikerek',
         gallery: [
-            'KEPEK/60_sikerek közismereti tárgyakból/0.jpg',
             'KEPEK/60_sikerek közismereti tárgyakból/1.jpg',
             'KEPEK/60_sikerek közismereti tárgyakból/2.jpg',
             'KEPEK/60_sikerek közismereti tárgyakból/3.jpg',
-            'KEPEK/60_sikerek közismereti tárgyakból/4.jpg',
-            'KEPEK/60_sikerek közismereti tárgyakból/5.jpg'
+            'KEPEK/60_sikerek közismereti tárgyakból/4.jpg'
         ]
     },
     {
@@ -1100,22 +1071,19 @@ const pages = [
         image: 'KEPEK/62_ELSŐ SZÁMÍTÓGÉP.jpg',
         pocketTitle: 'Az első számítógép',
         gallery: [
-            'KEPEK/62_első számítógép/0.jpg',
             'KEPEK/62_első számítógép/1.jpg',
+            'KEPEK/62_első számítógép/10.jpg',
+            'KEPEK/62_első számítógép/11.jpg',
+            'KEPEK/62_első számítógép/12.jpg',
+            'KEPEK/62_első számítógép/13.jpg',
             'KEPEK/62_első számítógép/2.jpg',
             'KEPEK/62_első számítógép/3.jpg',
             'KEPEK/62_első számítógép/4.jpg',
             'KEPEK/62_első számítógép/5.jpg',
-            'KEPEK/62_első számítógép/6.JPG',
+            'KEPEK/62_első számítógép/6.jpg',
             'KEPEK/62_első számítógép/7.jpg',
             'KEPEK/62_első számítógép/8.jpg',
-            'KEPEK/62_első számítógép/9.jpg',
-            'KEPEK/62_első számítógép/10.jpg',
-            'KEPEK/62_első számítógép/11.jpg',
-            'KEPEK/62_első számítógép/12.jpg',
-            'KEPEK/62_első számítógép/A - A teljes konfiguráció diákokkal.jpg',
-            'KEPEK/62_első számítógép/A gyorsolvasó.jpg',
-            'KEPEK/62_első számítógép/A kezelőpult.jpg'
+            'KEPEK/62_első számítógép/9.jpg'
         ]
     },
     {
@@ -1130,9 +1098,9 @@ const pages = [
         image: 'KEPEK/63_Görgey szobor koszorúzás.jpg',
         pocketTitle: 'Görgey 26',
         gallery: [
-            'KEPEK/63_Görgey 26/1.JPG',
-            'KEPEK/63_Görgey 26/2.JPG',
-            'KEPEK/63_Görgey 26/3.JPG',
+            'KEPEK/63_Görgey 26/1.jpg',
+            'KEPEK/63_Görgey 26/2.jpg',
+            'KEPEK/63_Görgey 26/3.jpg',
             'KEPEK/63_Görgey 26/4.jpg',
             'KEPEK/63_Görgey 26/5.jpg',
             'KEPEK/63_Görgey 26/6.jpg',
@@ -1151,10 +1119,10 @@ const pages = [
         image: 'KEPEK/64_Hackné Nyerges Rita.jpg',
         pocketTitle: 'Hackné Nyerges Rita',
         gallery: [
-            'KEPEK/64_Hackné Nyerges Rita/1.JPG',
-            'KEPEK/64_Hackné Nyerges Rita/2.JPG',
-            'KEPEK/64_Hackné Nyerges Rita/3.JPG',
-            'KEPEK/64_Hackné Nyerges Rita/4.JPG',
+            'KEPEK/64_Hackné Nyerges Rita/1.jpg',
+            'KEPEK/64_Hackné Nyerges Rita/2.jpg',
+            'KEPEK/64_Hackné Nyerges Rita/3.jpg',
+            'KEPEK/64_Hackné Nyerges Rita/4.jpg',
             'KEPEK/64_Hackné Nyerges Rita/5.jpg'
         ]
     },
@@ -1167,11 +1135,13 @@ const pages = [
     // --- 65. Internetes weboldal (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
+        image: 'KEPEK/65_tanulmányi verseny.jpg',
         pocketTitle: 'Szakmai sikerek',
         gallery: [
-            'KEPEK/65_szakmai sikerek/485617731_1393636744951556_7441646369026167608_n.jpg',
-            'KEPEK/65_szakmai sikerek/490019610_1208613617940285_5452175480160805664_n.jpg',
-            'KEPEK/65_szakmai sikerek/medium_letoeltes_a15da0a54f.jfif'
+            'KEPEK/65_szakmai sikerek/0.jpg',
+            'KEPEK/65_szakmai sikerek/1.jpg',
+            'KEPEK/65_szakmai sikerek/2.jpg',
+            'KEPEK/65_szakmai sikerek/3.jpg'
         ]
     },
     {
@@ -1183,14 +1153,12 @@ const pages = [
     // --- 66. Szakmák éjszakája (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/66B_szakmák éjszakája.jpg',
+        image: 'KEPEK/66 _szakmák éjszakája.jpg',
         pocketTitle: 'Szakmák éjszakája',
         gallery: [
             'KEPEK/66_szakmák éjszakája/1.jpg',
             'KEPEK/66_szakmák éjszakája/2.jpg',
-            'KEPEK/66_szakmák éjszakája/K.jpg',
-            'KEPEK/66_szakmák éjszakája/L.jpg',
-            'KEPEK/66_szakmák éjszakája/szakmák éjszakája.jpg'
+            'KEPEK/66_szakmák éjszakája/3.jpg'
         ]
     },
     {
@@ -1222,18 +1190,19 @@ const pages = [
     // --- 68. Újpesti Középiskolai Börze (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/68_újpesti iskolák börzéje.png',
+        image: 'KEPEK/68_újpesti iskolák börzéje.jpg',
         pocketTitle: 'Újpesti Középiskolai Börze',
         gallery: [
-            'KEPEK/68_középiskolai börze/1.JPG',
-            'KEPEK/68_középiskolai börze/2.JPG',
-            'KEPEK/68_középiskolai börze/3.JPG',
-            'KEPEK/68_középiskolai börze/4.JPG',
-            'KEPEK/68_középiskolai börze/5.JPG',
-            'KEPEK/68_középiskolai börze/6.JPG',
-            'KEPEK/68_középiskolai börze/7.JPG',
-            'KEPEK/68_középiskolai börze/I.jpg',
-            'KEPEK/68_középiskolai börze/J.jpg'
+            'KEPEK/68_középiskolai börze/1.jpg',
+            'KEPEK/68_középiskolai börze/10.jpg',
+            'KEPEK/68_középiskolai börze/2.jpg',
+            'KEPEK/68_középiskolai börze/3.jpg',
+            'KEPEK/68_középiskolai börze/4.jpg',
+            'KEPEK/68_középiskolai börze/5.jpg',
+            'KEPEK/68_középiskolai börze/6.jpg',
+            'KEPEK/68_középiskolai börze/7.jpg',
+            'KEPEK/68_középiskolai börze/8.jpg',
+            'KEPEK/68_középiskolai börze/9.jpg'
         ]
     },
     {
@@ -1245,12 +1214,7 @@ const pages = [
     // --- 69. Diákszáj (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/69_diákszáj.png',
-        pocketTitle: 'Diákszáj',
-        gallery: [
-            'KEPEK/69_diákszáj/Juliánus Béla.png',
-            'KEPEK/69_diákszáj/Szulejmán.png'
-        ]
+        image: 'KEPEK/69_diákszáj.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -1261,7 +1225,7 @@ const pages = [
     // --- 70. Guinness rekord és uniós csatlakozás (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/70_uniós csatlakozás, guinness (2).jpg',
+        image: 'KEPEK/70_uniós csatlakozás, guinness.jpg',
         pocketTitle: '24 órás angol óra',
         gallery: [
             'KEPEK/70_uniós csatlakozás_Guinness/1.jpg'
@@ -1279,9 +1243,10 @@ const pages = [
         image: 'KEPEK/71_gólyatábor_gólyanap.jpg',
         pocketTitle: 'Gólyatábor',
         gallery: [
+            'KEPEK/71_gólyatábor, gólyanap/1.jpg',
             'KEPEK/71_gólyatábor, gólyanap/2.jpg',
-            'KEPEK/71_gólyatábor, gólyanap/4.jpg',
-            'KEPEK/71_gólyatábor, gólyanap/5.jpg'
+            'KEPEK/71_gólyatábor, gólyanap/3.jpg',
+            'KEPEK/71_gólyatábor, gólyanap/4.jpg'
         ]
     },
     {
@@ -1311,7 +1276,7 @@ const pages = [
     // --- 73. Technikai dolgozók (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/73_technikai dolgozók.JPG',
+        image: 'KEPEK/73_technikai dolgozók.jpg',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -1322,10 +1287,11 @@ const pages = [
     // --- 74. 75 éves az iskola (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/74_75 éves az umszki.png',
+        image: 'KEPEK/74_75 éves az umszki.jpg',
         pocketTitle: '75 éves az iskola',
         gallery: [
             'KEPEK/74_75 éves az iskola/1.jpg',
+            'KEPEK/74_75 éves az iskola/10.jpg',
             'KEPEK/74_75 éves az iskola/2.jpg',
             'KEPEK/74_75 éves az iskola/3.jpg',
             'KEPEK/74_75 éves az iskola/4.jpg',
@@ -1333,14 +1299,7 @@ const pages = [
             'KEPEK/74_75 éves az iskola/6.jpg',
             'KEPEK/74_75 éves az iskola/7.jpg',
             'KEPEK/74_75 éves az iskola/8.jpg',
-            'KEPEK/74_75 éves az iskola/9.jpg',
-            'KEPEK/74_75 éves az iskola/10.jpg',
-            'KEPEK/74_75 éves az iskola/A. oldal.jpg',
-            'KEPEK/74_75 éves az iskola/B (2).jpg',
-            'KEPEK/74_75 éves az iskola/B. oldal.jpg',
-            'KEPEK/74_75 éves az iskola/B.jpg',
-            'KEPEK/74_75 éves az iskola/F.jpg',
-            'KEPEK/74_75 éves az iskola/Kép16.jpg'
+            'KEPEK/74_75 éves az iskola/9.jpg'
         ]
     },
     {
@@ -1352,25 +1311,29 @@ const pages = [
     // --- 75. A régi múzeum (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/75_75 éves műzeum.JPG',
+        image: 'KEPEK/75_75 éves műzeum.jpg',
         pocketTitle: 'A régi múzeum',
         gallery: [
             'KEPEK/75_75 éves iskolamúzeum/1.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/10.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/11.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/12.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/13.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/14.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/15.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/16.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/17.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/18.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/19.jpg',
             'KEPEK/75_75 éves iskolamúzeum/2.jpg',
-            'KEPEK/75_75 éves iskolamúzeum/75_RÉGI ÚZEUM.jpg',
-            'KEPEK/75_75 éves iskolamúzeum/D.jpg',
-            'KEPEK/75_75 éves iskolamúzeum/D (2).jpg',
-            'KEPEK/75_75 éves iskolamúzeum/PANORAMA.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3931.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3932.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3934.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3936.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3938.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3940.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3942.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3945.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3946.JPG',
-            'KEPEK/75_75 éves iskolamúzeum/PICT3949.JPG'
+            'KEPEK/75_75 éves iskolamúzeum/20.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/3.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/4.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/5.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/6.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/7.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/8.jpg',
+            'KEPEK/75_75 éves iskolamúzeum/9.jpg'
         ]
     },
     {
@@ -1386,12 +1349,12 @@ const pages = [
         pocketTitle: 'Osztálytablók',
         gallery: [
             'KEPEK/76_ osztálytalálkozók/1.jpg',
-            'KEPEK/76_ osztálytalálkozók/2.JPG',
-            'KEPEK/76_ osztálytalálkozók/3.JPG',
-            'KEPEK/76_ osztálytalálkozók/4.JPG',
-            'KEPEK/76_ osztálytalálkozók/5.JPG',
+            'KEPEK/76_ osztálytalálkozók/2.jpg',
+            'KEPEK/76_ osztálytalálkozók/3.jpg',
+            'KEPEK/76_ osztálytalálkozók/4.jpg',
+            'KEPEK/76_ osztálytalálkozók/5.jpg',
             'KEPEK/76_ osztálytalálkozók/6.jpg',
-            'KEPEK/76_ osztálytalálkozók/7.JPG'
+            'KEPEK/76_ osztálytalálkozók/7.jpg'
         ]
     },
     {
@@ -1403,12 +1366,12 @@ const pages = [
     // --- 77. Újpesti akadémikusok koszorúzása (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/77_újpesti akadémikusok emléktáblái.jpeg',
+        image: 'KEPEK/77_újpesti akadémikusok emléktáblái.jpg',
         pocketTitle: 'Akadémikusok',
         gallery: [
             'KEPEK/77_akadémikusok/1.jpg',
             'KEPEK/77_akadémikusok/2.jpg',
-            'KEPEK/77_akadémikusok/koszorúzás.jpg'
+            'KEPEK/77_akadémikusok/77_AKADÉMIKUSOK EMLÉKTÁBLÁI.jpg'
         ]
     },
     {
@@ -1420,7 +1383,7 @@ const pages = [
     // --- 78. Angol kéttannyelvűség (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/78_angol kéttannyelvűség.png'
+        image: 'KEPEK/78_angol kéttannyelvűség.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -1431,7 +1394,7 @@ const pages = [
     // --- 79. Német kéttannyelvűség (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/79_német kéttannyelvű.png'
+        image: 'KEPEK/79_német kéttannyelvű.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -1442,13 +1405,13 @@ const pages = [
     // --- 80. Urbán Kornél (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/80_urbán kornél.jpg',
+        image: 'KEPEK/80_Urbán Kornél.jpg',
         pocketTitle: 'Urbán Kornél',
         gallery: [
-            'KEPEK/80_Urbán Kornél/1_érettségi tablókép.jpg',
-            'KEPEK/80_Urbán Kornél/2_tanárként.jpg',
-            'KEPEK/80_Urbán Kornél/3_munka közben.jpg',
-            'KEPEK/80_Urbán Kornél/4_nyugdíjasként.jpg'
+            'KEPEK/80_Urbán Kornél/1.jpg',
+            'KEPEK/80_Urbán Kornél/2.jpg',
+            'KEPEK/80_Urbán Kornél/3.jpg',
+            'KEPEK/80_Urbán Kornél/4.jpg'
         ]
     },
     {
@@ -1460,7 +1423,10 @@ const pages = [
     // --- 81. Stúdió (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/81_stúdió.JPG'
+        image: 'KEPEK/81_stúdiósok.jpg',
+        gallery: [
+            'KEPEK/81_stúdiósok/81_stúdió.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -1471,10 +1437,11 @@ const pages = [
     // --- 82. Építőtáborok (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/82_építőtáborok.jpg',
+        image: 'KEPEK/82_építőtabor.jpg',
         pocketTitle: 'Építőtáborok',
         gallery: [
             'KEPEK/82_építőtáborok/1.jpg',
+            'KEPEK/82_építőtáborok/10.jpg',
             'KEPEK/82_építőtáborok/2.jpg',
             'KEPEK/82_építőtáborok/3.jpg',
             'KEPEK/82_építőtáborok/4.jpg',
@@ -1482,8 +1449,7 @@ const pages = [
             'KEPEK/82_építőtáborok/6.jpg',
             'KEPEK/82_építőtáborok/7.jpg',
             'KEPEK/82_építőtáborok/8.jpg',
-            'KEPEK/82_építőtáborok/9.jpg',
-            'KEPEK/82_építőtáborok/ea528284-d658-4fa2-8b36-31a15a6241f9.jpg'
+            'KEPEK/82_építőtáborok/9.jpg'
         ]
     },
     {
@@ -1495,18 +1461,18 @@ const pages = [
     // --- 83. Nyelvi táborok (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/83_nyelvi táborok.JPG',
+        image: 'KEPEK/83_nyelvi táborok.jpg',
         pocketTitle: 'Nyelvi táborok',
         gallery: [
-            'KEPEK/83_nyelvi táborok/1.JPG',
-            'KEPEK/83_nyelvi táborok/2.JPG',
-            'KEPEK/83_nyelvi táborok/3.JPG',
-            'KEPEK/83_nyelvi táborok/4.JPG',
-            'KEPEK/83_nyelvi táborok/5.JPG',
-            'KEPEK/83_nyelvi táborok/6.JPG',
-            'KEPEK/83_nyelvi táborok/7.JPG',
-            'KEPEK/83_nyelvi táborok/8.JPG',
-            'KEPEK/83_nyelvi táborok/9.JPG'
+            'KEPEK/83_nyelvi táborok/1.jpg',
+            'KEPEK/83_nyelvi táborok/2.jpg',
+            'KEPEK/83_nyelvi táborok/3.jpg',
+            'KEPEK/83_nyelvi táborok/4.jpg',
+            'KEPEK/83_nyelvi táborok/5.jpg',
+            'KEPEK/83_nyelvi táborok/6.jpg',
+            'KEPEK/83_nyelvi táborok/7.jpg',
+            'KEPEK/83_nyelvi táborok/8.jpg',
+            'KEPEK/83_nyelvi táborok/9.jpg'
         ]
     },
     {
@@ -1518,17 +1484,17 @@ const pages = [
     // --- 84. Erasmus+ (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/84_erasmus.JPG',
-        pocketTitle: 'Erasmus+ Velux',
+        image: 'KEPEK/84_erasmus.jpg',
+        pocketTitle: 'Pályázati sikerek',
         gallery: [
-            'KEPEK/84_Erasmu+ Velux/1.jpg',
-            'KEPEK/84_Erasmu+ Velux/2.jpg',
-            'KEPEK/84_Erasmu+ Velux/2.png',
-            'KEPEK/84_Erasmu+ Velux/3.jpg',
-            'KEPEK/84_Erasmu+ Velux/3.png',
-            'KEPEK/84_Erasmu+ Velux/4.jpg',
-            'KEPEK/84_Erasmu+ Velux/5.jpg',
-            'KEPEK/84_Erasmu+ Velux/velux.jpg'
+            'KEPEK/84_pályázati sikerek/1.jpg',
+            'KEPEK/84_pályázati sikerek/2.jpg',
+            'KEPEK/84_pályázati sikerek/3.jpg',
+            'KEPEK/84_pályázati sikerek/4.jpg',
+            'KEPEK/84_pályázati sikerek/5.jpg',
+            'KEPEK/84_pályázati sikerek/6.jpg',
+            'KEPEK/84_pályázati sikerek/7.jpg',
+            'KEPEK/84_pályázati sikerek/8.jpg'
         ]
     },
     {
@@ -1551,24 +1517,16 @@ const pages = [
     // --- 86. World Scholar's Cup 2018 (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/86_World Schcolars Cup 2018.jpg',
+        image: 'KEPEK/86_World Schcolar\'s Cup 2018.jpg',
         pocketTitle: 'World Scholar\'s Cup 2018',
         gallery: [
-            'KEPEK/86_World Scholars Cup 2018/A.jpg',
-            'KEPEK/86_World Scholars Cup 2018/A_1.jpg',
-            'KEPEK/86_World Scholars Cup 2018/B.png',
-            'KEPEK/86_World Scholars Cup 2018/C.jpg',
-            'KEPEK/86_World Scholars Cup 2018/D.jpg',
-            'KEPEK/86_World Scholars Cup 2018/E.jpg',
-            'KEPEK/86_World Scholars Cup 2018/F.jpg',
-            'KEPEK/86_World Scholars Cup 2018/G.jpg',
-            'KEPEK/86_World Scholars Cup 2018/H.jpg',
-            'KEPEK/86_World Scholars Cup 2018/I.jpg',
-            'KEPEK/86_World Scholars Cup 2018/J.jpeg',
-            'KEPEK/86_World Scholars Cup 2018/K.jpg',
-            'KEPEK/86_World Scholars Cup 2018/L.jpeg',
-            'KEPEK/86_World Scholars Cup 2018/M.jpg',
-            'KEPEK/86_World Scholars Cup 2018/N.png'
+            'KEPEK/86_World Scholar\'s Cup 2018/1.jpg',
+            'KEPEK/86_World Scholar\'s Cup 2018/2.jpg',
+            'KEPEK/86_World Scholar\'s Cup 2018/3.jpg',
+            'KEPEK/86_World Scholar\'s Cup 2018/4.jpg',
+            'KEPEK/86_World Scholar\'s Cup 2018/5.jpg',
+            'KEPEK/86_World Scholar\'s Cup 2018/6.jpg',
+            'KEPEK/86_World Scholar\'s Cup 2018/7.jpg'
         ]
     },
     {
@@ -1600,27 +1558,25 @@ const pages = [
     // --- 88. Igazgatók (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: ''
+        image: 'KEPEK/88_iskolavezetés.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Igazgatóink',
-        content: 'Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br>BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980<br>CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –'
+        content: 'Intézményünk 100 éve alatt számos nagyszerű pedagógus vezette az iskolát, akiknek szakmai elhivatottsága, közösségépítő munkája és fejlesztő törekvései formálták az itt tanuló generációkat. Különböző történelmi és társadalmi kihívások közepette álltak helyt, biztosítva az oktatás magas színvonalát.<br><br>Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br><table style="width: 100%; font-size: 1.45vh; line-height: 1.4; margin-top: 1vh; border: none; text-align: left;"><tr><td style="width: 50%; vertical-align: top; padding-right: 1vw;">BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980</td><td style="width: 50%; vertical-align: top;">CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –</td></tr></table>'
     },
 
     // --- 89. Dr. Nyárs Csaba-díj, Czellér András-díj (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/89_nyárs csaba díj.JPG',
+        image: 'KEPEK/89_nyárs csaba díj.jpg',
         pocketTitle: 'Dr. Nyárs Csaba-díj',
         gallery: [
-            'KEPEK/89_nyárs csaba díj/1.JPG',
-            'KEPEK/89_nyárs csaba díj/2.JPG',
-            'KEPEK/89_nyárs csaba díj/3.JPG',
-            'KEPEK/89_nyárs csaba díj/4.JPG',
-            'KEPEK/89_nyárs csaba díj/5.png',
-            'KEPEK/89_nyárs csaba díj/G.JPG',
-            'KEPEK/89_nyárs csaba díj/I.JPG'
+            'KEPEK/89_nyárs csaba díj/1.jpg',
+            'KEPEK/89_nyárs csaba díj/2.jpg',
+            'KEPEK/89_nyárs csaba díj/3.jpg',
+            'KEPEK/89_nyárs csaba díj/4.jpg',
+            'KEPEK/89_nyárs csaba díj/5.jpg'
         ]
     },
     {
@@ -1632,25 +1588,32 @@ const pages = [
     // --- 90. 90. tanév ünnepe (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/90_.JPG',
+        image: 'KEPEK/90_ünnep.jpg',
         pocketTitle: '90. tanév ünnepe',
         gallery: [
             'KEPEK/90_szülinap/1.jpg',
-            'KEPEK/90_szülinap/2.png',
-            'KEPEK/90_szülinap/3.JPG',
-            'KEPEK/90_szülinap/4.JPG',
-            'KEPEK/90_szülinap/5.JPG',
-            'KEPEK/90_szülinap/6.JPG',
-            'KEPEK/90_szülinap/7.JPG',
-            'KEPEK/90_szülinap/8.JPG',
-            'KEPEK/90_szülinap/9.JPG',
             'KEPEK/90_szülinap/10.jpg',
             'KEPEK/90_szülinap/11.jpg',
-            'KEPEK/90_szülinap/12.JPG',
+            'KEPEK/90_szülinap/12.jpg',
             'KEPEK/90_szülinap/13.jpg',
             'KEPEK/90_szülinap/14.jpg',
-            'KEPEK/90_szülinap/15.JPG',
-            'KEPEK/90_szülinap/A - P1013055.JPG'
+            'KEPEK/90_szülinap/15.jpg',
+            'KEPEK/90_szülinap/16.jpg',
+            'KEPEK/90_szülinap/17.jpg',
+            'KEPEK/90_szülinap/18.jpg',
+            'KEPEK/90_szülinap/19.jpg',
+            'KEPEK/90_szülinap/19b.jpg',
+            'KEPEK/90_szülinap/2.jpg',
+            'KEPEK/90_szülinap/20.jpg',
+            'KEPEK/90_szülinap/21.jpg',
+            'KEPEK/90_szülinap/3.jpg',
+            'KEPEK/90_szülinap/4.jpg',
+            'KEPEK/90_szülinap/5.jpg',
+            'KEPEK/90_szülinap/6.jpg',
+            'KEPEK/90_szülinap/7.jpg',
+            'KEPEK/90_szülinap/7b.jpg',
+            'KEPEK/90_szülinap/8.jpg',
+            'KEPEK/90_szülinap/9.jpg'
         ]
     },
     {
@@ -1662,25 +1625,16 @@ const pages = [
     // --- 91. Címer rekonstrukció (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/91_homlokzat.JPG',
+        image: 'KEPEK/91_címer .jpg',
         pocketTitle: 'Címer rekonstrukció',
         gallery: [
-            'KEPEK/91_címer rekonstrukció/1.JPG',
-            'KEPEK/91_címer rekonstrukció/2.jpg',
-            'KEPEK/91_címer rekonstrukció/3.JPG',
-            'KEPEK/91_címer rekonstrukció/5.jpg',
-            'KEPEK/91_címer rekonstrukció/6.jpg',
-            'KEPEK/91_címer rekonstrukció/7.JPG',
-            'KEPEK/91_címer rekonstrukció/8.jpg',
-            'KEPEK/91_címer rekonstrukció/27_iskolacímerek.jpg',
-            'KEPEK/91_címer rekonstrukció/36222849_337497080115360_6456547593601155072_n.jpg',
-            'KEPEK/91_címer rekonstrukció/36269341_10204356952720590_8321282094122663936_n.jpg',
-            'KEPEK/91_címer rekonstrukció/36312680_337496553448746_6207689779652329472_n.jpg',
-            'KEPEK/91_címer rekonstrukció/36316749_1852273668170779_1388618671177334784_n.jpg',
-            'KEPEK/91_címer rekonstrukció/IMG_4794 - A.JPG',
-            'KEPEK/91_címer rekonstrukció/IMG_6427.JPG',
-            'KEPEK/91_címer rekonstrukció/IMG_6434 - D.JPG',
-            'KEPEK/91_címer rekonstrukció/IMG_6503 - N.JPG'
+            'KEPEK/91_címerrekonstrukció/1.jpg',
+            'KEPEK/91_címerrekonstrukció/2.jpg',
+            'KEPEK/91_címerrekonstrukció/3.jpg',
+            'KEPEK/91_címerrekonstrukció/5.jpg',
+            'KEPEK/91_címerrekonstrukció/6.jpg',
+            'KEPEK/91_címerrekonstrukció/7.jpg',
+            'KEPEK/91_címerrekonstrukció/8.jpg'
         ]
     },
     {
@@ -1695,22 +1649,25 @@ const pages = [
         image: 'KEPEK/92_iskolakert.jpg',
         pocketTitle: 'Az iskolakert',
         gallery: [
-            'KEPEK/92_iskolakert/1928_nincs kerítés.jpg',
-            'KEPEK/92_iskolakert/1932_van kerítéés.jpg',
-            'KEPEK/92_iskolakert/1960-as évek.jpg',
+            'KEPEK/92_iskolakert/1.jpg',
+            'KEPEK/92_iskolakert/2.jpg',
+            'KEPEK/92_iskolakert/3.jpg',
+            'KEPEK/92_iskolakert/4.jpg',
             'KEPEK/92_iskolakert/508113658_24373468288906396_3354828008535129465_n.jpg',
             'KEPEK/92_iskolakert/60219770_10156830053839821_841068988715761664_n.jpg',
-            'KEPEK/92_iskolakert/G.JPG',
-            'KEPEK/92_iskolakert/H.JPG',
+            'KEPEK/92_iskolakert/G.jpg',
+            'KEPEK/92_iskolakert/H.jpg',
             'KEPEK/92_iskolakert/NYÁR_1.jpg',
             'KEPEK/92_iskolakert/NYÁR_2.jpg',
-            'KEPEK/92_iskolakert/P1011977.JPG',
-            'KEPEK/92_iskolakert/P1011982.JPG',
+            'KEPEK/92_iskolakert/P1011977.jpg',
+            'KEPEK/92_iskolakert/P1011982.jpg',
             'KEPEK/92_iskolakert/TAVASZ_2.jpg',
             'KEPEK/92_iskolakert/TAVASZ_3.jpg',
             'KEPEK/92_iskolakert/TAVASZ_4.jpg',
             'KEPEK/92_iskolakert/TÉL_1.jpg',
             'KEPEK/92_iskolakert/TÉL_3.jpg',
+            'KEPEK/92_iskolakert/TÉL_4.jpg',
+            'KEPEK/92_iskolakert/umszki_004.jpg',
             'KEPEK/92_iskolakert/ŐSZ_1.jpg'
         ]
     },
@@ -1723,7 +1680,7 @@ const pages = [
     // --- 93. UMSZKI diákdíj (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/93_umszki diákdíj.JPG'
+        image: 'KEPEK/93_umszki diákdíj.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -1734,27 +1691,35 @@ const pages = [
     // --- 94. CNC és 3D nyomtató, lézervágó (Események - Bézs / era-targyak) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: ''
+        image: 'KEPEK/94_korszerű gyártás.jpg',
+        gallery: [
+            'KEPEK/94_korszerű gyártástechnológiák/3c477d76-e2fc-428f-8b99-7285bbb65e69.jpg',
+            'KEPEK/94_korszerű gyártástechnológiák/88b7348d-1f5f-4a64-9f7e-f9b79c2af188.jpg',
+            'KEPEK/94_korszerű gyártástechnológiák/9a3d9b61-22d5-4cd3-ab56-41c8256ab3aa.jpg',
+            'KEPEK/94_korszerű gyártástechnológiák/9f56b681-071c-46eb-8bd9-a306dbad5cf1.jpg',
+            'KEPEK/94_korszerű gyártástechnológiák/b103e630-7725-45e2-a26e-5989d08754dd.jpg',
+            'KEPEK/94_korszerű gyártástechnológiák/be8b8bd9-0cda-4926-9ca0-0be490c8cbdc.jpg',
+            'KEPEK/94_korszerű gyártástechnológiák/c12b1bc4-ba74-4afa-a7fd-ce39f5e63aeb.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-targyak', dropCap: true,
         title: 'CNC, 3D nyomtató, lézervágó',
-        content: 'Az 1980-as évek közepétől vette kezdetét az ismerkedés a CNC-technikával, melynek előzménye az osztrák gyártmányú asztali CNC-gép, az EMCO volt. Ezeket követték a \'90-es évek elején a magyar gyártmányú Miniturn esztergagépek, melyek szintén oktatógépek voltak. Itt jelent meg a magyar Hunor programozástechnológia. Ennek továbbfejlesztése lett az ún. NCT programozási formula.<br>Ennek a folyamatnak óriási lendületet adott a 2008-ban külső telephelyen kialakított gyártórendszerekkel rendelkező géppark, itt már ipari termelésre alkalmas CNC, maró- és esztergagépek álltak rendelkezésre, kiegészítve mindezeket robottechnikával.<br>2018-ban a Velux Fundation program igazgatója kereste fel iskolánkat, pályázati lehetőséget ajánlva egy jelentős pénzügyi támogatáshoz. Ez a szervezet a dán Velux gyár alapítványa, amely több pályázatot hirdet minden évben, és nemcsak a hazai, de a közép-európai oktatást is támogatja.<br>A sikeres pályázat eredményeként 2019-ben elindulhatott az a projekt, amelyben másfél millió eurót kaptunk az iskola műszaki parkjának fejlesztésére. A projekt öt éve alatt a legmodernebb eszközöket szerezhettük be szakmai képzésünk minden területére. A támogatás jelentős fejlődést biztosított. Itt jelentek meg az új programozási nyelven alkalmazható, korszerű CNC-gépek (lézervágó, marógép, robotok), és 3D nyomtatórendszerek, melyek azóta is részét képezik az oktatásnak.<br>A lézergravírozás egy modern, érintésmentes anyagmegmunkálási eljárás, amely során egy nagy intenzitású lézersugár az anyag felületét felhevíti, elégeti vagy elpárologtatja, így hozva létre a tartós mintát vagy feliratot. Ez a technológia rendkívül precíz, gyors és tiszta, mivel nincs szükség a munkadarab mechanikus rögzítésére. Iskolánkba két lézervágógép található: egy CO2 lézervágógép, kisebb 100 W-os teljesítménnyel és egy Fiber lézervágógép 1000 W-os lézerteljesítménnyel. A kisebb teljesítményű géppel alapvetően fa- és plexilemezeket vágunk. Az 1000 W-os géppel fémlemezeket is meg tudunk munkálni. Nagy hasznát vesszük fémburkolatok készítésénél.<br>3D-s nyomtatás: sokféle eljárás létezik. Alapvetően egy alapanyagból (műanyag szál, folyékony gyanta, fémpor) kívánt geometriájú 3D-s testet állítunk elő. Ez egy gyors prototípusgyártó technológia. Ez egy nagyon kreatív gyártástechnológiáról van szó, ami felkelti a tanulók érdeklődését.<br><a href="https://www.facebook.com/reel/537165151381445" target="_blank">3D nyomtatás videó 1</a> <a href="https://www.facebook.com/reel/445166807643279" target="_blank">3D nyomtatás videó 2</a> <a href="https://www.facebook.com/reel/316719927319749" target="_blank">3D nyomtatás videó 3</a><br><a href="https://www.facebook.com/reel/632347194734573" target="_blank">3D nyomtatás videó 4</a> <a href="https://www.facebook.com/reel/3629050570493301" target="_blank">3D nyomtatás videó 5</a> <a href="https://www.youtube.com/channel/UCXyNFstcN_FktZI2tk61TvA" target="_blank">YouTube Csatorna</a>'
+        content: 'Az 1980-as évek közepétől vette kezdetét az ismerkedés a CNC-technikával, melynek előzménye az osztrák gyártmányú asztali CNC-gép, az EMCO volt. Ezeket követték a \'90-es évek elején a magyar gyártmányú Miniturn esztergagépek, melyek szintén oktatógépek voltak. Itt jelent meg a magyar Hunor programozástechnológia. Ennek továbbfejlesztése lett az ún. NCT programozási formula.<br>Ennek a folyamatnak óriási lendületet adott a 2008-ban külső telephelyen kialakított gyártórendszerekkel rendelkező géppark, itt már ipari termelésre alkalmas CNC, maró- és esztergagépek álltak rendelkezésre, kiegészítve mindezeket robottechnikával.<br>2018-ban a Velux Fundation program igazgatója kereste fel iskolánkat, pályázati lehetőséget ajánlva egy jelentős pénzügyi támogatáshoz. Ez a szervezet a dán Velux gyár alapítványa, amely több pályázatot hirdet minden évben, és nemcsak a hazai, de a közép-európai oktatást is támogatja.<br>A sikeres pályázat eredményeként 2019-ben elindulhatott az a projekt, amelyben másfél millió eurót kaptunk az iskola műszaki parkjának fejlesztésére. A projekt öt éve alatt a legmodernebb eszközöket szerezhettük be szakmai képzésünk minden területére. A támogatás jelentős fejlődést biztosított. Itt jelentek meg az új programozási nyelven alkalmazható, korszerű CNC-gépek (lézervágó, marógép, robotok), és 3D nyomtatórendszerek, melyek azóta is részét képezik az oktatásnak.<br>A lézergravírozás egy modern, érintésmentes anyagmegmunkálási eljárás, amely során egy nagy intenzitású lézersugár az anyag felületét felhevíti, elégeti vagy elpárologtatja, így hozva létre a tartós mintát vagy feliratot. Ez a technológia rendkívül precíz, gyors és tiszta, mivel nincs szükség a munkadarab mechanikus rögzítésére. Iskolánkba két lézervágógép található: egy CO2 lézervágógép, kisebb 100 W-os teljesítménnyel és egy Fiber lézervágógép 1000 W-os lézerteljesítménnyel. A kisebb teljesítményű géppel alapvetően fa- és plexilemezeket vágunk. Az 1000 W-os géppel fémlemezeket is meg tudunk munkálni. Nagy hasznát vesszük fémburkolatok készítésénél.<br>3D-s nyomtatás: sokféle eljárás létezik. Alapvetően egy alapanyagból (műanyag szál, folyékony gyanta, fémpor) kívánt geometriájú 3D-s testet állítunk elő. Ez egy gyors prototípusgyártó technológia. Ez egy nagyon kreatív gyártástechnológiáról van szó, ami felkelti a tanulók érdeklődését.<br><a href="https://www.facebook.com/reel/537165151381445" target="_blank">3D nyomtatás videó 1</a> <a href="https://www.facebook.com/reel/445166807643279" target="_blank">3D nyomtatás videó 2</a> <a href="https://www.facebook.com/reel/316719927319749" target="_blank">3D nyomtatás videó 3</a> <a href="https://www.facebook.com/reel/632347194734573" target="_blank">3D nyomtatás videó 4</a> <a href="https://www.facebook.com/reel/3629050570493301" target="_blank">3D nyomtatás videó 5</a> <a href="https://www.youtube.com/channel/UCXyNFstcN_FktZI2tk61TvA" target="_blank">YouTube Csatorna</a>'
     },
 
     // --- 95. Iskolatörténeti gyűjtemény (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/95_új múzeum.jpg',
+        image: 'KEPEK/95_ÚJMÚZEUM.jpg',
         pocketTitle: 'Iskolatörténeti gyűjtemény',
         gallery: [
             'KEPEK/95_új_múzeum/1.jpg',
-            'KEPEK/95_új_múzeum/2.JPG',
-            'KEPEK/95_új_múzeum/3.JPG',
-            'KEPEK/95_új_múzeum/4.JPG',
-            'KEPEK/95_új_múzeum/5.JPG',
-            'KEPEK/95_új_múzeum/6.jpg',
-            'KEPEK/95_új_múzeum/IMG_2443.JPG'
+            'KEPEK/95_új_múzeum/2.jpg',
+            'KEPEK/95_új_múzeum/3.jpg',
+            'KEPEK/95_új_múzeum/4.jpg',
+            'KEPEK/95_új_múzeum/5.jpg',
+            'KEPEK/95_új_múzeum/6.jpg'
         ]
     },
     {
@@ -1766,7 +1731,7 @@ const pages = [
     // --- 96. Hírességeink (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/96_hírességeink.png'
+        image: 'KEPEK/96_hírességeink.jpg'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -1777,13 +1742,12 @@ const pages = [
     // --- 97. Kulturális örökség napja (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/97_kulturalis örökseg.JPG',
+        image: 'KEPEK/97_kulturalis örökseg.jpg',
         pocketTitle: 'Kulturális örökség napja',
         gallery: [
-            'KEPEK/97_kulturális örökség napja/97_kulturális örökség napja.JPG',
-            'KEPEK/97_kulturális örökség napja/IMG_2441.JPG',
-            'KEPEK/97_kulturális örökség napja/UMSZKI_KÖN_2024_2.JPG',
-            'KEPEK/97_kulturális örökség napja/UMSZKI_KÖN_2024_3.JPG'
+            'KEPEK/97_kulturális örökség napja/1.jpg',
+            'KEPEK/97_kulturális örökség napja/2.jpg',
+            'KEPEK/97_kulturális örökség napja/3.jpg'
         ]
     },
     {
@@ -1795,7 +1759,7 @@ const pages = [
     // --- 98. Az iskolában forgatott filmek (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/98_film2.jpg',
+        image: 'KEPEK/98_film.jpg',
         pocketTitle: 'Az iskolában forgatott filmek',
         gallery: [
             'KEPEK/98 filmek/98_film_1.jpg',
@@ -1823,7 +1787,7 @@ const pages = [
     // --- 100. Tanár nélkül nincs jövő (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: ''
+        image: 'KEPEK/'
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -1836,12 +1800,11 @@ const pages = [
         type: 'impresszum', 
         eraCss: 'era-toc', 
         title: 'IMPRESSZUM',
-        content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A SZÖVEGEKET ÉS A FOTÓKAT ÖSSZEÁLLÍTOTTA:</b><br><span style="border: 5px solid black; padding: 0.1vh 0.5vw;">Urbán Kornél</span><br>Gulyás Ildikó<br><br><b>AZ UMSZKI100 EMLÉKKÖNYV SEGÉDSZERKESZTŐI:</b><br>Andorfer János<br>Braun Éva<br>Hegyiné Závori Szilvia<br>Kovács János<br>Kluka Norbert<br>Seres József<br>Soósné Varga Lia<br>Zabari Tibor<br><br><b>AZ EMLÉKKÖNYVET ÖSSZEÁLLÍTOTTA ÉS GONDOZTA:</b><br>Gulyás Ildikó</div>' 
+        content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A SZÖVEGEKET ÉS A FOTÓKAT ÖSSZEÁLLÍTOTTA:</b><br><span style="border: 3px solid black; padding: 0.1vh 0.5vw;">Urbán Kornél</span><br>Gulyás Ildikó<br><br><b>AZ UMSZKI100 EMLÉKKÖNYV SEGÉDSZERKESZTŐI:</b><br>Andorfer János<br>Braun Éva<br>Hegyiné Závori Szilvia<br>Kovács János<br>Kluka Norbert<br>Seres József<br>Soósné Varga Lia<br>Zabari Tibor<br><br><b>AZ EMLÉKKÖNYVET ÖSSZEÁLLÍTOTTA ÉS GONDOZTA:</b><br>Gulyás Ildikó</div>' 
     },
     { 
         type: 'impresszum', 
         eraCss: 'era-toc', 
-        title: 'IMPRESSZUM',
         content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A KIADVÁNYT SZERKESZTETTE:</b><br>Kolonics Márk<br><br><b>A KIADVÁNYT LEKTORÁLTA:</b><br>Widder László<br><br><b>FELELŐS KIADÓ:</b><br>Ziegler Tünde Edit</div>'
     },
 
