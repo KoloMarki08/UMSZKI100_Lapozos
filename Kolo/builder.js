@@ -82,10 +82,10 @@ function buildPageElement(pageData, pageNum, side) {
             mainImg.style.cursor = 'pointer'; // Egérkurzor mutatóra vált
             if (pageData.imagePosition) mainImg.style.objectPosition = pageData.imagePosition;
 
-            // --- ÚJ KÓD: KATTINTÁS ESEMÉNY A NAGYÍTÁSHOZ ---
+            // KATTINTÁS ESEMÉNY A NAGYÍTÁSHOZ
             mainImg.addEventListener('click', (e) => {
-                e.stopPropagation(); // Megakadályozzuk, hogy a kattintástól lapozzon a könyv
-                openLightbox(pageData.image); // Meghívjuk az app.js galéria nagyítóját
+                e.stopPropagation(); 
+                openLightbox(pageData.image); 
             });
 
             imgContainer.appendChild(mainImg);
@@ -127,12 +127,13 @@ function buildPageElement(pageData, pageNum, side) {
             textDiv.className = 'chapter-body';
             textDiv.style.width = '100%';
 
-            // Header törölve, a Title veszi át a legfelső helyet
+            // Ha van cím a képes oldalon
             if (pageData.title) {
                 const titleDiv = document.createElement('div');
                 titleDiv.className = 'chapter-title';
-                titleDiv.textContent = pageData.title;
-                titleDiv.style.marginBottom = '2vh'; // Kicsi szünet a cím és a szöveg között
+                // innerHTML engedélyezi a <br> taget!
+                titleDiv.innerHTML = pageData.title;
+                titleDiv.style.marginBottom = '2vh'; 
                 textDiv.appendChild(titleDiv);
             }
 
@@ -149,16 +150,14 @@ function buildPageElement(pageData, pageNum, side) {
             pocketContainer.appendChild(textDiv);
         }
     } else {
-        // Header teljes törlése a HTML-ből
         const header = content.querySelector('.page-header');
         if (header) header.remove();
 
-        // A Cím (Title) veszi át a főszerepet
         const title = content.querySelector('.chapter-title');
         if (pageData.title || pageData.header) {
-            // Ha a data.js-ben csak header van (pl. a TARTALOM oldalnál), azt is nagy címként kezeli
-            title.textContent = pageData.title || pageData.header;
-            title.style.marginBottom = '2vh'; // Kicsi szünet a cím és a szöveg között
+            // innerHTML engedélyezi a <br> taget!
+            title.innerHTML = pageData.title || pageData.header;
+            title.style.marginBottom = '2vh'; 
         } else {
             title.remove();
         }
@@ -181,7 +180,8 @@ function buildPageElement(pageData, pageNum, side) {
                 const span = document.createElement('span');
                 span.className = 'toc-link';
                 span.dataset.target = item.target;
-                span.textContent = `${item.number}. ${item.title}`;
+                // innerHTML a tartalomjegyzékben is, ha ott is lenne <br>
+                span.innerHTML = `${item.number}. ${item.title}`;
                 body.appendChild(span);
             });
         } else if (pageData.content) {

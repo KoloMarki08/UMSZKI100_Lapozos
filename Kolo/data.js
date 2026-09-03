@@ -27,7 +27,7 @@ const pages = [
     // --- 1. BEVEZETÉS (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
-        pocketTitle: 'ANTRÉ 75 éves jubileumi',
+        pocketTitle: 'ANTRÉ',
         gallery: [
             'KEPEK/1_magyar állami/1.jpg',
             'KEPEK/1_magyar állami/2.jpg',
@@ -700,7 +700,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Művésztanáraik, Képzőművészeink',
-        content: 'A reprezentatív kép alkotója a szignó alapján Guzsváry János, aki testnevelő tanár, gerelyhajító atléta és képzőművész volt egy személyben.<br>Laurencsik Béla mindamellett, hogy mérnök, mérnöktanár volt, Képzőművészeti Főiskolát is végzett.<br><br>Király Endre az iskola kimagasló tanáregyénisége volt. Kohóipari mérnöki végzettségével kiváló és kreatív öntőipari mérnökként - melyet több szabadalma sok gyakorlati tapasztalata is alátámaszt - pályázta meg a tanári állást, amit elnyert, és 1928-ban megkezdte tanári pályafutását. Sokoldalú ember volt. A festészethez való vonzódása végigkísérte életét. Több kiállítása volt: 1917-ben Szibériában, hadifogsága idején, 1934-ben Budapesten a Műcsarnokban, 1952-ben Vácon és 1960-ban időskora lakhelyén a svájci Lausanne-ban.<br>Bótos Sándor 1959 és 1981 között volt az iskola tanára. Szabadkézi rajzot és ábrázoló geometriát tanított. Csendes, visszahúzódó szuverén egyéniség volt. Diákjai nagyon kedvelték: tudása, tanítási módszere és egyénisége okán is. A tantestületben nagy tisztelet övezte. Szerénységére jellemző, hogy festőművészi tevékenységéről, sikereiről az iskolában soha nem beszélt.'
+        content: 'A reprezentatív kép alkotója a szignó alapján Guzsváry János, aki testnevelő tanár, gerelyhajító atléta és képzőművész volt egy személyben.<br><br>Laurencsik Béla mindamellett, hogy mérnök, mérnöktanár volt, Képzőművészeti Főiskolát is végzett.<br><br>Király Endre az iskola kimagasló tanáregyénisége volt. Kohóipari mérnöki végzettségével kiváló és kreatív öntőipari mérnökként - melyet több szabadalma sok gyakorlati tapasztalata is alátámaszt - pályázta meg a tanári állást, amit elnyert, és 1928-ban megkezdte tanári pályafutását. Sokoldalú ember volt. A festészethez való vonzódása végigkísérte életét. Több kiállítása volt: 1917-ben Szibériában, hadifogsága idején, 1934-ben Budapesten a Műcsarnokban, 1952-ben Vácon és 1960-ban időskora lakhelyén a svájci Lausanne-ban.<br><br>Bótos Sándor 1959 és 1981 között volt az iskola tanára. Szabadkézi rajzot és ábrázoló geometriát tanított. Csendes, visszahúzódó szuverén egyéniség volt. Diákjai nagyon kedvelték: tudása, tanítási módszere és egyénisége okán is. A tantestületben nagy tisztelet övezte. Szerénységére jellemző, hogy festőművészi tevékenységéről, sikereiről az iskolában soha nem beszélt.'
     },
 
     // --- 41. Gépészet (Alap - Fehér) ---
@@ -945,7 +945,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Tankönyvszerzőink',
-        content: 'A Landler/Umszki tanárainak, oktatóinak megjelent tankönyvei:<br><br>dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Z. - Juhász R. - Masa L.: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Szakmai alapismeretek I. (1988)<br>Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1., 2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)'
+        content: 'A Landler/Umszki tanárainak, oktatóinak megjelent tankönyvei:<br><br><br>dr. Podhorányi Györgyné: Kémiai kísérletgyűjtemény (1984)<br>Horváth Z. - Juhász R. - Masa L.: Ipari elektronika (2000)<br>Kovács János: Irányítástechnikai alapismeretek (2000)<br>Hámori Zoltán: Az elektrotechnika alapjai (2000)<br>Hámori Zoltán: Villamosgépek (2000)<br>Hámori Zoltán: Alapmérések - Villamos mérések (2001)<br>Nagy Imre: Szakmai alapismeretek I. (1988)<br>Nagy Imre: Minőségbiztosítás (2006)<br>Horváthné Tőkei Zsuzsanna: Számítógép rendszertechnika 1., 2. (2005, 2006)<br>Horváth József: Munka- és környezetvédelem (2010)<br>Zombori Béla: Elektronika (2020)<br>Zombori Béla: Digitális elektronika (2020)<br>Zombori Béla: Elektronikai feladatgyűjtemény (2020)'
     },
 
     // --- 55. Landler Jenő (Személyek - Kék) ---
@@ -1012,7 +1012,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Iskolai ünnepségek',
-        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik - a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások -, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.<br><br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br><br>évnyitó<br>aradi vértanúk emléknapja (október 6.)<br>az 1956-os forradalom emléknapja (október 23.)<br>a magyar nyelv napja (november 13.)<br>a magyar kultúra napja (január 22.)<br>kommunista diktatúrák áldozatainak emléknapja (február 25.)<br>az 1848–49-es forradalom emléknapja (március 15.)<br>a holokauszt áldozatainak emléknapja (április 16.)<br>nemzeti összetartozás napja (június 4.)<br>évzáró'
+        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br>-évnyitó,<br>-az aradi vértanúk emléknapja (október 6.),<br>- az 1956-os forradalom és szabadságharc emléknapja (október 23.),<br>- a magyar nyelv napja (november 13.),<br>- a magyar kultúra napja (január 22.),<br>- a kommunista diktatúrák áldozatainak emléknapja (február 25.),<br>- az 1848–49-es forradalom és szabadságharc emléknapja (március 15.),<br>- a holokauszt magyarországi áldozatainak emléknapja (április 16.),<br>- a nemzeti összetartozás napja (június 4.),<br>- évzáró.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik – a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások –, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.'
     },
 
     // --- 59. Elektroncső (Helyszínek - Zöld) ---
@@ -1164,7 +1164,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Szakmák Éjszakája',
-        content: '2016. április 15-én került első ízben a Szakmák Éjszakájának megrendezésére az UMSZKI-ban. Ez az interaktív bemutatókra épülő program igen komoly érdeklődésre tartott számot.<br>Látogathatóak voltak a műhelyek és a szaktantermek, ahol különlegesen érdekes programokkal, bemutatókkal várták az érdeklődőket. Gyerekek, szüleik és a kollégák lelkesen próbálták ki a rendelkezésükre álló eszközöket.<br>Az umszkis diákok és tanárok éjszakába nyúlóan dolgoztak, fáradhatatlanul beszéltek, be- és megmutatták az iskola fő profiljait a látogatóknak.'
+        content: '2016. április 15-én került sor első ízben a Szakmák Éjszakájának megrendezésére az UMSZKI-ban. Ez az interaktív bemutatókra épülő program igen komoly érdeklődésre tartott számot.<br>Látogathatóak voltak a műhelyek és a szaktantermek, ahol különlegesen érdekes programokkal, bemutatókkal várták az érdeklődőket. Gyerekek, szüleik és a kollégák lelkesen próbálták ki a rendelkezésükre álló eszközöket.<br>Az umszkis diákok és tanárok éjszakába nyúlóan dolgoztak, fáradhatatlanul beszéltek, be- és megmutatták az iskola fő profiljait a látogatóknak.'
     },
 
     // --- 67. Könyvtár (Helyszínek - Zöld) ---
@@ -1219,7 +1219,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Diákszáj',
-        content: 'Az emberek nagy része vizuális típus. A tanári pálya egyik öröm- és egyszerre kudarcforrása, ha egy-egy kevésbé jól sikerült módon megfogalmazott mondat kapcsán elindult a belső képalkotás. Mára ez a mentális műfaj élővé a meme-k által vált.<br>„Amikor Julianus barát meghozta a tatát veszedelem hírét, IV. Béla várromokat építtetett.”<br>„Szulejmán szultán Szigetvár alatt tehetetlen haragjában megütötte a gutát.”<br>„Dugonics Titusz fenekét a falnak támasztotta és azon felmászott a bástyára.”<br>„Vörösmarty Mihály az MTK tagja volt.”<br>A 75. Jubileumi évkönyv 81-84. oldalán olvasható a félrefogalmazások gyűjteménye.'
+        content: 'Az emberek nagy része vizuális típus. A tanári pálya egyik öröm- és egyszerre kudarcforrása, ha egy-egy kevésbé jól sikerült módon megfogalmazott mondat kapcsán elindul a belső képalkotás. Mára ez a mentális műfaj élővé a meme-k által vált.<br>„Amikor Julianus barát meghozta a tatát veszedelem hírét, IV. Béla várromokat építtetett.”<br>„Szulejmán szultán Szigetvár alatt tehetetlen haragjában megütötte a gutát.”<br>„Dugonics Titusz fenekét a falnak támasztotta és azon felmászott a bástyára.”<br>„Vörösmarty Mihály az MTK tagja volt.”<br>A 75. Jubileumi évkönyv 81-84. oldalán olvasható a félrefogalmazások gyűjteménye.'
     },
 
     // --- 70. 24 órás angol óra – Guinness rekord – uniós csatlakozás (Események - Bézs) ---
@@ -1281,7 +1281,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Technikai dolgozók',
-        content: 'A tanárokon, oktatókon, a vezetőségen és a diákokon túl ki mindenki járul még hozzá egy iskola mindennapjaihoz?<br>A titkárság, a tanulmányi osztály, a munkaügyi felelős, a gazdasági felelős, a portások, a gondnok, a karbantartók, az udvaros, a konyhai alkalmazottak, a takarítók, a kertész, a raktáros, az árubeszerző.<br>Legtöbbször ők leginkább a "backstage"-ben teszik a dolgukat, de nélkülük egyetlen közintézmény sem tudna működni sehogy. Ha ez a működés olajozott és zökkenőmentes, ahhoz ők is hozzájárulnak nap mint nap.<br>Ismét egy érdekesség az épület eredeti állapotát illetően, hogy kezdetben nem volt portásfülke. A mai 121-es tanári szoba volt a portás tartózkodási helye. Innen egy ablakon keresztül - ez ma is létezik - lehetett rálátni a nagykapura. Ebből a helyiségből egy vas csigalépcső vezetett le a portáslakásba.'
+        content: 'A tanárokon, oktatókon, a vezetőségen és a diákokon túl ki mindenki járul még hozzá egy iskola mindennapjaihoz?<br>A titkárság, a tanulmányi osztály, a munkaügyi felelős, a gazdasági felelős, a portások, a gondnok, a karbantartók, az udvaros, a konyhai alkalmazottak, a takarítók, a kertész, a raktáros, az árubeszerző.<br>Legtöbbször ők leginkább a „backstage"-ben teszik a dolgukat, de nélkülük egyetlen közintézmény sem tudna működni sehogy. Ha ez a működés olajozott és zökkenőmentes, ahhoz ők is hozzájárulnak nap mint nap.<br>Ismét egy érdekesség az épület eredeti állapotát illetően, hogy kezdetben nem volt portásfülke. A mai 121-es tanári szoba volt a portás tartózkodási helye. Innen egy ablakon keresztül - ez ma is létezik - lehetett rálátni a nagykapura. Ebből a helyiségből egy vas csigalépcső vezetett le a portáslakásba.'
     },
 
     // --- 74. 75 éves az iskola (Események - Bézs) ---
@@ -1405,7 +1405,7 @@ const pages = [
     // --- 80. Urbán Kornél (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/80_Urbán Kornél.JPG',
+        image: 'KEPEK/80_urbán kornél.jpg',
         pocketTitle: 'Urbán Kornél',
         gallery: [
             'KEPEK/80_Urbán Kornél/1.jpg',
@@ -1432,7 +1432,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
         title: 'A stúdió',
-        content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket "dobozos műsorként" emlegetik, tartják számon az iskola polgárai.<br>A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért.<br><br>Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A "backstage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed.<br>A mindenkori stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
+        content: 'Mint minden oktatási intézményben, az Umszkiban is fontos eleme minden tanteremnek a fali hangszóró. Itt a regionális nyelvváltozat szerint az ezekből elhangzó rádiós megemlékezéseket „dobozos műsorként" emlegetik, tartják számon az iskola polgárai.<br>A stúdió az a hely, ahol a kreativitás találkozik a fizikával és a technika ördögével. A mindenkori stúdiósok felelnek az iskolai ünnepségek, előadások teljes technikai hátteréért.<br><br>Nemcsak kezelik a keverőpultokat, a mikrofonokat és a hangfalakat, de igazi csapatként oldják meg a hirtelen jött színpadi helyzeteket is. A „backstage"-ben zajló munka a technikai felszerelés előkészítésén, karbantartásán, üzemeltetésén túl a műsorok hangfelvételének szerkesztéséig terjed.<br>A mindenkori stúdiósok idejüket, energiájukat áldozzák egy-egy iskolai rendezvény minél zavartalanabb lebonyolításához.'
     },
 
     // --- 82. Építőtáborok (Események - Bézs) ---
@@ -1565,7 +1565,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Iskolavezetés',
-        content: 'Intézményünk 100 éve alatt számos nagyszerű pedagógus vezette az iskolát, akiknek szakmai elhivatottsága, közösségépítő munkája és fejlesztő törekvései formálták az itt tanuló generációkat. Különböző történelmi és társadalmi kihívások közepette álltak helyt, biztosítva az oktatás magas színvonalát.<br><br>Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br>BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980<br>CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –'
+        content: 'Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br>BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980<br>CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –'
     },
 
     // --- 89. Dr. Nyárs Csaba-díj, Czellér András-díj (Események - Bézs) ---
@@ -1583,7 +1583,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
-        title: 'Dr. Nyárs Csaba-díj, Czellér András-díj',
+        title: 'Dr. Nyárs Csaba-díj,<br>Czellér András-díj',
         content: '2016 decemberében került sor először a Nyárs Csaba-díj átadására. A díjat Dr. Nyárs Csaba, a jeles újpesti lokálpatrióta alapította azzal a céllal, hogy az újpesti technikusképző intézmény, az UMSZKI két diákja és két tanára részesüljön minden évben az elismerésben. A díjak átadására az iskolai karácsonyi ünnepségen kerül sor.<br>Dr. Nyárs Csaba a közjegyzőnél hitelesített díj alapítóokirata alapján az iskolai alapítványnál három millió forintot helyezett el a finanszírozásra.<br><br>A mindenkori díjazott diákok az 50.000 forintos pénzjutalom mellé egy, az épületünket ábrázoló ezüst kitűzőt kapnak díszdobozban, valamint egy díszes oklevelet.<br><br>Czellér S. András iskolánk diákja volt. Számos tapasztalattal rendelkezik az energiaipar, a nemzetközi kereskedelem, az üzleti és a szoftverfejlesztés területén. Az iskolatörténeti gyűjteményt látva 50 éves osztálytalálkozójuk alkalmával, 2024-ben ajánlott fel jutalmazás céljára és az iskola új múzeumának fejlesztésére felhasználható jelentős pénzösszeget.'
     },
 
