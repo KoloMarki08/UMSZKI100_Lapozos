@@ -117,7 +117,7 @@ const pages = [
     // --- 7. Kovácsműhely (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/7_kovácsműhely.jpg',
+        image: 'KEPEK/7_kovácsműhely.JPG',
         pocketTitle: 'Kovácsműhely',
         gallery: [
             'KEPEK/7_kovácsműhely/1.jpg',
@@ -179,7 +179,7 @@ const pages = [
     // --- 11. Lépcsőház (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/11_LÉPCSŐHÁZ.jpg',
+        image: 'KEPEK/11_LÉPCSŐHÁZ.JPG',
     },
     {
         type: 'chapter', eraCss: 'era-helyiseg', dropCap: true,
@@ -201,14 +201,14 @@ const pages = [
     // --- 13. Az igazgatóság helytörténete (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/13_igazgatóság helytörténete.jpg',
+        image: 'KEPEK/13_igazgatóság helytörténete.JPG',
         pocketTitle: 'Az igazgatóság helytörténete',
         gallery: [
-            'KEPEK/13_igazgatói előtt/K.jpg',
+            'KEPEK/13_igazgatói előtt/K.JPG',
             'KEPEK/13_igazgatói előtt/L.jpg',
             'KEPEK/13_igazgatói előtt/M.jpg',
             'KEPEK/13_igazgatói előtt/N.jpg',
-            'KEPEK/13_igazgatói előtt/O.jpg'
+            'KEPEK/13_igazgatói előtt/O.JPG'
         ]
     },
     {
@@ -268,7 +268,7 @@ const pages = [
         pocketTitle: 'Az udvar platánjai',
         gallery: [
             'KEPEK/18_platánfák/1.jpg',
-            'KEPEK/18_platánfák/2.jpg',
+            'KEPEK/18_platánfák/2.JPG',
             'KEPEK/18_platánfák/3.jpg',
             'KEPEK/18_platánfák/4.jpg',
             'KEPEK/18_platánfák/5.jpg'
@@ -304,7 +304,7 @@ const pages = [
     // --- 20. Jegesmedve-relikvia (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/20_jegesmedve relikvia.jpg',
+        image: 'KEPEK/20_jegesmedve relikvia.JPG',
         pocketTitle: 'Jegesmedve-relikvia',
         gallery: [
             'KEPEK/20_jegesmedve/20_jegesmedve átadás 1945_46.jpg'
@@ -422,7 +422,7 @@ const pages = [
         image: 'KEPEK/26_az iskola helyrajza.jpg',
         pocketTitle: 'Az iskola „helyrajza” ',
         gallery: [
-            'KEPEK/26_az iskola helyrajza/1.jpg',
+            'KEPEK/26_az iskola helyrajza/1.JPG',
             'KEPEK/26_az iskola helyrajza/2 (2).jpg',
             'KEPEK/26_az iskola helyrajza/3.jpg',
             'KEPEK/26_az iskola helyrajza/4.jpg',
@@ -523,7 +523,7 @@ const pages = [
     // --- 32. Udvarátalakítás (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/32_udvarátalakítás.jpg',
+        image: 'KEPEK/32_udvarátalakítás.JPG',
         pocketTitle: 'Udvarátalakítás',
         gallery: [
             'KEPEK/32_udvarátalakítás/1.jpg',
@@ -554,11 +554,11 @@ const pages = [
             'KEPEK/33_szalagavatók/2.jpg',
             'KEPEK/33_szalagavatók/3.jpg',
             'KEPEK/33_szalagavatók/4.jpg',
-            'KEPEK/33_szalagavatók/5.jpg',
-            'KEPEK/33_szalagavatók/6.jpg',
-            'KEPEK/33_szalagavatók/7.jpg',
-            'KEPEK/33_szalagavatók/8.jpg',
-            'KEPEK/33_szalagavatók/9.jpg'
+            'KEPEK/33_szalagavatók/5.JPG',
+            'KEPEK/33_szalagavatók/6.JPG',
+            'KEPEK/33_szalagavatók/7.JPG',
+            'KEPEK/33_szalagavatók/8.JPG',
+            'KEPEK/33_szalagavatók/9.JPG'
         ]
     },
     {
@@ -676,7 +676,7 @@ const pages = [
             'KEPEK/40_művésztanáraink/1_LAURENCSIK/B.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/0.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/1.jpg',
-            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/10.jpg',
+            'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/10.JPG',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/11.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/12.jpg',
             'KEPEK/40_művésztanáraink/2_KIRÁLY ENDRE/13.jpg',
@@ -814,18 +814,18 @@ const pages = [
     // --- 47. Ballagások (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/47_ballagás.jpg',
+        image: 'KEPEK/47_ballagás.JPG',
         pocketTitle: 'Ballagások',
         gallery: [
-            'KEPEK/47_ballagás/1.jpg',
+            'KEPEK/47_ballagás/1.JPG',
             'KEPEK/47_ballagás/10.jpg',
             'KEPEK/47_ballagás/11.jpg',
             'KEPEK/47_ballagás/12.jpg',
-            'KEPEK/47_ballagás/13.jpg',
+            'KEPEK/47_ballagás/13.JPG',
             'KEPEK/47_ballagás/14.jpg',
             'KEPEK/47_ballagás/15.jpg',
             'KEPEK/47_ballagás/16.jpg',
-            'KEPEK/47_ballagás/17.jpg',
+            'KEPEK/47_ballagás/17.JPG',
             'KEPEK/47_ballagás/2.jpg',
             'KEPEK/47_ballagás/3.jpg',
             'KEPEK/47_ballagás/4.jpg',
@@ -868,7 +868,7 @@ const pages = [
         gallery: [
             'KEPEK/49_Zombori/1.jpg',
             'KEPEK/49_Zombori/2.jpg',
-            'KEPEK/49_Zombori/3.jpg'
+            'KEPEK/49_Zombori/3.JPG'
         ]
     },
     {
@@ -987,14 +987,14 @@ const pages = [
     // --- 57. Iskolazászló (Emléktárgyak - Sárga) ---
     {
         type: 'image', eraCss: 'era-targyak',
-        image: 'KEPEK/57_iskolazászló.jpg',
+        image: 'KEPEK/57_iskolazászló.JPG',
         pocketTitle: 'Iskolazászló',
         gallery: [
             'KEPEK/57_iskolazászló/1.jpg',
             'KEPEK/57_iskolazászló/1B.jpg',
             'KEPEK/57_iskolazászló/2.jpg',
             'KEPEK/57_iskolazászló/3.jpg',
-            'KEPEK/57_iskolazászló/4.jpg',
+            'KEPEK/57_iskolazászló/4.JPG',
             'KEPEK/57_iskolazászló/6.jpg'
         ]
     },
@@ -1021,13 +1021,13 @@ const pages = [
         image: 'KEPEK/59_elektroncső.jpg',
         pocketTitle: 'Elektroncső',
         gallery: [
-            'KEPEK/59_elektroncső/1.jpg',
+            'KEPEK/59_elektroncső/1.JPG',
             'KEPEK/59_elektroncső/2.jpg',
             'KEPEK/59_elektroncső/3.jpg',
             'KEPEK/59_elektroncső/4.jpg',
             'KEPEK/59_elektroncső/5.jpg',
-            'KEPEK/59_elektroncső/6.jpg',
-            'KEPEK/59_elektroncső/7.jpg'
+            'KEPEK/59_elektroncső/6.JPG',
+            'KEPEK/59_elektroncső/7.JPG'
         ]
     },
     {
@@ -1080,7 +1080,7 @@ const pages = [
             'KEPEK/62_első számítógép/3.jpg',
             'KEPEK/62_első számítógép/4.jpg',
             'KEPEK/62_első számítógép/5.jpg',
-            'KEPEK/62_első számítógép/6.jpg',
+            'KEPEK/62_első számítógép/6.JPG',
             'KEPEK/62_első számítógép/7.jpg',
             'KEPEK/62_első számítógép/8.jpg',
             'KEPEK/62_első számítógép/9.jpg'
@@ -1098,9 +1098,9 @@ const pages = [
         image: 'KEPEK/63_Görgey szobor koszorúzás.jpg',
         pocketTitle: 'Görgey 26',
         gallery: [
-            'KEPEK/63_Görgey 26/1.jpg',
-            'KEPEK/63_Görgey 26/2.jpg',
-            'KEPEK/63_Görgey 26/3.jpg',
+            'KEPEK/63_Görgey 26/1.JPG',
+            'KEPEK/63_Görgey 26/2.JPG',
+            'KEPEK/63_Görgey 26/3.JPG',
             'KEPEK/63_Görgey 26/4.jpg',
             'KEPEK/63_Görgey 26/5.jpg',
             'KEPEK/63_Görgey 26/6.jpg',
@@ -1119,10 +1119,10 @@ const pages = [
         image: 'KEPEK/64_Hackné Nyerges Rita.jpg',
         pocketTitle: 'Hackné Nyerges Rita',
         gallery: [
-            'KEPEK/64_Hackné Nyerges Rita/1.jpg',
-            'KEPEK/64_Hackné Nyerges Rita/2.jpg',
-            'KEPEK/64_Hackné Nyerges Rita/3.jpg',
-            'KEPEK/64_Hackné Nyerges Rita/4.jpg',
+            'KEPEK/64_Hackné Nyerges Rita/1.JPG',
+            'KEPEK/64_Hackné Nyerges Rita/2.JPG',
+            'KEPEK/64_Hackné Nyerges Rita/3.JPG',
+            'KEPEK/64_Hackné Nyerges Rita/4.JPG',
             'KEPEK/64_Hackné Nyerges Rita/5.jpg'
         ]
     },
@@ -1190,17 +1190,17 @@ const pages = [
     // --- 68. Újpesti Középiskolai Börze (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/68_újpesti iskolák börzéje.jpg',
+        image: 'KEPEK/68_újpesti iskolák börzéje.JPG',
         pocketTitle: 'Újpesti Középiskolai Börze',
         gallery: [
-            'KEPEK/68_középiskolai börze/1.jpg',
+            'KEPEK/68_középiskolai börze/1.JPG',
             'KEPEK/68_középiskolai börze/10.jpg',
-            'KEPEK/68_középiskolai börze/2.jpg',
-            'KEPEK/68_középiskolai börze/3.jpg',
-            'KEPEK/68_középiskolai börze/4.jpg',
-            'KEPEK/68_középiskolai börze/5.jpg',
-            'KEPEK/68_középiskolai börze/6.jpg',
-            'KEPEK/68_középiskolai börze/7.jpg',
+            'KEPEK/68_középiskolai börze/2.JPG',
+            'KEPEK/68_középiskolai börze/3.JPG',
+            'KEPEK/68_középiskolai börze/4.JPG',
+            'KEPEK/68_középiskolai börze/5.JPG',
+            'KEPEK/68_középiskolai börze/6.JPG',
+            'KEPEK/68_középiskolai börze/7.JPG',
             'KEPEK/68_középiskolai börze/8.jpg',
             'KEPEK/68_középiskolai börze/9.jpg'
         ]
@@ -1276,7 +1276,7 @@ const pages = [
     // --- 73. Technikai dolgozók (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/73_technikai dolgozók.jpg',
+        image: 'KEPEK/73_technikai dolgozók.JPG',
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -1311,7 +1311,7 @@ const pages = [
     // --- 75. A régi múzeum (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/75_75 éves műzeum.jpg',
+        image: 'KEPEK/75_75 éves műzeum.JPG',
         pocketTitle: 'A régi múzeum',
         gallery: [
             'KEPEK/75_75 éves iskolamúzeum/1.jpg',
@@ -1349,12 +1349,12 @@ const pages = [
         pocketTitle: 'Osztálytablók, osztálytalálkozók',
         gallery: [
             'KEPEK/76_ osztálytalálkozók/1.jpg',
-            'KEPEK/76_ osztálytalálkozók/2.jpg',
-            'KEPEK/76_ osztálytalálkozók/3.jpg',
-            'KEPEK/76_ osztálytalálkozók/4.jpg',
-            'KEPEK/76_ osztálytalálkozók/5.jpg',
+            'KEPEK/76_ osztálytalálkozók/2.JPG',
+            'KEPEK/76_ osztálytalálkozók/3.JPG',
+            'KEPEK/76_ osztálytalálkozók/4.JPG',
+            'KEPEK/76_ osztálytalálkozók/5.JPG',
             'KEPEK/76_ osztálytalálkozók/6.jpg',
-            'KEPEK/76_ osztálytalálkozók/7.jpg'
+            'KEPEK/76_ osztálytalálkozók/7.JPG'
         ]
     },
     {
@@ -1405,7 +1405,7 @@ const pages = [
     // --- 80. Urbán Kornél (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/80_Urbán Kornél.jpg',
+        image: 'KEPEK/80_Urbán Kornél.JPG',
         pocketTitle: 'Urbán Kornél',
         gallery: [
             'KEPEK/80_Urbán Kornél/1.jpg',
@@ -1462,18 +1462,18 @@ const pages = [
     // --- 83. Nyelvi táborok (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/83_nyelvi táborok.jpg',
+        image: 'KEPEK/83_nyelvi táborok.JPG',
         pocketTitle: 'Nyelvi táborok',
         gallery: [
-            'KEPEK/83_nyelvi táborok/1.jpg',
-            'KEPEK/83_nyelvi táborok/2.jpg',
-            'KEPEK/83_nyelvi táborok/3.jpg',
-            'KEPEK/83_nyelvi táborok/4.jpg',
-            'KEPEK/83_nyelvi táborok/5.jpg',
-            'KEPEK/83_nyelvi táborok/6.jpg',
-            'KEPEK/83_nyelvi táborok/7.jpg',
-            'KEPEK/83_nyelvi táborok/8.jpg',
-            'KEPEK/83_nyelvi táborok/9.jpg'
+            'KEPEK/83_nyelvi táborok/1.JPG',
+            'KEPEK/83_nyelvi táborok/2.JPG',
+            'KEPEK/83_nyelvi táborok/3.JPG',
+            'KEPEK/83_nyelvi táborok/4.JPG',
+            'KEPEK/83_nyelvi táborok/5.JPG',
+            'KEPEK/83_nyelvi táborok/6.JPG',
+            'KEPEK/83_nyelvi táborok/7.JPG',
+            'KEPEK/83_nyelvi táborok/8.JPG',
+            'KEPEK/83_nyelvi táborok/9.JPG'
         ]
     },
     {
@@ -1485,7 +1485,7 @@ const pages = [
     // --- 84. Pályázati sikerek: Erasmus +, VELUX-alapítvány (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/84_erasmus.jpg',
+        image: 'KEPEK/84_erasmus.JPG',
         pocketTitle: 'Pályázati sikerek',
         gallery: [
             'KEPEK/84_pályázati sikerek/1.jpg',
@@ -1571,13 +1571,13 @@ const pages = [
     // --- 89. Dr. Nyárs Csaba-díj, Czellér András-díj (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/89_nyárs csaba díj.jpg',
+        image: 'KEPEK/89_nyárs csaba díj.JPG',
         pocketTitle: 'Dr. Nyárs Csaba-díj',
         gallery: [
-            'KEPEK/89_nyárs csaba díj/1.jpg',
-            'KEPEK/89_nyárs csaba díj/2.jpg',
-            'KEPEK/89_nyárs csaba díj/3.jpg',
-            'KEPEK/89_nyárs csaba díj/4.jpg',
+            'KEPEK/89_nyárs csaba díj/1.JPG',
+            'KEPEK/89_nyárs csaba díj/2.JPG',
+            'KEPEK/89_nyárs csaba díj/3.JPG',
+            'KEPEK/89_nyárs csaba díj/4.JPG',
             'KEPEK/89_nyárs csaba díj/5.jpg'
         ]
     },
@@ -1590,32 +1590,32 @@ const pages = [
     // --- 90. 90. tanév (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/90_ünnep.jpg',
+        image: 'KEPEK/90_ünnep.JPG',
         pocketTitle: '90. tanév',
         gallery: [
             'KEPEK/90_szülinap/1.jpg',
             'KEPEK/90_szülinap/10.jpg',
             'KEPEK/90_szülinap/11.jpg',
-            'KEPEK/90_szülinap/12.jpg',
+            'KEPEK/90_szülinap/12.JPG',
             'KEPEK/90_szülinap/13.jpg',
             'KEPEK/90_szülinap/14.jpg',
-            'KEPEK/90_szülinap/15.jpg',
-            'KEPEK/90_szülinap/16.jpg',
+            'KEPEK/90_szülinap/15.JPG',
+            'KEPEK/90_szülinap/16.JPG',
             'KEPEK/90_szülinap/17.jpg',
-            'KEPEK/90_szülinap/18.jpg',
+            'KEPEK/90_szülinap/18.JPG',
             'KEPEK/90_szülinap/19.jpg',
             'KEPEK/90_szülinap/19b.jpg',
             'KEPEK/90_szülinap/2.jpg',
             'KEPEK/90_szülinap/20.jpg',
             'KEPEK/90_szülinap/21.jpg',
-            'KEPEK/90_szülinap/3.jpg',
-            'KEPEK/90_szülinap/4.jpg',
-            'KEPEK/90_szülinap/5.jpg',
-            'KEPEK/90_szülinap/6.jpg',
-            'KEPEK/90_szülinap/7.jpg',
+            'KEPEK/90_szülinap/3.JPG',
+            'KEPEK/90_szülinap/4.JPG',
+            'KEPEK/90_szülinap/5.JPG',
+            'KEPEK/90_szülinap/6.JPG',
+            'KEPEK/90_szülinap/7.JPG',
             'KEPEK/90_szülinap/7b.jpg',
-            'KEPEK/90_szülinap/8.jpg',
-            'KEPEK/90_szülinap/9.jpg'
+            'KEPEK/90_szülinap/8.JPG',
+            'KEPEK/90_szülinap/9.JPG'
         ]
     },
     {
@@ -1657,12 +1657,12 @@ const pages = [
             'KEPEK/92_iskolakert/4.jpg',
             'KEPEK/92_iskolakert/508113658_24373468288906396_3354828008535129465_n.jpg',
             'KEPEK/92_iskolakert/60219770_10156830053839821_841068988715761664_n.jpg',
-            'KEPEK/92_iskolakert/G.jpg',
-            'KEPEK/92_iskolakert/H.jpg',
+            'KEPEK/92_iskolakert/G.JPG',
+            'KEPEK/92_iskolakert/H.JPG',
             'KEPEK/92_iskolakert/NYÁR_1.jpg',
             'KEPEK/92_iskolakert/NYÁR_2.jpg',
-            'KEPEK/92_iskolakert/P1011977.jpg',
-            'KEPEK/92_iskolakert/P1011982.jpg',
+            'KEPEK/92_iskolakert/P1011977.JPG',
+            'KEPEK/92_iskolakert/P1011982.JPG',
             'KEPEK/92_iskolakert/TAVASZ_2.jpg',
             'KEPEK/92_iskolakert/TAVASZ_3.jpg',
             'KEPEK/92_iskolakert/TAVASZ_4.jpg',
@@ -1682,7 +1682,7 @@ const pages = [
     // --- 93. UMSZKI Diákdíj (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/93_umszki diákdíj.jpg'
+        image: 'KEPEK/93_umszki diákdíj.JPG'
     },
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
@@ -1714,14 +1714,14 @@ const pages = [
     // --- 95. Iskolatörténeti gyűjtemény - a megújult iskolamúzeum (Helyszínek - Zöld) ---
     {
         type: 'image', eraCss: 'era-helyiseg',
-        image: 'KEPEK/95_ÚJMÚZEUM.jpg',
+        image: 'KEPEK/95_ÚJMÚZEUM.JPG',
         pocketTitle: 'Iskolatörténeti gyűjtemény',
         gallery: [
             'KEPEK/95_új_múzeum/1.jpg',
-            'KEPEK/95_új_múzeum/2.jpg',
-            'KEPEK/95_új_múzeum/3.jpg',
-            'KEPEK/95_új_múzeum/4.jpg',
-            'KEPEK/95_új_múzeum/5.jpg',
+            'KEPEK/95_új_múzeum/2.JPG',
+            'KEPEK/95_új_múzeum/3.JPG',
+            'KEPEK/95_új_múzeum/4.JPG',
+            'KEPEK/95_új_múzeum/5.JPG',
             'KEPEK/95_új_múzeum/6.jpg'
         ]
     },
@@ -1745,7 +1745,7 @@ const pages = [
     // --- 97. Kulturális örökség napja (Események - Bézs) ---
     {
         type: 'image', eraCss: 'era-esemeny',
-        image: 'KEPEK/97_kulturalis örökseg.jpg',
+        image: 'KEPEK/97_kulturalis örökseg.JPG',
         pocketTitle: 'Kulturális örökség napja',
         gallery: [
             'KEPEK/97_kulturális örökség napja/1.jpg',
