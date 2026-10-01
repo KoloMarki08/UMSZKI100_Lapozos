@@ -27,6 +27,7 @@ const pages = [
     // --- 1. BEVEZETÉS (Alap - Fehér) ---
     {
         type: 'image', eraCss: 'era-uniform',
+        image: 'KEPEK/1_magyar állami/7.jpg',
         pocketTitle: 'ANTRÉ',
         gallery: [
             'KEPEK/1_magyar állami/1.jpg',
@@ -34,8 +35,7 @@ const pages = [
             'KEPEK/1_magyar állami/3.jpg',
             'KEPEK/1_magyar állami/4.jpg',
             'KEPEK/1_magyar állami/5.jpg',
-            'KEPEK/1_magyar állami/6.jpg',
-            'KEPEK/1_magyar állami/7.jpg'
+            'KEPEK/1_magyar állami/6.jpg'
         ]
     },
     {
@@ -647,7 +647,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Sportélet, sportsikerek',
-        content: 'Szinte lehetetlen vállalkozás a 100 év minden sporttal kapcsolatos eseményét, említésre érdemes személyét hiánytalanul felsorakoztatni.<br>Szöllősi Antal, iskolánk legendás testnevelő tanára a \'40-es évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott.<br>Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt.<br>Kis Alajos labdarúgóedző csapatával országos nagypályás bajnokságon is részt vett.<br>Szenczi László tanár úr az UTE, majd a Honvéd atlétikaedzője, és korábban Molnár Imréné testnevelő tanár országos és fővárosi atlétikai versenyekre vitte a diákokat.<br><br>Andorfer János - iskolánk volt diákja, jelenlegi tanára - 1993-tól vette át a kispályás labdarúgócsapatot, és 2018-ig nevezte, vitte, kísérte rendszeresen a diákokat kerületi, városi labdarúgó tornákra. A Budapesti Diáksport Szövetség középiskolák részére a kispályás Pesti Srác Kupát hirdette meg, melyen diákjaink rendszeresen vettek részt. A tanár urat 2015-ben felkérték a kerületi középiskolás válogatott vezetésére. Umszkis diákjaink az ifjúsági országos curling bajnokságon 6. helyezést értek el. Országos floorball-bajnokságon is szerepeltek. Diákolimpiai eredmények, az Amatőr Teremlabdarúgó Bajnokság eredményei, kosárlabda, sportlövészet, röplabda, tollaslabda, judo színesítik a palettát, és a kör így sem teljes.<br><br><b>Neves sportolóink, a teljesség igénye nélkül:</b><div style="column-count: 3; column-gap: 1.5vw; font-size: 1.3vh; line-height: 1.4; margin-top: 1vh;">Hagya István - magasugró<br>Gáll Mária - tornász<br>Bakos István - kézilabdázó<br>Jakab István - kézilabdázó<br>Sütő József - atléta, maratoni<br>Fekete Sándor - atléta<br>Tóth Zoltán - labdarúgó<br>Nyirádi György - kajakozó<br>Mózes András - atléta, maratoni<br>Brabant Béla - gyeplabda<br>Tóth Zoltán - hajómodellező<br>Ancsin János - jégkorongozó<br>Brockhauser István - labdarúgó<br>Sztankó Éva - röplabdázó<br>Szűcs Lajos - labdarúgó<br>Hoboth Sándor - röplabdázó<br>Giczy Csaba - kajakozó<br>Füzesi Zsolt - labdarúgó<br>Kovács Zoltán - vízilabdázó<br>Vass Sándor - kézilabdázó<br>Móró Endre - thai-boxoló<br>Spránitz Gábor - sportlövő<br>Vass Károly - kézilabdázó<br>Monostori Attila - vízilabdázó<br>Lange Péter - Sail Racing Team<br>Battlay Krisztina - röplabdázó<br>Lőw Zsolt - labdarúgó<br>Nyerges Krisztián - labdarúgó<br>Czingli László - tornász<br>Szirányi Bence - jégkorongozó<br>Németh Zsanett - birkózó<br>Guczoghy György - tornász<br>Ágh György - vízilabdázó<br>Farkas János - kalapácsvető<br>Nagy Tibor - labdarúgó<br>Sebeők Mátyás - jiu-jitsu<br>Kolonics Márk - karatéka</div>'
+        content: 'Szinte lehetetlen vállalkozás a 100 év minden sporttal kapcsolatos eseményét, említésre érdemes személyét hiánytalanul felsorakoztatni.<br>Szöllősi Antal, iskolánk legendás testnevelő tanára a \'40-es évek végén kinevelt egy kitűnő tornász csapatot. Versenyeken is indultak. Szöllősi a torna mellett az atlétikával, sőt a labdarúgással is kiemelten foglalkozott.<br>Sete Vilmos tanár úr jóvoltából az UMSZKI egyik sikersportága évtizedeken keresztül a kézilabda volt.<br>Kis Alajos labdarúgóedző csapatával országos nagypályás bajnokságon is részt vett.<br>Szenczi László tanár úr az UTE, majd a Honvéd atlétikaedzője, és korábban Molnár Imréné testnevelő tanár országos és fővárosi atlétikai versenyekre vitte a diákokat.<br><br>Andorfer János - iskolánk volt diákja, jelenlegi tanára - 1993-tól vette át a kispályás labdarúgócsapatot, és 2018-ig nevezte, vitte, kísérte rendszeresen a diákokat kerületi, városi labdarúgó tornákra. A Budapesti Diáksport Szövetség középiskolák részére a kispályás Pesti Srác Kupát hirdette meg, melyen diákjaink rendszeresen vettek részt. A tanár urat 2015-ben felkérték a kerületi középiskolás válogatott vezetésére. Umszkis diákjaink az ifjúsági országos curling bajnokságon 6. helyezést értek el. Országos floorball-bajnokságon is szerepeltek. Diákolimpiai eredmények, az Amatőr Teremlabdarúgó Bajnokság eredményei, kosárlabda, sportlövészet, röplabda, tollaslabda, judo színesítik a palettát, és a kör így sem teljes.<br><br><b>Neves sportolóink, a teljesség igénye nélkül:</b><div style="column-count: 3; column-gap: 1.5vw; font-size: 1.3vh; line-height: 1.4; margin-top: 1vh;">Hagya István - magasugró<br>Gáll Mária - tornász<br>Bakos István - kézilabdázó<br>Jakab István - kézilabdázó<br>Sütő József - atléta, maratoni<br>Fekete Sándor - atléta<br>Tóth Zoltán - labdarúgó<br>Nyirádi György - kajakozó<br>Mózes András - atléta, maratoni<br>Brabant Béla - gyeplabda<br>Tóth Zoltán - hajómodellező<br>Ancsin János - jégkorongozó<br>Brockhauser István - labdarúgó<br>Sztankó Éva - röplabdázó<br>Szűcs Lajos - labdarúgó<br>Hoboth Sándor - röplabdázó<br>Giczy Csaba - kajakozó<br>Füzesi Zsolt - labdarúgó<br>Kovács Zoltán - vízilabdázó<br>Vass Sándor - kézilabdázó<br>Móró Endre - thai-boxoló<br>Spránitz Gábor - sportlövő<br>Vass Károly - kézilabdázó<br>Monostori Attila - vízilabdázó<br>Lange Péter - Sail Racing Team<br>Battlay Krisztina - röplabdázó<br>Lőw Zsolt - labdarúgó<br>Nyerges Krisztián - labdarúgó<br>Czingli László - tornász<br>Szirányi Bence - jégkorongozó<br>Guczoghy György - tornász<br>Ágh György - vízilabdázó<br>Farkas János - kalapácsvető<br>Nagy Tibor - labdarúgó<br>Sebeők Mátyás - jiu-jitsu<br>Kolonics Márk - karatéka</div>'    
     },
 
     // --- 39. Csizmadia Ferenc (Személyek - Kék) ---
@@ -699,7 +699,7 @@ const pages = [
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
-        title: 'Művésztanáraik, Képzőművészeink',
+        title: 'Művésztanáraik, képzőművészeink',
         content: 'A reprezentatív kép alkotója a szignó alapján Guzsváry János, aki testnevelő tanár, gerelyhajító atléta és képzőművész volt egy személyben.<br><br>Laurencsik Béla mindamellett, hogy mérnök, mérnöktanár volt, Képzőművészeti Főiskolát is végzett.<br><br>Király Endre az iskola kimagasló tanáregyénisége volt. Kohóipari mérnöki végzettségével kiváló és kreatív öntőipari mérnökként - melyet több szabadalma sok gyakorlati tapasztalata is alátámaszt - pályázta meg a tanári állást, amit elnyert, és 1928-ban megkezdte tanári pályafutását. Sokoldalú ember volt. A festészethez való vonzódása végigkísérte életét. Több kiállítása volt: 1917-ben Szibériában, hadifogsága idején, 1934-ben Budapesten a Műcsarnokban, 1952-ben Vácon és 1960-ban időskora lakhelyén a svájci Lausanne-ban.<br><br>Bótos Sándor 1959 és 1981 között volt az iskola tanára. Szabadkézi rajzot és ábrázoló geometriát tanított. Csendes, visszahúzódó szuverén egyéniség volt. Diákjai nagyon kedvelték: tudása, tanítási módszere és egyénisége okán is. A tantestületben nagy tisztelet övezte. Szerénységére jellemző, hogy festőművészi tevékenységéről, sikereiről az iskolában soha nem beszélt.'
     },
 
@@ -1012,7 +1012,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Iskolai ünnepségek',
-        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br>-évnyitó,<br>-az aradi vértanúk emléknapja (október 6.),<br>- az 1956-os forradalom és szabadságharc emléknapja (október 23.),<br>- a magyar nyelv napja (november 13.),<br>- a magyar kultúra napja (január 22.),<br>- a kommunista diktatúrák áldozatainak emléknapja (február 25.),<br>- az 1848–49-es forradalom és szabadságharc emléknapja (március 15.),<br>- a holokauszt magyarországi áldozatainak emléknapja (április 16.),<br>- a nemzeti összetartozás napja (június 4.),<br>- évzáró.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik – a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások –, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.'
+        content: 'Az iskolai ünnepségek és rendezvények nem csupán kötelező programok a tanév naptárában, hanem az intézményi kultúra, a közösségépítés és az értékteremtés pillérei is.<br>Vegyük sorra a pontos dátumokhoz kötődő iskolai ünnepségeket, megemlékezéseket listaszerűen:<br>&emsp;• évnyitó,<br>&emsp;• az aradi vértanúk emléknapja (október 6.),<br>&emsp;• az 1956-os forradalom és szabadságharc emléknapja (október 23.),<br>&emsp;• a magyar nyelv napja (november 13.),<br>&emsp;• a magyar kultúra napja (január 22.),<br>&emsp;• a kommunista diktatúrák áldozatainak emléknapja (február 25.),<br>&emsp;• az 1848–49-es forradalom és szabadságharc emléknapja (március 15.),<br>&emsp;• a holokauszt magyarországi áldozatainak emléknapja (április 16.),<br>&emsp;• a nemzeti összetartozás napja (június 4.),<br>&emsp;• évzáró.<br>Ezeknek az alkalmaknak évről évre visszatérő ritmusa a tulajdonképpeni hagyományteremtés. Bár a modern világban az iskolai ünnepségek formája változik – a merev, statikus ünnepélyeket egyre inkább felváltják a diákokhoz jobban alkalmazkodó, interaktív vagy drámapedagógiai megoldások –, a lényegük változatlan marad. Az iskolai ünnepségek hidat képeznek a múlt és a jövő, az egyén és a közösség között.<br>Az ünnepi műsorok elkészítése komoly csapatmunkát igényel.'
     },
 
     // --- 59. Elektroncső (Helyszínek - Zöld) ---
@@ -1164,7 +1164,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-esemeny', dropCap: true,
         title: 'Szakmák Éjszakája',
-        content: '2016. április 15-én került sor első ízben a Szakmák Éjszakájának megrendezésére az UMSZKI-ban. Ez az interaktív bemutatókra épülő program igen komoly érdeklődésre tartott számot.<br>Látogathatóak voltak a műhelyek és a szaktantermek, ahol különlegesen érdekes programokkal, bemutatókkal várták az érdeklődőket. Gyerekek, szüleik és a kollégák lelkesen próbálták ki a rendelkezésükre álló eszközöket.<br>Az umszkis diákok és tanárok éjszakába nyúlóan dolgoztak, fáradhatatlanul beszéltek, be- és megmutatták az iskola fő profiljait a látogatóknak.'
+        content: 'A Szakmák Éjszakájának megrendezésére – első ízben – 2016. április 15-én került sor az UMSZKI-ban. Ez az interaktív bemutatókra épülő program igen komoly érdeklődésre tartott számot.<br>Látogathatóak voltak a műhelyek és a szaktantermek, ahol különlegesen érdekes programokkal, bemutatókkal várták az érdeklődőket. Gyerekek, szüleik és a kollégák lelkesen próbálták ki a rendelkezésükre álló eszközöket.<br>Az umszkis diákok és tanárok éjszakába nyúlóan dolgoztak, fáradhatatlanul beszéltek, be- és megmutatták az iskola fő profiljait a látogatóknak.'
     },
 
     // --- 67. Könyvtár (Helyszínek - Zöld) ---
@@ -1565,7 +1565,7 @@ const pages = [
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
         title: 'Iskolavezetés',
-        content: 'Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br>BLOCKNER GYULA 1924 – 1939<br>LAURENCSIK BÉLA 1939 – 1940<br>SZABÓ BÉLA 1940 – 1948<br>BOLGÁR MIKLÓS 1948 – 1950<br>DR. TEMESI ALFRÉD 1950 – 1951<br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br>BADÁR GÁBOR 1952 – 1957<br>BARTOS LÍVIA 1957 – 1980<br>CSIZMADIA FERENC 1980 – 2000<br>ZOMBORI BÉLA 2000 – 2011<br>KASZA GYULÁNÉ 2011 – 2012<br>HACKNÉ NYERGES RITA 2012 – 2018<br>VÁRKONYI ATTILA 2018 – 2019<br>SZEVER LÁSZLÓ 2019 – 2021<br>ZIEGLER TÜNDE EDIT 2021 –'
+        content: 'Intézményünk 100 éve alatt az alábbi személyek töltötték be az igazgatói pozíciót:<br><br>BLOCKNER GYULA 1924 – 1939<br><br>LAURENCSIK BÉLA 1939 – 1940<br><br>SZABÓ BÉLA 1940 – 1948<br><br>BOLGÁR MIKLÓS 1948 – 1950<br><br>DR. TEMESI ALFRÉD 1950 – 1951<br><br>DR. SZENTIRMAY JÁNOS 1951 – 1952<br><br>BADÁR GÁBOR 1952 – 1957<br><br>BARTOS LÍVIA 1957 – 1980<br><br>CSIZMADIA FERENC 1980 – 2000<br><br>ZOMBORI BÉLA 2000 – 2011<br><br>KASZA GYULÁNÉ 2011 – 2012<br><br>HACKNÉ NYERGES RITA 2012 – 2018<br><br>VÁRKONYI ATTILA 2018 – 2019<br><br>SZEVER LÁSZLÓ 2019 – 2021<br><br>ZIEGLER TÜNDE EDIT 2021 –'
     },
 
     // --- 89. Dr. Nyárs Csaba-díj, Czellér András-díj (Események - Bézs) ---
@@ -1790,7 +1790,52 @@ const pages = [
     // --- 100. Tanár nélkül nincs jövő (Személyek - Kék) ---
     {
         type: 'image', eraCss: 'era-szemelyek',
-        image: 'KEPEK/'
+        image: 'KEPEK/100_umszki100-unnep/43.jpg',
+        pocketTitle: 'UMSZKI100 öregdiák találkozó',
+        gallery: [
+            'KEPEK/100_umszki100-unnep/1.jpg',
+            'KEPEK/100_umszki100-unnep/2.jpg',
+            'KEPEK/100_umszki100-unnep/3.jpg',
+            'KEPEK/100_umszki100-unnep/4.jpg',
+            'KEPEK/100_umszki100-unnep/5.jpg',
+            'KEPEK/100_umszki100-unnep/6.jpg',
+            'KEPEK/100_umszki100-unnep/7.jpg',
+            'KEPEK/100_umszki100-unnep/8.jpg',
+            'KEPEK/100_umszki100-unnep/9.jpg',
+            'KEPEK/100_umszki100-unnep/10.jpg',
+            'KEPEK/100_umszki100-unnep/11.jpg',
+            'KEPEK/100_umszki100-unnep/12.jpg',
+            'KEPEK/100_umszki100-unnep/13.jpg',
+            'KEPEK/100_umszki100-unnep/14.jpg',
+            'KEPEK/100_umszki100-unnep/15.jpg',
+            'KEPEK/100_umszki100-unnep/16.jpg',
+            'KEPEK/100_umszki100-unnep/17.jpg',
+            'KEPEK/100_umszki100-unnep/18.jpg',
+            'KEPEK/100_umszki100-unnep/19.jpg',
+            'KEPEK/100_umszki100-unnep/20.jpg',
+            'KEPEK/100_umszki100-unnep/21.jpg',
+            'KEPEK/100_umszki100-unnep/22.jpg',
+            'KEPEK/100_umszki100-unnep/23.jpg',
+            'KEPEK/100_umszki100-unnep/24.jpg',
+            'KEPEK/100_umszki100-unnep/25.jpg',
+            'KEPEK/100_umszki100-unnep/26.jpg',
+            'KEPEK/100_umszki100-unnep/27.jpg',
+            'KEPEK/100_umszki100-unnep/28.jpg',
+            'KEPEK/100_umszki100-unnep/29.jpg',
+            'KEPEK/100_umszki100-unnep/30.jpg',
+            'KEPEK/100_umszki100-unnep/31.jpg',
+            'KEPEK/100_umszki100-unnep/32.jpg',
+            'KEPEK/100_umszki100-unnep/33.jpg',
+            'KEPEK/100_umszki100-unnep/34.jpg',
+            'KEPEK/100_umszki100-unnep/35.jpg',
+            'KEPEK/100_umszki100-unnep/36.jpg',
+            'KEPEK/100_umszki100-unnep/37.jpg',
+            'KEPEK/100_umszki100-unnep/38.jpg',
+            'KEPEK/100_umszki100-unnep/39.jpg',
+            'KEPEK/100_umszki100-unnep/40.jpg',
+            'KEPEK/100_umszki100-unnep/41.jpg',
+            'KEPEK/100_umszki100-unnep/42.jpg'
+        ]
     },
     {
         type: 'chapter', eraCss: 'era-szemelyek', dropCap: true,
@@ -1801,14 +1846,15 @@ const pages = [
     // --- SZERKESZTŐSÉG ÉS ZÁRÓ OLDALAK ---
     { 
         type: 'impresszum', 
-        eraCss: 'era-toc', 
+        eraCss: 'era-impresszum', /* EZT MÓDOSÍTOTTUK */
         title: 'IMPRESSZUM',
         content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A SZÖVEGEKET ÉS A FOTÓKAT ÖSSZEÁLLÍTOTTA:</b><br><span style="border: 3px solid black; padding: 0.1vh 0.5vw;">Urbán Kornél</span><br>Gulyás Ildikó<br><br><b>AZ UMSZKI100 EMLÉKKÖNYV SEGÉDSZERKESZTŐI:</b><br>Andorfer János<br>Braun Éva<br>Hegyiné Závori Szilvia<br>Kovács János<br>Kluka Norbert<br>Seres József<br>Soósné Varga Lia<br>Zabari Tibor<br><br><b>AZ EMLÉKKÖNYVET ÖSSZEÁLLÍTOTTA ÉS GONDOZTA:</b><br>Gulyás Ildikó</div>' 
     },
     { 
         type: 'impresszum', 
-        eraCss: 'era-toc', 
-        content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A KIADVÁNYT SZERKESZTETTE:</b><br>Kolonics Márk<br><br><b>A KIADVÁNYT LEKTORÁLTA:</b><br>Widder László<br><br><b>FELELŐS KIADÓ:</b><br>Ziegler Tünde Edit</div>'
+        eraCss: 'era-impresszum', /* EZT MÓDOSÍTOTTUK */
+        title: '<span style="opacity: 0;">IMPRESSZUM</span>',
+        content: '<div style="text-align: center; font-size: 2vh; line-height: 1.8; margin-top: 5vh;"><b>A KIADVÁNYT SZERKESZTETTE:</b><br>Kolonics Márk<br>Kluka Norbert<br><br><b>A KIADVÁNYT LEKTORÁLTA:</b><br>Widder László<br><br><b>FELELŐS KIADÓ:</b><br>Ziegler Tünde Edit</div>'
     },
 
     { type: 'back-cover', eraCss: 'era-cover' },

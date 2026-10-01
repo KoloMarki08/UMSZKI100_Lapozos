@@ -157,6 +157,10 @@ function animateFlip(direction, complete) {
 
 function startDrag(e) {
     if (isFlipping || scene.classList.contains('idle')) return;
+    
+    // --- MEGVÉDJÜK A LAPOZÁSTÓL A LIGHTBOXOT ---
+    if (document.getElementById('lightbox') && document.getElementById('lightbox').classList.contains('active')) return;
+
     wasDragged = false;
     if (e.target.closest('#bookmark') || e.target.closest('.pocket-wrapper')) return;
 
@@ -310,22 +314,90 @@ document.getElementById('info-modal').addEventListener('click', (e) => {
     }
 });
 
+
+// =====================================================================
+// --- ÚJ LIGHTBOX ZOOM ÉS MOZGATÁS ---
+// =====================================================================
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 lightbox.innerHTML = `
     <div class="lightbox-close">&times;</div>
-    <img id="lightbox-img" src="" alt="Nagy kép">
+    <img id="lightbox-img" src="" alt="Nagy kép" style="cursor: grab; transition: transform 0.05s linear;">
 `;
 document.body.appendChild(lightbox);
 
+const lbImg = lightbox.querySelector('#lightbox-img');
+let lbScale = 1;
+let lbPointX = 0;
+let lbPointY = 0;
+let lbStartX = 0;
+let lbStartY = 0;
+let isLbDragging = false;
+
 function openLightbox(url) {
-    document.getElementById('lightbox-img').src = url;
+    lbImg.src = url;
     lightbox.classList.add('active');
+    // Visszaállítás alaphelyzetbe megnyitáskor
+    lbScale = 1;
+    lbPointX = 0;
+    lbPointY = 0;
+    updateLightboxTransform();
 }
 
-lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
+function updateLightboxTransform() {
+    lbImg.style.transform = `translate(${lbPointX}px, ${lbPointY}px) scale(${lbScale})`;
+}
+
+// Bezárás csak akkor, ha a háttérre vagy az X-re kattintunk
+lightbox.addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('active');
+    }
 });
+
+// --- ZOOM (Egérgörgő) ---
+lightbox.addEventListener('wheel', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    e.preventDefault();
+    
+    const xs = (e.clientX - lbPointX) / lbScale;
+    const ys = (e.clientY - lbPointY) / lbScale;
+    const delta = Math.sign(e.deltaY) * -1; // -1 kicsinyítés, +1 nagyítás
+    
+    if (delta > 0) lbScale *= 1.2;
+    else lbScale /= 1.2;
+    
+    lbScale = Math.min(Math.max(0.5, lbScale), 10); // Nagyítás korlátozása 0.5x és 10x közé
+
+    lbPointX = e.clientX - xs * lbScale;
+    lbPointY = e.clientY - ys * lbScale;
+    
+    updateLightboxTransform();
+}, { passive: false });
+
+// --- MOZGATÁS (Egérrel/Ujjal húzás) ---
+lbImg.addEventListener('pointerdown', (e) => {
+    e.preventDefault();
+    isLbDragging = true;
+    lbStartX = e.clientX - lbPointX;
+    lbStartY = e.clientY - lbPointY;
+    lbImg.style.cursor = 'grabbing';
+});
+
+window.addEventListener('pointermove', (e) => {
+    if (!isLbDragging || !lightbox.classList.contains('active')) return;
+    e.preventDefault();
+    lbPointX = e.clientX - lbStartX;
+    lbPointY = e.clientY - lbStartY;
+    updateLightboxTransform();
+}, { passive: false });
+
+window.addEventListener('pointerup', () => {
+    isLbDragging = false;
+    lbImg.style.cursor = 'grab';
+});
+// =====================================================================
+
 
 // --- AUTOMATIKUS SORKÖZ-ELOSZTÓ ---
 function distributePageElements() {

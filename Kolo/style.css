@@ -226,6 +226,7 @@ body::before {
     padding: 4vh 4vw 5vh;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* EZT AZ EGY SORT KELL HOZZÁADNI */
     overflow: hidden;
     position: relative;
     box-shadow: inset 0 0 3vh rgba(0, 0, 0, .06);
@@ -846,8 +847,9 @@ footer {
 
 .page-left.era-toc {
     background-color: #f4ecd8 !important;
+    /* 0.85-ről 0.93-ra növeltük, így halványabb a kép */
     background-image:
-        linear-gradient(rgba(244, 236, 216, 0.85), rgba(244, 236, 216, 0.85)),
+        linear-gradient(rgba(244, 236, 216, 0.93), rgba(244, 236, 216, 0.93)),
         url('KEPEK/0_címlap.jpg') !important;
     background-size: 100% 100%, 200% 100% !important;
     background-position: center, left center !important;
@@ -857,8 +859,9 @@ footer {
 
 .page-right.era-toc {
     background-color: #f4ecd8 !important;
+    /* Itt is 0.85-ről 0.93-ra növeltük */
     background-image:
-        linear-gradient(rgba(244, 236, 216, 0.85), rgba(244, 236, 216, 0.85)),
+        linear-gradient(rgba(244, 236, 216, 0.93), rgba(244, 236, 216, 0.93)),
         url('KEPEK/0_címlap.jpg') !important;
     background-size: 100% 100%, 200% 100% !important;
     background-position: center, right center !important;
@@ -866,10 +869,32 @@ footer {
     background-blend-mode: normal, multiply !important;
 }
 
+/* --- IMPRESSZUM IGAZÍTÁS --- */
+.era-impresszum {
+    justify-content: flex-start !important; /* Kikapcsoljuk a középre húzást */
+    padding-top: 15vh; /* Felülről toljuk le őket egyszerre, így hajszálpontosan egy vonalban lesz a két lap */
+}
+
+.page-left.era-impresszum {
+    background-color: #f4ecd8 !important;
+    background-image: linear-gradient(rgba(244, 236, 216, 0.93), rgba(244, 236, 216, 0.93)), url('KEPEK/0_címlap.jpg') !important;
+    background-size: 100% 100%, 200% 100% !important;
+    background-position: center, left center !important;
+    background-blend-mode: normal, multiply !important;
+}
+
+.page-right.era-impresszum {
+    background-color: #f4ecd8 !important;
+    background-image: linear-gradient(rgba(244, 236, 216, 0.93), rgba(244, 236, 216, 0.93)), url('KEPEK/0_címlap.jpg') !important;
+    background-size: 100% 100%, 200% 100% !important;
+    background-position: center, right center !important;
+    background-blend-mode: normal, multiply !important;
+}
+
 .toc-grid {
     column-count: 2;
     column-gap: 3vw;
-    margin-top: 1vh;
+    margin-top: 2vh; /* Kicsit lejjebb toltuk */
     height: 100%;
     text-align: left;
 }
@@ -877,13 +902,14 @@ footer {
 .toc-grid .toc-link {
     display: block;
     width: 100%;
-    font-size: 1.35vh;
-    line-height: 1.25;
-    margin-bottom: 0.7vh;
+    font-size: 1.55vh; /* 1.35-ről nagyítva */
+    line-height: 1.35; /* 1.25-ről szellősebbre véve */
+    margin-bottom: 1vh; /* 0.7-ről növelve */
     text-decoration: none;
     border-bottom: none;
     break-inside: avoid;
-    font-weight: 600;
+    font-weight: 700; /* Vastagabb betű */
+    text-shadow: 0 0 4px rgba(244, 236, 216, 0.9); /* Finom élkiemelés a kép felett */
 }
 
 .toc-grid .toc-link:hover {
@@ -901,6 +927,12 @@ footer {
         --page-h: 96vh;
         --page-w: 46vw;
         --base-lh: 4vh;
+    }
+
+    .toc-grid .toc-link {
+        font-size: 16px !important; /* Fix méret, ami már jól olvasható */
+        margin-bottom: 12px !important; /* Fix sorköz a linkek között */
+        line-height: 20px !important; /* Fix sormagasság, ha több sorba törne a szöveg */
     }
 
     .page-content {
@@ -926,6 +958,15 @@ footer {
         --page-h: 96vh;
         --page-w: 47vw;
         --base-lh: 2.5vh;
+    }
+
+    .toc-grid .toc-link {
+        font-size: 15px !important; /* Picit kisebb, hogy álló nézetben is kiférjen a szűkebb oszlopba */
+        margin-bottom: 10px !important; 
+        line-height: 18px !important;
+    }
+    .toc-grid {
+        column-gap: 25px !important; /* Fix távolság a két oszlop között */
     }
 
     .page-content {
