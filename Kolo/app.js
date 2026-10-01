@@ -310,7 +310,7 @@ document.getElementById('info-modal').addEventListener('click', (e) => {
 });
 
 function distributePageElements() {
-    const bodies = document.querySelectorAll('.chapter-body');
+    const bodies = document.querySelectorAll('.chapter-body:not(.toc-grid)');
     bodies.forEach(body => {
         const elements = body.children;
         if (elements.length <= 1) return;

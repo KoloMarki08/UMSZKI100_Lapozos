@@ -839,6 +839,8 @@ footer {
 .era-toc {
     color: #3a2a18;
     background-color: #f4ecd8 !important;
+    justify-content: flex-start !important; /* Ez fixálja le, hogy ne középről, hanem fentről induljon mindkét oldal */
+    padding-top: 8vh; /* Finom térköz felülről, hogy szép vonalban legyen a cím */
 }
 
 .era-toc::before {
@@ -891,31 +893,62 @@ footer {
     background-blend-mode: normal, multiply !important;
 }
 
+/* --- TARTALOMJEGYZÉK: FIX 2 OSZLOP ÉS BEFÉRÉS JAVÍTÁSA --- */
+.page-content.era-toc {
+    padding-top: 3vh !important; /* Nyerünk egy kis helyet felül */
+    padding-bottom: 2vh !important; /* És alul is */
+}
+
+.era-toc .chapter-title {
+    margin-bottom: 1.5vh !important; /* Kisebb szünet a főcím alatt */
+}
+
 .toc-grid {
-    column-count: 2;
+    column-count: 2 !important; /* Szigorúan 2 oszlopra kényszerítjük */
     column-gap: 3vw;
-    margin-top: 2vh; /* Kicsit lejjebb toltuk */
+    display: block !important;
     height: 100%;
     text-align: left;
 }
 
 .toc-grid .toc-link {
-    display: block;
+    display: inline-block; 
     width: 100%;
-    font-size: 1.55vh; /* 1.35-ről nagyítva */
-    line-height: 1.35; /* 1.25-ről szellősebbre véve */
-    margin-bottom: 1vh; /* 0.7-ről növelve */
+    font-size: 1.5vh !important; /* Marad a méret, hogy vízszintesen kiférjen */
+    line-height: 1.3 !important; /* Kicsit szellősebb sorköz a 2 soros címeknél */
+    margin-bottom: 10px !important; /* Fix 12px távolság az egyes pontok között */
     text-decoration: none;
-    border-bottom: none;
+    font-weight: 700;
+    text-shadow: 0 0 4px rgba(244, 236, 216, 0.9);
     break-inside: avoid;
-    font-weight: 700; /* Vastagabb betű */
-    text-shadow: 0 0 4px rgba(244, 236, 216, 0.9); /* Finom élkiemelés a kép felett */
 }
 
 .toc-grid .toc-link:hover {
     color: #901a1e;
 }
 
+/* --- 101. TANTESTÜLET DUPLA KÉP --- */
+.era-tantestulet::before {
+    display: none !important; /* Vonalazás kikapcsolása */
+}
+.era-tantestulet .page-num {
+    display: none !important; /* Oldalszám elrejtése a képről */
+}
+.page-left.era-tantestulet {
+    background-color: #fff !important;
+    /* A kép nevét itt tudod majd módosítani, ha más lesz a fájlnév */
+    background-image: url('KEPEK/101_tantestulet.jpg') !important; 
+    background-size: 200% 100% !important;
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+}
+.page-right.era-tantestulet {
+    background-color: #fff !important;
+    background-image: url('KEPEK/101_tantestulet.jpg') !important;
+    background-size: 200% 100% !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+}
 
 /* =========================================================
    ---- TABLET & KISEBB KÉPERNYŐ OPTIMALIZÁLÁS ----
