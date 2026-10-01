@@ -48,14 +48,11 @@ function resetIdleTimer() {
     idleTimeout = setTimeout(putDownBook, IDLE_TIME_LIMIT);
 }
 
-// ---- VISSZAÁLLÍTOTT FULLSCREEN HÍVÁS ----
 ['touchstart', 'mousedown', 'keydown', 'click'].forEach(evt => {
     window.addEventListener(evt, (e) => {
-        // F11 (Fullscreen) automatikus indítása érintéskor vagy kattintáskor
         if (evt === 'click' || evt === 'touchstart') {
             requestFullScreen();
         }
-
         if (scene.classList.contains('idle')) {
             wakeUpBook();
         } else {
@@ -77,8 +74,6 @@ function renderSpread(index) {
     const spread = spreadsData[index];
     staticLeft.innerHTML = ''; staticLeft.appendChild(buildPageElement(spread.leftPage, spread.leftNum, 'left'));
     staticRight.innerHTML = ''; staticRight.appendChild(buildPageElement(spread.rightPage, spread.rightNum, 'right'));
-
-    // Elosztó algoritmus meghívása biztonságosan frame-renderelés után
     requestAnimationFrame(() => { distributePageElements(); });
 }
 
@@ -158,7 +153,7 @@ function animateFlip(direction, complete) {
 function startDrag(e) {
     if (isFlipping || scene.classList.contains('idle')) return;
     
-    // --- MEGVÉDJÜK A LAPOZÁSTÓL A LIGHTBOXOT ---
+    // LIGHTBOX VÉDELEM: Ne lapozzon, ha nyitva a nagy kép
     if (document.getElementById('lightbox') && document.getElementById('lightbox').classList.contains('active')) return;
 
     wasDragged = false;
@@ -314,92 +309,6 @@ document.getElementById('info-modal').addEventListener('click', (e) => {
     }
 });
 
-
-// =====================================================================
-// --- ÚJ LIGHTBOX ZOOM ÉS MOZGATÁS ---
-// =====================================================================
-const lightbox = document.createElement('div');
-lightbox.id = 'lightbox';
-lightbox.innerHTML = `
-    <div class="lightbox-close">&times;</div>
-    <img id="lightbox-img" src="" alt="Nagy kép" style="cursor: grab; transition: transform 0.05s linear;">
-`;
-document.body.appendChild(lightbox);
-
-const lbImg = lightbox.querySelector('#lightbox-img');
-let lbScale = 1;
-let lbPointX = 0;
-let lbPointY = 0;
-let lbStartX = 0;
-let lbStartY = 0;
-let isLbDragging = false;
-
-function openLightbox(url) {
-    lbImg.src = url;
-    lightbox.classList.add('active');
-    // Visszaállítás alaphelyzetbe megnyitáskor
-    lbScale = 1;
-    lbPointX = 0;
-    lbPointY = 0;
-    updateLightboxTransform();
-}
-
-function updateLightboxTransform() {
-    lbImg.style.transform = `translate(${lbPointX}px, ${lbPointY}px) scale(${lbScale})`;
-}
-
-// Bezárás csak akkor, ha a háttérre vagy az X-re kattintunk
-lightbox.addEventListener('click', (e) => {
-    if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
-        lightbox.classList.remove('active');
-    }
-});
-
-// --- ZOOM (Egérgörgő) ---
-lightbox.addEventListener('wheel', (e) => {
-    if (!lightbox.classList.contains('active')) return;
-    e.preventDefault();
-    
-    const xs = (e.clientX - lbPointX) / lbScale;
-    const ys = (e.clientY - lbPointY) / lbScale;
-    const delta = Math.sign(e.deltaY) * -1; // -1 kicsinyítés, +1 nagyítás
-    
-    if (delta > 0) lbScale *= 1.2;
-    else lbScale /= 1.2;
-    
-    lbScale = Math.min(Math.max(0.5, lbScale), 10); // Nagyítás korlátozása 0.5x és 10x közé
-
-    lbPointX = e.clientX - xs * lbScale;
-    lbPointY = e.clientY - ys * lbScale;
-    
-    updateLightboxTransform();
-}, { passive: false });
-
-// --- MOZGATÁS (Egérrel/Ujjal húzás) ---
-lbImg.addEventListener('pointerdown', (e) => {
-    e.preventDefault();
-    isLbDragging = true;
-    lbStartX = e.clientX - lbPointX;
-    lbStartY = e.clientY - lbPointY;
-    lbImg.style.cursor = 'grabbing';
-});
-
-window.addEventListener('pointermove', (e) => {
-    if (!isLbDragging || !lightbox.classList.contains('active')) return;
-    e.preventDefault();
-    lbPointX = e.clientX - lbStartX;
-    lbPointY = e.clientY - lbStartY;
-    updateLightboxTransform();
-}, { passive: false });
-
-window.addEventListener('pointerup', () => {
-    isLbDragging = false;
-    lbImg.style.cursor = 'grab';
-});
-// =====================================================================
-
-
-// --- AUTOMATIKUS SORKÖZ-ELOSZTÓ ---
 function distributePageElements() {
     const bodies = document.querySelectorAll('.chapter-body');
     bodies.forEach(body => {
@@ -442,10 +351,164 @@ function distributePageElements() {
 
 window.addEventListener('resize', distributePageElements);
 
-// Kezdő futtatás
 renderSpread(currentSpread);
 
 book.addEventListener('pointerdown', startDrag);
 window.addEventListener('pointermove', moveDrag, { passive: false });
 window.addEventListener('pointerup', endDrag);
 window.addEventListener('pointercancel', endDrag);
+
+
+// =====================================================================
+// --- ÚJ LIGHTBOX ZOOM ÉS MOZGATÁS (Mobil Pinch-to-Zoom támogatással) ---
+// =====================================================================
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+lightbox.innerHTML = `
+    <div class="lightbox-close">&times;</div>
+    <img id="lightbox-img" src="" alt="Nagy kép" style="cursor: grab; transition: transform 0.05s linear; touch-action: none;">
+`;
+document.body.appendChild(lightbox);
+
+const lbImg = lightbox.querySelector('#lightbox-img');
+let lbScale = 1;
+let lbPointX = 0;
+let lbPointY = 0;
+let lbStartX = 0;
+let lbStartY = 0;
+let isLbDragging = false;
+
+let lbPointers = []; 
+let lbInitialDistance = null;
+let lbInitialScale = 1;
+
+function openLightbox(url) {
+    lbImg.src = url;
+    lightbox.classList.add('active');
+    lbScale = 1;
+    lbPointX = 0;
+    lbPointY = 0;
+    lbPointers = []; 
+    updateLightboxTransform();
+}
+
+function updateLightboxTransform() {
+    lbImg.style.transform = `translate(${lbPointX}px, ${lbPointY}px) scale(${lbScale})`;
+}
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('active');
+    }
+});
+
+lightbox.addEventListener('wheel', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    e.preventDefault();
+    
+    const xs = (e.clientX - lbPointX) / lbScale;
+    const ys = (e.clientY - lbPointY) / lbScale;
+    const delta = Math.sign(e.deltaY) * -1; 
+    
+    if (delta > 0) lbScale *= 1.2;
+    else lbScale /= 1.2;
+    
+    lbScale = Math.min(Math.max(0.5, lbScale), 10); 
+
+    lbPointX = e.clientX - xs * lbScale;
+    lbPointY = e.clientY - ys * lbScale;
+    
+    updateLightboxTransform();
+}, { passive: false });
+
+lbImg.addEventListener('pointerdown', (e) => {
+    e.preventDefault();
+    lbPointers.push(e);
+    
+    if (lbPointers.length === 1) {
+        isLbDragging = true;
+        lbStartX = e.clientX - lbPointX;
+        lbStartY = e.clientY - lbPointY;
+        lbImg.style.cursor = 'grabbing';
+    } else if (lbPointers.length === 2) {
+        isLbDragging = false; 
+        lbInitialDistance = Math.hypot(
+            lbPointers[0].clientX - lbPointers[1].clientX,
+            lbPointers[0].clientY - lbPointers[1].clientY
+        );
+        lbInitialScale = lbScale;
+    }
+});
+
+window.addEventListener('pointermove', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    
+    const index = lbPointers.findIndex(p => p.pointerId === e.pointerId);
+    if (index !== -1) {
+        lbPointers[index] = e;
+    }
+
+    if (lbPointers.length === 2) {
+        e.preventDefault();
+        const currentDistance = Math.hypot(
+            lbPointers[0].clientX - lbPointers[1].clientX,
+            lbPointers[0].clientY - lbPointers[1].clientY
+        );
+        
+        if (lbInitialDistance) {
+            const scaleDiff = currentDistance / lbInitialDistance;
+            lbScale = Math.min(Math.max(0.5, lbInitialScale * scaleDiff), 10);
+            updateLightboxTransform();
+        }
+    } else if (lbPointers.length === 1 && isLbDragging) {
+        e.preventDefault();
+        lbPointX = e.clientX - lbStartX;
+        lbPointY = e.clientY - lbStartY;
+        updateLightboxTransform();
+    }
+}, { passive: false });
+
+function removePointer(e) {
+    lbPointers = lbPointers.filter(p => p.pointerId !== e.pointerId);
+    
+    if (lbPointers.length < 2) {
+        lbInitialDistance = null;
+    }
+    if (lbPointers.length === 1) {
+        isLbDragging = true;
+        lbStartX = lbPointers[0].clientX - lbPointX;
+        lbStartY = lbPointers[0].clientY - lbPointY;
+    } else if (lbPointers.length === 0) {
+        isLbDragging = false;
+        lbImg.style.cursor = 'grab';
+    }
+}
+
+window.addEventListener('pointerup', removePointer);
+window.addEventListener('pointercancel', removePointer);
+
+
+// =====================================================================
+// --- BILLENTYŰZETES LAPOZÁS (Nyilak) ---
+// =====================================================================
+window.addEventListener('keydown', (e) => {
+    const isLightboxActive = document.getElementById('lightbox') && document.getElementById('lightbox').classList.contains('active');
+    const isModalActive = document.getElementById('info-modal') && document.getElementById('info-modal').classList.contains('active');
+    
+    if (isFlipping || isDragging || scene.classList.contains('idle') || isLightboxActive || isModalActive) {
+        return;
+    }
+
+    if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+        if (currentSpread < spreadsData.length - 1) {
+            prepareFlip(1);
+            requestAnimationFrame(() => animateFlip(1, true));
+        }
+    } 
+    else if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+        if (currentSpread > 0) {
+            prepareFlip(-1);
+            requestAnimationFrame(() => animateFlip(-1, true));
+        }
+    }
+});
