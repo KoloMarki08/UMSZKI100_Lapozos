@@ -512,3 +512,76 @@ window.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// --- 75 ÉVES ÉVKÖNYV OLDALAINAK MEGNYITÁSA (TARTOMÁNYOK TÁMOGATÁSÁVAL) ---
+window.openOldBook = function(startPage, endPage, e) {
+    if(e) e.stopPropagation(); 
+    
+    let galleryUrls = [];
+    
+    // Ha csak egy oldalt adtunk meg, vagy szöveges a fájlnév (pl. '00 front')
+    if (!endPage || startPage === endPage || typeof startPage === 'string') {
+        let formattedNum = (typeof startPage === 'number' && startPage < 10) ? '0' + startPage : startPage;
+        galleryUrls.push(`KEPEK/75_evkonyv/${formattedNum}.jpg`);
+    } else {
+        // Ha tartományt adtunk meg (pl. 6-tól 28-ig)
+        for (let i = startPage; i <= endPage; i++) {
+            let formattedNum = i < 10 ? '0' + i : i;
+            galleryUrls.push(`KEPEK/75_evkonyv/${formattedNum}.jpg`);
+        }
+    }
+    
+    // Betöltjük a képeket a már meglévő csempés galéria-ablakodba (info-modal)
+    const modalBody = document.getElementById('modal-body');
+    modalBody.innerHTML = '';
+    
+    const grid = document.createElement('div');
+    grid.className = 'gallery-tile-grid';
+    
+    let wasGridDragged = false;
+    
+    galleryUrls.forEach(imgUrl => {
+        const img = document.createElement('img');
+        img.src = imgUrl;
+        img.className = 'gallery-tile-img';
+        img.draggable = false;
+        
+        img.addEventListener('click', (ev) => {
+            if (wasGridDragged) return;
+            ev.stopPropagation();
+            openLightbox(imgUrl);
+        });
+        
+        grid.appendChild(img);
+    });
+    
+    modalBody.appendChild(grid);
+    document.getElementById('info-modal').classList.add('active');
+    
+    // Fogd-és-vidd görgetés aktiválása a galérián (mint a zsebeknél)
+    let isGridDown = false;
+    let gridStartX;
+    let scrollLeft;
+    
+    grid.addEventListener('mousedown', (ev) => {
+        isGridDown = true;
+        wasGridDragged = false;
+        grid.classList.add('active-drag');
+        gridStartX = ev.pageX - grid.offsetLeft;
+        scrollLeft = grid.scrollLeft;
+    });
+    grid.addEventListener('mouseleave', () => { isGridDown = false; grid.classList.remove('active-drag'); });
+    grid.addEventListener('mouseup', () => { isGridDown = false; grid.classList.remove('active-drag'); });
+    grid.addEventListener('mousemove', (ev) => {
+        if (!isGridDown) return;
+        ev.preventDefault();
+        const x = ev.pageX - grid.offsetLeft;
+        const walk = (x - gridStartX) * 2;
+        if (Math.abs(walk) > 5) wasGridDragged = true;
+        grid.scrollLeft = scrollLeft - walk;
+    });
+    grid.addEventListener('click', (ev) => {
+        if (wasGridDragged) return;
+        if (ev.target === grid) closeModal();
+    });
+};
