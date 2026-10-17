@@ -1845,8 +1845,8 @@ const pages = [
     },
 
     // --- 101. Tantestület tabló (Dupla oldalas kép) ---
-    { eraCss: 'era-tantestulet' },
-    { eraCss: 'era-tantestulet' },
+    //{ eraCss: 'era-tantestulet' },
+    //{ eraCss: 'era-tantestulet' },
 
     // --- SZERKESZTŐSÉG ÉS ZÁRÓ OLDALAK ---
     { 
